@@ -37,7 +37,7 @@ const HeaderContact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         dispatch({ type: 'CONTACT_SUBMIT_START' });
-  
+
         try {
             const response = await fetch(`${apiUrl}/api/contact`, {
                 method: 'POST',
