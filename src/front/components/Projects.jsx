@@ -46,7 +46,8 @@ export const Projects = ({ limit = 0 }) => {
                     <h2 className="section-title">{t('projects.sectionTitle')}</h2>
                     <p className="text-white ct-description-p">{t('projects.sectionDescription')}</p>
                 </div>
-                <div className="row g-2 g-lg-3 h-100">
+                <Link to={'/projects/libreria-cosmonauta'} className="btn btn-warning">Vista single</Link>
+                {/* <div className="row g-2 g-lg-3 h-100">
                     <div className="col col-lg-6">
                         <div className="d-flex flex-column h-100">
                             {column1Projects.map((image, index) => (
@@ -75,7 +76,7 @@ export const Projects = ({ limit = 0 }) => {
                             ))}
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {limit > 0 ? (
                     <div className="row text-center mt-5">
                         <div className="col">

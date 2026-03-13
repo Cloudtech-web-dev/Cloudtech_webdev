@@ -11,5 +11,8 @@
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
   },
-  "emmet.triggerExpansionOnTab": true
+  "emmet.triggerExpansionOnTab": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }

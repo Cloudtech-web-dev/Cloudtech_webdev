@@ -165,12 +165,86 @@
       }
     }
   },
-
   "projects": {
     "sectionTitle": "Nuestros proyectos",
     "sectionDescription": "Hemos creado universos digitales únicos que resuelven desafíos y conectan a las marcas con sus audiencias. Sabemos que cada proyecto es una historia que refleja innovación y resultados claros, y estamos dispuestos a plasmarlo en tu visión.",
     "sectionCTAButton": "Conectemos ahora",
-    "sectionPortfolioButton": "Explora nuestro portafolio"
+    "sectionPortfolioButton": "Explora nuestro portafolio",
+    "menuItems": {
+      "itemOne": "[01] Necesidad",
+      "itemTwo": "[02] Nuestro proceso",
+      "itemThree": "[03] Solución alcanzada",
+      "itemFour": "[04] Créditos",
+      "tech": "Tecnologías"
+    },
+    "projectName1": "Librería Cosmonauta",
+    "projectPreview1": "Lorem ipsum dolor sit amet consectetur. Arcu commodo cursus et dui cursus luctus dolor.",
+    "projectSummary1": "Lorem ipsum dolor sit amet consectetur. Arcu commodo cursus et dui cursus luctus dolor. Sed urna dis est dolor id orci nibh ut. Lacus pulvinar auctor erat hendrerit ac convallis ut. Sed sit ipsum pulvinar varius a nisl arcu turpis. Habitant egestas volutpat egestas mauris libero cum. Tortor tristique ornare sed sit. Platea convallis massa ut viverra vestibulum mauris donec quis. Mollis.",
+    "projectName2": "Flora Nueva",
+    "projectPreview2": "Lorem ipsum dolor sit amet consectetur. Arcu commodo cursus et dui cursus luctus dolor.",
+    "projectSummary2": "Lorem ipsum dolor sit amet consectetur. Arcu commodo cursus et dui cursus luctus dolor. Sed urna dis est dolor id orci nibh ut. Lacus pulvinar auctor erat hendrerit ac convallis ut. Sed sit ipsum pulvinar varius a nisl arcu turpis. Habitant egestas volutpat egestas mauris libero cum. Tortor tristique ornare sed sit. Platea convallis massa ut viverra vestibulum mauris donec quis. Mollis.",
+    "projectName3": "Flotilla Amazónica",
+    "projectPreview3": "Lorem ipsum dolor sit amet consectetur. Arcu commodo cursus et dui cursus luctus dolor.",
+    "projectSummary3": "Lorem ipsum dolor sit amet consectetur. Arcu commodo cursus et dui cursus luctus dolor. Sed urna dis est dolor id orci nibh ut. Lacus pulvinar auctor erat hendrerit ac convallis ut. Sed sit ipsum pulvinar varius a nisl arcu turpis. Habitant egestas volutpat egestas mauris libero cum. Tortor tristique ornare sed sit. Platea convallis massa ut viverra vestibulum mauris donec quis. Mollis.",
+    "projectName4": "Las libreras leen",
+    "projectPreview4": "Lorem ipsum dolor sit amet consectetur. Arcu commodo cursus et dui cursus luctus dolor.",
+    "projectSummary4": "Lorem ipsum dolor sit amet consectetur. Arcu commodo cursus et dui cursus luctus dolor. Sed urna dis est dolor id orci nibh ut. Lacus pulvinar auctor erat hendrerit ac convallis ut. Sed sit ipsum pulvinar varius a nisl arcu turpis. Habitant egestas volutpat egestas mauris libero cum. Tortor tristique ornare sed sit. Platea convallis massa ut viverra vestibulum mauris donec quis. Mollis.",
+    "projectNeed1": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim. Lectus libero convallis tortor faucibus elit.",
+    "projectProcess1": {
+      "description": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim. Lectus libero convallis tortor faucibus elit.",
+      "phase1Title": "1. Análisis de requerimientos",
+      "phase1": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim.",
+      "phase2Title": "2. Propuesta en baja resolución",
+      "phase2": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim.",
+      "phase3Title": "3. Propuesta en alta definición",
+      "phase3": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim.",
+      "phase4Title": "4. Desarrollo",
+      "phase4": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim."
+    },
+    "projectSolution1": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim. Lectus libero convallis tortor faucibus elit.",
+    "projectNeed2": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim. Lectus libero convallis tortor faucibus elit.",
+    "projectProcess2": {
+      "description": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim. Lectus libero convallis tortor faucibus elit.",
+      "phase1Title": "1. Análisis de requerimientos",
+      "phase1": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim.",
+      "phase2Title": "2. Propuesta en baja resolución",
+      "phase2": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim.",
+      "phase3Title": "3. Propuesta en alta definición",
+      "phase3": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim.",
+      "phase4Title": "4. Desarrollo",
+      "phase4": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim."
+    },
+    "projectSolution2": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim. Lectus libero convallis tortor faucibus elit.",
+    "projectNeed3": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim. Lectus libero convallis tortor faucibus elit.",
+    "projectProcess3": {
+      "description": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim. Lectus libero convallis tortor faucibus elit.",
+      "phase1Title": "1. Análisis de requerimientos",
+      "phase1": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim.",
+      "phase2Title": "2. Propuesta en baja resolución",
+      "phase2": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim.",
+      "phase3Title": "3. Propuesta en alta definición",
+      "phase3": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim.",
+      "phase4Title": "4. Desarrollo",
+      "phase4": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim."
+    },
+    "projectSolution3": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim. Lectus libero convallis tortor faucibus elit.",
+    "projectNeed4": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim. Lectus libero convallis tortor faucibus elit.",
+    "projectProcess4": {
+      "description": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim. Lectus libero convallis tortor faucibus elit.",
+      "phase1Title": "1. Análisis de requerimientos",
+      "phase1": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim.",
+      "phase2Title": "2. Propuesta en baja resolución",
+      "phase2": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim.",
+      "phase3Title": "3. Propuesta en alta definición",
+      "phase3": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim.",
+      "phase4Title": "4. Desarrollo",
+      "phase4": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim."
+    },
+    "projectSolution4": "Lorem ipsum dolor sit amet consectetur. Velit duis tortor ullamcorper pharetra eget. Mi porttitor habitant donec quam vestibulum dignissim. Lectus libero convallis tortor faucibus elit.",
+    "projectsCTA": "¿Listo para comenzar tu proyecto?",
+    "projectsCTADescritpion": "Lorem ipsum dolor sit amet consectetur. Sed nisl a at a euismod lorem lacus ullamcorper. Elit molestie viverra et molestie. Enim sodales id non euismod sed. Phasellus aliquam viverra aliquet sed urna tortor tempor tristique lorem.",
+    "projectsCTAButton": "Conectemos ahora",
+    "otherProjects": "Otros proyectos"
   },
   "testimonials": {
     "sectionTitle": "Nuestros clientes",

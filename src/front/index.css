@@ -177,6 +177,22 @@ h6 {
   }
 }
 
+.ct-psummary {
+  width: 100%;  
+}
+
+@media (min-width: 768px) {
+  .ct-psummary {
+    width: 50%;    
+  }
+}
+
+@media (min-width: 1200px) {
+  .ct-psummary {
+    width: 50%;    
+  }
+}
+
 .ct-reviews {
   width: 100%;
   font-size: 16pt;
@@ -311,12 +327,15 @@ h6 {
 .btn-outline {
   color: #fbff06 !important;
   border-color: #fbff06 !important;
+  
 }
 
 .btn-outline:hover {
   background-color: #fbff06 !important;
-  color: #217b8f !important;
+  color: #000000 !important;
+  font-weight: bolder;
   border-color: #fbff06 !important;
+  transition: all 0.5s ease-out;
 }
 
 .text-warning {
