@@ -14,5 +14,8 @@
   "emmet.triggerExpansionOnTab": true,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
   }
 }

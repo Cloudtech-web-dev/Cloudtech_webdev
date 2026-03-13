@@ -11,6 +11,7 @@ export const OtherProjects = () => {
 
     return (
         <section id="otros-proyectos" className="my-4">
+            <h1 className="section-title text-center">{t('projects.otherProjects')}</h1>
             <div className="row">
                 {filteredProjects.map(project => (
                     <div key={project.id} className="col-12 col-lg-4 g-5">
