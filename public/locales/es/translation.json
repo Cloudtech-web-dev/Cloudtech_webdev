@@ -244,7 +244,15 @@
     "projectsCTA": "¿Listo para comenzar tu proyecto?",
     "projectsCTADescritpion": "Lorem ipsum dolor sit amet consectetur. Sed nisl a at a euismod lorem lacus ullamcorper. Elit molestie viverra et molestie. Enim sodales id non euismod sed. Phasellus aliquam viverra aliquet sed urna tortor tempor tristique lorem.",
     "projectsCTAButton": "Conectemos ahora",
-    "otherProjects": "Otros proyectos"
+    "otherProjects": "Otros proyectos",
+    "credits": {
+      "post1": "Desarrollo Frontend",
+      "post2": "Desarrollo Backend",
+      "post3": "Desarrollo Fullstack",
+      "post4": "Líder de proyecto",
+      "post5": "Diseño UX/UI",
+      "post6": "Desarrollo Web"
+    }
   },
   "testimonials": {
     "sectionTitle": "Nuestros clientes",
