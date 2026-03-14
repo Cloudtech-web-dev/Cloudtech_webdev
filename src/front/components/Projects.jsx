@@ -29,7 +29,7 @@ export const Projects = ({ limit = 0 }) => {
                         <Card
                             key={project.id}
                             id={project.id}
-                            cover={project.cover}
+                            gallery={project.gallery}
                             name={t(project.name)}
                             preview={t(project.preview)}
                             index={index}
