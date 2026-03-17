@@ -8,7 +8,7 @@ export const Card = ({ id, gallery = [], name, preview, index }) => {
 
     return (
 
-        <div className="row align-items-center g-4 g-lg-5 projects-card-spacing">
+        <div className="row align-items-center g-4 g-lg-5 projects-card-spacing mt-5 mb-5">
 
             {/* TEXT */}
             <div className={`col-12 col-lg-6 ${!isEven ? "order-lg-2" : "order-lg-1"}`}>
@@ -23,7 +23,7 @@ export const Card = ({ id, gallery = [], name, preview, index }) => {
                         to={`/projects/${id}`}
                         className="ct-btn-outline-accent text-decoration-none py-2 px-4"
                     >
-                        {t("projects.discoverMore")}
+                        {t('projects.discoverMore')}
                     </Link>
                 </div>
             </div>
