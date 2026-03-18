@@ -329,12 +329,20 @@
         "description": "Comunicador y estratega digital con más de una década de experiencia. Experto en crear contenidos y campañas impactantes con piezas multimedia y estrategias a medida, utiliza su versatilidad para la creación de narrativas complejas que reflejen los objetivos deseados y generen impacto."
       },
       "teamMember2": {
-        "position": "Fullstack Developer",
+        "position": "Desarrollador Fullstack",
         "description": "Programador Fullstack en JavaScript, React y Python, con un enfoque en la interacción y comunicación. Su trayectoria en traducción le permite hacer que la tecnología sea comprensible, creando plataformas dinámicas que optimizan la experiencia de usuarios, fomentando la conexión global."
       },
       "teamMember3": {
-        "position": "Fullstack Developer",
+        "position": "Desarrollador Fullstack",
         "description": "Desarrollador Fullstack experto en JavaScript, React y Python, apasionado por optimizar procesos y diseñar interfaces responsivas. Transforma conceptos técnicos complejos en soluciones claras, garantizando software e interfaces funcionales y amigables que mejoran la experiencia del usuario."
+      },
+      "teamMember4": {
+        "position": "Director de Proyectos",
+        "description": "Profesional en transformaciones sociales e innovación con trayectoria en gestión administrativa, tramitación de procedimientos, administración documental y articulación comunitaria. Eficaz coordinando actividades, elaborando documentos y garantizando la integridad financiera de recursos."
+      },
+      "teamMember5": {
+        "position": "Desarrollador de software",
+        "description": "Desarrollador de software versátil en Android, React, Python y Node, con sólidos conocimientos en redes informáticas. Esta preparación integral le permite fluir con naturalidad por todo el ciclo de aplicaciones web y móviles, desde la concepción hasta su implementación efectiva."
       }
     }
   },

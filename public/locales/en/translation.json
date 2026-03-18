@@ -335,6 +335,14 @@
       "teamMember3": {
         "position": "Fullstack Developer",
         "description": "Fullstack Developer expert in JavaScript, React, and Python, passionate about optimizing processes and designing responsive interfaces. He transforms complex technical concepts into clear solutions, ensuring functional and user-friendly software and interfaces that enhance user experience."
+      },
+      "teamMember4": {
+        "position": "Project Manager",
+        "description": "Experienced professional in social impact and innovation with a proven track record in administrative operations, workflow management, and community outreach. I excel at coordinating cross-functional activities and preparing strategic documentation while safeguarding the financial and operational integrity of all resources."
+      },
+      "teamMember5": {
+        "position": "Software Developer",
+        "description": "Versatile Developer (Android, React, Python, Node) & Networking Specialist. His broad technical expertise enables him to oversee the full software development lifecycle. He excels at bridging the gap between initial concept and successful implementation for both web and mobile platforms."
       }
     }
   },
