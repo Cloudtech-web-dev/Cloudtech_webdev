@@ -14,6 +14,7 @@ import { Contact } from "./pages/Contact";
 import { Login } from "./pages/Login";
 import { Admin } from "./pages/Admin";
 import { ProtectedRoute } from "./components/ProtectedRoute";
+import { SingleProjectView } from "./components/SingleProjectView";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,6 +32,7 @@ export const router = createBrowserRouter(
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/projects" element={<Portfolio />} />
+      <Route path="/projects/:projectId" element={<SingleProjectView />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/login" element={<Login />} />
       {/* <Route path="/admin" element={<Admin />} /> */}

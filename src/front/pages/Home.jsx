@@ -7,6 +7,7 @@ import { Testimonials } from "../components/Testimonial/Testimonials.jsx";
 import { HeaderHome } from "../components/HeaderHome.jsx";
 import { Benefits } from "../components/Benefits/Benefits.jsx";
 import { WorkWithUS } from "../components/WorkWithUs.jsx";
+import { ProjectsHome } from "../components/ProjectsHome.jsx";
 
 
 export const Home = () => {
@@ -18,7 +19,7 @@ export const Home = () => {
 			<HeaderHome />
 			<Services />
 			<Process />
-			<Projects limit={4} />
+			<ProjectsHome />
 			<Testimonials />
 			<Benefits />
 			<WorkWithUS />

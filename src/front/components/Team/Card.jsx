@@ -2,7 +2,6 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Link } from "react-router-dom"
 
 export const Card = ({ name, position, description, image, catImage, mailLink, linkedinLink, githubLink }) => {
     return (

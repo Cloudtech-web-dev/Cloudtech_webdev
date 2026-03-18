@@ -3,6 +3,7 @@ body {
   font-family: "Manrope", sans-serif;
   /* padding-top: 100px; */
 }
+
 h1 {
   font-family: "Exo 2", sans-serif;
   font-weight: bold;
@@ -12,6 +13,7 @@ h1 {
 p {
   font-family: "Manrope", sans-serif;
 }
+
 h2,
 h3,
 h4,
@@ -19,6 +21,11 @@ h5,
 h6 {
   font-family: "Outfit", sans-serif;
 }
+
+[id] {
+  scroll-margin-top: 120px;
+}
+
 /* Button styles */
 
 .ct-btn-outline-accent {
@@ -53,6 +60,32 @@ h6 {
 }
 
 /* Titles & text styles */
+
+.index-item-hover {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform-origin: left;
+}
+
+.index-item-hover:hover {
+  color: #fbff06;
+  transform: scale(1.1);
+}
+
+.link-custom-hover {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform-origin: center;
+}
+
+.link-custom-hover:hover {
+  color: #fbff06;
+  transform: scale(1.1);
+}
 
 .text-ct-secondary {
   color: #60e0a5;
@@ -128,6 +161,22 @@ h6 {
 
 /* Services cards, components & background */
 
+.bg-credits {
+  background-color: #04171B;
+}
+
+.custom-gallery-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.custom-gallery-img:hover {
+  transform: scale(1.04);
+}
+
 .card-text {
   font-size: 13pt;
 }
@@ -174,6 +223,22 @@ h6 {
   .ct-description-p {
     width: 50%;
     margin: auto;
+  }
+}
+
+.ct-psummary {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .ct-psummary {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ct-psummary {
+    width: 55%;
   }
 }
 
@@ -311,12 +376,15 @@ h6 {
 .btn-outline {
   color: #fbff06 !important;
   border-color: #fbff06 !important;
+
 }
 
 .btn-outline:hover {
   background-color: #fbff06 !important;
-  color: #217b8f !important;
+  color: #000000 !important;
+  font-weight: bolder;
   border-color: #fbff06 !important;
+  transition: all 0.5s ease-out;
 }
 
 .text-warning {
@@ -333,29 +401,36 @@ h6 {
     font-size: 3rem;
   }
 }
+
 /* Benefits cards, components & background */
 .section-title {
   color: #e2e505;
   font-weight: bold;
 }
+
 .text-ct-secondary {
   color: #60e0a5;
 }
+
 .ct-description-p {
   color: #ffff;
 }
+
 .card-divider {
   border: none;
   border-top: 1px solid #6ee6b9;
   opacity: 1;
 }
+
 .card-background {
   color: transparent;
 }
+
 /* header contacto */
 .header {
   margin-bottom: 4rem !important;
 }
+
 .form-label-contact {
   color: #60e0a5 !important;
 }
@@ -370,10 +445,12 @@ h6 {
 .btn-submit-contact:hover {
   background-color: #2799b3 !important;
 }
+
 /* Work With Us  */
 .text-stat-number {
   color: #60e0a5;
 }
+
 .text-stat-symbol {
   color: #fbff06;
 }
