@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 export const Card = ({ id, gallery = [], name, preview, index }) => {
 
-    const { t } = useTranslation();
+   const { t } = useTranslation("");
     const isEven = index % 2 === 0;
 
     return (
