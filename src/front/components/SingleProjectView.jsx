@@ -44,7 +44,8 @@ export const SingleProjectView = () => {
 
     return (
         <section id="project-view" className="mx-auto">
-            <div className="container py-5 mt-5 d-flex flex-column gap-5">
+            <div className="container mt-5 mt-lg-2 d-flex flex-column gap-5">
+                <div className="mt-3 d-lg-none"></div>
                 <div className="d-flex flex-column justify-content-center">
                     <img src={projectData.cover} alt="portada de proyecto CloudTech" className="rounded-4" />
                 </div>
@@ -53,17 +54,17 @@ export const SingleProjectView = () => {
 
                 <div className="d-flex flex-column flex-md-row justify-content-between gap-4 px-5 my-5 text-white">
                     <ul className="list-unstyled d-flex flex-column text-md-start text-center gap-2">
-                        <li className="fs-5">{t('projects.menuItems.itemOne')}</li>
-                        <li className="fs-5">{t('projects.menuItems.itemTwo')}</li>
-                        <li className="fs-5">{t('projects.menuItems.itemThree')}</li>
-                        <li className="fs-5">{t('projects.menuItems.itemFour')}</li>
+                        <li className="fs-5"><a href="#needs" className="index-item-hover">{t('projects.menuItems.itemOne')}</a></li>
+                        <li className="fs-5"><a href="#process" className="index-item-hover">{t('projects.menuItems.itemTwo')}</a></li>
+                        <li className="fs-5"><a href="#gallery" className="index-item-hover">{t('projects.menuItems.itemThree')}</a></li>
+                        <li className="fs-5"><a href="#credits" className="index-item-hover">{t('projects.menuItems.itemFour')}</a></li>
                     </ul>
                     <p className="ct-psummary text-lg-start text-center">{t(projectData.summary)}</p>
                 </div>
 
                 {/* SECCIÓN ANÁLISIS DE NECESIDADES */}
 
-                <div className="d-flex flex-column justify-content-center">
+                <div id="needs" className="d-flex flex-column justify-content-center">
                     <div className="d-flex flex-column flex-lg-row gap-4 gap-lg-5 justify-content-center align-items-center">
                         <h2 className="fs-4 section-title">{t('projects.menuItems.itemOne')}</h2>
                         <p className="text-white text-lg-start text-center ct-psummary">{t(projectData.need)}</p>
@@ -73,7 +74,7 @@ export const SingleProjectView = () => {
 
                 {/* SECCIÓN PROCESO */}
 
-                <div className="d-flex flex-column justify-content-center gap-4">
+                <div id="process" className="d-flex flex-column justify-content-center gap-4">
                     <div className="d-flex flex-column flex-lg-row gap-4 gap-lg-5 justify-content-center align-items-center">
                         <h2 className="fs-4 section-title">{t('projects.menuItems.itemTwo')}</h2>
                         <p className="text-white text-lg-start text-center ct-psummary">{t(projectData.process)}</p>
@@ -84,7 +85,7 @@ export const SingleProjectView = () => {
 
                 {/* SECCIÓN FOTOS PROYECTO ENTREGADO */}
 
-                <div className="d-flex flex-column justify-content-center gap-4 my-5">
+                <div id="gallery" className="d-flex flex-column justify-content-center gap-4 my-5">
                     <div className="d-flex flex-column flex-lg-row gap-4 gap-lg-5 justify-content-center align-items-center">
                         <h2 className="fs-4 section-title">{t('projects.menuItems.itemThree')}</h2>
                         <p className="text-white text-lg-start text-center ct-psummary">{t(projectData.solution)}</p>
@@ -108,7 +109,7 @@ export const SingleProjectView = () => {
 
                 {/* SECCIÓN CRÉDITOS */}
 
-                <div className="d-flex flex-column justify-content-center gap-4 bg-credits py-5">
+                <div id="credits" className="d-flex flex-column justify-content-center gap-4 bg-credits py-5">
                     <div className="d-flex flex-column gap-4 gap-lg-5 justify-content-center align-items-center">
                         <h2 className="fs-4 section-title">{t('projects.menuItems.itemFour')}</h2>
                         <div className="d-flex flex-column gap-4">
@@ -128,7 +129,7 @@ export const SingleProjectView = () => {
                                     <li key={index} className="text-white">{item}</li>
                                 ))}
                             </ul>
-                            {projectData.collab ? <p className="text-white text-center mt-4">Proyecto realizado junto al equipo de Colmena Lab</p> : ""}
+                            {projectData.collab ? <p className="text-white text-center mt-4"><a className="text-decoration-none text-white" href="https://www.colmenalab.com/" target="_blank">{t(projectData.collab)}</a></p> : ""}
                         </div>
                     </div>
 

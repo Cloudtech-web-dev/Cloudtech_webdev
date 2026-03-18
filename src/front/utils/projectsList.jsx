@@ -1,8 +1,17 @@
-import CoverCosmo from '../assets/img/ProjectHeaders/header-cosmonauta.jpg'
-import CoverFlora from '../assets/img/ProjectHeaders/flora-nueva.jpg'
-import CoverFlotilla from '../assets/img/ProjectHeaders/flotilla.jpg'
-import CoverLibreras from '../assets/img/ProjectHeaders/libreras.jpg'
+import CoverCosmo from '../assets/img/ProjectHeaders/Cosmocover.jpg'
+import CoverFlora from '../assets/img/ProjectHeaders/floracover.jpg'
+import CoverFlotilla from '../assets/img/ProjectHeaders/flotillacover.jpg'
+import CoverLibreras from '../assets/img/ProjectHeaders/librerascover.jpg'
+import CoverAsocove from '../assets/img/ProjectHeaders/asocovecover.jpg'
+import CoverBusquedas from '../assets/img/ProjectHeaders/busquedascover.jpg'
+import CoverMura from '../assets/img/ProjectHeaders/muracover.jpg'
 import { galleryCosmo } from './galleryContent'
+import { galleryFlotilla } from './galleryContent'
+import { galleryFlora } from './galleryContent'
+import { galleryLibreras } from './galleryContent'
+import { galleryAsocove } from './galleryContent'
+import { galleryBusquedas } from './galleryContent'
+import { galleryMura } from './galleryContent'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFirstdraft, faSearchengin } from "@fortawesome/free-brands-svg-icons";
 import { faWandMagic } from "@fortawesome/free-solid-svg-icons";
@@ -109,7 +118,7 @@ export const projectsList = [
             }
         ],
         solution: 'projects.projectSolution2',
-        gallery: galleryCosmo,
+        gallery: galleryFlora,
         credits: [
             {
                 name: 'David Pinto',
@@ -162,7 +171,7 @@ export const projectsList = [
             }
         ],
         solution: 'projects.projectSolution3',
-        gallery: galleryCosmo,
+        gallery: galleryFlotilla,
         credits: [
             {
                 name: 'David Pinto',
@@ -215,7 +224,7 @@ export const projectsList = [
             }
         ],
         solution: 'projects.projectSolution4',
-        gallery: galleryCosmo,
+        gallery: galleryLibreras,
         credits: [
             {
                 name: 'David Pinto',
@@ -238,7 +247,7 @@ export const projectsList = [
     },
     {
         id: 'asocove',
-        cover: CoverLibreras,
+        cover: CoverAsocove,
         name: 'projects.projectName5',
         preview: 'projects.projectPreview5',
         summary: 'projects.projectSummary5',
@@ -267,7 +276,7 @@ export const projectsList = [
             }
         ],
         solution: 'projects.projectSolution5',
-        gallery: galleryCosmo,
+        gallery: galleryAsocove,
         credits: [
             {
                 name: 'David Pinto',
@@ -291,7 +300,7 @@ export const projectsList = [
     },
     {
         id: 'busquedas',
-        cover: CoverLibreras,
+        cover: CoverBusquedas,
         name: 'projects.projectName6',
         preview: 'projects.projectPreview6',
         summary: 'projects.projectSummary6',
@@ -320,7 +329,7 @@ export const projectsList = [
             }
         ],
         solution: 'projects.projectSolution6',
-        gallery: galleryCosmo,
+        gallery: galleryBusquedas,
         credits: [
             {
                 name: 'David Pinto',
@@ -343,7 +352,7 @@ export const projectsList = [
     },
     {
         id: 'mura',
-        cover: CoverLibreras,
+        cover: CoverMura,
         name: 'projects.projectName7',
         preview: 'projects.projectPreview7',
         summary: 'projects.projectSummary7',
@@ -372,7 +381,7 @@ export const projectsList = [
             }
         ],
         solution: 'projects.projectSolution7',
-        gallery: galleryCosmo,
+        gallery: galleryMura,
         credits: [
             {
                 name: 'David Pinto',
