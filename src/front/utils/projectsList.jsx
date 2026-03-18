@@ -25,6 +25,13 @@ import { faLeanpub } from '@fortawesome/free-brands-svg-icons/faLeanpub'
 import { faCreditCard } from '@fortawesome/free-solid-svg-icons'
 import { faArrowsSplitUpAndLeft } from '@fortawesome/free-solid-svg-icons'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
+import { faSignsPost } from '@fortawesome/free-solid-svg-icons'
+import { faWix } from '@fortawesome/free-brands-svg-icons'
+import { faMicroscope } from '@fortawesome/free-solid-svg-icons'
+import { faPaintBrush } from '@fortawesome/free-solid-svg-icons'
+import { faRobot } from '@fortawesome/free-solid-svg-icons'
+import { faFingerprint } from '@fortawesome/free-solid-svg-icons'
+import { faFlask } from '@fortawesome/free-solid-svg-icons'
 
 export const projectsList = [
     {
@@ -255,7 +262,7 @@ export const projectsList = [
         process: 'projects.projectProcess5.description',
         phase: [
             {
-                icon: <FontAwesomeIcon icon={faSitemap} size="5x" />,
+                icon: <FontAwesomeIcon icon={faSignsPost} size="5x" />,
                 title: 'projects.projectProcess5.phase1Title',
                 description: 'projects.projectProcess5.phase1'
             },
@@ -265,12 +272,12 @@ export const projectsList = [
                 description: 'projects.projectProcess5.phase2'
             },
             {
-                icon: <FontAwesomeIcon icon={faHammer} size="5x" />,
+                icon: <FontAwesomeIcon icon={faWix} size="5x" />,
                 title: 'projects.projectProcess5.phase3Title',
                 description: 'projects.projectProcess5.phase3'
             },
             {
-                icon: <FontAwesomeIcon icon={faUser} size="5x" />,
+                icon: <FontAwesomeIcon icon={faMicroscope} size="5x" />,
                 title: 'projects.projectProcess5.phase4Title',
                 description: 'projects.projectProcess5.phase4'
             }
@@ -295,7 +302,7 @@ export const projectsList = [
                 position: 'projects.credits.post5'
             },
         ],
-        tech: ['Figma', 'WixStudio', 'CSS'],
+        tech: ['Figma', 'WixStudio', 'CSS', 'Wix Forms'],
         collab: 'projects.collab'
     },
     {
@@ -308,22 +315,22 @@ export const projectsList = [
         process: 'projects.projectProcess6.description',
         phase: [
             {
-                icon: <FontAwesomeIcon icon={faSitemap} size="5x" />,
+                icon: <FontAwesomeIcon icon={faFingerprint} size="5x" />,
                 title: 'projects.projectProcess6.phase1Title',
                 description: 'projects.projectProcess6.phase1'
             },
             {
-                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
+                icon: <FontAwesomeIcon icon={faLanguage} size="5x" />,
                 title: 'projects.projectProcess6.phase2Title',
                 description: 'projects.projectProcess6.phase2'
             },
             {
-                icon: <FontAwesomeIcon icon={faHammer} size="5x" />,
+                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
                 title: 'projects.projectProcess6.phase3Title',
                 description: 'projects.projectProcess6.phase3'
             },
             {
-                icon: <FontAwesomeIcon icon={faUser} size="5x" />,
+                icon: <FontAwesomeIcon icon={faRobot} size="5x" />,
                 title: 'projects.projectProcess6.phase4Title',
                 description: 'projects.projectProcess6.phase4'
             }
@@ -360,22 +367,22 @@ export const projectsList = [
         process: 'projects.projectProcess7.description',
         phase: [
             {
-                icon: <FontAwesomeIcon icon={faSitemap} size="5x" />,
+                icon: <FontAwesomeIcon icon={faFingerprint} size="5x" />,
                 title: 'projects.projectProcess7.phase1Title',
                 description: 'projects.projectProcess7.phase1'
             },
             {
-                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
+                icon: <FontAwesomeIcon icon={faFlask} size="5x" />,
                 title: 'projects.projectProcess7.phase2Title',
                 description: 'projects.projectProcess7.phase2'
             },
             {
-                icon: <FontAwesomeIcon icon={faHammer} size="5x" />,
+                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
                 title: 'projects.projectProcess7.phase3Title',
                 description: 'projects.projectProcess7.phase3'
             },
             {
-                icon: <FontAwesomeIcon icon={faUser} size="5x" />,
+                icon: <FontAwesomeIcon icon={faHammer} size="5x" />,
                 title: 'projects.projectProcess7.phase4Title',
                 description: 'projects.projectProcess7.phase4'
             }

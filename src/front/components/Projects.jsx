@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-import { projectsContent } from "../utils/projectsContent";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { Card } from "./Projects/Card";
 import { ProjectCTA } from "../components/ProjectSingle/ProjectCTA";
 import { projectsList } from "../utils/projectsList";
@@ -36,24 +35,12 @@ export const Projects = ({ limit = 0 }) => {
                         />
                     ))}
                 </div>
-                {/* Buttons */}
-                {/* {limit > 0 ? (
-                    <div className="row text-center mt-5">
-                        <div className="col">
-                            <Link to={"/projects"} className="btn btn-outline btn-lg rounded-pill px-4 mx-auto w-lg-auto">
-                                {t('projects.sectionPortfolioButton')}
-                            </Link>
-                        </div>
-                    </div>
-                ) : (
-                    <div className="row text-center mt-5">
-                        <div className="col">
-                            <Link to={"/contact"} className="btn btn-outline btn-lg rounded-pill px-4 mx-auto w-lg-auto">
-                                {t('projects.sectionCTAButton')}
-                            </Link>
-                        </div>
-                    </div>
-                )} */}
+
+                <div className="d-flex justify-content-center">
+                    <Link to={"/projects"} className="btn btn-outline btn-lg rounded-pill px-4 mx-auto w-lg-auto">
+                        {t('projects.sectionPortfolioButton')}
+                    </Link>
+                </div>
             </div>
 
             {/* CTA */}

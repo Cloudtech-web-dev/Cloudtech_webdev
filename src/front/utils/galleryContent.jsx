@@ -3,6 +3,7 @@ import Cosmo2 from '../assets/img/Portfolio/Cosmonauta/cosmo2.jpg'
 import Cosmo3 from '../assets/img/Portfolio/Cosmonauta/cosmo3.jpg'
 import Cosmo4 from '../assets/img/Portfolio/Cosmonauta/cosmo4.jpg'
 import Cosmo5 from '../assets/img/Portfolio/Cosmonauta/cosmo5.jpg'
+import Cosmo6 from '../assets/img/Portfolio/Cosmonauta/cosmo6.jpg'
 import Flora1 from '../assets/img/Portfolio/Flora/flora1.jpg'
 import Flora2 from '../assets/img/Portfolio/Flora/flora2.jpg'
 import Flora3 from '../assets/img/Portfolio/Flora/flora3.jpg'
@@ -41,7 +42,7 @@ import Mura5 from '../assets/img/Portfolio/Mura/mura5.jpg'
 import Mura6 from '../assets/img/Portfolio/Mura/mura6.jpg'
 
 
-export const galleryCosmo = [Cosmo1, Cosmo2, Cosmo3, Cosmo4, Cosmo5];
+export const galleryCosmo = [Cosmo1, Cosmo2, Cosmo3, Cosmo4, Cosmo5, Cosmo6];
 export const galleryFlotilla = [Flotilla1, Flotilla2, Flotilla3, Flotilla4, Flotilla5, Flotilla6];
 export const galleryFlora = [Flora1, Flora2, Flora3, Flora4, Flora5, Flora6];
 export const galleryLibreras = [Libreras1, Libreras2, Libreras3, Libreras4, Libreras5, Libreras6];
