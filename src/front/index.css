@@ -22,6 +22,10 @@ h6 {
   font-family: "Outfit", sans-serif;
 }
 
+[id] {
+  scroll-margin-top: 120px;
+}
+
 /* Button styles */
 
 .ct-btn-outline-accent {
@@ -56,6 +60,32 @@ h6 {
 }
 
 /* Titles & text styles */
+
+.index-item-hover {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform-origin: left;
+}
+
+.index-item-hover:hover {
+  color: #fbff06;
+  transform: scale(1.1);
+}
+
+.link-custom-hover {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform-origin: center;
+}
+
+.link-custom-hover:hover {
+  color: #fbff06;
+  transform: scale(1.1);
+}
 
 .text-ct-secondary {
   color: #60e0a5;
@@ -144,7 +174,7 @@ h6 {
 }
 
 .custom-gallery-img:hover {
-  transform: scale(1.02);
+  transform: scale(1.04);
 }
 
 .card-text {
@@ -208,7 +238,7 @@ h6 {
 
 @media (min-width: 1200px) {
   .ct-psummary {
-    width: 50%;
+    width: 55%;
   }
 }
 
