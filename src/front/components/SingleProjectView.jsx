@@ -79,7 +79,7 @@ export const SingleProjectView = () => {
                         <p className="text-white text-lg-start text-center ct-psummary">{t(projectData.process)}</p>
                     </div>
 
-                    <ProjectProcess />
+                    <ProjectProcess phases={projectData.phase} />
                 </div>
 
                 {/* SECCIÓN FOTOS PROYECTO ENTREGADO */}
@@ -123,11 +123,12 @@ export const SingleProjectView = () => {
                         </div>
                         <div className="d-flex flex-column gap-2 mt-4">
                             <h3 className="text-white text-center">{t('projects.menuItems.tech')}</h3>
-                            <ul className="list-unstyled d-flex flex-column flex-lg-row gap-lg-5 text-center gap-2">
+                            <ul className="list-unstyled d-flex flex-column flex-lg-row gap-lg-5 text-center justify-content-center gap-2">
                                 {projectData.tech.map((item, index) => (
                                     <li key={index} className="text-white">{item}</li>
                                 ))}
                             </ul>
+                            {projectData.collab ? <p className="text-white text-center mt-4">Proyecto realizado junto al equipo de Colmena Lab</p> : ""}
                         </div>
                     </div>
 
