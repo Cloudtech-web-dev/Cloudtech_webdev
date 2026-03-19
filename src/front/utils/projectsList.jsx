@@ -5,33 +5,17 @@ import CoverLibreras from '../assets/img/ProjectHeaders/librerascover.jpg'
 import CoverAsocove from '../assets/img/ProjectHeaders/asocovecover.jpg'
 import CoverBusquedas from '../assets/img/ProjectHeaders/busquedascover.jpg'
 import CoverMura from '../assets/img/ProjectHeaders/muracover.jpg'
-import { galleryCosmo } from './galleryContent'
-import { galleryFlotilla } from './galleryContent'
-import { galleryFlora } from './galleryContent'
-import { galleryLibreras } from './galleryContent'
-import { galleryAsocove } from './galleryContent'
-import { galleryBusquedas } from './galleryContent'
-import { galleryMura } from './galleryContent'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFirstdraft, faSearchengin } from "@fortawesome/free-brands-svg-icons";
-import { faWandMagic } from "@fortawesome/free-solid-svg-icons";
-import { faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
-import { faHammer } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { faSitemap } from '@fortawesome/free-solid-svg-icons'
-import { faLanguage } from '@fortawesome/free-solid-svg-icons'
-import { faLock } from '@fortawesome/free-solid-svg-icons'
-import { faLeanpub } from '@fortawesome/free-brands-svg-icons/faLeanpub'
-import { faCreditCard } from '@fortawesome/free-solid-svg-icons'
-import { faArrowsSplitUpAndLeft } from '@fortawesome/free-solid-svg-icons'
-import { faCode } from '@fortawesome/free-solid-svg-icons'
-import { faSignsPost } from '@fortawesome/free-solid-svg-icons'
-import { faWix } from '@fortawesome/free-brands-svg-icons'
-import { faMicroscope } from '@fortawesome/free-solid-svg-icons'
-import { faPaintBrush } from '@fortawesome/free-solid-svg-icons'
-import { faRobot } from '@fortawesome/free-solid-svg-icons'
-import { faFingerprint } from '@fortawesome/free-solid-svg-icons'
-import { faFlask } from '@fortawesome/free-solid-svg-icons'
+import { galleryCosmo, galleryFlotilla, galleryFlora, galleryLibreras, galleryAsocove, galleryBusquedas, galleryMura } from './galleryContent'
+import { needsCover } from './needsCoverGallery'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faWandMagicSparkles, faHammer, faUser, faSitemap,
+    faLanguage, faLock, faCreditCard, faArrowsSplitUpAndLeft,
+    faCode, faSignsPost, faMicroscope, faRobot,
+    faFingerprint, faFlask
+} from "@fortawesome/free-solid-svg-icons";
+import { faLeanpub, faWix } from "@fortawesome/free-brands-svg-icons";
+
 
 export const projectsList = [
     {
@@ -41,6 +25,7 @@ export const projectsList = [
         preview: 'projects.projectPreview1',
         summary: 'projects.projectSummary1',
         need: 'projects.projectNeed1',
+        needsArt: needsCover[0],
         process: 'projects.projectProcess1.description',
         phase: [
             {
@@ -101,6 +86,7 @@ export const projectsList = [
         preview: 'projects.projectPreview2',
         summary: 'projects.projectSummary2',
         need: 'projects.projectNeed2',
+        needsArt: needsCover[1],
         process: 'projects.projectProcess2.description',
         phase: [
             {
@@ -154,6 +140,7 @@ export const projectsList = [
         preview: 'projects.projectPreview3',
         summary: 'projects.projectSummary3',
         need: 'projects.projectNeed3',
+        needsArt: needsCover[2],
         process: 'projects.projectProcess3.description',
         phase: [
             {
@@ -207,6 +194,7 @@ export const projectsList = [
         preview: 'projects.projectPreview4',
         summary: 'projects.projectSummary4',
         need: 'projects.projectNeed4',
+        needsArt: needsCover[3],
         process: 'projects.projectProcess4.description',
         phase: [
             {
@@ -259,6 +247,7 @@ export const projectsList = [
         preview: 'projects.projectPreview5',
         summary: 'projects.projectSummary5',
         need: 'projects.projectNeed5',
+        needsArt: needsCover[4],
         process: 'projects.projectProcess5.description',
         phase: [
             {
@@ -312,6 +301,7 @@ export const projectsList = [
         preview: 'projects.projectPreview6',
         summary: 'projects.projectSummary6',
         need: 'projects.projectNeed6',
+        needsArt: needsCover[5],
         process: 'projects.projectProcess6.description',
         phase: [
             {
@@ -364,6 +354,7 @@ export const projectsList = [
         preview: 'projects.projectPreview7',
         summary: 'projects.projectSummary7',
         need: 'projects.projectNeed7',
+        needsArt: needsCover[6],
         process: 'projects.projectProcess7.description',
         phase: [
             {

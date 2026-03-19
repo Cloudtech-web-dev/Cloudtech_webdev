@@ -18,10 +18,37 @@ export const Footer = () => {
 						<img src={logoFooter} alt="clooudTech logo" className="mb-3" />
 						<p className="text-white mb-3 w-75 d-none d-sm-block mb-4">{t('footer.footerSlogan')}</p>
 						<div className="fs-2 d-flex gap-3 text-white justify-content-center justify-content-sm-start">
-							<FontAwesomeIcon icon={faFacebookSquare} />
-							<FontAwesomeIcon icon={faInstagram} />
-							<FontAwesomeIcon icon={faLinkedin} />
-							<FontAwesomeIcon icon={faYoutube} />
+							<a
+								href="https://www.facebook.com/CloudTechEc/"
+								target="_blank"
+								className="link-custom-hover"
+								rel="noopener noreferrer"
+							>
+								<FontAwesomeIcon icon={faFacebookSquare} />
+							</a>
+							<a
+								href="https://www.instagram.com/cloudtechec/"
+								target="_blank"
+								className="link-custom-hover"
+								rel="noopener noreferrer"
+							>
+								<FontAwesomeIcon icon={faInstagram} />
+							</a>
+							<a
+								href="https://www.linkedin.com/company/cloudtech-ec/"
+								target="_blank"
+								className="link-custom-hover"
+								rel="noopener noreferrer"
+							>
+								<FontAwesomeIcon icon={faLinkedin} />
+							</a>
+							{/* <a
+								href="https://www.facebook.com/CloudTechEc/"
+								target="_blank"
+								className="link-custom-hover"
+							>
+								<FontAwesomeIcon icon={faYoutube} />
+							</a> */}
 						</div>
 					</div>
 					<div className="col text-white text-end d-flex flex-column d-none d-sm-flex">

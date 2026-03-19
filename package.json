@@ -67,6 +67,7 @@
 		"react-dom": "^18.2.0",
 		"react-floating-whatsapp": "^5.0.8",
 		"react-i18next": "^15.6.0",
-		"react-router-dom": "^6.18.0"
+		"react-router-dom": "^6.18.0",
+		"swiper": "^12.1.2"
 	}
 }

@@ -1,6 +1,6 @@
 import { teamContent } from "../../utils/teamContent"
 import { Card } from "./Card"
-import teamBg from "../../assets/img/teamBackground.png"
+import teamBg from "../../assets/img/teamBackground.jpg"
 import { useTranslation } from "react-i18next"
 
 export const Team = () => {

@@ -11,7 +11,7 @@ export const Navbar = () => {
 	const offcanvasRef = useRef()
 	const handleLinkClick = () => {
 		const offcanvasElement = offcanvasRef.current;
-        const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
+		const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
 
 		if (offcanvasInstance) {
 			offcanvasInstance.hide();
@@ -54,7 +54,7 @@ export const Navbar = () => {
 			</nav>
 
 			{/* --- NAVBAR MÓVIL (TRIGGER Y OFFCANVAS) --- */}
-			<div className="d-lg-none fixed-top bg-black d-flex justify-content-between align-items-center mx-3 mt-3 p-3 rounded-pill">
+			<div className="d-lg-none fixed-top bg-black d-flex justify-content-between align-items-center mx-3 mt-3 py-3 px-5 rounded-pill">
 				<Link className="navbar-brand" to="/">
 					<img src={LogoNavbar} alt="CloudTech Logo" className="h-auto w-auto" />
 				</Link>
@@ -67,7 +67,7 @@ export const Navbar = () => {
 				>
 					<FontAwesomeIcon icon={faBars} className="fa-icon-yellow" size="xl" />
 				</button>
-				
+
 			</div>
 
 			<div
@@ -105,6 +105,9 @@ export const Navbar = () => {
 							</li>
 							<li className="nav-item">
 								<Link className="nav-link text-white fs-2 fw-medium" to="/projects" onClick={handleLinkClick}>Proyectos</Link>
+							</li>
+							<li className="nav-item d-flex align-items-center gap-3">
+								<span className="text-white fs-2 fw-medium">Idioma</span> <LanguageSwitcher />
 							</li>
 						</ul>
 						<div className="mt-5 w-100 px-4">
