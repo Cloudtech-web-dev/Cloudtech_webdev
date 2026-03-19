@@ -24,7 +24,6 @@ export const Projects = ({ limit = 0 }) => {
                             href={PortfolioPDF}
                             target="_blank"
                             rel="noopener noreferrer"
-                            download="CloudTech-Portfolio.pdf"
                             className="btn btn-outline btn-lg rounded-pill px-4 mx-auto w-lg-auto"
                         >
                             {t('projects.downloadPortfolio')}

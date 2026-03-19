@@ -1,4 +1,12 @@
 {
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "language": "Language"
+  },
   "headers": {
     "headerHome": {
       "headLine": "We shape ideas to create digital universes",
@@ -304,9 +312,10 @@
       "post1": "Frontend Development",
       "post2": "Backend Development",
       "post3": "Fullstack Development",
-      "post4": "Project Manager",
+      "post4": "Project Leader",
       "post5": "UX/UI Design",
-      "post6": "Web Development"
+      "post6": "Web Development",
+      "post7": "Project Manager"
     },
     "downloadPortfolio": "Download our portfolio",
     "collab": "Project carried out alongside the Colmena Lab team. "
