@@ -1,4 +1,12 @@
 {
+  "navbar": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "contact": "Contáctanos",
+    "language": "Idioma"
+  },
   "headers": {
     "headerHome": {
       "headLine": "Moldeamos ideas para crear universos digitales",
@@ -306,7 +314,8 @@
       "post3": "Desarrollo Fullstack",
       "post4": "Líder de proyecto",
       "post5": "Diseño UX/UI",
-      "post6": "Desarrollo Web"
+      "post6": "Desarrollo Web",
+      "post7": "Gestor de proyectos"
     },
     "downloadPortfolio": "Descarga nuestro portafolio",
     "collab": "Proyecto realizado junto al equipo de Colmena Lab."

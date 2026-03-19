@@ -5,8 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
+	const { t } = useTranslation();
 
 	const offcanvasRef = useRef()
 	const handleLinkClick = () => {
@@ -31,22 +33,22 @@ export const Navbar = () => {
 					{/* <div className="d-none d-lg-flex justify-content-end w-100"> */}
 					<ul className="navbar-nav flex-row align-items-center gap-3">
 						<li className="nav-item">
-							<Link className="nav-link text-white" to="/">Inicio</Link>
+							<Link className="nav-link text-white" to="/">{t('navbar.home')}</Link>
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link text-white" to="/about">Nosotros</Link>
+							<Link className="nav-link text-white" to="/about">{t('navbar.about')}</Link>
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link text-white" to="/services">Servicios</Link>
+							<Link className="nav-link text-white" to="/services">{t('navbar.services')}</Link>
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link text-white" to="/projects">Proyectos</Link>
+							<Link className="nav-link text-white" to="/projects">{t('navbar.projects')}</Link>
 						</li>
 						<li className="nav-item">
 							<LanguageSwitcher />
 						</li>
 						<li className="nav-item">
-							<Link className="btn btn-outline-custom-yellow rounded-pill py-2 px-4 fw-medium" to="/contact">Contáctanos</Link>
+							<Link className="btn btn-outline-custom-yellow rounded-pill py-2 px-4 fw-medium" to="/contact">{t('navbar.contact')}</Link>
 						</li>
 					</ul>
 					{/* </div>	 */}
@@ -95,23 +97,23 @@ export const Navbar = () => {
 					<div className="flex-grow-1 d-flex flex-column justify-content-center align-items-center text-center">
 						<ul className="navbar-nav gap-4">
 							<li className="nav-item">
-								<Link className="nav-link text-white fs-2 fw-medium" to="/" onClick={handleLinkClick}>Inicio</Link>
+								<Link className="nav-link text-white fs-2 fw-medium" to="/" onClick={handleLinkClick}>{t('navbar.home')}</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link text-white fs-2 fw-medium" to="/about" onClick={handleLinkClick}>Nosotros</Link>
+								<Link className="nav-link text-white fs-2 fw-medium" to="/about" onClick={handleLinkClick}>{t('navbar.about')}</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link text-white fs-2 fw-medium" to="/services" onClick={handleLinkClick}>Servicios</Link>
+								<Link className="nav-link text-white fs-2 fw-medium" to="/services" onClick={handleLinkClick}>{t('navbar.services')}</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link text-white fs-2 fw-medium" to="/projects" onClick={handleLinkClick}>Proyectos</Link>
+								<Link className="nav-link text-white fs-2 fw-medium" to="/projects" onClick={handleLinkClick}>{t('navbar.projects')}</Link>
 							</li>
 							<li className="nav-item d-flex align-items-center gap-3">
-								<span className="text-white fs-2 fw-medium">Idioma</span> <LanguageSwitcher />
+								<span className="text-white fs-2 fw-medium">{t('navbar.language')}</span> <LanguageSwitcher />
 							</li>
 						</ul>
 						<div className="mt-5 w-100 px-4">
-							<Link className="btn btn-outline-custom-yellow rounded-pill w-100 py-2 fs-5 fw-bold" to="/contact" onClick={handleLinkClick}>Contáctanos</Link>
+							<Link className="btn btn-outline-custom-yellow rounded-pill w-100 py-2 fs-5 fw-bold" to="/contact" onClick={handleLinkClick}>{t('navbar.contact')}</Link>
 						</div>
 					</div>
 				</div>
