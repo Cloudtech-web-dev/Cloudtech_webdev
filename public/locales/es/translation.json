@@ -25,7 +25,13 @@
     }
   },
   "footer": {
-    "footerSlogan": "Moldeamos ideas para crear universos digitales."
+    "footerSlogan": "Moldeamos ideas para crear universos digitales.",
+    "sections": {
+      "about": "Nosotros",
+      "services": "Servicios",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    }
   },
   "about": {
     "sectionTitle": "¿Quiénes somos?",
@@ -302,6 +308,7 @@
       "post5": "Diseño UX/UI",
       "post6": "Desarrollo Web"
     },
+    "downloadPortfolio": "Descarga nuestro portafolio",
     "collab": "Proyecto realizado junto al equipo de Colmena Lab."
   },
   "testimonials": {

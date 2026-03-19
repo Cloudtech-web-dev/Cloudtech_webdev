@@ -60,7 +60,7 @@ export const Process = () => {
                         </div>
                     </div>
 
-                    <div className="row">
+                    <div className="row d-flex justify-content-center">
                         {activeSection === 'capacidades' ? (
                             <>
                                 <div className="col-12 col-sm-6 pe-md-3">

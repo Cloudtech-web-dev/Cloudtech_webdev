@@ -2,7 +2,7 @@ import client1 from "../assets/img/Testimonials/clientprofile1.jpg"
 import company1 from "../assets/img/Testimonials/companylogo1.png"
 import client2 from "../assets/img/Testimonials/clientProfile2.png"
 import company2 from "../assets/img/Testimonials/companylogo2.png"
-import client3 from "../assets/img/Testimonials/clientProfile3.png"
+import client3 from "../assets/img/Testimonials/clientProfile3.webp"
 import company3 from "../assets/img/Testimonials/companylogo3.png"
 
 export const testimonialsContent = [

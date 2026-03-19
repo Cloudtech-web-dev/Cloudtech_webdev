@@ -48,7 +48,9 @@ export const Admin = () => {
                     <ul className="nav flex-column">
                         <li><hr class="dropdown-divider" /></li>
                         <li className="nav-item">
-                            <Link to={""}
+                            <Link
+                                to={""}
+                                rel="noopener noreferrer"
                                 className={`adminOption fs-5 ms-4 ${activeContent === 'leads' ? 'fw-bold' : ''}`}
                                 onClick={(e) => {
                                     e.preventDefault();
@@ -62,6 +64,7 @@ export const Admin = () => {
                     <div className="mt-auto mb-4">
                         <Link
                             to='/'
+                            rel="noopener noreferrer"
                             onClick={handleLogout}
                             className="text-decoration-none text-white fs-5 d-block text-center">
                             Cerrar sesión

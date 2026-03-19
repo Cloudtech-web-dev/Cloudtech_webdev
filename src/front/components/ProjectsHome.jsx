@@ -16,7 +16,7 @@ export const ProjectsHome = () => {
 
                 {/* Projects */}
                 <div className="d-flex justify-content-center my-5">
-                    <img src={ProjectsPreview} alt="Vista previa de proyectos de CloudTech" />
+                    <img src={ProjectsPreview} alt="Vista previa de proyectos de CloudTech" className="img-fluid" />
                 </div>
 
                 <div className="d-flex justify-content-center">
