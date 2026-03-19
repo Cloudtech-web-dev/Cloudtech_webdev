@@ -234,8 +234,8 @@ export const projectsList = [
         gallery: galleryLibreras,
         credits: [
             {
-                name: 'David Pinto',
-                position: 'projects.credits.post6'
+                name: 'Gabriel Pinto',
+                position: 'projects.credits.post4'
             },
             {
                 name: 'José Miguel Pinto',
@@ -287,7 +287,7 @@ export const projectsList = [
         credits: [
             {
                 name: 'David Pinto',
-                position: 'projects.credits.post6'
+                position: 'projects.credits.post4'
             },
             {
                 name: 'José Miguel Pinto',
@@ -298,7 +298,7 @@ export const projectsList = [
                 position: 'projects.credits.post6'
             },
             {
-                name: 'David Pinto',
+                name: 'Santiago Montoya',
                 position: 'projects.credits.post5'
             },
         ],
@@ -339,8 +339,8 @@ export const projectsList = [
         gallery: galleryBusquedas,
         credits: [
             {
-                name: 'David Pinto',
-                position: 'projects.credits.post6'
+                name: 'Gabriel Pinto',
+                position: 'projects.credits.post4'
             },
             {
                 name: 'José Miguel Pinto',
@@ -391,8 +391,8 @@ export const projectsList = [
         gallery: galleryMura,
         credits: [
             {
-                name: 'David Pinto',
-                position: 'projects.credits.post6'
+                name: 'Gabriel Pinto',
+                position: 'projects.credits.post4'
             },
             {
                 name: 'José Miguel Pinto',

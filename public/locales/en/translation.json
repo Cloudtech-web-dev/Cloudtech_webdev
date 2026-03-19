@@ -25,7 +25,13 @@
     }
   },
   "footer": {
-    "footerSlogan": "We Mold Ideas to Create Digital Universes"
+    "footerSlogan": "We Mold Ideas to Create Digital Universes",
+    "sections": {
+      "about": "About",
+      "services": "Services",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
   },
   "about": {
     "sectionTitle": "Who We Are",
