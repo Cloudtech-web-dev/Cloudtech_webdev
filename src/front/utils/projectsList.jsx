@@ -5,32 +5,17 @@ import CoverLibreras from '../assets/img/ProjectHeaders/librerascover.jpg'
 import CoverAsocove from '../assets/img/ProjectHeaders/asocovecover.jpg'
 import CoverBusquedas from '../assets/img/ProjectHeaders/busquedascover.jpg'
 import CoverMura from '../assets/img/ProjectHeaders/muracover.jpg'
-import { galleryCosmo } from './galleryContent'
-import { galleryFlotilla } from './galleryContent'
-import { galleryFlora } from './galleryContent'
-import { galleryLibreras } from './galleryContent'
-import { galleryAsocove } from './galleryContent'
-import { galleryBusquedas } from './galleryContent'
-import { galleryMura } from './galleryContent'
+import { galleryCosmo, galleryFlotilla, galleryFlora, galleryLibreras, galleryAsocove, galleryBusquedas, galleryMura } from './galleryContent'
 import { needsCover } from './needsCoverGallery'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
-import { faHammer } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { faSitemap } from '@fortawesome/free-solid-svg-icons'
-import { faLanguage } from '@fortawesome/free-solid-svg-icons'
-import { faLock } from '@fortawesome/free-solid-svg-icons'
-import { faLeanpub } from '@fortawesome/free-brands-svg-icons/faLeanpub'
-import { faCreditCard } from '@fortawesome/free-solid-svg-icons'
-import { faArrowsSplitUpAndLeft } from '@fortawesome/free-solid-svg-icons'
-import { faCode } from '@fortawesome/free-solid-svg-icons'
-import { faSignsPost } from '@fortawesome/free-solid-svg-icons'
-import { faWix } from '@fortawesome/free-brands-svg-icons'
-import { faMicroscope } from '@fortawesome/free-solid-svg-icons'
-import { faPaintBrush } from '@fortawesome/free-solid-svg-icons'
-import { faRobot } from '@fortawesome/free-solid-svg-icons'
-import { faFingerprint } from '@fortawesome/free-solid-svg-icons'
-import { faFlask } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faWandMagicSparkles, faHammer, faUser, faSitemap,
+    faLanguage, faLock, faCreditCard, faArrowsSplitUpAndLeft,
+    faCode, faSignsPost, faMicroscope, faRobot,
+    faFingerprint, faFlask
+} from "@fortawesome/free-solid-svg-icons";
+import { faLeanpub, faWix } from "@fortawesome/free-brands-svg-icons";
+
 
 export const projectsList = [
     {

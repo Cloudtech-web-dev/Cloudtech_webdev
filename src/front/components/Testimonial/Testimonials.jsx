@@ -43,8 +43,6 @@ export const Testimonials = () => {
                         </SwiperSlide>
                     )}
                 </Swiper>
-
-
             </div>
         </section>
     )

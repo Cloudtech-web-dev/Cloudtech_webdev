@@ -1,6 +1,6 @@
 import { Card } from "./Card"
 import { servicesContent } from "../../utils/servicesContent"
-import serviceBg from "../../assets/img/servicesBackground.png"
+import serviceBg from "../../assets/img/servicesBackground.jpg"
 import { useTranslation } from "react-i18next"
 
 export const Services = () => {
