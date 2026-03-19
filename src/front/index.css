@@ -159,6 +159,21 @@ h6 {
   opacity: 1;
 }
 
+/* Swiper para otros proyectos */
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fbff06 !important;
+  /* Tu color amarillo */
+  transform: scale(0.7);
+  /* Para que no sean gigantes */
+}
+
+/* Evitar que las cards se peguen a los bordes al navegar */
+.swiper {
+  padding: 0 40px 0px 40px !important;
+}
+
 /* Services cards, components & background */
 
 .bg-credits {

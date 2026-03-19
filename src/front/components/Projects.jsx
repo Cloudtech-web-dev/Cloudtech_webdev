@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import { Card } from "./Projects/Card";
 import { ProjectCTA } from "../components/ProjectSingle/ProjectCTA";
 import { projectsList } from "../utils/projectsList";
@@ -34,12 +33,6 @@ export const Projects = ({ limit = 0 }) => {
                             index={index}
                         />
                     ))}
-                </div>
-
-                <div className="d-flex justify-content-center">
-                    <Link to={"/projects"} className="btn btn-outline btn-lg rounded-pill px-4 mx-auto w-lg-auto">
-                        {t('projects.sectionPortfolioButton')}
-                    </Link>
                 </div>
             </div>
 

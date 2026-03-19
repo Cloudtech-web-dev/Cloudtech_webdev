@@ -69,7 +69,7 @@ export const SingleProjectView = () => {
                         <h2 className="fs-4 section-title">{t('projects.menuItems.itemOne')}</h2>
                         <p className="text-white text-lg-start text-center ct-psummary">{t(projectData.need)}</p>
                     </div>
-                    <img src={AnalysisArt} className="mt-5 rounded-4" alt="proceso analisis de necesidad CloudTech" />
+                    <img src={projectData.needsArt} className="mt-5 rounded-4 img-fluid" alt="proceso analisis de necesidad CloudTech" />
                 </div>
 
                 {/* SECCIÓN PROCESO */}
