@@ -20,7 +20,7 @@ export const teamContent = [
         catImage: cat1,
         mailLink: 'dpinto@cloudtech.com.ec',
         linkedinLink: 'https://www.linkedin.com/in/davidpinto6/',
-        githubLink: ''
+
     },
     {
         id: 1,
@@ -53,7 +53,7 @@ export const teamContent = [
         catImage: cat4,
         mailLink: 'alfredo.gabriel2000@gmail.com',
         linkedinLink: 'http://www.linkedin.com/in/gabrielpinto-95033a2b7',
-        githubLink: ''
+
     },
     {
         id: 4,

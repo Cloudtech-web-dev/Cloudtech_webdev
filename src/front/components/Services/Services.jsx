@@ -44,8 +44,8 @@ export const Services = () => {
 
                 {sections.map(section => (
                     <div className="row my-3" key={section.id}>
-                        <h3 className="section-title mb-0">{section.title}</h3>
-                        <h5 className="text-white mb-4 fw-normal fst-italic">{section.subtitle}</h5>
+                        <h3 className="section-title mb-0 text-center text-md-start">{section.title}</h3>
+                        <h5 className="text-white mb-4 fw-normal fst-italic text-center text-md-start">{section.subtitle}</h5>
                         {groupedServices[section.id] && groupedServices[section.id].map(service => (
                             <div key={service.title} className="col-md-6 col-lg-4 col-xl-3 mb-4">
                                 <Card

@@ -1,6 +1,11 @@
 import { Card } from "./Card";
 import { testimonialsContent } from "../../utils/testimonialsContent";
 import { useTranslation } from "react-i18next";
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Autoplay } from "swiper/modules"
+
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 export const Testimonials = () => {
     const { t } = useTranslation();
@@ -11,34 +16,35 @@ export const Testimonials = () => {
                 <div className="d-flex flex-column text-center justify-content-center">
                     <h2 className="section-title">{t('testimonials.sectionTitle')}</h2>
                 </div>
-                <div className="row">
-                    <div className="col">
-                        <div id="testimonialsCarousel" className="carousel slide">
-                            <div className="carousel-inner">
-                                {testimonialsContent.map((card, index) =>
-                                    <div key={card.id}
-                                        className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-                                        <Card
-                                            name={card.name}
-                                            position={t(card.position)}
-                                            review={t(card.review)}
-                                            profilePicture={card.profilePicture}
-                                            logo={card.logo}
-                                        />
-                                    </div>
-                                )}
+
+                <Swiper
+                    modules={[Navigation, Autoplay]}
+                    spaceBetween={30}
+                    slidesPerView={1}
+                    navigation
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false
+                    }}
+
+                    className="my-5 testimonial-swiper"
+                >
+                    {testimonialsContent.map(card =>
+                        <SwiperSlide key={card.id}>
+                            <div className="h-100">
+                                <Card
+                                    name={card.name}
+                                    position={t(card.position)}
+                                    review={t(card.review)}
+                                    profilePicture={card.profilePicture}
+                                    logo={card.logo}
+                                />
                             </div>
-                            <button className="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
-                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Previous</span>
-                            </button>
-                            <button className="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
-                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                        </SwiperSlide>
+                    )}
+                </Swiper>
+
+
             </div>
         </section>
     )

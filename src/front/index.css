@@ -169,10 +169,38 @@ h6 {
   /* Para que no sean gigantes */
 }
 
-/* Evitar que las cards se peguen a los bordes al navegar */
 .swiper {
   padding: 0 40px 0px 40px !important;
 }
+
+/* Swiper para testimonials */
+
+.testimonial-swiper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px !important;
+}
+
+@media (min-width: 768px) {
+  .testimonial-swiper .swiper-button-next {
+    right: 20px !important;
+  }
+
+  .testimonial-swiper .swiper-button-prev {
+    left: 20px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .testimonial-swiper .swiper-button-next {
+    right: 150px !important;
+  }
+
+  .testimonial-swiper .swiper-button-prev {
+    left: 150px !important;
+  }
+}
+
 
 /* Services cards, components & background */
 

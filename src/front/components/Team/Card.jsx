@@ -21,7 +21,10 @@ export const Card = ({ name, position, description, image, catImage, mailLink, l
                 <div className="d-flex justify-content-center fs-1 gap-3">
                     <a href={`mailto:${mailLink}`} className="text-white"><FontAwesomeIcon icon={faEnvelope} /></a>
                     <a href={linkedinLink} target="_blank" className="text-white"><FontAwesomeIcon icon={faLinkedin} /></a>
-                    <a href={githubLink} target="_blank" className="text-white"><FontAwesomeIcon icon={faGithubSquare} /> </a>
+                    {githubLink ?
+                        <a href={githubLink} target="_blank" className="text-white"><FontAwesomeIcon icon={faGithubSquare} /> </a> : ""
+                    }
+
                 </div>
             </div>
         </div>
