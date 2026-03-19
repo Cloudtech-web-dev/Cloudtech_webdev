@@ -129,7 +129,7 @@ export const SingleProjectView = () => {
                                     <li key={index} className="text-white">{item}</li>
                                 ))}
                             </ul>
-                            {projectData.collab ? <p className="text-white text-center mt-4"><a className="text-decoration-none text-white" href="https://www.colmenalab.com/" target="_blank">{t(projectData.collab)}</a></p> : ""}
+                            {projectData.collab ? <p className="text-white text-center mt-4"><a className="text-decoration-none text-white" href="https://www.colmenalab.com/" rel="noopener noreferrer" target="_blank">{t(projectData.collab)}</a></p> : ""}
                         </div>
                     </div>
 

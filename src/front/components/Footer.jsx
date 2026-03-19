@@ -22,6 +22,7 @@ export const Footer = () => {
 								href="https://www.facebook.com/CloudTechEc/"
 								target="_blank"
 								className="link-custom-hover"
+								rel="noopener noreferrer"
 							>
 								<FontAwesomeIcon icon={faFacebookSquare} />
 							</a>
@@ -29,6 +30,7 @@ export const Footer = () => {
 								href="https://www.instagram.com/cloudtechec/"
 								target="_blank"
 								className="link-custom-hover"
+								rel="noopener noreferrer"
 							>
 								<FontAwesomeIcon icon={faInstagram} />
 							</a>
@@ -36,6 +38,7 @@ export const Footer = () => {
 								href="https://www.linkedin.com/company/cloudtech-ec/"
 								target="_blank"
 								className="link-custom-hover"
+								rel="noopener noreferrer"
 							>
 								<FontAwesomeIcon icon={faLinkedin} />
 							</a>
