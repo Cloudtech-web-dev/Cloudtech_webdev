@@ -25,7 +25,13 @@
     }
   },
   "footer": {
-    "footerSlogan": "Moldeamos ideas para crear universos digitales."
+    "footerSlogan": "Moldeamos ideas para crear universos digitales.",
+    "sections": {
+      "about": "Nosotros",
+      "services": "Servicios",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    }
   },
   "about": {
     "sectionTitle": "¿Quiénes somos?",

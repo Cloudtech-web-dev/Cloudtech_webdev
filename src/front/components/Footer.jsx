@@ -26,10 +26,10 @@ export const Footer = () => {
 					</div>
 					<div className="col text-white text-end d-flex flex-column d-none d-sm-flex">
 						<Link to={"/"} className="footerLink fs-5 fw-bold">CloudTech</Link>
-						<Link to={"/about"} className="footerLink fs-5">Nosotros</Link>
-						<Link to={"/services"} className="footerLink fs-5">Servicios</Link>
-						<Link to={"/projects"} className="footerLink fs-5">Proyectos</Link>
-						<Link to={"/contact"} className="footerLink fs-5">Contacto</Link>
+						<Link to={"/about"} className="footerLink fs-5">{t('footer.sections.about')}</Link>
+						<Link to={"/services"} className="footerLink fs-5">{t('footer.sections.services')}</Link>
+						<Link to={"/projects"} className="footerLink fs-5">{t('footer.sections.projects')}</Link>
+						<Link to={"/contact"} className="footerLink fs-5">{t('footer.sections.contact')}</Link>
 
 					</div>
 				</div>
