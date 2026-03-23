@@ -1,23 +1,26 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import LogoNavbar from "../assets/img/LogoNavbar.svg";
 import LogoNavMovil from "../assets/img/LogoNavMovil.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import LanguageSwitcher from "./LanguageSwitcher";
-import { useRef } from "react";
+
 import { useTranslation } from "react-i18next";
+
 
 export const Navbar = () => {
 	const { t } = useTranslation();
+	const [isOpen, setIsOpen] = useState(false);
 
-	const offcanvasRef = useRef()
-	const handleLinkClick = () => {
-		const offcanvasElement = offcanvasRef.current;
-		const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
+	const toggleMenu = () => {
+		setIsOpen(!isOpen);
+		document.body.style.overflow = !isOpen ? 'hidden' : 'auto';
+	};
 
-		if (offcanvasInstance) {
-			offcanvasInstance.hide();
-		};
+	const closeMenu = () => {
+		setIsOpen(false);
+		document.body.style.overflow = 'auto';
 	};
 
 	return (
@@ -55,69 +58,58 @@ export const Navbar = () => {
 				</div>
 			</nav>
 
-			{/* --- NAVBAR MÓVIL (TRIGGER Y OFFCANVAS) --- */}
+			{/* --- NAVBAR MÓVIL (TRIGGER) --- */}
 			<div className="d-lg-none fixed-top bg-black d-flex justify-content-between align-items-center mx-3 mt-3 py-3 px-5 rounded-pill">
-				<Link className="navbar-brand" to="/">
+				<Link className="navbar-brand" to="/" onClick={closeMenu}>
 					<img src={LogoNavbar} alt="CloudTech Logo" className="h-auto w-auto" />
 				</Link>
 				<button
 					className="navbar-toggler"
 					type="button"
-					data-bs-toggle="offcanvas"
-					data-bs-target="#mobileMenuOffcanvas"
-					aria-controls="mobileMenuOffcanvas"
+					onClick={toggleMenu}
 				>
 					<FontAwesomeIcon icon={faBars} className="fa-icon-yellow" size="xl" />
 				</button>
 
 			</div>
 
-			<div
-				ref={offcanvasRef}
-				className="offcanvas offcanvas-start custom-mobile-menu vh-100 vw-100"
-				tabIndex="-1"
-				id="mobileMenuOffcanvas"
-				aria-labelledby="mobileMenuOffcanvasLabel"
-			>
-				<div className="offcanvas-body d-flex flex-column">
-					<div className="bg-custom-mobile-header d-flex justify-content-between align-items-center mx-3 my-4 p-3 rounded-pill">
-						<h5 className="offcanvas-title mb-0" id="mobileMenuOffcanvasLabel">
-							<img src={LogoNavMovil} alt="CloudTech Logo Movil" className="h-auto w-auto" />
-						</h5>
-						<button
-							type="button"
-							className="btn"
-							onClick={handleLinkClick}
-							aria-label="Close"
-						>
-							<FontAwesomeIcon icon={faXmark} className="text-white" size="xl" />
-						</button>
-					</div>
 
-					<div className="flex-grow-1 d-flex flex-column justify-content-center align-items-center text-center">
-						<ul className="navbar-nav gap-4">
-							<li className="nav-item">
-								<Link className="nav-link text-white fs-2 fw-medium" to="/" onClick={handleLinkClick}>{t('navbar.home')}</Link>
-							</li>
-							<li className="nav-item">
-								<Link className="nav-link text-white fs-2 fw-medium" to="/about" onClick={handleLinkClick}>{t('navbar.about')}</Link>
-							</li>
-							<li className="nav-item">
-								<Link className="nav-link text-white fs-2 fw-medium" to="/services" onClick={handleLinkClick}>{t('navbar.services')}</Link>
-							</li>
-							<li className="nav-item">
-								<Link className="nav-link text-white fs-2 fw-medium" to="/projects" onClick={handleLinkClick}>{t('navbar.projects')}</Link>
-							</li>
-							<li className="nav-item d-flex align-items-center gap-3">
-								<span className="text-white fs-2 fw-medium">{t('navbar.language')}</span> <LanguageSwitcher />
-							</li>
-						</ul>
-						<div className="mt-5 w-100 px-4">
-							<Link className="btn btn-outline-custom-yellow rounded-pill w-100 py-2 fs-5 fw-bold" to="/contact" onClick={handleLinkClick}>{t('navbar.contact')}</Link>
-						</div>
+			<div className={`custom-menu-overlay ${isOpen ? 'active' : ''}`}>
+				<div className="d-flex justify-content-between align-items-center border border-2 border-white mx-3 my-4 p-3 rounded-pill">
+					<img src={LogoNavMovil} alt="CloudTech Logo Movil" className="h-auto w-auto" />
+					<button
+						type="button"
+						className="btn"
+						onClick={toggleMenu}
+					>
+						<FontAwesomeIcon icon={faXmark} className="text-white" size="xl" />
+					</button>
+				</div>
+
+				<div className="flex-grow-1 d-flex flex-column justify-content-center align-items-center text-center">
+					<ul className="navbar-nav gap-4">
+						<li className="nav-item">
+							<Link className="nav-link text-white fs-2 fw-medium" to="/" onClick={closeMenu}>{t('navbar.home')}</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link text-white fs-2 fw-medium" to="/about" onClick={closeMenu}>{t('navbar.about')}</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link text-white fs-2 fw-medium" to="/services" onClick={closeMenu}>{t('navbar.services')}</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link text-white fs-2 fw-medium" to="/projects" onClick={closeMenu}>{t('navbar.projects')}</Link>
+						</li>
+						<li className="nav-item d-flex align-items-center gap-3">
+							<span className="text-white fs-2 fw-medium">{t('navbar.language')}</span> <LanguageSwitcher />
+						</li>
+					</ul>
+					<div className="mt-5 w-100 px-4">
+						<Link className="btn btn-outline-custom-yellow rounded-pill w-100 py-2 fs-5 fw-bold" to="/contact" onClick={closeMenu}>{t('navbar.contact')}</Link>
 					</div>
 				</div>
 			</div>
+
 		</>
 	);
 };

@@ -9,10 +9,13 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: "es",
+    //lng: "es",
     fallbackLng: "en",
     debug: false,
-
+    detection: {
+      order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
+      caches: ['localStorage', 'cookie']
+    },
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },

@@ -586,3 +586,31 @@ h6 {
 .login-logo {
   min-width: 200px;
 }
+
+/* Offcanvas mobile menu */
+
+.custom-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  /* Escondido a la izquierda */
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#60E0A5, #165766);
+
+  /* O el color de tu diseño */
+  z-index: 2000;
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cuando el estado es 'active' en React */
+.custom-menu-overlay.active {
+  left: 0;
+}
+
+/* Aseguramos que nada de Bootstrap interfiera con nuestro nuevo botón */
+.offcanvas-backdrop {
+  display: none !important;
+}
