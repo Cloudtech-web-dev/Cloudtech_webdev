@@ -592,7 +592,7 @@ h6 {
 .custom-menu-overlay {
   position: fixed;
   top: 0;
-  left: -100%;
+  left: -200%;
   /* Escondido a la izquierda */
   width: 100vw;
   height: 100vh;
