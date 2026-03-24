@@ -7,33 +7,36 @@ import { StoreProvider } from './hooks/useGlobalReducer';  // Import the StorePr
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './i18n';
+import { HelmetProvider } from 'react-helmet-async';
 
 const Main = () => {
 
     return (
         <React.StrictMode>
-            <Suspense
-                fallback={
-                    <div className='d-flex justify-content-center align-items-center' style={{ width: "100vh", height: "100vh" }}>
-                        <div>
-                            <div class="spinner-grow text-warning" role="status">
-                                <span class="visually-hidden"></span>
+            <HelmetProvider>
+                <Suspense
+                    fallback={
+                        <div className='d-flex justify-content-center align-items-center' style={{ width: "100vh", height: "100vh" }}>
+                            <div>
+                                <div class="spinner-grow text-warning" role="status">
+                                    <span class="visually-hidden"></span>
+                                </div>
+                                <div class="spinner-grow text-success" role="status">
+                                    <span class="visually-hidden"></span>
+                                </div>
+                                <div class="spinner-grow text-light" role="status">
+                                    <span class="visually-hidden"></span>
+                                </div>
                             </div>
-                            <div class="spinner-grow text-success" role="status">
-                                <span class="visually-hidden"></span>
-                            </div>
-                            <div class="spinner-grow text-light" role="status">
-                                <span class="visually-hidden"></span>
-                            </div>
-                        </div>
-                    </div>}>
-                {/* Provide global state to all components */}
-                <StoreProvider>
-                    {/* Set up routing for the application */}
-                    <RouterProvider router={router}>
-                    </RouterProvider>
-                </StoreProvider>
-            </Suspense>
+                        </div>}>
+                    {/* Provide global state to all components */}
+                    <StoreProvider>
+                        {/* Set up routing for the application */}
+                        <RouterProvider router={router}>
+                        </RouterProvider>
+                    </StoreProvider>
+                </Suspense>
+            </HelmetProvider>
         </React.StrictMode>
     );
 }

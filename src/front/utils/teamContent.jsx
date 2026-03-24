@@ -1,6 +1,6 @@
 import devProfile1 from '../assets/img/Team/teammember1.jpg'
 import devProfile2 from '../assets/img/Team/teammember2.jpg'
-import devProfile3 from '../assets/img/Team/teammember3.png'
+import devProfile3 from '../assets/img/Team/teammember3.jpg'
 import devProfile4 from '../assets/img/Team/teammember4.jpg'
 import devProfile5 from '../assets/img/Team/teammember5.jpg'
 import cat1 from '../assets/img/Team/cat1.jpg'
