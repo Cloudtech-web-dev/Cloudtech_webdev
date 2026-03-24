@@ -1,29 +1,29 @@
-import React, { useEffect } from "react"
-import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import { Services } from "../components/Services/Services.jsx";
 import { Process } from "../components/Process.jsx";
-import { Projects } from "../components/Projects.jsx";
 import { Testimonials } from "../components/Testimonial/Testimonials.jsx";
 import { HeaderHome } from "../components/HeaderHome.jsx";
 import { Benefits } from "../components/Benefits/Benefits.jsx";
 import { WorkWithUS } from "../components/WorkWithUs.jsx";
 import { ProjectsHome } from "../components/ProjectsHome.jsx";
-
+import { SEO } from "../utils/SEO.jsx";
 
 export const Home = () => {
-
-	const { store, dispatch } = useGlobalReducer()
-
 	return (
 		<>
-			<HeaderHome />
-			<Services />
-			<Process />
-			<ProjectsHome />
-			<Testimonials />
-			<Benefits />
-			<WorkWithUS />
-
+			<SEO
+				title="Desarrollo Web y Comunicación Estratégica"
+				description="Transformamos tu presencia digital con diseño web de alto impacto y comunicación estratégica. Conoce nuestro portafolio y por qué nuestros clientes nos recomiendan."
+				url={window.location.href}
+			/>
+			<main>
+				<HeaderHome />
+				<Services />
+				<Process />
+				<ProjectsHome />
+				<Testimonials />
+				<Benefits />
+				<WorkWithUS />
+			</main>
 		</>
 	);
 }; 
