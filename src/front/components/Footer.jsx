@@ -23,6 +23,7 @@ export const Footer = () => {
 								target="_blank"
 								className="link-custom-hover"
 								rel="noopener noreferrer"
+								aria-label="Visitar nuestra página de Facebook"
 							>
 								<FontAwesomeIcon icon={faFacebookSquare} />
 							</a>
@@ -31,6 +32,7 @@ export const Footer = () => {
 								target="_blank"
 								className="link-custom-hover"
 								rel="noopener noreferrer"
+								aria-label="Síguenos en Instagram"
 							>
 								<FontAwesomeIcon icon={faInstagram} />
 							</a>
@@ -39,6 +41,7 @@ export const Footer = () => {
 								target="_blank"
 								className="link-custom-hover"
 								rel="noopener noreferrer"
+								aria-label="Conócenos en LinkedIn"
 							>
 								<FontAwesomeIcon icon={faLinkedin} />
 							</a>
