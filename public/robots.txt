@@ -1,0 +1,6 @@
+# CloudTech Robots.txt
+User-agent: *
+Allow: /
+
+# Indica dónde está tu sitemap para que los buscadores lo encuentren rápido
+Sitemap: https://cloudtech.com.ec/sitemap.xml

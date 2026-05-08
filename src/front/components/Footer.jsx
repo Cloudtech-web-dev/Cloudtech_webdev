@@ -16,13 +16,15 @@ export const Footer = () => {
 				<div className="row">
 					<div className="col text-center text-sm-start">
 						<img src={logoFooter} alt="clooudTech logo" className="mb-3" />
-						<p className="text-white mb-3 w-75 d-none d-sm-block mb-4">{t('footer.footerSlogan')}</p>
+						<p className="text-white w-75 d-none d-sm-block">{t('footer.footerSlogan')}</p>
+						<p className="text-white fw-bold">dev@cloudtech.com.ec</p>
 						<div className="fs-2 d-flex gap-3 text-white justify-content-center justify-content-sm-start">
 							<a
 								href="https://www.facebook.com/CloudTechEc/"
 								target="_blank"
 								className="link-custom-hover"
 								rel="noopener noreferrer"
+								aria-label="Visitar nuestra página de Facebook"
 							>
 								<FontAwesomeIcon icon={faFacebookSquare} />
 							</a>
@@ -31,6 +33,7 @@ export const Footer = () => {
 								target="_blank"
 								className="link-custom-hover"
 								rel="noopener noreferrer"
+								aria-label="Síguenos en Instagram"
 							>
 								<FontAwesomeIcon icon={faInstagram} />
 							</a>
@@ -39,6 +42,7 @@ export const Footer = () => {
 								target="_blank"
 								className="link-custom-hover"
 								rel="noopener noreferrer"
+								aria-label="Conócenos en LinkedIn"
 							>
 								<FontAwesomeIcon icon={faLinkedin} />
 							</a>

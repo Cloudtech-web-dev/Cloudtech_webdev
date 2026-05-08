@@ -67,6 +67,7 @@ export const Navbar = () => {
 					className="navbar-toggler"
 					type="button"
 					onClick={toggleMenu}
+					aria-label="Abrir menú de navegación"
 				>
 					<FontAwesomeIcon icon={faBars} className="fa-icon-yellow" size="xl" />
 				</button>
@@ -81,6 +82,7 @@ export const Navbar = () => {
 						type="button"
 						className="btn"
 						onClick={toggleMenu}
+						aria-label="Cerrar menú"
 					>
 						<FontAwesomeIcon icon={faXmark} className="text-white" size="xl" />
 					</button>

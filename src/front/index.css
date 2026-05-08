@@ -609,8 +609,3 @@ h6 {
 .custom-menu-overlay.active {
   left: 0;
 }
-
-/* Aseguramos que nada de Bootstrap interfiera con nuestro nuevo botón */
-.offcanvas-backdrop {
-  display: none !important;
-}
