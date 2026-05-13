@@ -79,114 +79,114 @@ export const projectsList = [
         ],
         tech: ['Figma', 'React', 'Javascript', 'Tailwind', 'FastAPI', 'Python', 'PostgreSQL']
     },
-    {
-        id: 'flora-nueva',
-        cover: CoverFlora,
-        name: 'projects.projectName2',
-        preview: 'projects.projectPreview2',
-        summary: 'projects.projectSummary2',
-        need: 'projects.projectNeed2',
-        needsArt: needsCover[1],
-        process: 'projects.projectProcess2.description',
-        phase: [
-            {
-                icon: <FontAwesomeIcon icon={faLeanpub} size="5x" />,
-                title: 'projects.projectProcess2.phase1Title',
-                description: 'projects.projectProcess2.phase1'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faSitemap} size="5x" />,
-                title: 'projects.projectProcess2.phase2Title',
-                description: 'projects.projectProcess2.phase2'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
-                title: 'projects.projectProcess2.phase3Title',
-                description: 'projects.projectProcess2.phase3'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faHammer} size="5x" />,
-                title: 'projects.projectProcess2.phase4Title',
-                description: 'projects.projectProcess2.phase4'
-            }
-        ],
-        solution: 'projects.projectSolution2',
-        gallery: galleryFlora,
-        credits: [
-            {
-                name: 'David Pinto',
-                position: 'projects.credits.post4'
-            },
-            {
-                name: 'José Miguel Pinto',
-                position: 'projects.credits.post6'
-            },
-            {
-                name: 'Santiago Montoya',
-                position: 'projects.credits.post6'
-            },
-            {
-                name: 'Santiago Montoya',
-                position: 'projects.credits.post5'
-            },
-        ],
-        tech: ['Figma', 'Wordpress', 'Elementor', 'Woocommerce', 'CSS', 'Forminator', 'Yoast SEO'],
-        collab: 'projects.collab'
-    },
-    {
-        id: 'flotilla-amazonica',
-        cover: CoverFlotilla,
-        name: 'projects.projectName3',
-        preview: 'projects.projectPreview3',
-        summary: 'projects.projectSummary3',
-        need: 'projects.projectNeed3',
-        needsArt: needsCover[2],
-        process: 'projects.projectProcess3.description',
-        phase: [
-            {
-                icon: <FontAwesomeIcon icon={faLanguage} size="5x" />,
-                title: 'projects.projectProcess3.phase1Title',
-                description: 'projects.projectProcess3.phase1'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faLock} size="5x" />,
-                title: 'projects.projectProcess3.phase2Title',
-                description: 'projects.projectProcess3.phase2'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
-                title: 'projects.projectProcess3.phase3Title',
-                description: 'projects.projectProcess3.phase3'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faHammer} size="5x" />,
-                title: 'projects.projectProcess3.phase4Title',
-                description: 'projects.projectProcess3.phase4'
-            }
-        ],
-        solution: 'projects.projectSolution3',
-        gallery: galleryFlotilla,
-        credits: [
-            {
-                name: 'David Pinto',
-                position: 'projects.credits.post4'
-            },
-            {
-                name: 'José Miguel Pinto',
-                position: 'projects.credits.post6'
-            },
-            {
-                name: 'Santiago Montoya',
-                position: 'projects.credits.post6'
-            },
-            {
-                name: 'Santiago Montoya',
-                position: 'projects.credits.post5'
-            },
-        ],
-        tech: ['Figma', 'Wordpress', 'Elementor', 'CSS', 'Flickr API', 'Yoast SEO'],
-        collab: 'projects.collab'
-    },
+    // {
+    //     id: 'flora-nueva',
+    //     cover: CoverFlora,
+    //     name: 'projects.projectName2',
+    //     preview: 'projects.projectPreview2',
+    //     summary: 'projects.projectSummary2',
+    //     need: 'projects.projectNeed2',
+    //     needsArt: needsCover[1],
+    //     process: 'projects.projectProcess2.description',
+    //     phase: [
+    //         {
+    //             icon: <FontAwesomeIcon icon={faLeanpub} size="5x" />,
+    //             title: 'projects.projectProcess2.phase1Title',
+    //             description: 'projects.projectProcess2.phase1'
+    //         },
+    //         {
+    //             icon: <FontAwesomeIcon icon={faSitemap} size="5x" />,
+    //             title: 'projects.projectProcess2.phase2Title',
+    //             description: 'projects.projectProcess2.phase2'
+    //         },
+    //         {
+    //             icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
+    //             title: 'projects.projectProcess2.phase3Title',
+    //             description: 'projects.projectProcess2.phase3'
+    //         },
+    //         {
+    //             icon: <FontAwesomeIcon icon={faHammer} size="5x" />,
+    //             title: 'projects.projectProcess2.phase4Title',
+    //             description: 'projects.projectProcess2.phase4'
+    //         }
+    //     ],
+    //     solution: 'projects.projectSolution2',
+    //     gallery: galleryFlora,
+    //     credits: [
+    //         {
+    //             name: 'David Pinto',
+    //             position: 'projects.credits.post4'
+    //         },
+    //         {
+    //             name: 'José Miguel Pinto',
+    //             position: 'projects.credits.post6'
+    //         },
+    //         {
+    //             name: 'Santiago Montoya',
+    //             position: 'projects.credits.post6'
+    //         },
+    //         {
+    //             name: 'Santiago Montoya',
+    //             position: 'projects.credits.post5'
+    //         },
+    //     ],
+    //     tech: ['Figma', 'Wordpress', 'Elementor', 'Woocommerce', 'CSS', 'Forminator', 'Yoast SEO'],
+    //     collab: 'projects.collab'
+    // },
+    // {
+    //     id: 'flotilla-amazonica',
+    //     cover: CoverFlotilla,
+    //     name: 'projects.projectName3',
+    //     preview: 'projects.projectPreview3',
+    //     summary: 'projects.projectSummary3',
+    //     need: 'projects.projectNeed3',
+    //     needsArt: needsCover[2],
+    //     process: 'projects.projectProcess3.description',
+    //     phase: [
+    //         {
+    //             icon: <FontAwesomeIcon icon={faLanguage} size="5x" />,
+    //             title: 'projects.projectProcess3.phase1Title',
+    //             description: 'projects.projectProcess3.phase1'
+    //         },
+    //         {
+    //             icon: <FontAwesomeIcon icon={faLock} size="5x" />,
+    //             title: 'projects.projectProcess3.phase2Title',
+    //             description: 'projects.projectProcess3.phase2'
+    //         },
+    //         {
+    //             icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
+    //             title: 'projects.projectProcess3.phase3Title',
+    //             description: 'projects.projectProcess3.phase3'
+    //         },
+    //         {
+    //             icon: <FontAwesomeIcon icon={faHammer} size="5x" />,
+    //             title: 'projects.projectProcess3.phase4Title',
+    //             description: 'projects.projectProcess3.phase4'
+    //         }
+    //     ],
+    //     solution: 'projects.projectSolution3',
+    //     gallery: galleryFlotilla,
+    //     credits: [
+    //         {
+    //             name: 'David Pinto',
+    //             position: 'projects.credits.post4'
+    //         },
+    //         {
+    //             name: 'José Miguel Pinto',
+    //             position: 'projects.credits.post6'
+    //         },
+    //         {
+    //             name: 'Santiago Montoya',
+    //             position: 'projects.credits.post6'
+    //         },
+    //         {
+    //             name: 'Santiago Montoya',
+    //             position: 'projects.credits.post5'
+    //         },
+    //     ],
+    //     tech: ['Figma', 'Wordpress', 'Elementor', 'CSS', 'Flickr API', 'Yoast SEO'],
+    //     collab: 'projects.collab'
+    // },
     {
         id: 'las-libreras-leen',
         cover: CoverLibreras,
@@ -244,60 +244,60 @@ export const projectsList = [
         ],
         tech: ['Figma', 'Wordpress', 'CSS', 'MailChimp', 'Yoast SEO']
     },
-    {
-        id: 'asocove',
-        cover: CoverAsocove,
-        name: 'projects.projectName5',
-        preview: 'projects.projectPreview5',
-        summary: 'projects.projectSummary5',
-        need: 'projects.projectNeed5',
-        needsArt: needsCover[4],
-        process: 'projects.projectProcess5.description',
-        phase: [
-            {
-                icon: <FontAwesomeIcon icon={faSignsPost} size="5x" />,
-                title: 'projects.projectProcess5.phase1Title',
-                description: 'projects.projectProcess5.phase1'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
-                title: 'projects.projectProcess5.phase2Title',
-                description: 'projects.projectProcess5.phase2'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faWix} size="5x" />,
-                title: 'projects.projectProcess5.phase3Title',
-                description: 'projects.projectProcess5.phase3'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faMicroscope} size="5x" />,
-                title: 'projects.projectProcess5.phase4Title',
-                description: 'projects.projectProcess5.phase4'
-            }
-        ],
-        solution: 'projects.projectSolution5',
-        gallery: galleryAsocove,
-        credits: [
-            {
-                name: 'David Pinto',
-                position: 'projects.credits.post4'
-            },
-            {
-                name: 'José Miguel Pinto',
-                position: 'projects.credits.post6'
-            },
-            {
-                name: 'Santiago Montoya',
-                position: 'projects.credits.post6'
-            },
-            {
-                name: 'Santiago Montoya',
-                position: 'projects.credits.post5'
-            },
-        ],
-        tech: ['Figma', 'WixStudio', 'CSS', 'Wix Forms'],
-        collab: 'projects.collab'
-    },
+    // {
+    //     id: 'asocove',
+    //     cover: CoverAsocove,
+    //     name: 'projects.projectName5',
+    //     preview: 'projects.projectPreview5',
+    //     summary: 'projects.projectSummary5',
+    //     need: 'projects.projectNeed5',
+    //     needsArt: needsCover[4],
+    //     process: 'projects.projectProcess5.description',
+    //     phase: [
+    //         {
+    //             icon: <FontAwesomeIcon icon={faSignsPost} size="5x" />,
+    //             title: 'projects.projectProcess5.phase1Title',
+    //             description: 'projects.projectProcess5.phase1'
+    //         },
+    //         {
+    //             icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
+    //             title: 'projects.projectProcess5.phase2Title',
+    //             description: 'projects.projectProcess5.phase2'
+    //         },
+    //         {
+    //             icon: <FontAwesomeIcon icon={faWix} size="5x" />,
+    //             title: 'projects.projectProcess5.phase3Title',
+    //             description: 'projects.projectProcess5.phase3'
+    //         },
+    //         {
+    //             icon: <FontAwesomeIcon icon={faMicroscope} size="5x" />,
+    //             title: 'projects.projectProcess5.phase4Title',
+    //             description: 'projects.projectProcess5.phase4'
+    //         }
+    //     ],
+    //     solution: 'projects.projectSolution5',
+    //     gallery: galleryAsocove,
+    //     credits: [
+    //         {
+    //             name: 'David Pinto',
+    //             position: 'projects.credits.post4'
+    //         },
+    //         {
+    //             name: 'José Miguel Pinto',
+    //             position: 'projects.credits.post6'
+    //         },
+    //         {
+    //             name: 'Santiago Montoya',
+    //             position: 'projects.credits.post6'
+    //         },
+    //         {
+    //             name: 'Santiago Montoya',
+    //             position: 'projects.credits.post5'
+    //         },
+    //     ],
+    //     tech: ['Figma', 'WixStudio', 'CSS', 'Wix Forms'],
+    //     collab: 'projects.collab'
+    // },
     {
         id: 'busquedas',
         cover: CoverBusquedas,

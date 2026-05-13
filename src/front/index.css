@@ -96,7 +96,7 @@ h6 {
 }
 
 .section-title {
-  color: #fbff06;
+  color: #FBFF06;
 }
 
 .process-section-title {
@@ -609,3 +609,9 @@ h6 {
 .custom-menu-overlay.active {
   left: 0;
 }
+
+/* Elementos servicios */
+
+/* .service-icon {
+  font-size: 70px;
+} */
