@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Card } from "./Projects/Card";
 import { ProjectCTA } from "../components/ProjectSingle/ProjectCTA";
 import { projectsList } from "../utils/projectsList";
-import PortfolioPDF from "../assets/img/Portfolio/CloudTech-Portfolio.pdf"
+//import PortfolioPDF from "../assets/img/Portfolio/CloudTech-Portfolio.pdf"
 
 export const Projects = ({ limit = 0 }) => {
     const { t } = useTranslation();
