@@ -1,4 +1,5 @@
 services:
+
   # Servicio del Backend (Python/Flask API)
   server:
     build:
@@ -9,6 +10,8 @@ services:
       - ./src:/app
       - ./migrations:/app/migrations
     env_file: ./.env
+    ports:
+      - "8001:8000" # Maps Host 8001 to Flask 8000
     networks:
       - app-network
     depends_on:
@@ -20,6 +23,8 @@ services:
       context: .
       dockerfile: Dockerfile.frontend # Especifica el otro Dockerfile
     restart: always
+    ports:
+      - "8002:80" # Maps Host 8002 to React's Nginx 80
     networks:
       - app-network
 
