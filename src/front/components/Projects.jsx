@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Card } from "./Projects/Card";
 import { ProjectCTA } from "../components/ProjectSingle/ProjectCTA";
 import { projectsList } from "../utils/projectsList";
-import PortfolioPDF from "../assets/img/Portfolio/CloudTech-Portfolio.pdf"
+//import PortfolioPDF from "../assets/img/Portfolio/CloudTech-Portfolio.pdf"
 
 export const Projects = ({ limit = 0 }) => {
     const { t } = useTranslation();
@@ -20,14 +20,14 @@ export const Projects = ({ limit = 0 }) => {
                     <h2 className="section-title">{t('projects.sectionTitle')}</h2>
                     <p className="text-white ct-description-p">{t('projects.sectionDescription')}</p>
                     <div className="d-flex justify-content-center mb-3">
-                        <a
+                        {/* <a
                             href={PortfolioPDF}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn btn-outline btn-lg rounded-pill px-4 mx-auto w-lg-auto"
                         >
                             {t('projects.downloadPortfolio')}
-                        </a>
+                        </a> */}
                     </div>
                 </div>
 
