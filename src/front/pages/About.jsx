@@ -1,7 +1,9 @@
 import { Team } from "../components/Team/Team"
 import { Process } from "../components/Process"
 import { HeaderAbout } from "../components/HeaderAbout"
-import { Values } from "../components/Values/Values"
+// import { Values } from "../components/Values/Values"
+import { Values } from "../components/About/Values"
+import { WorkSteps } from "../components/About/WorkSteps"
 import { SEO } from "../utils/SEO"
 
 export const About = () => {
@@ -16,6 +18,8 @@ export const About = () => {
                 <HeaderAbout />
                 <Team />
                 <Process />
+                {/* <Values /> */}
+                <WorkSteps />
                 <Values />
             </main>
         </>
