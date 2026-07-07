@@ -103,6 +103,7 @@
     background-color: #FBFF06;
     color: #04171B;
     padding: 0rem 0.7rem 0rem 0.7rem;
+    width: max-content;
 }
 
 /* ==========================================
@@ -317,6 +318,46 @@
     font-weight: normal;
     margin: 0;
 }
+
+/* ==========================================
+   COLUMNA DETALLE MIEMBROS DE EQUIPO STICKY
+   ========================================== */
+
+.sticky-sidebar-column {
+    position: -webkit-sticky;
+    position: sticky;
+
+    /* 1. Posición inicial exacta para alinearse con las primeras cards */
+    top: 0px;
+
+    height: fit-content;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+
+    /* 2. Declaramos la animación y su velocidad/suavizado */
+    animation: adjustStickyTop linear both;
+
+    /* 3. Vinculamos la animación directamente al scroll del navegador */
+    animation-timeline: scroll(root);
+
+    /* Rango del scroll donde ocurrirá la transición (desde el inicio hasta que avance un poco) */
+    animation-range: entry 0% exit 15%;
+}
+
+/* 4. Definimos el cambio de posición suave */
+@keyframes adjustStickyTop {
+    from {
+        /* Al inicio del componente se mantiene arriba alineado con las cards */
+        top: 0px;
+    }
+
+    to {
+        /* Al bajar el scroll, se desplaza suavemente hacia abajo para esquivar la Navbar 
+           (Ajusta los 120px dependiendo de la altura real de tu menú) */
+        top: 400px;
+    }
+}
+
 
 /* ==========================================
    RESPONSIVE MÓVIL
