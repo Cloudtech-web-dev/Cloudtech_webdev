@@ -23,11 +23,11 @@ export const Team = () => {
     return (
         <section className="d-flex justify-content-center">
             < div className="container py-4">
-                <div className="d-flex flex-column text-center justify-content-center mb-4">
-                    <h2 className="section-title">{t('team.sectionTitle')}</h2>
+                <div className="d-flex flex-column text-center justify-content-center mb-5 gap-5">
+                    <h2 className="page-intro-title">{t('team.sectionTitle')}</h2>
                     <p className="text-white ct-description-p">{t('team.sectionDescription')}</p>
                 </div>
-                <div className="row my-3 align-items-start">
+                <div className="row pt-5 align-items-start">
                     <div className="col-lg-7 col-md-12 mb-4">
                         <div className="row">
                             {teamContent.map(teamMember => (

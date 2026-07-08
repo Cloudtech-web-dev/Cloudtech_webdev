@@ -14,11 +14,11 @@ export const HeaderAbout = () => {
                 <div className="row z-0 d-flex justify-content-center">
                     <div className="col-12 pt-5 pt-lg-0 col-lg-6 my-5 my-lg-2 py-5 py-lg-3 d-flex flex-column justify-content-center align-items-center z-1">
                         <h1 className="hero-title-home display-3 fw-bolder mt-sm-0 mt-4 mb-4 text-center">
-                            {t('about.sectionTitle')}
+                            {t('headers.headerAbout.headLine')}
                         </h1>
 
                         <p className="hero-subtitle-home fs-5 text-white text-center w-75 mb-5">
-                            {t('about.sectionDescription')}
+                            {t('headers.headerAbout.headerDescription')}
                         </p>
 
                         <div className="d-flex flex-column justify-content-center flex-md-row gap-3 w-100">

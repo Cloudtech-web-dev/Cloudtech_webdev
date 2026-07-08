@@ -2,6 +2,7 @@ import { Team } from "../components/Team/Team"
 import { HeaderAbout } from "../components/HeaderAbout"
 import { Values } from "../components/About/Values"
 import { WorkSteps } from "../components/About/WorkSteps"
+import { WhoWeAre } from "../components/About/WhoWeAre"
 import { SEO } from "../utils/SEO"
 
 export const About = () => {
@@ -14,6 +15,7 @@ export const About = () => {
             />
             <main>
                 <HeaderAbout />
+                <WhoWeAre />
                 <Team />
                 <WorkSteps />
                 <Values />
