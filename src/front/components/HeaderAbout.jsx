@@ -1,23 +1,25 @@
 import { Link } from "react-router-dom";
 import HomeAbout from "../assets/img/HomeAbout.jpg"
 import { useTranslation } from "react-i18next";
+import '../../../src/front/styles/StickyLayout.css';
 
 export const HeaderAbout = () => {
     const { t } = useTranslation();
 
     return (
 
-        <section className="w-100 h-100 mb-5 position-relative">
-            <img src={HomeAbout} alt="CloudTech background image" className="z-n1 mx-auto position-absolute w-100 h-100 object-fit-cover d-sm-block" />
-            <div className="position-absolute w-100 h-100 bg-dark bg-opacity-75 mx-auto"></div>
-            <div className="container w-100 h-100 py-5">
-                <div className="row z-0 d-flex justify-content-center">
-                    <div className="col-12 pt-5 pt-lg-0 col-lg-6 my-5 my-lg-2 py-5 py-lg-3 d-flex flex-column justify-content-center align-items-center z-1">
-                        <h1 className="hero-title-home display-3 fw-bolder mt-sm-0 mt-4 mb-4 text-center">
+        <section className="w-100 min-vh-100 mb-5 position-relative d-flex align-items-center">
+            <img src={HomeAbout} alt="CloudTech background image" className="z-n1 position-absolute w-100 h-100 object-fit-cover d-sm-block" />
+            <div className="position-absolute w-100 h-100 bg-dark bg-opacity-75"></div>
+
+            <div className="container z-1">
+                <div className="row d-flex justify-content-center">
+                    <div className="col-12 col-lg-8 text-center d-flex flex-column gap-5">
+                        <h1 className="hero-title-home display-3 fw-bolder text-center">
                             {t('headers.headerAbout.headLine')}
                         </h1>
 
-                        <p className="hero-subtitle-home fs-5 text-white text-center w-75 mb-5">
+                        <p className="intro-text-positive">
                             {t('headers.headerAbout.headerDescription')}
                         </p>
 

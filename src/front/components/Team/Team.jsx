@@ -55,9 +55,9 @@ export const Team = () => {
                     </div>
                     {selectedMember && (
                         <div className="col-lg-5 col-md-12 mb-4 d-flex flex-column justify-content-start gap-3 sticky-sidebar-column">
-                            <span className="bg-positive-title section-title-positive">{selectedMember.name}</span>
+                            <div className="bg-positive-title section-title-positive">{selectedMember.name}</div>
                             <span className="text-white fs-5">{selectedMember.position}</span>
-                            <p className="intro-text-positive">
+                            <p className="intro-text-positive ">
                                 {selectedMember.description}
                             </p>
                             <div className="d-flex justify-content-start fs-1 gap-3">

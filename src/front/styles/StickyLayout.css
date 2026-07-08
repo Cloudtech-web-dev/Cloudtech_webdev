@@ -87,7 +87,20 @@
     font-weight: 800;
     color: #FBFF06;
     margin: 0;
-    white-space: nowrap;
+    display: block;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+
+    @media (min-width: 1200px) {
+        white-space: nowrap;
+    }
+
+    @media (max-width: 991px) {
+        white-space: normal;
+        font-size: 2.5rem;
+        max-width: 100%;
+    }
 }
 
 .intro-text-positive {
@@ -103,7 +116,9 @@
     background-color: #FBFF06;
     color: #04171B;
     padding: 0rem 0.7rem 0rem 0.7rem;
-    width: max-content;
+    display: block;
+    width: fit-content;
+    max-width: 100%;
 }
 
 /* ==========================================
@@ -333,6 +348,8 @@
     height: fit-content;
     max-height: calc(100vh - 120px);
     overflow-y: auto;
+    overflow-x: hidden;
+    width: auto;
 
     /* 2. Declaramos la animación y su velocidad/suavizado */
     animation: adjustStickyTop linear both;
