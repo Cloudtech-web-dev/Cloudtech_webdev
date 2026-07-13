@@ -2,34 +2,73 @@ import { teamContent } from "../../utils/teamContent"
 import { Card } from "./Card"
 import teamBg from "../../assets/img/teamBackground.jpg"
 import { useTranslation } from "react-i18next"
+import { useState } from "react"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faGithubSquare } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import "../../styles/StickyLayout.css"
 
 export const Team = () => {
     const { t } = useTranslation();
+    const [selectedMember, setSelectedMember] = useState({
+        name: teamContent[0].name,
+        position: t(teamContent[0].position),
+        description: t(teamContent[0].description),
+        mailLink: teamContent[0].mailLink,
+        linkedinLink: teamContent[0].linkedinLink,
+        githubLink: teamContent[0].githubLink || null
+    });
 
     return (
-        <section className="d-flex justify-content-center position-relative">
-            <img src={teamBg} alt="CloudTech team background section" className="mx-auto ct-team-bg position-absolute w-100 h-100 object-fit-cover d-none d-sm-block" />
+        <section className="d-flex justify-content-center">
             < div className="container py-4">
-                <div className="d-flex flex-column text-center justify-content-center mb-4">
-                    <h2 className="section-title">{t('team.sectionTitle')}</h2>
+                <div className="d-flex flex-column text-center justify-content-center mb-5 gap-5">
+                    <h2 className="page-intro-title">{t('team.sectionTitle')}</h2>
                     <p className="text-white ct-description-p">{t('team.sectionDescription')}</p>
                 </div>
-                <div className="row my-3">
-                    {teamContent.map(teamMember => (
-                        <div key={teamMember.id} className="col-md-6 col-lg-4 mb-4">
-                            <Card
-                                name={teamMember.name}
-                                position={t(teamMember.position)}
-                                description={t(teamMember.description)}
-                                image={teamMember.image}
-                                catImage={teamMember.catImage}
-                                mailLink={teamMember.mailLink}
-                                linkedinLink={teamMember.linkedinLink}
-                                githubLink={teamMember.githubLink}
-                            />
+                <div className="row pt-5 align-items-start">
+                    <div className="col-lg-7 col-md-12 mb-4">
+                        <div className="row">
+                            {teamContent.map(teamMember => (
+                                <div key={teamMember.id} className="col-sm-6 mb-4"
+                                    onClick={() => setSelectedMember({
+                                        name: teamMember.name,
+                                        position: t(teamMember.position),
+                                        description: t(teamMember.description),
+                                        mailLink: teamMember.mailLink,
+                                        linkedinLink: teamMember.linkedinLink,
+                                        githubLink: teamMember.githubLink || null
+                                    })}
+                                >
+                                    <Card
+                                        name={teamMember.name}
+                                        position={t(teamMember.position)}
+                                        image={teamMember.image}
+                                        catImage={teamMember.catImage}
+                                    />
+                                </div>
+                            ))
+                            }
                         </div>
-                    ))
-                    }
+
+                    </div>
+                    {selectedMember && (
+                        <div className="col-lg-5 col-md-12 mb-4 d-flex flex-column justify-content-start gap-3 sticky-sidebar-column">
+                            <div className="bg-positive-title section-title-positive">{selectedMember.name}</div>
+                            <span className="text-white fs-5">{selectedMember.position}</span>
+                            <p className="intro-text-positive ">
+                                {selectedMember.description}
+                            </p>
+                            <div className="d-flex justify-content-start fs-1 gap-3">
+                                <a href={`mailto:${selectedMember.mailLink}`} rel="noopener noreferrer" className="text-white"><FontAwesomeIcon icon={faEnvelope} /></a>
+                                <a href={selectedMember.linkedinLink} rel="noopener noreferrer" target="_blank" className="text-white"><FontAwesomeIcon icon={faLinkedin} /></a>
+                                {selectedMember.githubLink && (
+                                    <a href={selectedMember.githubLink} rel="noopener noreferrer" target="_blank" className="text-white"><FontAwesomeIcon icon={faGithubSquare} /> </a>
+                                )}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div >
         </section >

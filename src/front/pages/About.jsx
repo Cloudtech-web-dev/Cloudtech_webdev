@@ -1,8 +1,10 @@
 import { Team } from "../components/Team/Team"
-import { Process } from "../components/Process"
 import { HeaderAbout } from "../components/HeaderAbout"
-import { Values } from "../components/Values/Values"
+import { Values } from "../components/About/Values"
+import { WorkSteps } from "../components/About/WorkSteps"
+import { WhoWeAre } from "../components/About/WhoWeAre"
 import { SEO } from "../utils/SEO"
+import { WhereToBegin } from "../components/Services/WhereToBegin"
 
 export const About = () => {
     return (
@@ -14,8 +16,10 @@ export const About = () => {
             />
             <main>
                 <HeaderAbout />
+                <WhereToBegin />
+                <WhoWeAre />
                 <Team />
-                <Process />
+                <WorkSteps />
                 <Values />
             </main>
         </>

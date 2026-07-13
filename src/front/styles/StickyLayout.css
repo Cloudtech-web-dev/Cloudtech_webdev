@@ -1,0 +1,550 @@
+/* ==========================================
+   INTRODUCCIÓN SECCIÓN
+   ========================================== */
+
+.intro-scroll-wrapper {
+    height: 180vh;
+    position: relative;
+    background-color: #E5E5E5;
+}
+
+/* Clava la intro al centro mientras dure el scroll del wrapper */
+.intro-sticky-box {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.intro-content {
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #04171B;
+    margin: 0;
+    max-width: 35%;
+    /* white-space: nowrap; */
+
+}
+
+.intro-text {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #04171B;
+    font-weight: 500;
+    margin: 0;
+    max-width: 40%;
+}
+
+.bg-negative-title {
+    background-color: #04171B;
+    color: #FBFF06;
+    padding: 0rem 0.7rem 0rem 0.7rem;
+}
+
+/* ==========================================
+   INTRODUCCIÓN SECCIÓN VERSIÓN COLOR POSITIVO 
+   ========================================== */
+
+.intro-scroll-wrapper-positive {
+    height: 180vh;
+    position: relative;
+    background-color: #04171B;
+}
+
+/* Clava la intro al centro mientras dure el scroll del wrapper */
+.intro-sticky-box-positive {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.intro-content-positive {
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    max-width: 40%;
+}
+
+.section-title-positive {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #FBFF06;
+    margin: 0;
+    display: block;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+
+    @media (min-width: 1200px) {
+        white-space: nowrap;
+    }
+
+    @media (max-width: 991px) {
+        white-space: normal;
+        font-size: 2.5rem;
+        max-width: 100%;
+    }
+}
+
+.intro-text-positive {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0;
+
+}
+
+.bg-positive-title {
+    background-color: #FBFF06;
+    color: #04171B;
+    padding: 0rem 0.7rem 0rem 0.7rem;
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+}
+
+/* ==========================================
+   CONTENIDOS SECCIÓN CÓMO TRABAJAMOS 
+   ========================================== */
+
+.work-steps-layout {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Clavado estático en el centro */
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    opacity: 1;
+    visibility: hidden;
+    /* Inicia oculto para que no se encimen; el JS activa el correcto */
+    pointer-events: none;
+    box-sizing: border-box;
+    padding: 0 2rem;
+}
+
+.work-steps-content {
+    display: flex;
+    max-width: 60%;
+    flex-direction: column;
+    gap: 50px;
+    opacity: 0;
+    /* Inicia invisible hasta que el JS la despierte */
+    will-change: transform, opacity;
+}
+
+.counter-wrapper,
+.container-bar {
+    will-change: opacity;
+}
+
+.work-steps-title {
+    font-size: 5.3rem;
+    font-weight: 800;
+
+    color: #FBFF06;
+    margin: 0;
+    text-align: left;
+}
+
+.work-steps-description {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0;
+    max-width: 80%;
+    text-align: left;
+}
+
+.counter-wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.work-steps-counter {
+    font-size: 10.6rem;
+    font-weight: 900;
+    color: #FBFF06;
+    margin: 0;
+}
+
+.work-steps-total {
+    font-size: 4rem;
+    font-weight: 500;
+    color: #FBFF06;
+    margin: 0;
+}
+
+/* ==========================================
+   CONTENEDOR GLOBAL DE PASOS (NUEVAS REGLAS)
+   ========================================== */
+
+.work-steps-scroll-container {
+    height: 600vh;
+    /* Altura ideal para controlar cómodamente el fade de los 5 pasos */
+    position: relative;
+    background-color: #04171B;
+}
+
+.work-steps-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ==========================================
+   BARRA DE PROGRESO
+   ========================================== */
+
+.container-bar {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 15px;
+    display: block;
+    /* Asegura el bloque físico */
+}
+
+/* Apuntar de forma compuesta rompe la prioridad de Bootstrap */
+.container-bar .progress-bar {
+    display: block !important;
+    /* Desactivamos el flexbox nativo de Bootstrap */
+    height: 100% !important;
+    background-color: #FBFF06 !important;
+    /* Forzamos tu amarillo de marca */
+    transition: none !important;
+    /* Movimiento milimétrico con el scroll */
+}
+
+/* ==========================================
+   CLASES PARA VALUES VERSIÓN DESKTOP 
+   ========================================== */
+
+.scroll-container {
+    height: 900vh;
+    /* Controla la velocidad total del scroll */
+    position: relative;
+    background-color: #E5E5E5;
+}
+
+.sticky-view {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.horizontal-track {
+    display: flex;
+    height: 100%;
+    width: max-content;
+    will-change: transform;
+}
+
+.card-content-section {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.split-text-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+}
+
+.content-text {
+    font-size: 6rem;
+    font-weight: 900;
+    text-align: center;
+    position: absolute;
+    white-space: nowrap;
+    color: #04171B;
+    will-change: transform;
+    transition: none;
+}
+
+.text-top {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.text-bottom {
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.content-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 80%;
+    max-width: 570px;
+    text-align: center;
+    opacity: 0;
+    will-change: transform, opacity;
+    pointer-events: none;
+    transition: none;
+}
+
+.content-description p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #04171B;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* ==========================================
+   COLUMNA DETALLE MIEMBROS DE EQUIPO STICKY
+   ========================================== */
+
+.sticky-sidebar-column {
+    position: -webkit-sticky;
+    position: sticky;
+
+    /* 1. Posición inicial exacta para alinearse con las primeras cards */
+    top: 0px;
+
+    height: fit-content;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: auto;
+
+    /* 2. Declaramos la animación y su velocidad/suavizado */
+    animation: adjustStickyTop linear both;
+
+    /* 3. Vinculamos la animación directamente al scroll del navegador */
+    animation-timeline: scroll(root);
+
+    /* Rango del scroll donde ocurrirá la transición (desde el inicio hasta que avance un poco) */
+    animation-range: entry 0% exit 15%;
+}
+
+/* 4. Definimos el cambio de posición suave */
+@keyframes adjustStickyTop {
+    from {
+        /* Al inicio del componente se mantiene arriba alineado con las cards */
+        top: 0px;
+    }
+
+    to {
+        /* Al bajar el scroll, se desplaza suavemente hacia abajo para esquivar la Navbar 
+           (Ajusta los 120px dependiendo de la altura real de tu menú) */
+        top: 400px;
+    }
+}
+
+/* ========================================================
+   COMPONENTE TIPOS DE INICIOS DE PROYECTO PARA SERVICIOS
+   ======================================================== */
+
+.phase-text-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 85%;
+    max-width: 1200px;
+}
+
+.phase-number {
+    font-weight: bold;
+    font-size: 5.5rem;
+}
+
+.phase-title {
+    font-weight: bold;
+    font-size: 2.6rem;
+    max-width: 50%;
+    line-height: 1.1;
+}
+
+.phase-description {
+    max-width: 450px;
+    font-size: 2rem;
+    line-height: 1.4;
+    color: #04171B;
+}
+
+/* ==========================================
+   RESPONSIVE MÓVIL
+   ========================================== */
+@media (max-width: 768px) {
+    .scroll-container {
+        height: 950vh;
+    }
+
+    .content-text {
+        font-size: 2.8rem;
+    }
+
+    .content-description p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .intro-content-positive {
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        white-space: normal;
+        max-width: 100%;
+    }
+
+    .intro-text {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+        max-width: 80%;
+    }
+
+    .phase-text-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phase-number {
+        font-weight: bold;
+        font-size: 3.5rem;
+    }
+
+    .phase-title {
+        font-weight: bold;
+        font-size: 2rem;
+        max-width: 50%;
+        line-height: 1.1;
+    }
+
+    .phase-description {
+        max-width: 450px;
+        font-size: 1.6rem;
+        line-height: 1.4;
+        color: #04171B;
+    }
+
+    .phase-title-number {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .intro-content-positive {
+        max-width: 80%;
+    }
+
+    .work-steps-layout {
+        flex-direction: column-reverse;
+        /* El contador y la barra se leen abajo */
+        gap: 40px;
+        text-align: center;
+    }
+
+    .work-steps-content {
+        max-width: 90%;
+        gap: 20px;
+    }
+
+    .work-steps-title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .work-steps-description {
+        font-size: 1.2rem;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .work-steps-counter {
+        font-size: 6rem;
+    }
+
+    .phase-text-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phase-title-number {
+        justify-content: center;
+    }
+
+    .intro-text {
+        max-width: 80%;
+    }
+
+    .section-title {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .intro-content-positive {
+        max-width: 80%;
+    }
+
+    .section-title {
+        max-width: 70%;
+    }
+
+    .intro-text {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 1600px) {
+    .intro-content-positive {
+        max-width: 80%;
+    }
+
+    .section-title {
+        max-width: 60%;
+    }
+
+    .intro-text {
+        max-width: 80%;
+    }
+}

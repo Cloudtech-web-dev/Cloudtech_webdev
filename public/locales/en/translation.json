@@ -22,13 +22,13 @@
     "headerAbout": {
       "headLine": "Your Vision, The Engine of Our Creativity",
       "headerDescription": "We mold your ideas into powerful web experiences that reflect your brand's essence and meet your strategic objectives.",
-      "portfolioButton": "Projects",
-      "contactButton": "Contact Us"
+      "portfolioButton": "View Projects",
+      "contactButton": "Let's Talk"
     },
     "headerServices": {
       "headLine": "Your custom-made universe",
       "headerDescription": "Our services are the bridge between your ideas and powerful digital solutions that will boost your brand and generate sustained growth.",
-      "portfolioButton": "Projects",
+      "portfolioButton": "View Projects",
       "contactButton": "Contact Us"
     },
     "headerProjects": {

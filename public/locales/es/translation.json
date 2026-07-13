@@ -20,10 +20,10 @@
       }
     },
     "headerAbout": {
-      "headLine": "Tu visión, el motor de nuestra creatividad",
-      "headerDescription": "Moldeamos tus ideas en experiencias web poderosas que reflejan la esencia de tu marca y cumplen tus objetivos estratégicos.",
-      "portfolioButton": "Proyectos",
-      "contactButton": "Contáctanos"
+      "headLine": "Un estudio digital para proyectos con identidad",
+      "headerDescription": "Creamos sitios web y experiencias digitales para proyectos con identidad, cuidando cómo se ven, cómo se entienden y cómo funcionan.",
+      "portfolioButton": "Ver proyectos",
+      "contactButton": "Hablemos"
     },
     "headerServices": {
       "headLine": "Tu Universo a Medida",
@@ -48,7 +48,7 @@
   },
   "about": {
     "sectionTitle": "¿Quiénes somos?",
-    "sectionDescription": "Somos una empresa que cree en el valor de unir la creatividad y la tecnología. Combinamos estrategia, diseño de vanguardia y tecnología robusta para crear una presencia online intuitiva y funcional."
+    "sectionDescription": "CloudTech es un estudio digital que une diseño, narrativa y desarrollo web. Trabajamos con marcas, creativos y proyectos que necesitan una presencia digital clara, atractiva y funcional. Nos interesa cómo se ve un sitio, pero también cómo lo experimentan y cómo presenta de la mejor manera un trabajo, un producto o una idea."
   },
   "services": {
     "sectionTitle": "Qué hacemos",
@@ -342,7 +342,7 @@
   },
   "team": {
     "sectionTitle": "Conoce a nuestro equipo",
-    "sectionDescription": "Nuestro compromiso es generar conexiones reales y un crecimiento medible para tu negocio. En CloudTech, tu singularidad cobra vida en un universo digital a medida y sofisticado.",
+    "sectionDescription": "Somos un equipo que combina estrategia, diseño, desarrollo, contenido y gestión comercial para construir sitios web y experiencias digitales con identidad.",
     "sectionCTAButton": "Hablemos de tu proyecto",
     "card": {
       "teamMember1": {
