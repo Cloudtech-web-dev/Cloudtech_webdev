@@ -1,55 +1,49 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+const stats = [
+    { number: "99", symbol: "%", label: "workWithUs.statistics.customerSatisfaction" },
+    { number: "+", symbol: "10", label: "workWithUs.statistics.completedProjects" },
+    { number: "+", symbol: "5", label: "workWithUs.statistics.yearsOfExperience" },
+    { number: "18", symbol: "K", label: "workWithUs.statistics.activeUsers" },
+];
+
 export const WorkWithUS = () => {
     const { t } = useTranslation();
 
     return (
 
-        <section className="text-white text-center py-5">
+        <section className="text-white py-5">
             <div className="container">
-                <div className="d-flex flex-column text-center justify-content-center">
-                    <h2 className="section-title mb-4">{t('workWithUs.sectionTitle')}</h2>
-                    <p className="text-white ct-description-p">
-                        {t('workWithUs.sectionDescription')}
-                    </p>
-
-                    <div className="mt-5 align-items-center justify-content-center">
-                        <Link className="btn btn-outline btn-lg rounded-pill px-5 w-50 d-none d-lg-block mx-auto " to="/contact">{t('workWithUs.workWithUsCTA')}</Link>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                    <div className="row" style={{ maxWidth: 1064, gap: 70 }}>
+                        <div className="col g-0">
+                            <h2 className="mb-4 font-h2" style={{ color: "var(--bs-accent-1)", fontSize: 56, lineHeight: 1, letterSpacing: "-1%", width: 527 }}>
+                                {t('workWithUs.sectionTitle')}
+                            </h2>
+                        </div>
+                        <div className="col g-0">
+                            <p className="font-p1" style={{ whiteSpace: 'pre-line' }}>
+                                {t('workWithUs.sectionDescription')}
+                            </p>
+                            <div className="mt-5 align-items-center justify-content-center">
+                                <Link className="btn btn-outline btn-lg rounded-pill border-2 font-p1 fw-bold fs-6 d-none d-lg-block mx-auto " to="/contact" style={{ minWidth: "50%", width: "fit-content", maxWidth: "80%", padding: "18px 34px", lineHeight: "18px" }}>
+                                    {t('workWithUs.workWithUsCTA')}
+                                </Link>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="row mt-5 pt-3">
-                        <div className="col-12 col-lg-6 mb-4 mb-lg-0">
-                            <p className="display-5 fw-bold mb-1">
-                                <span className="text-stat-number">99</span>
-                                <span className="text-stat-symbol">%</span>
-                            </p>
-                            <p className="title-sub text-white fw-semibold">{t('workWithUs.statistics.customerSatisfaction')}</p>
-                        </div>
-
-                        <div className="col-12 col-lg-6 mb-4 mb-lg-0">
-                            <p className="display-5 fw-bold mb-1">
-                                <span className="text-stat-number">18</span>
-                                <span className="text-stat-symbol">K</span>
-                            </p>
-                            <p className="title-sub text-white fw-semibold">{t('workWithUs.statistics.activeUsers')}</p>
-                        </div>
-
-                        <div className="col-12 col-lg-6 mb-4 mb-lg-0">
-                            <p className="display-5 fw-bold mb-1">
-                                <span className="text-stat-number">+</span>
-                                <span className="text-stat-symbol">10</span>
-                            </p>
-                            <p className="text-white fw-semibold">{t('workWithUs.statistics.completedProjects')}</p>
-                        </div>
-
-                        <div className="col-12 col-lg-6 mb-4 mb-lg-0">
-                            <p className="display-5 fw-bold mb-1">
-                                <span className="text-stat-number">+</span>
-                                <span className="text-stat-symbol">5</span>
-                            </p>
-                            <p className="text-white fw-semibold">{t('workWithUs.statistics.yearsOfExperience')}</p>
-                        </div>
+                    <div className="row mt-5 pt-3 text-center">
+                        {stats.map((stat, idx) => (
+                            <div key={idx} className="col-12 col-lg-3 mb-4 mb-lg-0">
+                                <p className="display-5 fw-bold mb-1">
+                                    <span className="text-stat-number">{stat.number}</span>
+                                    <span className="text-stat-symbol">{stat.symbol}</span>
+                                </p>
+                                <p className="title-sub text-white fw-semibold">{t(stat?.label, "")}</p>
+                            </div>
+                        ))}
                     </div>
 
                     <div className="container mt-4">

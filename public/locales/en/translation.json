@@ -9,10 +9,15 @@
   },
   "headers": {
     "headerHome": {
-      "headLine": "We shape ideas to create digital universes",
-      "headerDescription": "We build digital environments that strengthen your brand and unite your audiences. We create an online presence that ensures measurable results and scalable growth.",
+      "headLine": "We design websites and digital <0>experiences</0> for creatives and brands with identity",
+      "headerDescription": "We combine design, narrative and web development for projects that need a digital presence at the level of their work.",
       "portfolioButton": "Projects",
-      "contactButton": "Contact Us"
+      "contactButton": "Contact Us",
+      "servicesPresentation": {
+        "headLine": "<0>More than a website:</0> a clear way to present what you do",
+        "description": "We create websites for projects that need to better show their work, their products or their services. We turn ideas, content and identity into clear, attractive and intuitive digital experiences.",
+        "portfolioButton": "See Projects"
+      }
     },
     "headerAbout": {
       "headLine": "Your Vision, The Engine of Our Creativity",
@@ -46,8 +51,8 @@
     "sectionDescription": "We are a company that believes in the value of uniting creativity and technology. We combine strategy, cutting-edge design, and robust technology to create an intuitive and functional online presence."
   },
   "services": {
-    "sectionTitle": "Discover our services",
-    "sectionDescription": "Each of our services is designed to build and amplify your digital presence, turning your ideas into products and measurable results. Explore how we can shape your online universe.",
+    "sectionTitle": "What we do",
+    "sectionDescription": "We design and develop websites, applications and digital experiences for projects with identity.",
     "webDevelopmentTitle": "Web Development",
     "webDevelopmentSubtitle": "Building Your Digital Universe",
     "communicationTitle": "Digital Communication",
@@ -181,7 +186,7 @@
   },
   "projects": {
     "sectionTitle": "Our Projects",
-    "sectionDescription": "We have created unique digital universes that solve challenges and connect brands with their audiences. We know that every project is a story reflecting innovation and clear results, and we are ready to bring your vision to life.",
+    "sectionDescription": "Some projects where we help brands and creatives to better present their work, their products and their ideas.",
     "sectionCTAButton": "Conectemos ahora",
     "sectionPortfolioButton": "Explore our portfolio",
     "discoverMore": "Discover More",
@@ -321,7 +326,7 @@
     "collab": "Project carried out alongside the Colmena Lab team. "
   },
   "testimonials": {
-    "sectionTitle": "Our clients",
+    "sectionTitle": "<0>Testimonials</0> from our clients",
     "testimony1": {
       "position": "General Editor",
       "review": "“With the production of our website, MURA has consolidated as the space for literary and artistic experimentation we sought. The team not only built a WordPress site that faithfully reflects our identity, but also provided us with editorial and security functionalities. They understood our vision for literature and self-management, allowing us to build a vibrant community of creators in Ecuador and Latin America.”"
@@ -423,9 +428,9 @@
     }
   },
   "workWithUs": {
-    "sectionTitle": "Why Work With Us?",
-    "sectionDescription": "We mold ideas to create digital universes that not only look good but generate real, measurable impact. Choosing us means partnering with a team that combines creativity, experience, and a structured process to take your brand to the next level with real results.",
-    "workWithUsCTA": "Contact Us",
+    "sectionTitle": "From the idea to a digital presence at the level of your work",
+    "sectionDescription": "We accompany each project from initial definition to deployment, taking care of the structure, design, content and development.\n\nThe result: a clear, attractive and functional website, designed to better represent what you do and make it easier for people to understand, explore or buy.",
+    "workWithUsCTA": "Schedule an appointment",
     "statistics": {
       "customerSatisfaction": "Client Satisfaction",
       "activeUsers": "Active Users per Year",

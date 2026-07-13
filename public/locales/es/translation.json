@@ -9,10 +9,15 @@
   },
   "headers": {
     "headerHome": {
-      "headLine": "Moldeamos ideas para crear universos digitales",
-      "headerDescription": "Construimos entornos digitales que fortalecen tu marca y unen tus audiencias. Creamos presencias online que aseguran resultados medibles y un crecimiento escalable.",
+      "headLine": "Diseñamos sitios web y <0>experiencias</0> digitales para creativos y marcas con identidad",
+      "headerDescription": "Combinamos diseño, narrativa y desarrollo web para proyectos que necesitan una presencia digital a la altura de su trabajo.",
       "portfolioButton": "Proyectos",
-      "contactButton": "Contáctanos"
+      "contactButton": "Contáctanos",
+      "servicesPresentation": {
+        "headLine": "<0>Más que una web:</0> una forma clara de presentar lo que haces",
+        "description": "Creamos sitios web para proyectos que necesitan mostrar mejor su trabajo, sus productos o sus servicios. Convertimos ideas, contenido e identidad en experiencias digitales claras, atractivas e intuitivas.",
+        "portfolioButton": "Ver Proyectos"
+      }
     },
     "headerAbout": {
       "headLine": "Tu visión, el motor de nuestra creatividad",
@@ -46,8 +51,8 @@
     "sectionDescription": "Somos una empresa que cree en el valor de unir la creatividad y la tecnología. Combinamos estrategia, diseño de vanguardia y tecnología robusta para crear una presencia online intuitiva y funcional."
   },
   "services": {
-    "sectionTitle": "Conoce nuestros servicios",
-    "sectionDescription": "Cada uno de nuestros servicios está diseñado para construir y amplificar tu presencia digital, convirtiendo tus ideas en productos y resultados medibles. Explora cómo podemos dar forma a tu universo online.",
+    "sectionTitle": "Qué hacemos",
+    "sectionDescription": "Diseñamos y desarrollamos sitios web, aplicaciones y experiencias digitales para proyectos con identidad.",
     "webDevelopmentTitle": "Desarrollo Web",
     "webDevelopmentSubtitle": "Construyendo tu universo digital",
     "communicationTitle": "Comunicación",
@@ -181,7 +186,7 @@
   },
   "projects": {
     "sectionTitle": "Nuestros proyectos",
-    "sectionDescription": "Hemos creado universos digitales únicos que resuelven desafíos y conectan a las marcas con sus audiencias. Sabemos que cada proyecto es una historia que refleja innovación y resultados claros, y estamos dispuestos a plasmarlo en tu visión.",
+    "sectionDescription": "Algunos proyectos donde ayudamos a marcas y creativos a presentar mejor su trabajo, sus productos y sus ideas.",
     "sectionCTAButton": "Conectemos ahora",
     "discoverMore": "Descubre más",
     "sectionPortfolioButton": "Explora nuestro portafolio",
@@ -321,7 +326,7 @@
     "collab": "Proyecto realizado junto al equipo de Colmena Lab."
   },
   "testimonials": {
-    "sectionTitle": "Nuestros clientes",
+    "sectionTitle": "<0>Testimonios</0> de nuestros clientes",
     "testimony1": {
       "position": "Editor General",
       "review": "“El equipo no solo construyó un sitio web en WordPress que refleja fielmente nuestra identidad, sino que nos dotó de las funcionalidades editoriales y de seguridad. Comprendieron nuestra visión sobre la literatura y la autogestión, permitiéndonos construir una amplia comunidad de creadores en Ecuador y Latinoamérica.”"
@@ -423,9 +428,9 @@
     }
   },
   "workWithUs": {
-    "sectionTitle": "¿Por qué trabajar con nosotros? ",
-    "sectionDescription": "Moldeamos ideas para crear universos digitales que no solo lucen bien, sino que generan un impacto real y medible. Elegirnos significa aliarse con un equipo que combina creatividad, experiencia y un proceso estructurado para llevar tu marca al siguiente nivel con resultados reales.",
-    "workWithUsCTA": "Conectemos ahora",
+    "sectionTitle": "De la idea a una presencia digital a la altura de tu trabajo",
+    "sectionDescription": "Acompañamos cada proyecto desde la definición inicial hasta la publicación, cuidando la estructura, el diseño, el contenido y el desarrollo.\n\nEl resultado: una web clara, atractiva y funcional, pensada para representar mejor lo que haces y facilitar que las personas entiendan, exploren o compren.",
+    "workWithUsCTA": "Agenda una cita",
     "statistics": {
       "customerSatisfaction": "Satisfacción de clientes",
       "activeUsers": "Usuarios activos al año",

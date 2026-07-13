@@ -35,9 +35,9 @@ export const Navbar = () => {
 
 					{/* <div className="d-none d-lg-flex justify-content-end w-100"> */}
 					<ul className="navbar-nav flex-row align-items-center gap-3">
-						<li className="nav-item">
+						{/* <li className="nav-item">
 							<Link className="nav-link text-white" to="/">{t('navbar.home')}</Link>
-						</li>
+						</li> */}
 						<li className="nav-item">
 							<Link className="nav-link text-white" to="/about">{t('navbar.about')}</Link>
 						</li>
