@@ -540,6 +540,25 @@
       "alertSuccess": "¡Gracias! Tu mensaje ha sido enviado.",
       "alertError": "¡Ups! Ocurrió un problema, intenta nuevamente.",
       "loading": "Enviando..."
+    },
+    "afterwards": {
+      "opening": {
+        "title": "¿Qué pasa después? "
+      },
+      "steps": {
+        "step1": {
+          "title": "[01] Revisamos tu solicitud",
+          "description": "Leemos la información que nos compartes para entender qué necesitas."
+        },
+        "step2": {
+          "title": "[02] Te contactamos",
+          "description": "Coordinamos una llamada o conversación inicial para aclarar dudas."
+        },
+        "step3": {
+          "title": "[03] Definimos el camino",
+          "description": "Te proponemos el siguiente paso: diagnóstico, propuesta, diseño, desarrollo o mejora."
+        }
+      }
     }
   },
   "whatsapp": {

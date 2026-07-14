@@ -629,3 +629,45 @@ h6 {
   font-size: 96px;
   font-weight: bold;
 }
+
+/* Elementos componente Afterwards para Contacto*/
+
+.afterwards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6.6rem;
+  justify-content: center;
+  align-items: center;
+  padding: 6.6rem 0;
+}
+
+.afterwards-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  color: #FBFF06;
+  padding: 0 10px;
+
+  @media (min-width: 768px) {
+    font-size: 5.8rem;
+    padding: 0;
+  }
+}
+
+.afterwards-step-title {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: white;
+}
+
+.afterwards-step-description {
+  font-size: 1.5rem;
+  color: white;
+  line-height: 1.4;
+}
+
+.afterwards-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
