@@ -4,7 +4,6 @@ import { Values } from "../components/About/Values"
 import { WorkSteps } from "../components/About/WorkSteps"
 import { WhoWeAre } from "../components/About/WhoWeAre"
 import { SEO } from "../utils/SEO"
-import { WhereToBegin } from "../components/Services/WhereToBegin"
 
 export const About = () => {
     return (
@@ -16,7 +15,6 @@ export const About = () => {
             />
             <main>
                 <HeaderAbout />
-                <WhereToBegin />
                 <WhoWeAre />
                 <Team />
                 <WorkSteps />

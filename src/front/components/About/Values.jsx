@@ -1,18 +1,20 @@
 import { useRef, useEffect } from 'react';
+import { useTranslation } from "react-i18next";
 import '../../styles/StickyLayout.css';
 
 export const Values = () => {
+    const { t } = useTranslation();
     const containerRef = useRef(null);
     const trackRef = useRef(null);
     const animationFrameRef = useRef(null);
 
     const valuesData = [
-        { title: 'CLARIDAD', desc: 'Ordenamos ideas, contenidos y recorridos para que cada sitio sea fácil de entender, usar y explorar.' },
-        { title: 'CRITERIO', desc: 'No trabajamos con fórmulas genéricas. Cada decisión de diseño, contenido y desarrollo responde a la identidad y los objetivos del proyecto.' },
-        { title: 'SOLIDEZ TÉCNICA', desc: 'Cuidamos que cada sitio funcione bien: que sea estable, adaptable, fácil de usar y preparado para crecer y escalar.' },
-        { title: 'COLABORACIÓN', desc: 'Trabajamos cerca de cada cliente para entender sus necesidades, resolver dudas y avanzar con comunicación clara durante todo el proceso.' },
-        { title: 'INNOVACIÓN', desc: 'Exploramos nuevas herramientas y formas de trabajo cuando el proyecto lo necesita, sin perder de vista lo esencial: construir soluciones útiles y bien pensadas.' },
-        { title: 'TRANSPARENCIA', desc: 'Mantenemos procesos claros, decisiones explicadas y expectativas realistas para que cada etapa del proyecto avance con confianza.' }
+        { title: t('about.values.valueContent.value1.title'), desc: t('about.values.valueContent.value1.description') },
+        { title: t('about.values.valueContent.value2.title'), desc: t('about.values.valueContent.value2.description') },
+        { title: t('about.values.valueContent.value3.title'), desc: t('about.values.valueContent.value3.description') },
+        { title: t('about.values.valueContent.value4.title'), desc: t('about.values.valueContent.value4.description') },
+        { title: t('about.values.valueContent.value5.title'), desc: t('about.values.valueContent.value5.description') },
+        { title: t('about.values.valueContent.value6.title'), desc: t('about.values.valueContent.value6.description') }
     ];
 
     useEffect(() => {
@@ -105,9 +107,9 @@ export const Values = () => {
             <div className='intro-scroll-wrapper'>
                 <div className='intro-sticky-box'>
                     <div className='intro-content'>
-                        <h2 className='section-title'>Lo que guía nuestro <span className='bg-negative-title'>trabajo</span></h2>
+                        <h2 className='section-title'>{t('about.values.opening.openingTitle')}</h2>
                         <p className='intro-text'>
-                            Cada proyecto necesita algo distinto, pero nuestra forma de trabajar se sostiene en principios claros: entender antes de construir, diseñar con intención y desarrollar soluciones que funcionen para personas reales.
+                            {t('about.values.opening.openingDescription')}
                         </p>
                     </div>
                 </div>

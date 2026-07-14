@@ -105,6 +105,30 @@
         "description": "Design without limits in 2D and 3D with the most complete tool for architects and engineers. Accelerate your workflows and create impactful designs with powerful modeling, visualization, and automation features.",
         "link": "Acquire Full License"
       }
+    },
+    "whereToBegin": {
+      "opening": {
+        "openingTitle": "No todos los proyectos empiezan en el mismo punto",
+        "openingDescription": "Puedes llegar con una idea, una marca ya creada, un diseño listo o una web que necesita mejorar. Nos adaptamos al punto en el que estás para ayudarte a avanzar, a lo que tu proyecto necesita hoy."
+      },
+      "phases": {
+        "phase1": {
+          "title": "EMPEZAR DESDE CERO",
+          "description": "Ordenamos las ideas, definimos la estructura y construimos la web completa."
+        },
+        "phase2": {
+          "title": "DISEÑO Y EXPERIENCIA",
+          "description": "No trabajamos con fórmulas genéricas. Cada decisión de diseño, contenido y desarrollo responde a la identidad y los objetivos del proyecto."
+        },
+        "phase3": {
+          "title": "LLEVA TU DISEÑO A LA WEB",
+          "description": "Tomamos diseños existentes y los convertimos en sitios funcionales, responsivos y fáciles de usar."
+        },
+        "phase4": {
+          "title": "OPTIMIZAR TU WEB",
+          "description": "Revisamos lo que ya tienes y proponemos mejoras en estructura, diseño, contenido, rendimiento o funcionalidad."
+        }
+      }
     }
   },
   "process": {

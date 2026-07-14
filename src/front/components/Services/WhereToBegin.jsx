@@ -1,16 +1,19 @@
 import { useRef, useEffect } from 'react';
 import '../../styles/StickyLayout.css';
+import { useTranslation } from "react-i18next"
 
 export const WhereToBegin = () => {
+    const { t } = useTranslation();
+
     const containerRef = useRef(null);
     const trackRef = useRef(null);
     const animationFrameRef = useRef(null);
 
     const phaseData = [
-        { title: 'EMPEZAR DESDE CERO', desc: 'Ordenamos las ideas, definimos la estructura y construimos la web completa.' },
-        { title: 'DISEÑO Y EXPERIENCIA', desc: 'No trabajamos con fórmulas genéricas. Cada decisión de diseño, contenido y desarrollo responde a la identidad y los objetivos del proyecto.' },
-        { title: 'LLEVA TU DISEÑO A LA WEB', desc: 'Tomamos diseños existentes y los convertimos en sitios funcionales, responsivos y fáciles de usar.' },
-        { title: 'OPTIMIZAR TU WEB', desc: 'Revisamos lo que ya tienes y proponemos mejoras en estructura, diseño, contenido, rendimiento o funcionalidad.' }
+        { title: t('services.whereToBegin.phases.phase1.title'), desc: t('services.whereToBegin.phases.phase1.description') },
+        { title: t('services.whereToBegin.phases.phase2.title'), desc: t('services.whereToBegin.phases.phase2.description') },
+        { title: t('services.whereToBegin.phases.phase3.title'), desc: t('services.whereToBegin.phases.phase3.description') },
+        { title: t('services.whereToBegin.phases.phase4.title'), desc: t('services.whereToBegin.phases.phase4.description') }
     ];
 
     useEffect(() => {
@@ -74,7 +77,7 @@ export const WhereToBegin = () => {
                     <div className='intro-content'>
                         <h2 className='section-title'>No todos los <span className='bg-negative-title'>proyectos</span> empiezan en el mismo punto</h2>
                         <p className='intro-text'>
-                            Puedes llegar con una idea, una marca ya creada, un diseño listo o una web que necesita mejorar. Nos adaptamos al punto en el que estás para ayudarte a avanzar, a lo que tu proyecto necesita hoy.
+                            {t('services.whereToBegin.opening.openingDescription')}
                         </p>
                     </div>
                 </div>

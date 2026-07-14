@@ -1,17 +1,19 @@
 import { useRef, useEffect } from 'react';
 import '../../styles/StickyLayout.css';
+import { useTranslation } from "react-i18next";
 
 export const WorkSteps = () => {
+    const { t } = useTranslation();
     const containerRef = useRef(null);
     const trackRef = useRef(null);
     const animationFrameRef = useRef(null);
 
     const workStepsData = [
-        { title: 'Escuchamos y entendemos', desc: 'Conocemos tu proyecto, tus objetivos, tus referencias y las necesidades reales que debe resolver la web o experiencia digital.' },
-        { title: 'Ordenamos la información', desc: 'Conocemos tu proyecto, tus objetivos, tus referencias y las necesidades reales que debe resolver la web o experiencia digital.' },
-        { title: 'Diseñamos la experiencia', desc: 'Conocemos tu proyecto, tus objetivos, tus referencias y las necesidades reales que debe resolver la web o experiencia digital.' },
-        { title: 'Desarrollamos la solución', desc: 'Conocemos tu proyecto, tus objetivos, tus referencias y las necesidades reales que debe resolver la web o experiencia digital.' },
-        { title: 'Publicamos y acompañamos', desc: 'Conocemos tu proyecto, tus objetivos, tus referencias y las necesidades reales que debe resolver la web o experiencia digital.' }
+        { title: t('about.workSteps.steps.step1.title'), desc: t('about.workSteps.steps.step1.description') },
+        { title: t('about.workSteps.steps.step2.title'), desc: t('about.workSteps.steps.step2.description') },
+        { title: t('about.workSteps.steps.step3.title'), desc: t('about.workSteps.steps.step3.description') },
+        { title: t('about.workSteps.steps.step4.title'), desc: t('about.workSteps.steps.step4.description') },
+        { title: t('about.workSteps.steps.step5.title'), desc: t('about.workSteps.steps.step5.description') }
     ];
 
     useEffect(() => {
@@ -130,15 +132,15 @@ export const WorkSteps = () => {
             <div className='intro-scroll-wrapper-positive'>
                 <div className='intro-sticky-box-positive'>
                     <div className='intro-content-positive'>
-                        <h2 className='section-title-positive'>Cómo <span className='bg-positive-title'>trabajamos</span></h2>
+                        <h2 className='section-title-positive'>{t('about.workSteps.opening.openingTitle')}</h2>
                         <p className='intro-text-positive'>
-                            Cada proyecto empieza por entender qué necesita comunicar, a quién debe llegar y cómo debe funcionar. A partir de ahí, ordenamos la información, definimos la experiencia, diseñamos la interfaz y desarrollamos una solución clara, funcional y alineada con los objetivos del proyecto.
+                            {t('about.workSteps.opening.openingDescription')}
                         </p>
                     </div>
                 </div>
-            </div>
+            </div >
             {/* CONTENEDOR PRINCIPAL DE PASOS */}
-            <div className="work-steps-scroll-container" ref={containerRef}>
+            < div className="work-steps-scroll-container" ref={containerRef} >
                 <div className="intro-sticky-box-positive">
                     <div ref={trackRef} className="work-steps-track">
                         {workStepsData.map((item, index) => (
@@ -162,7 +164,7 @@ export const WorkSteps = () => {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

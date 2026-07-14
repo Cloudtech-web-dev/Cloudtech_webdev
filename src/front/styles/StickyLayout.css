@@ -94,7 +94,7 @@
     overflow-wrap: break-word;
     white-space: normal;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 1400px) {
         white-space: nowrap;
     }
 
@@ -343,7 +343,6 @@
 .sticky-sidebar-column {
     position: -webkit-sticky;
     position: sticky;
-
     /* 1. Posición inicial exacta para alinearse con las primeras cards */
     top: 0px;
 
@@ -352,6 +351,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     width: auto;
+    padding-bottom: 30px;
 
     /* 2. Declaramos la animación y su velocidad/suavizado */
     animation: adjustStickyTop linear both;
@@ -373,7 +373,7 @@
     to {
         /* Al bajar el scroll, se desplaza suavemente hacia abajo para esquivar la Navbar 
            (Ajusta los 120px dependiendo de la altura real de tu menú) */
-        top: 400px;
+        top: 150px;
     }
 }
 
