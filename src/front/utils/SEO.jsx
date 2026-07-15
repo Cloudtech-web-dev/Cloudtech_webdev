@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async"
+import { useTranslation } from "react-i18next";
 
 export const SEO = ({
     title,
@@ -8,15 +9,16 @@ export const SEO = ({
     image = "https://cloudtech.com.ec/assets/LogoNavbar-Cw3ty4Sl.svg",
     url = "https://cloudtech.com.ec/"
 }) => {
+    const { t } = useTranslation();
     return (
         <Helmet>
             {/* Etiquetas Estándar */}
-            <title>{title} | {name}</title>
+            <title>{t(title)} | {name}</title>
             <meta name='description' content={description} />
 
             {/* Etiquetas Open Graph (Facebook, LinkedIn, WhatsApp) */}
             <meta property="og:type" content={type} />
-            <meta property="og:title" content={title} />
+            <meta property="og:title" content={t(title)} />
             <meta property="og:description" content={description} />
             <meta property="og:image" content={image} />
             <meta property="og:url" content={url} />

@@ -1,0 +1,355 @@
+/* ==========================================
+   GLASS EFFECT FOR NAVBAR
+   ========================================== */
+.glass-effect {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: none;
+}
+
+.glass-navbar {
+    top: 0;
+    z-index: 1030;
+    min-height: 88px;
+    margin-bottom: -88px;
+    background-color: rgba(4, 23, 27, 0.16);
+}
+
+.glass-mobile-navbar {
+    top: 0;
+    z-index: 1030;
+    background-color: rgba(4, 23, 27, 0.16);
+    border-radius: 0;
+}
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL
+   ========================================== */
+.services-accordion-section {
+    width: 100%;
+    padding: 6rem 0;
+    color: white;
+}
+
+.custom-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.accordion-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Esto garantiza exactamente 10px entre cada card */
+}
+
+/* ==========================================
+   ENCABEZADO DE CATEGORÍA (NUEVO: CENTRADO)
+   ========================================== */
+.category-header-centered {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-category-title-main {
+    color: #FBFF06;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 110%;
+    margin-bottom: 1.5rem;
+}
+
+.service-category-description-main {
+    color: var(--text-white);
+    opacity: 0.8;
+    line-height: 160%;
+    font-size: 1.1rem;
+}
+
+.service-category-wrapper {
+    margin-bottom: 5rem;
+}
+
+/* ==========================================
+   TARJETA DEL ACORDEÓN
+   ========================================== */
+.accordion-card {
+    border: 1px solid #FFFF;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.1s ease;
+    background: transparent;
+}
+
+.accordion-card.open {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: #6EF3C5;
+}
+
+.accordion-card:hover:not(.open) {
+    border-color: rgba(110, 243, 197, 0.4);
+}
+
+/* ==========================================
+   HEADER DEL ITEM
+   ========================================== */
+.accordion-header {
+    width: 100%;
+    padding: 1.8rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.accordion-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.header-icon-svg {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    color: #6EF3C5;
+}
+
+.accordion-header-title {
+    color: #6EF3C5;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* ICONO MAS / MENOS */
+.plus-minus-indicator {
+    color: #6EF3C5;
+    position: relative;
+    width: 22px;
+    /* Tamaño del contenedor */
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.accordion-toggle-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.accordion-card.open .accordion-toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* ==========================================
+   CUERPO (SISTEMA DE COLUMNAS INTERNAS)
+   ========================================== */
+.accordion-body-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-body-collapse.show {
+    max-height: 1200px;
+    /* Suficiente para el contenido */
+}
+
+.accordion-body-content {
+    padding: 0 2.5rem 3rem 2.5rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    /* Dos columnas: texto más ancho que imagen */
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Lado del Texto */
+.item-description {
+    color: white;
+    opacity: 0.9;
+    font-size: large;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.btn-outline-accent {
+    border: 2px solid #FBFF06;
+    border-radius: 100px;
+    color: #FBFF06;
+    font-size: large;
+    padding: 10px 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-accent:hover {
+    border: 2px solid #FBFF06;
+    border-radius: 100px;
+    background-color: #FBFF06;
+    color: black;
+    font-weight: bold;
+    padding: 10px 30px;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+
+/* Lado de la Imagen */
+.preview-image {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 280px;
+    border-radius: 20px;
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================
+   BOTÓN FINAL (FOOTER CTA)
+   ========================================== */
+.accordion-footer-cta {
+    display: flex;
+    justify-content: center;
+    /* Centra el botón horizontalmente */
+    margin-top: 80px;
+    /* Espacio generoso después del último acordeón */
+    padding-bottom: 4rem;
+    /* Espacio antes de que termine la sección */
+}
+
+.accordion-footer-cta {
+    padding: 15px 45px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 992px) {
+    .service-category-title-main {
+        font-size: 2.5rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        /* Una columna en tablets/móviles */
+        gap: 2rem;
+    }
+
+    .accordion-header {
+        padding: 1.5rem;
+    }
+
+    .accordion-body-content {
+        padding: 0 1.5rem 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-category-title-main {
+        font-size: 2rem;
+    }
+
+    .accordion-header-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* ==========================================
+   CONTACT CARDS
+   ========================================== */
+
+.contact-cards-section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.contact-card-custom {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 250px;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.contact-card-custom:hover {
+    transform: translateY(-12px);
+    border-color: #FBFF06;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.card-text-wrapper {
+    max-width: 100%;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.card-title-contact {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.card-description-contact {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 70%;
+}
+
+.icon-contact {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    flex-shrink: 0;
+    color: #FBFF06;
+}
+
+.align-items-stretch {
+    align-items: stretch;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 991px) {
+    .custom-gap-20 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .custom-gap-20 .col {
+        width: 100%;
+    }
+}
