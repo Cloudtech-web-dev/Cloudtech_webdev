@@ -15,10 +15,10 @@
       "contactButton": "Contáctanos"
     },
     "headerAbout": {
-      "headLine": "Tu visión, el motor de nuestra creatividad",
-      "headerDescription": "Moldeamos tus ideas en experiencias web poderosas que reflejan la esencia de tu marca y cumplen tus objetivos estratégicos.",
-      "portfolioButton": "Proyectos",
-      "contactButton": "Contáctanos"
+      "headLine": "Un estudio digital para proyectos con identidad",
+      "headerDescription": "Creamos sitios web y experiencias digitales para proyectos con identidad, cuidando cómo se ven, cómo se entienden y cómo funcionan.",
+      "portfolioButton": "Ver proyectos",
+      "contactButton": "Hablemos"
     },
     "headerServices": {
       "headLine": "Tu Universo a Medida",
@@ -43,7 +43,67 @@
   },
   "about": {
     "sectionTitle": "¿Quiénes somos?",
-    "sectionDescription": "Somos una empresa que cree en el valor de unir la creatividad y la tecnología. Combinamos estrategia, diseño de vanguardia y tecnología robusta para crear una presencia online intuitiva y funcional."
+    "sectionDescription": "CloudTech es un estudio digital que une diseño, narrativa y desarrollo web. Trabajamos con marcas, creativos y proyectos que necesitan una presencia digital clara, atractiva y funcional. Nos interesa cómo se ve un sitio, pero también cómo lo experimentan y cómo presenta de la mejor manera un trabajo, un producto o una idea.",
+    "workSteps": {
+      "opening": {
+        "openingTitle": "Cómo trabajamos",
+        "openingDescription": "Cada proyecto empieza por entender qué necesita comunicar, a quién debe llegar y cómo debe funcionar. A partir de ahí, ordenamos la información, definimos la experiencia, diseñamos la interfaz y desarrollamos una solución clara, funcional y alineada con los objetivos del proyecto."
+      },
+      "steps": {
+        "step1": {
+          "title": "Escuchamos y entendemos",
+          "description": "Ordenamos las ideas, definimos la estructura y construimos la web completa."
+        },
+        "step2": {
+          "title": "Ordenamos la información",
+          "description": "Definimos qué debe decir tu sitio, cómo se organiza el contenido y qué recorrido necesita hacer cada usuario."
+        },
+        "step3": {
+          "title": "Diseñamos la experiencia",
+          "description": "Trabajamos la estructura visual, los wireframes y las pantallas principales para que el proyecto se vea claro, atractivo y fácil de recorrer."
+        },
+        "step4": {
+          "title": "Desarrollamos la solución",
+          "description": "Construimos el sitio, tienda online, aplicación o plataforma con la tecnología adecuada para que funcione bien y pueda crecer."
+        },
+        "step5": {
+          "title": "Publicamos y acompañamos ",
+          "description": "Revisamos, ajustamos y dejamos una base lista para que el proyecto pueda continuar, actualizarse o escalar según sus necesidades. "
+        }
+      }
+    },
+    "values": {
+      "opening": {
+        "openingTitle": "Lo que guía nuestro trabajo",
+        "openingDescription": "Cada proyecto necesita algo distinto, pero nuestra forma de trabajar se sostiene en principios claros: entender antes de construir, diseñar con intención y desarrollar soluciones que funcionen para personas reales."
+      },
+      "valueContent": {
+        "value1": {
+          "title": "CLARIDAD",
+          "description": "Ordenamos ideas, contenidos y recorridos para que cada sitio sea fácil de entender, usar y explorar."
+        },
+        "value2": {
+          "title": "CRITERIO",
+          "description": "No trabajamos con fórmulas genéricas. Cada decisión de diseño, contenido y desarrollo responde a la identidad y los objetivos del proyecto."
+        },
+        "value3": {
+          "title": "SOLIDEZ TÉCNICA",
+          "description": "Cuidamos que cada sitio funcione bien: que sea estable, adaptable, fácil de usar y preparado para crecer y escalar."
+        },
+        "value4": {
+          "title": "COLABORACIÓN",
+          "description": "Trabajamos cerca de cada cliente para entender sus necesidades, resolver dudas y avanzar con comunicación clara durante todo el proceso."
+        },
+        "value5": {
+          "title": "INNOVACIÓN",
+          "description": "Exploramos nuevas herramientas y formas de trabajo cuando el proyecto lo necesita, sin perder de vista lo esencial: construir soluciones útiles y bien pensadas."
+        },
+        "value6": {
+          "title": "TRANSPARENCIA",
+          "description": "Mantenemos procesos claros, decisiones explicadas y expectativas realistas para que cada etapa del proyecto avance con confianza."
+        }
+      }
+    }
   },
   "services": {
     "sectionTitle": "Conoce nuestros servicios",
@@ -104,6 +164,30 @@
         "title": "AutoCAD IST",
         "description": "Diseña sin límites en 2D y 3D con la herramienta más completa para arquitectos e ingenieros. Acelera tus flujos de trabajo y crea diseños impactantes con potentes funciones de modelado, visualización y automatización.",
         "link": "Adquirir licencia completa"
+      }
+    },
+    "whereToBegin": {
+      "opening": {
+        "openingTitle": "No todos los proyectos empiezan en el mismo punto",
+        "openingDescription": "Puedes llegar con una idea, una marca ya creada, un diseño listo o una web que necesita mejorar. Nos adaptamos al punto en el que estás para ayudarte a avanzar, a lo que tu proyecto necesita hoy."
+      },
+      "phases": {
+        "phase1": {
+          "title": "EMPEZAR DESDE CERO",
+          "description": "Ordenamos las ideas, definimos la estructura y construimos la web completa."
+        },
+        "phase2": {
+          "title": "DISEÑO Y EXPERIENCIA",
+          "description": "No trabajamos con fórmulas genéricas. Cada decisión de diseño, contenido y desarrollo responde a la identidad y los objetivos del proyecto."
+        },
+        "phase3": {
+          "title": "LLEVA TU DISEÑO A LA WEB",
+          "description": "Tomamos diseños existentes y los convertimos en sitios funcionales, responsivos y fáciles de usar."
+        },
+        "phase4": {
+          "title": "OPTIMIZAR TU WEB",
+          "description": "Revisamos lo que ya tienes y proponemos mejoras en estructura, diseño, contenido, rendimiento o funcionalidad."
+        }
       }
     }
   },
@@ -337,7 +421,7 @@
   },
   "team": {
     "sectionTitle": "Conoce a nuestro equipo",
-    "sectionDescription": "Nuestro compromiso es generar conexiones reales y un crecimiento medible para tu negocio. En CloudTech, tu singularidad cobra vida en un universo digital a medida y sofisticado.",
+    "sectionDescription": "Somos un equipo que combina estrategia, diseño, desarrollo, contenido y gestión comercial para construir sitios web y experiencias digitales con identidad.",
     "sectionCTAButton": "Hablemos de tu proyecto",
     "card": {
       "teamMember1": {
@@ -456,6 +540,25 @@
       "alertSuccess": "¡Gracias! Tu mensaje ha sido enviado.",
       "alertError": "¡Ups! Ocurrió un problema, intenta nuevamente.",
       "loading": "Enviando..."
+    },
+    "afterwards": {
+      "opening": {
+        "title": "¿Qué pasa después? "
+      },
+      "steps": {
+        "step1": {
+          "title": "[01] Revisamos tu solicitud",
+          "description": "Leemos la información que nos compartes para entender qué necesitas."
+        },
+        "step2": {
+          "title": "[02] Te contactamos",
+          "description": "Coordinamos una llamada o conversación inicial para aclarar dudas."
+        },
+        "step3": {
+          "title": "[03] Definimos el camino",
+          "description": "Te proponemos el siguiente paso: diagnóstico, propuesta, diseño, desarrollo o mejora."
+        }
+      }
     }
   },
   "whatsapp": {
