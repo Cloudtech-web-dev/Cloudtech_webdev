@@ -16,7 +16,7 @@ export const OtherProjects = () => {
 
     return (
         <section id="otros-proyectos" className="my-5">
-            <h1 className="section-title text-center">{t('projects.otherProjects')}</h1>
+            <h1 className="component-title text-center">{t('projects.otherProjects')}</h1>
 
             <Swiper
                 modules={[Navigation, Autoplay]}

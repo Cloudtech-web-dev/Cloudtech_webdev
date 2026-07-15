@@ -269,6 +269,8 @@
     "sectionCTAButton": "Conectemos ahora",
     "sectionPortfolioButton": "Explore our portfolio",
     "discoverMore": "Discover More",
+    "sectionTitle2": "Our Projects",
+    "sectionDescription2": "Each project starts with a different need: selling products, organizing content, showcasing a project, or building a clear digital identity. These projects demonstrate how we combine structure, design and development to create useful, attractive and easy-to-use digital experiences.",
     "menuItems": {
       "itemOne": "[01] The Need",
       "itemTwo": "[02] Our Process",
@@ -297,6 +299,9 @@
     "projectName7": "MURA",
     "projectPreview7": "The website for MURA Digital Magazine, integrating an experimental design and self-management tools to showcase unusual literature and voices from across Latin America. ",
     "projectSummary7": "MURA is a digital magazine specialized in literature and arts that seeks to dismantle the traditional structures of literary genres. CloudTech materialized the project comprehensively, designing its visual identity from scratch and implementing a dynamic editorial platform on WordPress. The result is a fluid, self-managed editorial ecosystem that showcases the disruptive talent of Ecuador and Latin America. ",
+    "projectName8": "Piedra Negra",
+    "projectPreview8": "Visual branding and commercial tool development for an Ecuadorian coffee brand seeking to strengthen its retail presence and open up B2B opportunities. ",
+    "projectSummary8": "MURA is a digital magazine specialized in literature and arts that seeks to dismantle the traditional structures of literary genres. CloudTech materialized the project comprehensively, designing its visual identity from scratch and implementing a dynamic editorial platform on WordPress. The result is a fluid, self-managed editorial ecosystem that showcases the disruptive talent of Ecuador and Latin America. ",
     "projectNeed1": "The bookstore required a scalable digital sales channel to market its catalog nationwide. The technical challenge was to centralize inventory management for multiple independent publishers and replace manual sales processes with an automated, secure infrastructure capable of handling complex payment flows without user friction. ",
     "projectProcess1": {
       "description": "For Cosmonauta, the methodology centered on building a technical infrastructure capable of unifying complex inventory management with a seamless shopping experience. The development approach prioritized backend robustness and transactional security, ensuring the platform scales perfectly alongside its growing literary catalog.",

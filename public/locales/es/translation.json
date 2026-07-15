@@ -15,20 +15,20 @@
       "contactButton": "Contáctanos"
     },
     "headerAbout": {
-      "headLine": "Un estudio digital para proyectos con identidad",
+      "headLine": "Un estudio digital para proyectos con <0>identidad</0>",
       "headerDescription": "Creamos sitios web y experiencias digitales para proyectos con identidad, cuidando cómo se ven, cómo se entienden y cómo funcionan.",
       "portfolioButton": "Ver proyectos",
       "contactButton": "Hablemos"
     },
     "headerServices": {
-      "headLine": "Tu Universo a Medida",
-      "headerDescription": "Nuestros servicios son el puente entre tus ideas y soluciones digitales potentes que impulsarán tu marca y generarán crecimiento sostenido.",
+      "headLine": "Sitios web, aplicaciones y tiendas online con <0>identidad</0>",
+      "headerDescription": "Creamos experiencias digitales claras, atractivas y funcionales, pensadas para mostrar mejor tu trabajo, tus productos o tus servicios.",
       "portfolioButton": "Proyectos",
       "contactButton": "Contáctanos"
     },
     "headerProjects": {
-      "headLine": "Diseñamos y conectamos tu ecosistema digital",
-      "headerDescription": "Exploramos la intersección entre estrategia, diseño y tecnología para construir soluciones digitales únicas que resuelven desafíos reales y canalizan los esfuerzos hacia una experiencia inigualable.",
+      "headLine": "Proyectos digitales con <0>identidad</0>",
+      "headerDescription": "Una selección de sitios web, tiendas online, portafolios y plataformas editoriales donde diseño, contenido y desarrollo se integran para presentar mejor una marca, un producto o una idea.",
       "contactButton": "Contáctanos"
     }
   },
@@ -297,6 +297,9 @@
     "projectName7": "MURA",
     "projectPreview7": "Implementamos la página web de MURA Revista Digital, integrando un diseño experimental y herramientas de autogestión para visibilizar literaturas y voces inusuales de toda Latinoamérica.",
     "projectSummary7": "MURA es una revista digital especializada en literatura y artes que busca desarmar las estructuras tradicionales de los géneros literarios. CloudTech materializó el proyecto de forma integral, diseñando su identidad visual desde cero e implementando una plataforma editorial dinámica sobre WordPress. El resultado es un ecosistema editorial fluido y autogestionado que visibiliza el talento disruptivo de Ecuador y Latinoamérica.",
+    "projectName8": "Piedra Negra",
+    "projectPreview8": "Estandarización visual y desarrollo de herramientas comerciales para una marca de café ecuatoriano que busca fortalecer su presencia en retail y abrir oportunidades B2B.",
+    "projectSummary8": "MURA es una revista digital especializada en literatura y artes que busca desarmar las estructuras tradicionales de los géneros literarios. CloudTech materializó el proyecto de forma integral, diseñando su identidad visual desde cero e implementando una plataforma editorial dinámica sobre WordPress. El resultado es un ecosistema editorial fluido y autogestionado que visibiliza el talento disruptivo de Ecuador y Latinoamérica.",
     "projectNeed1": "La librería requería un canal de ventas digital escalable para comercializar su catálogo a nivel nacional. El desafío técnico consistía en centralizar la gestión de inventario de múltiples editoriales independientes y sustituir procesos de venta manuales por una infraestructura automatizada, segura y capaz de manejar flujos de pago complejos sin fricciones para el usuario.",
     "projectProcess1": {
       "description": "Nuestra metodología para Cosmonauta se centró en construir una infraestructura técnica capaz de unificar la gestión compleja de inventarios con una experiencia de compra fluida. Abordamos el desarrollo priorizando la robustez del backend y la seguridad transaccional, asegurando que la plataforma escale al mismo ritmo que su catálogo literario.",

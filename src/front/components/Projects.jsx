@@ -17,8 +17,8 @@ export const Projects = ({ limit = 0 }) => {
 
                 {/* Sction Title */}
                 <div className="d-flex flex-column text-center justify-content-center mb-5 gap-5">
-                    <h2 className="section-title">{t('projects.sectionTitle')}</h2>
-                    <p className="text-white ct-description-p">{t('projects.sectionDescription')}</p>
+                    <h2 className="component-title text-center">{t('projects.sectionTitle2')}</h2>
+                    <p className="text-white ct-description-p">{t('projects.sectionDescription2')}</p>
                     <div className="d-flex justify-content-center mb-3">
                         {/* <a
                             href={PortfolioPDF}
@@ -38,7 +38,8 @@ export const Projects = ({ limit = 0 }) => {
                         <Card
                             key={project.id}
                             id={project.id}
-                            gallery={project.gallery}
+                            // gallery={project.gallery}
+                            cover={project.cover}
                             name={t(project.name)}
                             preview={t(project.preview)}
                             index={index}

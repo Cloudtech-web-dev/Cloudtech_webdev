@@ -1,6 +1,9 @@
-import { HeaderProjects } from "../components/HeaderProjects";
+
 import { Projects } from "../components/Projects";
+import { CallToAction } from "../components/Projects/CallToAction";
 import { SEO } from "../utils/SEO";
+import HomeProjects from "../assets/img/HomeProjects.jpg"
+import PageHeader from "../components/PageHeader";
 
 export const Portfolio = () => {
     return (
@@ -11,8 +14,13 @@ export const Portfolio = () => {
                 url={window.location.href}
             />
             <main>
-                <HeaderProjects />
+                <PageHeader
+                    title="headers.headerProjects.headLine"
+                    description='headers.headerProjects.headerDescription'
+                    backgroundImg={HomeProjects}
+                />
                 <Projects />
+                <CallToAction />
             </main>
         </>
     )

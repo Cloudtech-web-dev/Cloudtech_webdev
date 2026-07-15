@@ -34,6 +34,7 @@ h6 {
   padding: 0.5rem 5rem 0.5rem 5rem;
   color: white;
   font-weight: bold;
+  transform: scale(1.02);
 }
 
 .ct-btn-outline-accent:hover {
@@ -41,11 +42,41 @@ h6 {
   padding: 0.5rem 5rem 0.5rem 5rem;
   color: #217b8f;
   font-weight: bolder;
+  transform: scale(1.02);
 }
 
 .custom-modal-close-btn {
   color: #fbff06;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fbff06'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
+}
+
+.btn.btn-outline-dark-custom {
+  background-color: transparent;
+  color: #04171B;
+  border: 2px solid #04171B;
+  border-radius: 999px;
+  font-weight: 700;
+  /* transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.2s ease; */
+}
+
+.btn.btn-outline-dark-custom:hover {
+  background-color: #04171B;
+  color: #FBFF06;
+  border-color: #04171B;
+  transform: scale(1.02);
+}
+
+.btn.btn-outline-dark-custom:focus,
+.btn.btn-outline-dark-custom:active {
+  background-color: #04171B;
+  color: #FBFF06;
+  border-color: #04171B;
+  box-shadow: none;
+
 }
 
 /* Carousel next and prev buttons color style */
@@ -100,6 +131,13 @@ h6 {
   font-weight: bold;
 }
 
+.component-title {
+  color: #FBFF06;
+  font-size: 3.5rem;
+  font-weight: 800;
+
+}
+
 .process-section-title {
   background: none;
   border-style: none;
@@ -116,6 +154,13 @@ h6 {
 .ct-paragraph {
   font-size: 16pt;
   line-height: 170%;
+}
+
+.highlighted-text {
+  display: inline-block;
+  padding: 0 0.5rem;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 
 /* Cat transition effect */
@@ -417,11 +462,13 @@ h6 {
   color: white;
   display: inline-block;
   transition: color 0.6s ease, transform 0.8s ease;
+  font-weight: 500;
 }
 
 .navbar .navbar-nav .nav-link:hover {
   color: #fbff06 !important;
   transform: scale(1.05);
+  font-weight: 500;
 }
 
 .fa-icon-yellow {
@@ -455,7 +502,7 @@ h6 {
 }
 
 .hero-title-home {
-  color: #fbff06 !important;
+  color: #fbff06;
 }
 
 .btn-outline {

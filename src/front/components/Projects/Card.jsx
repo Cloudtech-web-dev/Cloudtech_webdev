@@ -1,24 +1,30 @@
-import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import * as bootstrap from "bootstrap";
+// =============================================
+// CÓDIGO DEL CARRUSEL COMENTADO TEMPORALMENTE
+// =============================================
+// import { useEffect, useRef } from "react";
+// import * as bootstrap from "bootstrap";
 
-export const Card = ({ id, gallery = [], name, preview, index }) => {
+export const Card = ({ id, cover, gallery = [], name, preview, index }) => {
     const { t } = useTranslation();
     const isEven = index % 2 === 0;
-    const carouselRef = useRef(null);
+    // =============================================
+    // CÓDIGO DEL CARRUSEL COMENTADO TEMPORALMENTE
+    // =============================================
+    // const carouselRef = useRef(null);
 
-    useEffect(() => {
-        if (carouselRef.current && gallery.length > 1) {
-            // Inicializamos el carrusel manualmente para asegurar el autoplay
-            const carousel = new bootstrap.Carousel(carouselRef.current, {
-                interval: 3000,
-                ride: 'carousel',
-                pause: false // No se detiene al pasar el mouse
-            });
-            carousel.cycle();
-        }
-    }, [gallery.length]);
+    // useEffect(() => {
+    //     if (carouselRef.current && gallery.length > 1) {
+    //         // Inicializamos el carrusel manualmente para asegurar el autoplay
+    //         const carousel = new bootstrap.Carousel(carouselRef.current, {
+    //             interval: 3000,
+    //             ride: 'carousel',
+    //             pause: false // No se detiene al pasar el mouse
+    //         });
+    //         carousel.cycle();
+    //     }
+    // }, [gallery.length]);
 
     return (
         <div className="row align-items-center g-4 g-lg-5 projects-card-spacing mt-5 mb-5">
@@ -40,8 +46,11 @@ export const Card = ({ id, gallery = [], name, preview, index }) => {
                 </div>
             </div>
 
+            {/* // =============================================
+            // CÓDIGO DEL CARRUSEL COMENTADO TEMPORALMENTE
+            // ============================================= */}
             {/* COLUMNA DEL CARRUSEL: Imágenes y Flechas */}
-            <div className={`col-12 col-lg-6 ${!isEven ? "order-lg-1" : "order-lg-2"}`}>
+            {/* <div className={`col-12 col-lg-6 ${!isEven ? "order-lg-1" : "order-lg-2"}`}>
                 <div
                     id={`carousel-${id}`}
                     ref={carouselRef}
@@ -64,10 +73,10 @@ export const Card = ({ id, gallery = [], name, preview, index }) => {
                             </Link>
                         ))}
 
-                    </div>
+                    </div> */}
 
-                    {/* FLECHAS: Negras con fondo gris desenfocado */}
-                    {gallery.length > 1 && (
+            {/* FLECHAS: Negras con fondo gris desenfocado */}
+            {/* {gallery.length > 1 && (
                         <>
                             <button className="carousel-control-prev" type="button" data-bs-target={`#carousel-${id}`} data-bs-slide="prev">
                                 <span className="carousel-control-prev-icon custom-arrow" aria-hidden="true"></span>
@@ -80,6 +89,20 @@ export const Card = ({ id, gallery = [], name, preview, index }) => {
                         </>
                     )}
                 </div>
+            </div> */}
+            {/* IMAGEN DE PORTADA */}
+            <div className={`col-12 col-lg-6 ${!isEven ? "order-lg-1" : "order-lg-2"}`}>
+
+                <Link
+                    to={`/projects/${id}`}
+                    className="d-block"
+                >
+                    <img
+                        src={cover}
+                        alt={name}
+                        className="img-fluid rounded-4 shadow-lg project-cover-img"
+                    />
+                </Link>
             </div>
         </div>
     );
