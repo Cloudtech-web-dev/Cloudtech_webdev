@@ -25,6 +25,7 @@ export const About = () => {
                 <Afterwards />
 
                 <WhereToBegin />
+                <HeaderAbout />
                 <WhoWeAre />
                 <Team />
                 <WorkSteps />
