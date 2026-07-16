@@ -443,6 +443,14 @@
       "teamMember5": {
         "position": "Desarrollador de software",
         "description": "Desarrollador de software versátil en Android, React, Python y Node, con sólidos conocimientos en redes informáticas. Esta preparación integral le permite fluir con naturalidad por todo el ciclo de aplicaciones web y móviles, desde la concepción hasta su implementación efectiva."
+      },
+      "teamMember6": {
+        "position": "Ejecutiva de Cuenta",
+        "description": "Gestiona nuevos contactos y acompaña el proceso comercial. Su rol ayuda a que cada oportunidad avance con seguimiento, cercanía y claridad."
+      },
+      "teamMember7": {
+        "position": "Ejecutiva de Cuenta",
+        "description": "Especializada en la gestión de clientes y el desarrollo de oportunidades comerciales. Comprende las necesidades de cada cliente, coordina propuestas y asegura una comunicación fluida durante todo el proceso, fortaleciendo relaciones de largo plazo."
       }
     }
   },

@@ -443,6 +443,14 @@
       "teamMember5": {
         "position": "Software Developer",
         "description": "Versatile Developer (Android, React, Python, Node) & Networking Specialist. His broad technical expertise enables him to oversee the full software development lifecycle. He excels at bridging the gap between initial concept and successful implementation for both web and mobile platforms."
+      },
+      "teamMember6": {
+        "position": "Ejecutiva de Cuenta",
+        "description": "Gestiona nuevos contactos y acompaña el proceso comercial. Su rol ayuda a que cada oportunidad avance con seguimiento, cercanía y claridad."
+      },
+      "teamMember7": {
+        "position": "Ejecutiva de Cuenta",
+        "description": "Especializada en la gestión de clientes y el desarrollo de oportunidades comerciales. Comprende las necesidades de cada cliente, coordina propuestas y asegura una comunicación fluida durante todo el proceso, fortaleciendo relaciones de largo plazo."
       }
     }
   },
