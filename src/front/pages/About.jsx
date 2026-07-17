@@ -22,10 +22,6 @@ export const About = () => {
                     description='headers.headerAbout.headerDescription'
                     backgroundImg={HomeAbout}
                 />
-                <Afterwards />
-
-                <WhereToBegin />
-                <HeaderAbout />
                 <WhoWeAre />
                 <Team />
                 <WorkSteps />

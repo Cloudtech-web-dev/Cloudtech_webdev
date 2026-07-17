@@ -377,6 +377,41 @@
     }
 }
 
+/* ANIMACIÓN PARA CONTENIDO DE DESCRIPCIONES DE EQUIPO */
+
+.description-collapse-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    /* Altura 0 */
+    transition: grid-template-rows 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Cuando la tarjeta está seleccionada, expande la fila al tamaño de su contenido */
+.description-collapse-wrapper.is-open {
+    grid-template-rows: 1fr;
+}
+
+/* El contenedor interno que evita desbordes y anima la opacidad */
+.description-collapse-content {
+    overflow: hidden;
+    min-height: 0;
+    /* ⚠️ CRUCIAL: Sin esto, CSS Grid no puede colapsar a 0 */
+    opacity: 0;
+    transform: translateY(-8px);
+    /* Desfase inicial hacia arriba */
+    transition:
+        opacity 0.3s ease-out,
+        transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Animaciones de entrada cuando la envoltura está abierta */
+.description-collapse-wrapper.is-open .description-collapse-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+    /* Espera un instante a que empiece a abrirse el alto */
+}
+
 /* ========================================================
    COMPONENTE TIPOS DE INICIOS DE PROYECTO PARA SERVICIOS
    ======================================================== */

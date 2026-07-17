@@ -30,31 +30,52 @@ export const Team = () => {
                 <div className="row pt-5 align-items-start">
                     <div className="col-lg-7 col-md-12 mb-4">
                         <div className="row">
-                            {teamContent.map(teamMember => (
-                                <div key={teamMember.id} className="col-sm-6 mb-4"
-                                    onClick={() => setSelectedMember({
-                                        name: teamMember.name,
-                                        position: t(teamMember.position),
-                                        description: t(teamMember.description),
-                                        mailLink: teamMember.mailLink,
-                                        linkedinLink: teamMember.linkedinLink,
-                                        githubLink: teamMember.githubLink || null
-                                    })}
-                                >
-                                    <Card
-                                        name={teamMember.name}
-                                        position={t(teamMember.position)}
-                                        image={teamMember.image}
-                                        catImage={teamMember.catImage}
-                                    />
-                                </div>
-                            ))
+                            {teamContent.map(teamMember => {
+                                const isSelected = selectedMember && selectedMember.name === teamMember.name;
+
+                                return (
+                                    <div key={teamMember.id} className="col-12 col-sm-6 d-flex flex-column mb-4"
+                                        onClick={() => setSelectedMember({
+                                            name: teamMember.name,
+                                            position: t(teamMember.position),
+                                            description: t(teamMember.description),
+                                            mailLink: teamMember.mailLink,
+                                            linkedinLink: teamMember.linkedinLink,
+                                            githubLink: teamMember.githubLink || null
+                                        })}
+                                    >
+                                        <Card
+                                            name={teamMember.name}
+                                            position={t(teamMember.position)}
+                                            image={teamMember.image}
+                                            catImage={teamMember.catImage}
+                                        />
+
+                                        <div className={`description-collapse-wrapper d-lg-none ${isSelected ? 'is-open' : ''}`}>
+                                            <div className="description-collapse-content">
+                                                <div className="d-flex flex-column justify-content-start gap-3 mt-3 px-2 text-start">
+                                                    <p className="intro-text-positive ">
+                                                        {selectedMember.description}
+                                                    </p>
+                                                    <div className="d-flex justify-content-start display-3 gap-4">
+                                                        <a href={`mailto:${selectedMember.mailLink}`} rel="noopener noreferrer" className="text-white"><FontAwesomeIcon icon={faEnvelope} /></a>
+                                                        <a href={selectedMember.linkedinLink} rel="noopener noreferrer" target="_blank" className="text-white"><FontAwesomeIcon icon={faLinkedin} /></a>
+                                                        {selectedMember.githubLink && (
+                                                            <a href={selectedMember.githubLink} rel="noopener noreferrer" target="_blank" className="text-white"><FontAwesomeIcon icon={faGithubSquare} /> </a>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
                             }
                         </div>
 
                     </div>
                     {selectedMember && (
-                        <div className="col-lg-5 col-md-12 mb-4 d-flex flex-column justify-content-start gap-3 sticky-sidebar-column">
+                        <div className="col-lg-5 d-none d-lg-flex flex-column col-md-12 mb-4 d-flex flex-column justify-content-start gap-3 sticky-sidebar-column">
                             <div className="bg-positive-title section-title-positive">{selectedMember.name}</div>
                             <span className="text-white fs-5">{selectedMember.position}</span>
                             <p className="intro-text-positive ">
