@@ -27,7 +27,7 @@
    ========================================== */
 .services-accordion-section {
     width: 100%;
-    padding: 6rem 0;
+    padding: 4.1rem 0;
     color: white;
 }
 
@@ -49,8 +49,11 @@
    ========================================== */
 .category-header-centered {
     text-align: center;
-    margin-bottom: 4rem;
+    padding: 100px 20px;
     max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -58,7 +61,7 @@
 .service-category-title-main {
     color: #FBFF06;
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 110%;
     margin-bottom: 1.5rem;
 }
@@ -66,8 +69,8 @@
 .service-category-description-main {
     color: var(--text-white);
     opacity: 0.8;
-    line-height: 160%;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
 }
 
 .service-category-wrapper {

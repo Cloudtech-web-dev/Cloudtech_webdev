@@ -36,7 +36,7 @@ export const Process = () => {
 
     return (
         <section>
-            <div className="container py-5">
+            <div className="container container-ct-layout">
                 <div className="row">
                     <div className="col pe-sm-4 pe-md-5">
                         <div className="d-flex justify-content-end">
