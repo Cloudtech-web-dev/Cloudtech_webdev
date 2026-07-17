@@ -718,3 +718,9 @@ h6 {
   flex-direction: column;
   gap: 40px;
 }
+
+/* Separación estándar para contenedores*/
+
+.container-ct-layout {
+  padding: 8.3rem 0;
+}
