@@ -9,6 +9,8 @@ import { projectsList } from "../utils/projectsList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { SEO } from "../utils/SEO";
+import { CallToAction } from "./ProjectSingle/CallToAction";
+import "../styles/StickyLayout.css"
 
 export const SingleProjectView = () => {
     const { projectId } = useParams();
@@ -73,7 +75,7 @@ export const SingleProjectView = () => {
 
                     <div id="needs" className="d-flex flex-column justify-content-center">
                         <div className="d-flex flex-column flex-lg-row gap-4 gap-lg-5 justify-content-center align-items-center">
-                            <h2 className="fs-4 section-title">{t('projects.menuItems.itemOne')}</h2>
+                            <h2 className="component-title fs-4">{t('projects.menuItems.itemOne')}</h2>
                             <p className="text-white text-lg-start text-center ct-psummary">{t(projectData.need)}</p>
                         </div>
                         <img src={projectData.needsArt} className="mt-5 rounded-4 img-fluid" alt="proceso analisis de necesidad CloudTech" />
@@ -83,7 +85,7 @@ export const SingleProjectView = () => {
 
                     <div id="process" className="d-flex flex-column justify-content-center gap-4">
                         <div className="d-flex flex-column flex-lg-row gap-4 gap-lg-5 justify-content-center align-items-center">
-                            <h2 className="fs-4 section-title">{t('projects.menuItems.itemTwo')}</h2>
+                            <h2 className="component-title fs-4">{t('projects.menuItems.itemTwo')}</h2>
                             <p className="text-white text-lg-start text-center ct-psummary">{t(projectData.process)}</p>
                         </div>
 
@@ -94,7 +96,7 @@ export const SingleProjectView = () => {
 
                     <div id="gallery" className="d-flex flex-column justify-content-center gap-4 my-5">
                         <div className="d-flex flex-column flex-lg-row gap-4 gap-lg-5 justify-content-center align-items-center">
-                            <h2 className="fs-4 section-title">{t('projects.menuItems.itemThree')}</h2>
+                            <h2 className="component-title fs-4">{t('projects.menuItems.itemThree')}</h2>
                             <p className="text-white text-lg-start text-center ct-psummary">{t(projectData.solution)}</p>
                         </div>
                         <div className="row g-4">
@@ -118,7 +120,7 @@ export const SingleProjectView = () => {
 
                     <div id="credits" className="d-flex flex-column justify-content-center gap-4 bg-credits py-5">
                         <div className="d-flex flex-column gap-4 gap-lg-5 justify-content-center align-items-center">
-                            <h2 className="fs-4 section-title">{t('projects.menuItems.itemFour')}</h2>
+                            <h2 className="component-title fs-4">{t('projects.menuItems.itemFour')}</h2>
                             <div className="d-flex flex-column gap-4">
 
                                 {projectData.credits.map((item, index) => (
@@ -130,7 +132,7 @@ export const SingleProjectView = () => {
 
                             </div>
                             <div className="d-flex flex-column gap-2 mt-4">
-                                <h3 className="text-white text-center">{t('projects.menuItems.tech')}</h3>
+                                <h3 className="component-title text-white text-center">{t('projects.menuItems.tech')}</h3>
                                 <ul className="list-unstyled d-flex flex-column flex-lg-row gap-lg-5 text-center justify-content-center gap-2">
                                     {projectData.tech.map((item, index) => (
                                         <li key={index} className="text-white">{item}</li>
@@ -142,47 +144,50 @@ export const SingleProjectView = () => {
 
 
                     </div>
-                    <ProjectCTA />
-                    <OtherProjects />
                 </div>
-                {showModal && selectedImageIndex !== null && (
-                    <>
-                        <div className="modal-backdrop fade show"></div>
-                        <div
-                            className="modal fade show d-block"
-                            tabIndex="-1"
-                            role="dialog"
-                            onClick={handleCloseModal}
-                        >
-                            <div className="modal-dialog modal-dialog-centered modal-xl" onClick={(e) => e.stopPropagation()}>
-                                <div className="modal-content card card-background border-0 rounded-4">
-                                    <div className="modal-header border-0 pb-0">
-                                        <button
-                                            type="button"
-                                            className="btn-close custom-modal-close-btn mb-1"
-                                            aria-label="Close"
-                                            onClick={handleCloseModal}
-                                        ></button>
-                                    </div>
-                                    <div className="modal-body text-center pt-0 position-relative">
-                                        <button onClick={handlePrev} className="btn text-white bg-dark opacity-75 position-absolute top-50 start-0 translate-middle-y ms-2 rounded-pill d-flex align-items-center justify-content-center z-3" style={{ width: '45px', height: '45px' }}>
-                                            <FontAwesomeIcon icon={faChevronLeft} />
-                                        </button>
-                                        <img
-                                            src={currentImage}
-                                            className="img-fluid"
-                                            alt="detalle portafolio de CloudTech"
-                                            style={{ maxHeight: '90vh', objectFit: 'contain' }}
-                                        />
-                                        <button onClick={handleNext} className="btn text-white bg-dark opacity-75 position-absolute top-50 end-0 translate-middle-y me-2 rounded-pill d-flex align-items-center justify-content-center z-3" style={{ width: '45px', height: '45px' }}>
-                                            <FontAwesomeIcon icon={faChevronRight} />
-                                        </button>
+                <CallToAction />
+                <div className="container my-5">
+                    <OtherProjects />
+
+                    {showModal && selectedImageIndex !== null && (
+                        <>
+                            <div className="modal-backdrop fade show"></div>
+                            <div
+                                className="modal fade show d-block"
+                                tabIndex="-1"
+                                role="dialog"
+                                onClick={handleCloseModal}
+                            >
+                                <div className="modal-dialog modal-dialog-centered modal-xl" onClick={(e) => e.stopPropagation()}>
+                                    <div className="modal-content card card-background border-0 rounded-4">
+                                        <div className="modal-header border-0 pb-0">
+                                            <button
+                                                type="button"
+                                                className="btn-close custom-modal-close-btn mb-1"
+                                                aria-label="Close"
+                                                onClick={handleCloseModal}
+                                            ></button>
+                                        </div>
+                                        <div className="modal-body text-center pt-0 position-relative">
+                                            <button onClick={handlePrev} className="btn text-white bg-dark opacity-75 position-absolute top-50 start-0 translate-middle-y ms-2 rounded-pill d-flex align-items-center justify-content-center z-3" style={{ width: '45px', height: '45px' }}>
+                                                <FontAwesomeIcon icon={faChevronLeft} />
+                                            </button>
+                                            <img
+                                                src={currentImage}
+                                                className="img-fluid"
+                                                alt="detalle portafolio de CloudTech"
+                                                style={{ maxHeight: '90vh', objectFit: 'contain' }}
+                                            />
+                                            <button onClick={handleNext} className="btn text-white bg-dark opacity-75 position-absolute top-50 end-0 translate-middle-y me-2 rounded-pill d-flex align-items-center justify-content-center z-3" style={{ width: '45px', height: '45px' }}>
+                                                <FontAwesomeIcon icon={faChevronRight} />
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </>
-                )}
+                        </>
+                    )}
+                </div>
             </section>
         </>
     )

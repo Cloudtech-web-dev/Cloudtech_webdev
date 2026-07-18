@@ -5,6 +5,7 @@ import LogoNavMovil from "../assets/img/LogoNavMovil.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import LanguageSwitcher from "./LanguageSwitcher";
+import "../styles/Accordion.css";
 
 import { useTranslation } from "react-i18next";
 
@@ -12,7 +13,6 @@ import { useTranslation } from "react-i18next";
 export const Navbar = () => {
 	const { t } = useTranslation();
 	const [isOpen, setIsOpen] = useState(false);
-
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
 		document.body.style.overflow = !isOpen ? 'hidden' : 'auto';
@@ -27,17 +27,16 @@ export const Navbar = () => {
 		<>
 			{/* --- NAVBAR DE ESCRITORIO --- */}
 			{/* <div className="container w-100 mb-5"></div> */}
-			<nav className="navbar fixed-top navbar-expand-md d-none d-lg-block py-3 justify-content-center" style={{ backgroundColor: "rgba(4, 23, 27, 0.16)", backdropFilter: "blur(20px)", boxShadow: "0px 3px 20.4px 0px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.29)" }}>
-				<div className="container rounded-pill px-5 py-1 d-flex justify-content-between align-items-center">
+			{/* <nav className="navbar fixed-top navbar-expand-md d-none d-lg-block py-3 justify-content-center" style={{ backgroundColor: "rgba(4, 23, 27, 0.16)", backdropFilter: "blur(20px)", boxShadow: "0px 3px 20.4px 0px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.29)" }}>
+				<div className="container rounded-pill px-5 py-1 d-flex justify-content-between align-items-center"> */}
+			<nav className="navbar sticky-top navbar-expand-md d-none d-lg-block w-100 p-0 glass-effect glass-navbar">
+				<div className="container px-5 py-3 d-flex justify-content-between align-items-center">
 					<Link className="navbar-brand" to="/">
 						<img src={LogoNavbar} alt="CloudTech Logo" className="h-auto w-auto" />
 					</Link>
 
 					{/* <div className="d-none d-lg-flex justify-content-end w-100"> */}
 					<ul className="navbar-nav flex-row align-items-center gap-3">
-						{/* <li className="nav-item">
-							<Link className="nav-link text-white" to="/">{t('navbar.home')}</Link>
-						</li> */}
 						<li className="nav-item">
 							<Link className="nav-link text-white" to="/about">{t('navbar.about')}</Link>
 						</li>
@@ -59,7 +58,7 @@ export const Navbar = () => {
 			</nav>
 
 			{/* --- NAVBAR MÓVIL (TRIGGER) --- */}
-			<div className="d-lg-none fixed-top bg-black d-flex justify-content-between align-items-center mx-3 mt-3 py-3 px-5 rounded-pill">
+			<div className="d-lg-none sticky-top w-100 glass-effect glass-mobile-navbar d-flex justify-content-between align-items-center py-3 px-4">
 				<Link className="navbar-brand" to="/" onClick={closeMenu}>
 					<img src={LogoNavbar} alt="CloudTech Logo" className="h-auto w-auto" />
 				</Link>

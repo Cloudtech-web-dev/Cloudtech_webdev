@@ -94,7 +94,7 @@
     overflow-wrap: break-word;
     white-space: normal;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 1400px) {
         white-space: nowrap;
     }
 
@@ -118,7 +118,7 @@
     background-color: #FBFF06;
     color: #04171B;
     padding: 0rem 0.7rem 0rem 0.7rem;
-    display: block;
+    display: inline-block;
     width: fit-content;
     max-width: 100%;
 }
@@ -343,7 +343,6 @@
 .sticky-sidebar-column {
     position: -webkit-sticky;
     position: sticky;
-
     /* 1. Posición inicial exacta para alinearse con las primeras cards */
     top: 0px;
 
@@ -352,6 +351,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     width: auto;
+    padding-bottom: 30px;
 
     /* 2. Declaramos la animación y su velocidad/suavizado */
     animation: adjustStickyTop linear both;
@@ -373,8 +373,43 @@
     to {
         /* Al bajar el scroll, se desplaza suavemente hacia abajo para esquivar la Navbar 
            (Ajusta los 120px dependiendo de la altura real de tu menú) */
-        top: 400px;
+        top: 150px;
     }
+}
+
+/* ANIMACIÓN PARA CONTENIDO DE DESCRIPCIONES DE EQUIPO */
+
+.description-collapse-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    /* Altura 0 */
+    transition: grid-template-rows 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Cuando la tarjeta está seleccionada, expande la fila al tamaño de su contenido */
+.description-collapse-wrapper.is-open {
+    grid-template-rows: 1fr;
+}
+
+/* El contenedor interno que evita desbordes y anima la opacidad */
+.description-collapse-content {
+    overflow: hidden;
+    min-height: 0;
+    /* ⚠️ CRUCIAL: Sin esto, CSS Grid no puede colapsar a 0 */
+    opacity: 0;
+    transform: translateY(-8px);
+    /* Desfase inicial hacia arriba */
+    transition:
+        opacity 0.3s ease-out,
+        transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Animaciones de entrada cuando la envoltura está abierta */
+.description-collapse-wrapper.is-open .description-collapse-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+    /* Espera un instante a que empiece a abrirse el alto */
 }
 
 /* ========================================================

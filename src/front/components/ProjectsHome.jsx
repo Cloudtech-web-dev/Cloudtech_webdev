@@ -35,10 +35,10 @@ export const ProjectsHome = () => {
         },
         {
             id: "jp-portfolio",
-            name: t("projects.projectName8"),
+            name: t("projects.projectName9"),
             logo: jpLogo,
             bgPicture: jpBg,
-            description: t("projects.featured.projectDescription8"),
+            description: t("projects.featured.projectDescription9"),
             tags: [t("projects.tags.webCinematographer"), t("projects.tags.visualPortfolio")],
             path: null
         },

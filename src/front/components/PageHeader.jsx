@@ -1,22 +1,33 @@
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
+import "../styles/StickyLayout.css";
 
 const PageHeader = ({ title, description, backgroundImg, withProjectButton = true }) => {
   const { t } = useTranslation();
 
   return (
-    <section className="w-100 min-vh-100 mb-5 position-relative d-flex align-items-center">
-      <img src={backgroundImg} alt="CloudTech background image" className="z-n1 position-absolute w-100 h-100 object-fit-cover d-sm-block" />
-      <div className="position-absolute w-100 h-100 bg-dark bg-opacity-75"></div>
+    <section className="position-relative min-vh-100 overflow-hidden">
+      <img
+        src={backgroundImg}
+        alt="CloudTech background image"
+        className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-0"
+        style={{ objectPosition: "center, center" }} />
 
-      <div className="container z-1">
-        <div className="row d-flex justify-content-center">
-          <div className="col-12 col-lg-8 text-center d-flex flex-column gap-5">
-            <h1 className="hero-title-home display-3 fw-bolder text-center">
-              {t(title)}
+      <div className="position-absolute w-100 h-100 mx-auto" style={{ backgroundColor: "rgba(0, 0, 0, .55)", }} />
+
+      <div className="container w-100 min-vh-100 py-5 d-flex align-items-center position-relative z-2">
+        <div className="row w-100 z-0 d-flex justify-content-center">
+          <div className="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center z-1 gap-5 w-auto">
+            <h1 className="hero-title-home display-2 fw-bolder text-center">
+              <Trans
+                i18nKey={title}
+                components={[
+                  <span className={`highlighted-text bg-positive-title`} />
+                ]}
+              />
             </h1>
 
-            <p className="intro-text-positive">
+            <p className="hero-subtitle-home fs-5 fw-bold text-white text-center w-75">
               {t(description)}
             </p>
 
@@ -30,5 +41,4 @@ const PageHeader = ({ title, description, backgroundImg, withProjectButton = tru
     </section>
   )
 }
-
 export default PageHeader;
