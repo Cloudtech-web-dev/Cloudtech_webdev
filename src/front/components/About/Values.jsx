@@ -102,7 +102,7 @@ export const Values = () => {
     }, [valuesData.length]);
 
     return (
-        <>
+        <div className='light-section'>
             {/* CONTENEDOR DE INTRODUCCIÓN */}
             <div className='intro-scroll-wrapper'>
                 <div className='intro-sticky-box'>
@@ -134,7 +134,7 @@ export const Values = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
 
 
     );

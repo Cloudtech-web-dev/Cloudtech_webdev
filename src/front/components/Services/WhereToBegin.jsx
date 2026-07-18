@@ -70,7 +70,7 @@ export const WhereToBegin = () => {
     }, [phaseData.length]);
 
     return (
-        <>
+        <div className='light-section'>
             {/* CONTENEDOR DE INTRODUCCIÓN */}
             <div className='intro-scroll-wrapper'>
                 <div className='intro-sticky-box'>
@@ -102,6 +102,6 @@ export const WhereToBegin = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
