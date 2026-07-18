@@ -1,0 +1,292 @@
+.form-bool-inputs label {
+  --transition-params: 0.2s ease;
+
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--switch-text-color, var(--bs-gray-100));
+  transition:
+    color var(--transition-params),
+    background-color var(--transition-params)
+  ;
+
+  &:not(:has(input[type="text"])) {
+
+    &:has(input:checked) {
+      color: var(--switch-text-color, var(--bs-gray-100));
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--switch-text-color, var(--bs-gray-100));
+        background-color: var(--switch-transient-bg, rgba(var(--bs-gray-1000-rgb), 85%));
+      }
+    }
+    
+    &:has(input:checked) {
+      background-color: var(--switch-bg-color, var(--bs-gray-1000));
+    }
+    
+    &:active {
+      color: var(--switch-text-color, var(--bs-gray-100));
+      background-color: var(--switch-transient-bg, rgba(var(--bs-gray-1000-rgb), 85%));
+      scale: 0.95;
+    }
+  }
+}
+
+.form-dropdown {
+
+  select,
+  select::picker(select) {
+    appearance: base-select
+  }
+
+  select::picker(select) {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+    --picker-transition-params: 0.3s ease;
+    transition: opacity var(--picker-transition-params), transform var(--picker-transition-params);
+  }
+
+  @starting-style {
+    select::picker(select) {
+      opacity: 0;
+      transform: scaleY(0);
+      --picker-transition-params: 1s ease;
+      transition: opacity var(--picker-transition-params), transform var(--picker-transition-params);
+    }
+  }
+
+  select option {
+    padding: 12px;
+    background-color: var(--bs-gray-100);
+    --option-transition-params: 0.2s ease;
+    transition: background var(--option-transition-params), color var(--option-transition-params);
+
+    &::checkmark {
+      opacity: 0
+    }
+
+    &:not([disabled]) {
+      &:hover {
+        background-color: var(--bs-gray-1000);
+        color: var(--bs-gray-100);
+      }
+
+      &::checkmark {
+        content: "✓";
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@property --form-border-width {
+  syntax: "<length>";
+  initial-value: 1px;
+  inherits: false;
+}
+
+.form-data-input {
+  input {
+    border: 0;
+    border-bottom: var(--form-border-width) solid var(--bs-gray-1000);
+    outline: 0;
+    transition: --form-border-width 0.3s ease;
+
+    &:focus-visible {
+      --form-border-width: 3px;
+    }
+  }
+}
+
+.submit-handles {
+  button {
+    color: var(--bs-gray-1000) !important;
+    border-color: currentColor !important;
+
+    font-family: "Manrope", sans-serif !important;
+
+    &:hover {
+      color: var(--bs-gray-100) !important;
+      border-color: currentColor !important;
+      background-color: var(--bs-gray-1000) !important;
+      outline: 2px solid var(--bs-gray-1000) !important;
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.5;
+    user-select: none;
+
+    input {
+      appearance: none;
+
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--bs-gray-1000);
+      border-radius: 4px;
+      display: grid;
+      place-content: center;
+      transition: all 0.2s ease-in-out;
+
+      &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        background-color: var(--bs-gray-100);
+
+        border-radius: 2px;
+      }
+
+      &:checked {
+        background-color: var(--bs-gray-1000);
+        border-color: var(--bs-gray-1000);
+
+        &::before { transform: scale(1) }
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--bs-gray-500);
+        outline-offset: 2px;
+      }
+    }
+
+    &:hover {
+      input {
+        border-color: var(--bs-gray-1000);
+      }
+    }
+  }
+
+}
+
+.modalOverlay {
+
+  /* --- Basic modal definitions --- */
+
+  user-select: none;
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
+  position: fixed;
+  height: 80dvh;
+  padding: 0;
+  bottom: 0;
+  margin-bottom: 0;
+  
+  width: 100vw;
+  @media (width < 768px) { max-width: none }
+  
+  .modalContainer {
+    background-color: var(--bs-gray-100);
+    color: var(--bs-gray-1000);
+    height: 100%;
+    width: 100%;
+    
+    .scrollContainer {
+      height: 100%;
+      overflow: auto;
+      scrollbar-color: var(--bs-gray-1000) var(--bs-gray-100);
+      /* scrollbar-color: var(--bs-gray-100) var(--bs-gray-1000); */
+      padding: 24px;
+      @media (width < 768px) { padding-bottom: 0 }
+    }
+  }
+
+  /* --- Modal transitions --- */
+
+  opacity: 0;
+  translate: 0 100vh;
+  transition:
+    opacity 300ms ease
+  , translate   300ms ease
+  , display 300ms allow-discrete
+  , overlay 300ms allow-discrete;
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition:
+      opacity 300ms ease
+    , display 300ms allow-discrete
+    , overlay 300ms allow-discrete;
+  }
+
+  &:open {
+    opacity: 1;
+    translate: 0 0;
+
+    &::backdrop {
+      opacity: 1;
+
+      @starting-style {
+        opacity: 0;
+      }
+    }
+
+    @starting-style {
+      opacity: 0;
+      translate: 0 100vh;
+    }
+  }
+}
+
+.form {
+  @media (width < 768px) {
+    gap: 30px !important;
+  
+    .section {
+      h3 {
+        display: flex;
+        flex-direction: column;
+      }
+      > div {
+        padding: 0 !important;
+      }
+    }
+
+    .instructions {
+      font-size: 1.2rem !important;
+      margin: 0;
+    }
+
+    .section1 {
+      label {
+        width: 140px !important;
+        height: 140px !important;
+      }
+    }
+
+    .section5 {
+      > div {
+        align-items: start;
+        
+        label {
+          width: 100%;
+          flex-direction: column-reverse;
+          gap: 0.3lh !important;
+          align-items: start !important;
+          font-size: 1.3rem;
+
+          input {
+            width: 100%;
+            background-color: var(--bs-gray-200) !important;
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -25,7 +25,7 @@ export const Layout = () => {
                 {showNavbar && <Navbar />}
                 <Outlet />
                 {/* <WhatsappButton /> */}
-                {showFooter && <Footer />}
+                {showFooter && <Footer withBrandCard={location.pathname != "/contact"} />}
             </>
         </AppContext.Provider>
     )

@@ -1,4 +1,5 @@
 import { CardsContact } from "../components/Contact/CardsContact"
+import { Afterwards } from "../components/Contact/Afterwards"
 import HeaderContact from "../components/HeaderContact"
 import { SEO } from "../utils/SEO"
 
@@ -10,8 +11,11 @@ export const Contact = () => {
                 description="¿Tienes una idea en mente? Contáctanos para materializar tu visión. Expertos en desarrollo, diseño y estrategia listos para llevar tu negocio al siguiente nivel."
                 url={window.location.href}
             />
-            <HeaderContact />
-            <CardsContact />
+            <main>
+                <HeaderContact />
+                <Afterwards />
+                <CardsContact />
+            </main>
         </>
     )
 }

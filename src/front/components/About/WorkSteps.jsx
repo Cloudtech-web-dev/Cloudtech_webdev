@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import '../../styles/StickyLayout.css';
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 export const WorkSteps = () => {
     const { t } = useTranslation();
@@ -9,11 +9,11 @@ export const WorkSteps = () => {
     const animationFrameRef = useRef(null);
 
     const workStepsData = [
-        { title: t('about.workSteps.steps.step1.title'), desc: t('about.workSteps.steps.step1.description') },
-        { title: t('about.workSteps.steps.step2.title'), desc: t('about.workSteps.steps.step2.description') },
-        { title: t('about.workSteps.steps.step3.title'), desc: t('about.workSteps.steps.step3.description') },
-        { title: t('about.workSteps.steps.step4.title'), desc: t('about.workSteps.steps.step4.description') },
-        { title: t('about.workSteps.steps.step5.title'), desc: t('about.workSteps.steps.step5.description') }
+        { title: <Trans i18nKey={'about.workSteps.steps.step1.title'} components={[<span className='highlighted-text' />]} />, desc: t('about.workSteps.steps.step1.description') },
+        { title: <Trans i18nKey={'about.workSteps.steps.step2.title'} components={[<span className='highlighted-text' />]} />, desc: t('about.workSteps.steps.step2.description') },
+        { title: <Trans i18nKey={'about.workSteps.steps.step3.title'} components={[<span className='highlighted-text' />]} />, desc: t('about.workSteps.steps.step3.description') },
+        { title: <Trans i18nKey={'about.workSteps.steps.step4.title'} components={[<span className='highlighted-text' />]} />, desc: t('about.workSteps.steps.step4.description') },
+        { title: <Trans i18nKey={'about.workSteps.steps.step5.title'} components={[<span className='highlighted-text' />]} />, desc: t('about.workSteps.steps.step5.description') }
     ];
 
     useEffect(() => {
@@ -132,7 +132,9 @@ export const WorkSteps = () => {
             <div className='intro-scroll-wrapper-positive'>
                 <div className='intro-sticky-box-positive'>
                     <div className='intro-content-positive'>
-                        <h2 className='section-title-positive'>{t('about.workSteps.opening.openingTitle')}</h2>
+                        <h2 className='section-title-positive'>
+                            <Trans i18nKey={'about.workSteps.opening.openingTitle'} components={[<span className='highlighted-text' />]} />
+                        </h2>
                         <p className='intro-text-positive'>
                             {t('about.workSteps.opening.openingDescription')}
                         </p>

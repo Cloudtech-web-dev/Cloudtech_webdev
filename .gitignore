@@ -102,3 +102,5 @@ Thumbs.db
 # Ignorar la carpeta de certificados SSL
 nginx-proxy/certs/
 
+# Ignorar carpeta Sass/Scss
+src/front/scss/

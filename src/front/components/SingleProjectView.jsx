@@ -100,7 +100,7 @@ export const SingleProjectView = () => {
                             <p className="text-white text-lg-start text-center ct-psummary">{t(projectData.solution)}</p>
                         </div>
                         <div className="row g-4">
-                            {projectData.gallery.map((item, index) => (
+                            {projectData.gallery?.map((item, index) => (
                                 <div key={index} className="col-12 col-md-6 col-lg-4">
                                     <div className="gallery-card">
                                         <img
