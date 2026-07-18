@@ -5,7 +5,7 @@ export const Card = ({ name, position, description, image, catImage, mailLink, l
                 <div className="card-img-wrapper overflow-hidden">
                     <img src={image} className="original-image w-100 h-100 object-fit-cover" alt="CloudTech Team member profile picture" />
                     <div
-                        className="cat-image-overlay cat-transition"
+                        className="cat-image-overlay"
                         style={{ '--cat-image-url': `url(${catImage})` }}
                     ></div>
                 </div>
