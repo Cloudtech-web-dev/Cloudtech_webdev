@@ -38,13 +38,14 @@
     }
   },
   "footer": {
-    "footerSlogan": "We Mold Ideas to Create Digital Universes",
+    "footerSlogan": "We would love to hear your <0>idea</0>",
     "sections": {
       "about": "About",
       "services": "Services",
       "projects": "Projects",
       "contact": "Contact"
-    }
+    },
+    "welcomingSentence": "Let's talk about your project"
   },
   "about": {
     "sectionTitle": "Who We Are",
@@ -110,7 +111,14 @@
         "description": "Design without limits in 2D and 3D with the most complete tool for architects and engineers. Accelerate your workflows and create impactful designs with powerful modeling, visualization, and automation features.",
         "link": "Acquire Full License"
       }
-    }
+    },
+    "kinds": {
+      "webSites": "Websites",
+      "webApps": "Web applications",
+      "eCommerce": "E-commerce",
+      "visualIdentity": "Identity and visual content"
+    },
+    "exploreServicesButton": "Explore services"
   },
   "process": {
     "sectionToggleCapacities": "Capabilities",
@@ -218,6 +226,7 @@
     "projectName7": "MURA",
     "projectPreview7": "The website for MURA Digital Magazine, integrating an experimental design and self-management tools to showcase unusual literature and voices from across Latin America. ",
     "projectSummary7": "MURA is a digital magazine specialized in literature and arts that seeks to dismantle the traditional structures of literary genres. CloudTech materialized the project comprehensively, designing its visual identity from scratch and implementing a dynamic editorial platform on WordPress. The result is a fluid, self-managed editorial ecosystem that showcases the disruptive talent of Ecuador and Latin America. ",
+    "projectName8": "Portfolio Jean-Pierre Olivares",
     "projectNeed1": "The bookstore required a scalable digital sales channel to market its catalog nationwide. The technical challenge was to centralize inventory management for multiple independent publishers and replace manual sales processes with an automated, secure infrastructure capable of handling complex payment flows without user friction. ",
     "projectProcess1": {
       "description": "For Cosmonauta, the methodology centered on building a technical infrastructure capable of unifying complex inventory management with a seamless shopping experience. The development approach prioritized backend robustness and transactional security, ensuring the platform scales perfectly alongside its growing literary catalog.",
@@ -323,7 +332,21 @@
       "post7": "Project Manager"
     },
     "downloadPortfolio": "Download our portfolio",
-    "collab": "Project carried out alongside the Colmena Lab team. "
+    "collab": "Project carried out alongside the Colmena Lab team. ",
+    "tags": {
+      "digitalMagazine": "Digital magazine",
+      "eCommerce": "E-Commerce",
+      "multilingualSite": "Multilingual site",
+      "visualPortfolio": "Visual portfolio",
+      "webCinematographer": "Filmmaker website",
+      "webDev": "Web development"
+    },
+    "featured": {
+      "projectDescription1": "Online store for an independent bookstore, with a catalog, inventory management and secure payments.",
+      "projectDescription6": "An editorial platform in three languages, designed to organize content, authors and translations clearly.",
+      "projectDescription7": "Digital literature magazine, with a clean visual experience and a structure designed to give prominence to the content.",
+      "projectDescription8": "A website designed to present audiovisual and photographic work in a clear, visual and professional way."
+    }
   },
   "testimonials": {
     "sectionTitle": "<0>Testimonials</0> from our clients",
@@ -439,9 +462,9 @@
     }
   },
   "contact": {
-    "sectionTitle": "Let's connect!",
-    "sectionDescription": "Your project is our next challenge",
-    "formButton": "Send",
+    "sectionTitle": "<0>Tell us</0> what you want to build",
+    "sectionDescription": "If you need a website, an online store, a portfolio or a digital experience to better present your project, we can help you shape it.",
+    "formButton": "What do you need?",
     "whatsAppButton": "Tell us your idea",
     "labels": {
       "nameLabel": "Full name:",
@@ -461,6 +484,62 @@
       "alertSuccess": "Thanks! Your message was sent.",
       "alertError": "Oops! A problem occurred, please try again.",
       "loading": "Sending..."
+    },
+    "form": {
+      "formSubmission": {
+        "newsletter": "I agree to receive commercial communications.",
+        "submitButton": "Send message",
+        "termsDisclosure": "I accept the conditions and privacy policy."
+      },
+      "section1": {
+        "title": "What do you need to build?",
+        "options": {
+          "creativePortfolio": "Creative portfolio",
+          "notSure": "I'm not sure",
+          "onlineShop": "Online store",
+          "visualIndentity": "Identity and visual content",
+          "webApp": "Web application",
+          "webSite": "Website",
+          "webUpgrade": "Improve an existing website"
+        }
+      },
+      "section2": {
+        "title": "What stage are you in?",
+        "options": {
+          "opt1": "I have an initial idea",
+          "opt2": "Option 2",
+          "opt3": "Option 3",
+          "opt4": "Option 4",
+          "placeholder": "Choose an option..."
+        }
+      },
+      "section3": {
+        "title": "Briefly tell us what you need"
+      },
+      "section4": {
+        "title": "Ideal term",
+        "options": {
+          "opt1": "As soon as possible",
+          "opt2": "In 1 month",
+          "opt3": "2 to 3 months",
+          "opt4": "Later",
+          "opt5": "Don't know"
+        }
+      },
+      "section5": {
+        "title": "Your data",
+        "fieldsLabels": {
+          "email": "Email",
+          "phone": "Whatsapp or Phone",
+          "projectName": "Name of your project",
+          "fullName": "First and last name"
+        }
+      },
+      "top": {
+        "closeButton": "Close",
+        "description": "Complete the form and we will respond to you to understand what stage you are in and how we can accompany you.",
+        "scrollDown": "Scroll down"
+      }
     }
   },
   "whatsapp": {

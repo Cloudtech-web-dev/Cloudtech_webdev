@@ -1,5 +1,18 @@
 @import "constants.css";
 
+* {
+  scrollbar-width: thin
+}
+
+html {
+  scroll-snap-type: y proximity;
+}
+
+html:has(body.modal-open) {
+  overflow: hidden;
+  scrollbar-gutter: stable;
+}
+
 body {
   /* background-image: linear-gradient(0deg, #124652, #199ab7); */
   --bs-body-bg: var(--bs-gray-1000);
@@ -256,6 +269,10 @@ h6 {
 
 .card-text {
   font-size: 13pt;
+  
+  @media (width < 500px) {
+    font-size: 9.5pt !important;
+  }
 }
 
 .team-card {
@@ -376,13 +393,15 @@ h6 {
 /* Footer links*/
 
 .footerLink {
-  color: white;
+  /* color: white; */
+  color: var(--bs-gray-100);
   transition: color 0.3s ease;
   text-decoration: none;
 }
 
 .footerLink:hover {
-  color: #fbff06;
+  /* color: #fbff06; */
+  color: var(--bs-accent-1);
 }
 
 /* Language switch */
@@ -408,11 +427,11 @@ h6 {
 
 .btn-outline-custom-yellow:hover {
   background-color: #fbff06 !important;
-  color: #217b8f !important;
+  color: var(--bs-gray-1000) !important;
 }
 
 .btn-outline-custom-yellow:hover::after {
-  color: #217b8f !important;
+  color: var(--bs-gray-1000) !important;
   border: 2px solid #fbff06 !important;
   background-color: #fbff06 !important;
 }
@@ -459,8 +478,8 @@ h6 {
 }
 
 .hero-title-home {
-  /* color: #fbff06 !important; */
-  color: var(--bs-accent-2);
+  color: #fbff06 !important;
+  /* color: var(--bs-accent-2); */
 }
 
 .btn-outline {
@@ -638,9 +657,10 @@ h6 {
 
 /* Palabra resaltada dentro de header */
 
-.highlighted-text {
+/* Previous implementation */
+.highlighted-text.is-header {
   position: relative;
-  color: var(--highlighted-text-color, var(--bs-gray-1000));
+  /* color: var(--highlighted-text-color, var(--bs-gray-1000)); */
 
   isolation: isolate;
 
@@ -657,4 +677,15 @@ h6 {
     height: calc(100% + 2*var(--gy));
     width: calc(100% + 2*var(--gx));
   }
+}
+
+/* Newer without ::before */
+.highlighted-text:not(.is-header) {
+  color: var(--highlighted-text-color, var(--bs-gray-1000));
+  background-image: linear-gradient(var(--highlighted-text-bg, var(--bs-accent-1)));
+  background-size: 100%;
+  background-repeat: no-repeat;
+  box-decoration-break: clone;
+  padding-inline: var(--highlighted-text-padding, 0.12lh);
+  margin-inline: calc(-1*var(--highlighted-text-padding, 0.12lh));
 }

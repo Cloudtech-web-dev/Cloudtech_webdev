@@ -38,7 +38,8 @@
     }
   },
   "footer": {
-    "footerSlogan": "Moldeamos ideas para crear universos digitales.",
+    "footerSlogan": "Nos encantaría conocer tu <0>idea</0>",
+    "welcomingSentence": "Hablemos de tu proyecto",
     "sections": {
       "about": "Nosotros",
       "services": "Servicios",
@@ -59,6 +60,13 @@
     "communicationSubtitle": "Reunimos tus audiencias",
     "softwareSolutionsTitle": "Soluciones de software",
     "softwareSolutionsSubtitle": "Herramientas para materializar tus ideas",
+    "exploreServicesButton": "Explorar servicios",
+    "kinds": {
+      "webSites": "Sitios web",
+      "webApps": "Aplicaciones web",
+      "eCommerce": "E-commerce",
+      "visualIdentity": "Identidad y contenido visual"
+    },
     "card": {
       "wordpress": {
         "title": "Wordpress",
@@ -197,6 +205,20 @@
       "itemFour": "[04] Créditos",
       "tech": "Tecnologías"
     },
+    "tags": {
+      "eCommerce": "E-Commerce",
+      "webDev": "Desarrollo web",
+      "digitalMagazine": "Revista digital",
+      "webCinematographer": "Web cineasta",
+      "visualPortfolio": "Portafolio visual",
+      "multilingualSite": "Sitio multilingüe"
+    },
+    "featured": {
+      "projectDescription1": "Tienda online para una librería independiente, con catálogo, gestión de inventario y pagos seguros.",
+      "projectDescription7": "Revista digital de literatura, con una experiencia visual limpia y una estructura pensada para dar protagonismo al contenido.",
+      "projectDescription8": "Una web pensada para presentar trabajo audiovisual y fotográfico de forma clara, visual y profesional.",
+      "projectDescription6": "Una plataforma editorial en tres idiomas, diseñada para organizar contenidos, autores y traducciones de forma clara."
+    },
     "projectName1": "Librería Cosmonauta",
     "projectPreview1": "Conceptualizamos y desarrollamos el e-commerce de Librería Cosmonauta, integrando pagos seguros y gestión de inventario para potenciar sus ventas y el alcance de su comunidad lectora a nivel nacional.",
     "projectSummary1": "Cosmonauta es una librería especializada en la distribución de literatura independiente. Este proyecto desarrolló una tienda online de alto rendimiento. El resultado es un flujo continuo donde el contenido editorial de alta profundidad actúa como el motor principal de conversión y ventas.",
@@ -218,6 +240,7 @@
     "projectName7": "MURA",
     "projectPreview7": "Implementamos la página web de MURA Revista Digital, integrando un diseño experimental y herramientas de autogestión para visibilizar literaturas y voces inusuales de toda Latinoamérica.",
     "projectSummary7": "MURA es una revista digital especializada en literatura y artes que busca desarmar las estructuras tradicionales de los géneros literarios. CloudTech materializó el proyecto de forma integral, diseñando su identidad visual desde cero e implementando una plataforma editorial dinámica sobre WordPress. El resultado es un ecosistema editorial fluido y autogestionado que visibiliza el talento disruptivo de Ecuador y Latinoamérica.",
+    "projectName8": "Portfolio Jean-Pierre Olivares",
     "projectNeed1": "La librería requería un canal de ventas digital escalable para comercializar su catálogo a nivel nacional. El desafío técnico consistía en centralizar la gestión de inventario de múltiples editoriales independientes y sustituir procesos de venta manuales por una infraestructura automatizada, segura y capaz de manejar flujos de pago complejos sin fricciones para el usuario.",
     "projectProcess1": {
       "description": "Nuestra metodología para Cosmonauta se centró en construir una infraestructura técnica capaz de unificar la gestión compleja de inventarios con una experiencia de compra fluida. Abordamos el desarrollo priorizando la robustez del backend y la seguridad transaccional, asegurando que la plataforma escale al mismo ritmo que su catálogo literario.",
@@ -439,10 +462,66 @@
     }
   },
   "contact": {
-    "sectionTitle": "Conectemos",
-    "sectionDescription": "Tu proyecto es nuestro próximo reto.",
-    "formButton": "Enviar",
+    "sectionTitle": "<0>Cuéntanos</0> qué quieres contruir",
+    "sectionDescription": "Si necesitas una web, una tienda online, un portafolio o una experiencia digital para presentar mejor tu proyecto, podemos ayudarte a darle forma.",
+    "formButton": "¿Qué necesitas?",
     "whatsAppButton": "Cuéntanos tu idea",
+    "form": {
+      "top": {
+        "scrollDown": "Desplázate hacia abajo",
+        "closeButton": "Cerrar",
+        "description": "Completa el formulario y te responderemos para entender en qué etapa estás y cómo podemos acompañarte."
+      },
+      "section1": {
+        "title": "¿Qué necesitas construir?",
+        "options": {
+          "webSite": "Sitio web",
+          "webApp": "Aplicación web",
+          "onlineShop": "Tienda online",
+          "creativePortfolio": "Portafolio creativo",
+          "visualIndentity": "Identidad y contenido visual",
+          "webUpgrade": "Mejora una web existente",
+          "notSure": "No estoy seguro"
+        }
+      },
+      "section2": {
+        "title": "¿En qué etapa estás?",
+        "options": {
+          "placeholder": "Escoge una opción...",
+          "opt1": "Tengo una idea inicial",
+          "opt2": "Opción 2",
+          "opt3": "Opción 3",
+          "opt4": "Opción 4"
+        }
+      },
+      "section3": {
+        "title": "Cuéntanos brevemente qué necesitas"
+      },
+      "section4": {
+        "title": "Plazo ideal",
+        "options": {
+          "opt1": "Lo antes posible",
+          "opt2": "En 1 mes",
+          "opt3": "2 a 3 meses",
+          "opt4": "Más adelante",
+          "opt5": "No lo sé"
+        }
+      },
+      "section5": {
+        "title": "Tus datos",
+        "fieldsLabels": {
+          "fullName": "Nombre y apellido",
+          "email": "Correo electróncio",
+          "phone": "Whatsapp o Teléfono",
+          "projectName": "Nombre de tu proyecto"
+        }
+      },
+      "formSubmission": {
+        "termsDisclosure": "Acepto las condiciones y la política de privacidad.",
+        "newsletter": "Acepto recibir comunicaciones comerciales.",
+        "submitButton": "Enviar mensaje"
+      }
+    },
     "labels": {
       "nameLabel": "Nombre completo:",
       "phoneLabel": "Teléfono:",

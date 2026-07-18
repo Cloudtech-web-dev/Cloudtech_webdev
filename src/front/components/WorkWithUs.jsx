@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const stats = [
-    { number: "99", symbol: "%", label: "workWithUs.statistics.customerSatisfaction" },
-    { number: "+", symbol: "10", label: "workWithUs.statistics.completedProjects" },
-    { number: "+", symbol: "5", label: "workWithUs.statistics.yearsOfExperience" },
-    { number: "18", symbol: "K", label: "workWithUs.statistics.activeUsers" },
+    { number: "99", suffix: "%", label: "workWithUs.statistics.customerSatisfaction" },
+    { prefix: "+", number: "10", label: "workWithUs.statistics.completedProjects" },
+    { prefix: "+", number: "5", label: "workWithUs.statistics.yearsOfExperience" },
+    { number: "18", suffix: "K", label: "workWithUs.statistics.activeUsers" },
 ];
 
 export const WorkWithUS = () => {
@@ -13,16 +13,17 @@ export const WorkWithUS = () => {
 
     return (
 
-        <section className="text-white py-5">
+        // <section className="py-5" style={{color: "var(--bs-gray-100)" , scrollSnapAlign: "end" }}>
+        <section className="py-5" style={{color: "var(--bs-gray-100)" }}>
             <div className="container">
                 <div className="d-flex flex-column justify-content-center align-items-center">
-                    <div className="row" style={{ maxWidth: 1064, gap: 70 }}>
+                    <div className="home-workwithus-upper row" style={{ maxWidth: 1064, gap: 40, width: "100%" }}>
                         <div className="col g-0">
-                            <h2 className="mb-4 font-h2" style={{ color: "var(--bs-accent-1)", fontSize: 56, lineHeight: 1, letterSpacing: "-1%", width: 527 }}>
+                            <h2 className="mb-4 font-h2" style={{ color: "var(--bs-accent-1)", fontSize: 56, lineHeight: 1, letterSpacing: "-1%", maxWidth: 527 }}>
                                 {t('workWithUs.sectionTitle')}
                             </h2>
                         </div>
-                        <div className="col g-0">
+                        <div className="home-workwithus-description col g-0">
                             <p className="font-p1" style={{ whiteSpace: 'pre-line' }}>
                                 {t('workWithUs.sectionDescription')}
                             </p>
@@ -32,21 +33,85 @@ export const WorkWithUS = () => {
                                 </Link>
                             </div>
                         </div>
+                        <style>{`
+                            @media (width < 768px) {
+                                .home-workwithus-upper {
+                                    display: flex;
+                                    flex-direction: column;
+                                    padding-inline: 10px;
+                                    gap: 10px !important;
+
+                                    &:first-child h2 {
+                                        font-size: calc(1.525rem + 3.3vw) !important;
+                                        line-height: 1.2 !important;
+                                        letter-spacing: -0.01em !important;
+                                        // text-align: center;
+                                    }
+                                        
+                                    .home-workwithus-description p {
+                                        // font-size: 1.5rem;
+                                        font-weight: 500;
+                                        letter-spacing: 0;
+                                    }
+                                }
+                            }
+                        `}</style>
                     </div>
 
-                    <div className="row mt-5 pt-3 text-center">
+                    <div className="row mt-md-5 pt-3 text-center">
                         {stats.map((stat, idx) => (
                             <div key={idx} className="col-12 col-lg-3 mb-4 mb-lg-0">
-                                <p className="display-5 fw-bold mb-1">
-                                    <span className="text-stat-number">{stat.number}</span>
-                                    <span className="text-stat-symbol">{stat.symbol}</span>
+                                <p className="display-5 fw-bold mb-1 stat" style={{ "--upTo": stat.number, "--idx": idx }}>
+                                    <span className="text-stat-number">{stat.prefix}</span>
+                                    <span className={`text-stat-${stat.prefix ? "symbol" : "number"} counter`}>{stat.number}</span>
+                                    <span className="text-stat-symbol">{stat.suffix}</span>
                                 </p>
-                                <p className="title-sub text-white fw-semibold">{t(stat?.label, "")}</p>
+                                <style>{`
+                                    @supports (background: paint(houdini)) and (counter-reset: x 0) {
+                                        @property --counter-value {
+                                            syntax: "<integer>";
+                                            initial-value: 0;
+                                            inherits: false;
+                                        }
+                                        
+                                        .stat {
+                                            --stat-animation-stagger: calc(var(--idx, 0) * var(--stat-stagger-duration, 0.2s));
+                                            --stat-animation-parameters: 2s ease-out var(--stat-animation-stagger) forwards;
+                                            
+                                            opacity: 0;
+                                            translate: 0 30%;
+                                            animation: fadeIn var(--stat-animation-parameters);
+                                            timeline-trigger-name: --stat-trigger;
+                                            timeline-trigger-source: view();
+                                            animation-trigger: --stat-trigger play-once;
+                                            view-timeline-inset: 500px 500px;
+                                            
+                                            .counter { visibility: hidden }
+                                            .counter::before {
+                                                visibility: visible;
+                                                position: absolute;
+                                                content: counter(num);
+                                                counter-reset: num var(--counter-value);
+                                                animation: countUp var(--stat-animation-parameters);
+                                                animation-trigger: --stat-trigger play-once;
+                                                view-timeline-inset: 500px 500px;
+                                            }
+                                        }
+                                        
+                                        @keyframes countUp {
+                                            to { --counter-value: var(--upTo, 5000) }
+                                        }
+                                        @keyframes fadeIn {
+                                            to { opacity: 1; translate: none; }
+                                        }
+                                    }
+                                `}</style>
+                                <p className="title-sub fw-semibold">{t(stat?.label, "")}</p>
                             </div>
                         ))}
                     </div>
 
-                    <div className="container mt-4">
+                    <div className="container mt-4 d-lg-none">
                         <Link className="btn btn-outline btn-lg rounded-pill px-4 mx-auto d-lg-none w-100 w-lg-auto" to="/contact">{t('workWithUs.workWithUsCTA')}</Link>
                     </div>
                 </div>

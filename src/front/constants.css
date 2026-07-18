@@ -1,57 +1,56 @@
 :root {
-  /* =======  Color variables (a merge between the Figma design and Bootstrap defaults):  ======= */
-  --bs-primary: #0d6efd;
+  /* =======  Color variables (a merge between the Figma design and Bootstrap defaults):  ======= */  --bs-primary: #0d6efd !important;
   --bs-primary-rgb: 13, 110, 253;
-  --bs-secondary: #6c757d;
+  --bs-secondary: #6c757d !important;
   --bs-secondary-rgb: 108, 117, 125;
-  --bs-success: #198754;
+  --bs-success: #198754 !important;
   --bs-success-rgb: 25, 135, 84;
-  --bs-info: #0dcaf0;
+  --bs-info: #0dcaf0 !important;
   --bs-info-rgb: 13, 202, 240;
-  --bs-warning: #ffc107;
+  --bs-warning: #ffc107 !important;
   --bs-warning-rgb: 255, 193, 7;
-  --bs-danger: #dc3545;
+  --bs-danger: #dc3545 !important;
   --bs-danger-rgb: 220, 53, 69;
-  --bs-light: #f8f9fa;
+  --bs-light: #f8f9fa !important;
   --bs-light-rgb: 248, 249, 250;
-  --bs-dark: #212529;
+  --bs-dark: #212529 !important;
   --bs-dark-rgb: 33, 37, 41;
-  --bs-primary-1: #199AB7;
+  --bs-primary-1: #199AB7 !important;
   --bs-primary-1-rgb: 25, 154, 183;
-  --bs-primary-2: #217B8F;
+  --bs-primary-2: #217B8F !important;
   --bs-primary-2-rgb: 33, 123, 143;
-  --bs-primary-3: #165766;
+  --bs-primary-3: #165766 !important;
   --bs-primary-3-rgb: 22, 87, 102;
-  --bs-secondary-1: #60E0A5;
+  --bs-secondary-1: #60E0A5 !important;
   --bs-secondary-1-rgb: 96, 224, 165;
-  --bs-secondary-2: #73BF9C;
+  --bs-secondary-2: #73BF9C !important;
   --bs-secondary-2-rgb: 115, 191, 156;
-  --bs-secondary-3: #528C72;
+  --bs-secondary-3: #528C72 !important;
   --bs-secondary-3-rgb: 82, 140, 114;
-  --bs-accent-1: #FBFF06;
+  --bs-accent-1: #FBFF06 !important;
   --bs-accent-1-rgb: 251, 255, 6;
-  --bs-accent-2: #E2E505;
+  --bs-accent-2: #E2E505 !important;
   --bs-accent-2-rgb: 226, 229, 5;
-  --bs-accent-3: #A8AB02;
+  --bs-accent-3: #A8AB02 !important;
   --bs-accent-3-rgb: 168, 171, 2;
-  --bs-gray-100: #E5E5E5;
+  --bs-gray-100: #E5E5E5 !important;
   --bs-gray-100-rgb: 229, 229, 229;
-  --bs-gray-300: #A6BCC2;
+  --bs-gray-300: #A6BCC2 !important;
   --bs-gray-300-rgb: 166, 188, 194;
-  --bs-gray-500: #5F828B;
+  --bs-gray-500: #5F828B !important;
   --bs-gray-500-rgb: 95, 130, 139;
-  --bs-gray-700: #264E58;
+  --bs-gray-700: #264E58 !important;
   --bs-gray-700-rgb: 38, 78, 88;
-  --bs-gray-1000: #04171B;
+  --bs-gray-1000: #04171B !important;
   --bs-gray-1000-rgb: 4, 23, 27;
-  --bs-gradient-1: linear-gradient(180deg, #60E0A5 0, #165766 100%);
-  --bs-radial-gradient-2: radial-gradient(circle, #1bd5ff 0%, #128ba6 60%, #0c323b 100%);
-  --bs-grad-accent: linear-gradient(180deg, #FBFF06 0, #7E8101 87.98%);
-  --bs-grad-primary: linear-gradient(180deg, #199AB7 12.02%, #124652 100%);
-  --bs-grad-secondary: linear-gradient(180deg, #60E0A5 0, #124450 87.98%);
-  --bs-grad-acc-second: linear-gradient(180deg, #FBFF06 0, #477D64 77.4%);
-  --bs-grad-secondary-primary: linear-gradient(180deg, #60E0A5 0, #165766 81.73%);
-  --bs-alt-gradient: radial-gradient(circle, rgba(27, 213, 255, 0.9) 22%, #128ba6 67%, #0c323b 100%);
+  --bs-gradient-1: linear-gradient(180deg, #60E0A5 0, #165766 100%) !important;
+  --bs-radial-gradient-2: radial-gradient(circle, #1bd5ff 0%, #128ba6 60%, #0c323b 100%) !important;
+  --bs-grad-accent: linear-gradient(180deg, #FBFF06 0, #7E8101 87.98%) !important;
+  --bs-grad-primary: linear-gradient(180deg, #199AB7 12.02%, #124652 100%) !important;
+  --bs-grad-secondary: linear-gradient(180deg, #60E0A5 0, #124450 87.98%) !important;
+  --bs-grad-acc-second: linear-gradient(180deg, #FBFF06 0, #477D64 77.4%) !important;
+  --bs-grad-secondary-primary: linear-gradient(180deg, #60E0A5 0, #165766 81.73%) !important;
+  --bs-alt-gradient: radial-gradient(circle, rgba(27, 213, 255, 0.9) 22%, #128ba6 67%, #0c323b 100%) !important;
   /* =======  Font variables  ======= */
   --font-family-h0: "Outfit";
   --font-size-h0: 64px/1.17;
@@ -93,7 +92,8 @@ h2, .font-h2 {
   letter-spacing: -0.01em;
 }
 
-h3, .font-h3 {
+h3,
+.font-h3 {
   font-weight: 700;
   font-size: 24px;
   font-family: "Outfit", sans-serif;

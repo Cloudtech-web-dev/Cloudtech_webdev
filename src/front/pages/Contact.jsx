@@ -9,7 +9,9 @@ export const Contact = () => {
                 description="¿Tienes una idea en mente? Contáctanos para materializar tu visión. Expertos en desarrollo, diseño y estrategia listos para llevar tu negocio al siguiente nivel."
                 url={window.location.href}
             />
-            <HeaderContact />
+            <main>
+                <HeaderContact />
+            </main>
         </>
     )
 }

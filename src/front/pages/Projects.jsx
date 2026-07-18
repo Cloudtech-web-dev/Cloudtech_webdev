@@ -1,6 +1,8 @@
 import { HeaderProjects } from "../components/HeaderProjects";
 import { Projects } from "../components/Projects";
 import { SEO } from "../utils/SEO";
+import PageHeader from "../components/PageHeader";
+import HomeProjects from "../assets/img/HomeProjects.jpg"
 
 export const Portfolio = () => {
     return (
@@ -11,7 +13,12 @@ export const Portfolio = () => {
                 url={window.location.href}
             />
             <main>
-                <HeaderProjects />
+                {/* <HeaderProjects /> */}
+                <PageHeader
+                    title="headers.headerProjects.headLine"
+                    description='headers.headerProjects.headerDescription'
+                    backgroundImg={HomeProjects}
+                />
                 <Projects />
             </main>
         </>

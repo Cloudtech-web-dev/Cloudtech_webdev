@@ -17,50 +17,74 @@ export const ProjectsHome = () => {
     const spotlightProjects = [
         {
             id: "cosmonauta",
-            name: "Librería Cosmonauta",
+            name: t("projects.projectName1"),
             logo: cosmoLogo,
             bgPicture: cosmoBg,
-            description: "Tienda online para una librería independiente, con catálogo, gestión de inventario y pagos seguros.",
-            tags: ["E-commerce", "Desarrollo web", "Desarrollo web", "a", "b", "Desarrollo web"]
+            description: t("projects.featured.projectDescription1"),
+            tags: [t("projects.tags.eCommerce"), t("projects.tags.webDev")],
+            path: "/projects/libreria-cosmonauta"
         },
         {
             id: "mura",
-            name: "MURA",
+            name: t("projects.projectName7"),
             logo: muraLogo,
             bgPicture: muraBg,
-            description: "Revista digital de literatura, con una experiencia visual limpia y una estructura pensada para dar protagonismo al contenido.",
-            tags: ["Revisata digital", "Revista digital"]
+            description: t("projects.featured.projectDescription7"),
+            tags: [t("projects.tags.digitalMagazine"), t("projects.tags.digitalMagazine")],
+            path: "/projects/mura"
         },
         {
             id: "jp-portfolio",
-            name: "Portfolio Jean-Pierre Olivares",
+            name: t("projects.projectName8"),
             logo: jpLogo,
             bgPicture: jpBg,
-            description: "Una web pensada para presentar trabajo audiovisual y fotográfico de forma clara, visual y profesional.",
-            tags: ["Web cineasta", "Portafolio visual"]
+            description: t("projects.featured.projectDescription8"),
+            tags: [t("projects.tags.webCinematographer"), t("projects.tags.visualPortfolio")],
+            path: null
         },
         {
             id: "busquedas",
-            name: "Búsquedas",
+            name: t("projects.projectName6"),
             logo: busquedasLogo,
             bgPicture: busquedasBg,
-            description: "Una plataforma editorial en tres idiomas, diseñada para organizar contenidos, autores y traducciones de forma clara.",
-            tags: ["Revista digital", "Sitio multilingüe"]
+            description: t("projects.featured.projectDescription6"),
+            tags: [t("projects.tags.digitalMagazine"), t("projects.tags.multilingualSite")],
+            path: "/projects/busquedas"
         }
     ];
 
     return (
-        <section id="projects-home-version">
-            <div className="container py-5">
-                {/* Sction Title */}
-                <div className="d-flex flex-column text-center align-items-center mb-5 mx-auto" style={{ width: "fit-content", gap: 40 }}>
-                    <h2 className="font-h1 position-relative" style={{ width: "fit-content", color: "var(--bs-gray-1000)" }}>
-                        <span className="position-absolute" style={{ backgroundColor: "var(--bs-accent-1)", top: "-30%", left: "-7.5%", zIndex: -1, width: "115%", height: "160%" }} />
-                        {t('projects.sectionTitle')}
+        <section id="projects-home-version" style={{ paddingTop: 65, paddingBottom: 52, color: "var(--bs-gray-100)" }}>
+            <div className="container py-5 overflow-x-hidden">
+                {/* Section Title */}
+                <div className="home-projects-upper d-flex flex-column text-center align-items-center mb-5 mx-auto" style={{ width: "fit-content", maxWidth: "100%", paddingInline: 20, gap: 40 }}>
+                    <h2 className="home-projects-title font-h1 position-relative" style={{ width: "fit-content", color: "var(--bs-gray-1000)" }}>
+                        <span className="d-none d-md-block position-absolute" style={{ backgroundColor: "var(--bs-accent-1)", top: "-30%", left: "-7.5%", zIndex: -1, width: "115%", height: "160%" }} />
+                        <span className="highlighted-text">{t('projects.sectionTitle')}</span>
                     </h2>
-                    <p className="font-p1" style={{ width: 600, color: "var(--bs-gray-100)" }}>
+                    <p className="home-projects-description font-p1" style={{ maxWidth: 600 }}>
                         {t('projects.sectionDescription')}
                     </p>
+                    <style>{`
+                        @media (width < 768px) {
+                            .home-projects-upper {
+                                .home-projects-title {
+                                    font-size: calc(1.525rem + 3.3vw);
+                                    line-height: 1.4;
+                                }
+                                .home-projects-description {
+                                    font-size: 1.5rem;
+                                    font-weight: 500;
+                                    letter-spacing: 0;
+                                }
+                            }
+                        }
+                        @media (width >= 768px) {
+                            .home-projects-title {
+                                .highlighted-text { background: none; }
+                            }
+                        }
+                    `}</style>
                 </div>
 
                 {/* Projects */}
@@ -68,18 +92,20 @@ export const ProjectsHome = () => {
                     <img src={ProjectsPreview} alt="Vista previa de proyectos de CloudTech" className="img-fluid" />
                 </div> */}
 
-                <div className="container text-white" style={{ width: 774, marginBottom: 60 }}>
-                    <div className="row row-cols-2" style={{ "--gutter": "10px", "--bs-gutter-x": "var(--gutter)", "--bs-gutter-y": "var(--gutter)" }}>
+                <div className="container" style={{ maxWidth: 774, marginBottom: 60 }}>
+                    <div className="row row-cols-2" style={{ "--gutter": "10px", "--bs-gutter-x": "var(--gutter)", "--bs-gutter-y": "var(--gutter)", justifyContent: "center" }}>
                         {spotlightProjects.map(project => (
-                            <div key={project.id} className="col">
+                            <div key={project.id} className="col" style={{ maxWidth: 380, minWidth: 330 }}>
                                 {/* Project Card */}
-                                <div className="project-card container d-flex flex-column h-100" style={{ gap: 20, paddingBlockEnd: 20 }}>
+                                <Link to={project.path} className="project-card container d-flex flex-column h-100" style={{ gap: 20, paddingBlockEnd: 20, textDecoration: "none", color: "var(--bs-gray-100)" }}>
                                     {/* Main Card Container */}
                                     <div className="card-main row text-center align-items-center position-relative overflow-hidden border" style={{ height: 655, paddingInline: 20, background: "var(--bs-gray-1000)" /* "#165766" */, borderRadius: 12, boxShadow: "5px 6px 7px 3px #00000040, 2px 4px 3.3px 1px #00000078" }} >
                                         <img src={project.bgPicture} alt={`Imagen de fondo de ${project.name}`} className="z-n1 position-absolute top-0 start-0 w-100 h-100 object-fit-cover d-sm-block p-0" />
                                         <div className="col g-0">
                                             <img src={project.logo} alt={`Logo de ${project.name}`} style={{ width: 221 }} />
-                                            <p className="card-description" style={{ display: "none", marginTop: 40 }}>{project.description}</p>
+                                            <div className="card-description-wrapper d-grid">
+                                                <p className="card-description m-0 overflow-hidden">{project.description}</p>
+                                            </div>
                                         </div>
                                     </div>
                                     {/* Card Footer */}
@@ -95,20 +121,36 @@ export const ProjectsHome = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             </div>
                         ))}
                     </div>
                     <style>{`
-                        .project-card:hover {
-                            .card-main {
-                                background: #0000008A !important;
-                            }
-                            .card-footer {
-                                color: yellow;
+                        .project-card {
+                            .card-main { transition: background 0.3s ease; }
+                            .card-footer { transition: color 0.3s ease; }
+                            .card-description-wrapper {
+                                grid-template-rows: 0fr;
+                                margin-top: 0px;
+                                transition:
+                                  grid-template-rows 0.4s ease
+                                , margin-top 0.3s ease;
                             }
                             .card-description {
-                                display: block !important;
+                                opacity: 0;
+                                transition:
+                                  opacity 0.3s ease
+                                , display 0.3s allow-discrete;
+                            }
+                        
+                            &:hover {
+                                .card-main { background: rgba(0, 0, 0, 0.541) !important }
+                                .card-footer { color: var(--bs-accent-1) }
+                                .card-description-wrapper {
+                                    grid-template-rows: 1fr;
+                                    margin-top: 40px;
+                                }
+                                .card-description { opacity: 1 }
                             }
                         }
                     `}</style>
@@ -126,10 +168,22 @@ export const ProjectsHome = () => {
                 </div> */}
 
 
-                <div className="d-flex flex-column justify-content-center flex-md-row gap-3">
-                    <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 font-p1 fw-bold fs-6" style={{ width: 419, padding: "18px 34px", lineHeight: "18px" }}>
+                <div className="home-projects-portfolio-btn d-flex flex-column justify-content-center flex-md-row gap-3">
+                    <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 font-p1 fw-bold fs-6" style={{ maxWidth: 419, width: "100%", padding: "18px 34px", lineHeight: "18px" }}>
                         {t('projects.sectionPortfolioButton')}
                     </Link>
+                    <style>{`
+                        @media (width < 768px) {
+                            .home-projects-portfolio-btn a {
+                                border-width: 1px !important;
+                                font-size: 20px !important;
+                                font-weight: 400 !important;
+                                letter-spacing: 0;
+                                line-height: var(--bs-btn-line-height) !important;
+                                padding: 0.5rem 3rem !important;
+                            }
+                        }
+                    `}</style>
                 </div>
             </div>
 
