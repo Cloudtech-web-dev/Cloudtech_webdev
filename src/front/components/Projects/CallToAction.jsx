@@ -6,7 +6,7 @@ export const CallToAction = () => {
     // const { t } = useTranslation();
 
     return (
-        <section className="intro-scroll-wrapper">
+        <section className="intro-scroll-wrapper light-section">
             {/* Call to Action Section */}
             <div className="intro-sticky-box">
                 <div className="intro-content">

@@ -100,7 +100,7 @@ export const Card = ({ id, cover, gallery = [], name, preview, index }) => {
                     <img
                         src={cover}
                         alt={name}
-                        className="img-fluid rounded-4 shadow-lg project-cover-img"
+                        className="img-fluid rounded-3 shadow-lg project-cover-img"
                     />
                 </Link>
             </div>
