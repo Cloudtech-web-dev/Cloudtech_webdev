@@ -27,8 +27,8 @@ export const Navbar = () => {
 		<>
 			{/* --- NAVBAR DE ESCRITORIO --- */}
 			{/* <div className="container w-100 mb-5"></div> */}
-			<nav className="navbar sticky-top navbar-expand-md d-none d-lg-block py-3 justify-content-center">
-				<div className="container bg-black rounded-pill px-5 py-1 d-flex justify-content-between align-items-center">
+			<nav className="navbar fixed-top navbar-expand-md d-none d-lg-block py-3 justify-content-center" style={{ backgroundColor: "rgba(4, 23, 27, 0.16)", backdropFilter: "blur(20px)", boxShadow: "0px 3px 20.4px 0px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.29)" }}>
+				<div className="container rounded-pill px-5 py-1 d-flex justify-content-between align-items-center">
 					<Link className="navbar-brand" to="/">
 						<img src={LogoNavbar} alt="CloudTech Logo" className="h-auto w-auto" />
 					</Link>

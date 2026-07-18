@@ -24,8 +24,8 @@ export const Layout = () => {
                 <ScrollToTop location={location} />
                 {showNavbar && <Navbar />}
                 <Outlet />
-                <WhatsappButton />
-                {showFooter && <Footer />}
+                {/* <WhatsappButton /> */}
+                {showFooter && <Footer withBrandCard={location.pathname != "/contact"} />}
             </>
         </AppContext.Provider>
     )
