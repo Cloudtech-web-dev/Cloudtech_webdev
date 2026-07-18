@@ -173,12 +173,12 @@ h6 {
   line-height: 170%;
 }
 
-.highlighted-text {
+/* .highlighted-text {
   display: inline-block;
   padding: 0 0.5rem;
   line-height: 1.5;
   white-space: nowrap;
-}
+} */
 
 /* Cat transition effect */
 

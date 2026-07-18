@@ -1,7 +1,7 @@
 import { teamContent } from "../../utils/teamContent"
 import { Card } from "./Card"
 import teamBg from "../../assets/img/teamBackground.jpg"
-import { useTranslation } from "react-i18next"
+import { Trans, useTranslation } from "react-i18next"
 import { useState } from "react"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
@@ -24,7 +24,9 @@ export const Team = () => {
         <section className="d-flex justify-content-center">
             < div className="container py-4">
                 <div className="d-flex flex-column text-center justify-content-center mb-5 gap-5">
-                    <h2 className="page-intro-title">{t('team.sectionTitle')}</h2>
+                    <h2 className="page-intro-title">
+                        <Trans i18nKey={'team.sectionTitle'} components={[<span className="highlighted-text" />]} />
+                    </h2>
                     <p className="text-white ct-description-p">{t('team.sectionDescription')}</p>
                 </div>
                 <div className="row pt-5 align-items-start">

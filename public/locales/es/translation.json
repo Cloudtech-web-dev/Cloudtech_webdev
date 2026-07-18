@@ -45,42 +45,43 @@
       "services": "Servicios",
       "projects": "Proyectos",
       "contact": "Contacto"
-    }
+    },
+    "copywright": "Todos los Derechos Reservados."
   },
   "about": {
-    "sectionTitle": "¿Quiénes somos?",
+    "sectionTitle": "<0>¿Quiénes</0> somos?",
     "sectionDescription": "CloudTech es un estudio digital que une diseño, narrativa y desarrollo web. Trabajamos con marcas, creativos y proyectos que necesitan una presencia digital clara, atractiva y funcional. Nos interesa cómo se ve un sitio, pero también cómo lo experimentan y cómo presenta de la mejor manera un trabajo, un producto o una idea.",
     "workSteps": {
       "opening": {
-        "openingTitle": "Cómo trabajamos",
+        "openingTitle": "Cómo <0>trabajamos</0>",
         "openingDescription": "Cada proyecto empieza por entender qué necesita comunicar, a quién debe llegar y cómo debe funcionar. A partir de ahí, ordenamos la información, definimos la experiencia, diseñamos la interfaz y desarrollamos una solución clara, funcional y alineada con los objetivos del proyecto."
       },
       "steps": {
         "step1": {
-          "title": "Escuchamos y entendemos",
+          "title": "<0>Escuchamos</0> y entendemos",
           "description": "Ordenamos las ideas, definimos la estructura y construimos la web completa."
         },
         "step2": {
-          "title": "Ordenamos la información",
+          "title": "<0>Ordenamos</0> la información",
           "description": "Definimos qué debe decir tu sitio, cómo se organiza el contenido y qué recorrido necesita hacer cada usuario."
         },
         "step3": {
-          "title": "Diseñamos la experiencia",
+          "title": "<0>Diseñamos</0> la experiencia",
           "description": "Trabajamos la estructura visual, los wireframes y las pantallas principales para que el proyecto se vea claro, atractivo y fácil de recorrer."
         },
         "step4": {
-          "title": "Desarrollamos la solución",
+          "title": "<0>Desarrollamos</0> la solución",
           "description": "Construimos el sitio, tienda online, aplicación o plataforma con la tecnología adecuada para que funcione bien y pueda crecer."
         },
         "step5": {
-          "title": "Publicamos y acompañamos ",
+          "title": "<0>Publicamos</0> y acompañamos ",
           "description": "Revisamos, ajustamos y dejamos una base lista para que el proyecto pueda continuar, actualizarse o escalar según sus necesidades. "
         }
       }
     },
     "values": {
       "opening": {
-        "openingTitle": "Lo que guía nuestro trabajo",
+        "openingTitle": "Lo que guía nuestro <0>trabajo</0>",
         "openingDescription": "Cada proyecto necesita algo distinto, pero nuestra forma de trabajar se sostiene en principios claros: entender antes de construir, diseñar con intención y desarrollar soluciones que funcionen para personas reales."
       },
       "valueContent": {
@@ -451,7 +452,7 @@
     }
   },
   "team": {
-    "sectionTitle": "Conoce a nuestro equipo",
+    "sectionTitle": "Conoce a nuestro <0>equipo</0>",
     "sectionDescription": "Somos un equipo que combina estrategia, diseño, desarrollo, contenido y gestión comercial para construir sitios web y experiencias digitales con identidad.",
     "sectionCTAButton": "Hablemos de tu proyecto",
     "card": {

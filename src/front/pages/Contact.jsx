@@ -1,4 +1,5 @@
 import { CardsContact } from "../components/Contact/CardsContact"
+import { Afterwards } from "../components/Contact/Afterwards"
 import HeaderContact from "../components/HeaderContact"
 import { SEO } from "../utils/SEO"
 
@@ -12,6 +13,7 @@ export const Contact = () => {
             />
             <main>
                 <HeaderContact />
+                <Afterwards />
                 <CardsContact />
             </main>
         </>

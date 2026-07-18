@@ -95,7 +95,7 @@ export const Footer = ({ withBrandCard = true }) => {
 	const { t } = useTranslation();
 
 	return (
-		<footer className="footer mt-auto" style={{color: "var(--bs-gray-100)", /* scrollSnapAlign: "end", */ padding: "80px 90px" }}>
+		<footer className="footer mt-auto" style={{ color: "var(--bs-gray-100)", /* scrollSnapAlign: "end", */ padding: "80px 90px" }}>
 			<div className="container g-0">
 				{/* Optional Animated Brand Card */}
 				{withBrandCard && (
@@ -108,13 +108,13 @@ export const Footer = ({ withBrandCard = true }) => {
 								<RotatingLogo text={t("footer.welcomingSentence")} duration="30s" style={{ maxWidth: 192 }} />
 								{/* <p className="text-white w-75 d-none d-sm-block">{t('footer.footerSlogan')}</p> */}
 								<p className="w-75 d-none d-sm-block font-h1" style={{ color: "var(--bs-secondary-2)", width: 429, lineHeight: "1.2" }}>
-									<Trans i18nKey="footer.footerSlogan" components={[<span className="highlighted-text" style={{"--highlighted-text-bg": "var(--bs-secondary-2)"}} />]} />
+									<Trans i18nKey="footer.footerSlogan" components={[<span className="highlighted-text" style={{ "--highlighted-text-bg": "var(--bs-secondary-2)" }} />]} />
 									{/* NOS ENCANTARÍA CONOCER TU <span className="highlighted-text" style={{"--highlighted-text-bg": "var(--bs-secondary-2)"}}>IDEA</span> */}
 								</p>
 							</div>
 							<div className="footer-card col-auto w-100 d-flex flex-column d-md-none align-items-center border" style={{ maxWidth: 827, gap: 62, borderRadius: 12, userSelect: "none" }}>
 								<p className="w-75 font-h1" style={{ color: "var(--bs-secondary-2)", width: 429, lineHeight: "1.2" }}>
-									<Trans i18nKey="footer.footerSlogan" components={[<span className="highlighted-text" style={{"--highlighted-text-bg": "var(--bs-secondary-2)"}} />]} />
+									<Trans i18nKey="footer.footerSlogan" components={[<span className="highlighted-text" style={{ "--highlighted-text-bg": "var(--bs-secondary-2)" }} />]} />
 									{/* NOS ENCANTARÍA CONOCER TU <span className="highlighted-text" style={{"--highlighted-text-bg": "var(--bs-secondary-2)"}}>IDEA</span> */}
 								</p>
 								<RotatingLogo text={t("footer.welcomingSentence")} duration="30s" style={{ maxWidth: 192 }} />
@@ -182,10 +182,10 @@ export const Footer = ({ withBrandCard = true }) => {
 			</div>
 			<hr className="opacity-100" style={{ border: "1px solid var(--bs-gray-100)", marginTop: 40, marginBottom: 20 }} />
 			<div className="d-none d-md-block text-center">
-				<p> <span className="font-p1" style={{color: "var(--bs-secondary-1)", fontSize: 14, lineHeight: "1.8"}}>© {currentYear} CloudTech</span> <span className="text-ct-gray"> | All Rights Reserved.</span> </p>
+				<p> <span className="font-p1" style={{ color: "var(--bs-secondary-1)", fontSize: 14, lineHeight: "1.8" }}>© {currentYear} CloudTech</span> <span className="text-ct-gray"> | {t('footer.copywright')}</span> </p>
 			</div>
 			<div className="d-md-none text-center">
-				<p> <span className="font-p1" style={{color: "var(--bs-secondary-1)", fontSize: 14, lineHeight: "1.8"}}>© {currentYear} CloudTech</span> <span className="text-ct-gray"> <br/> All Rights Reserved.</span> </p>
+				<p> <span className="font-p1" style={{ color: "var(--bs-secondary-1)", fontSize: 14, lineHeight: "1.8" }}>© {currentYear} CloudTech</span> <span className="text-ct-gray"> <br /> {t('footer.copywright')}</span> </p>
 			</div>
 			<style>{`
 				@media (width < 768px) {

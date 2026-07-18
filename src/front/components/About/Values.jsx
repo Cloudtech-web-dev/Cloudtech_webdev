@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import '../../styles/StickyLayout.css';
 
 export const Values = () => {
@@ -107,7 +107,9 @@ export const Values = () => {
             <div className='intro-scroll-wrapper'>
                 <div className='intro-sticky-box'>
                     <div className='intro-content'>
-                        <h2 className='section-title'>{t('about.values.opening.openingTitle')}</h2>
+                        <h2 className='section-title'>
+                            <Trans i18nKey={'about.values.opening.openingTitle'} components={[<span className='highlighted-text' style={{ "--highlighted-text-color": "var(--bs-accent-1)", "--highlighted-text-bg": "var(--bs-gray-1000)" }} />]} />
+                        </h2>
                         <p className='intro-text'>
                             {t('about.values.opening.openingDescription')}
                         </p>
