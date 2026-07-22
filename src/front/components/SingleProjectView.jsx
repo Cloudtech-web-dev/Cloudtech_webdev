@@ -61,22 +61,22 @@ export const SingleProjectView = () => {
 
                     {/* SECCIÓN ÍNDICE Y RESUMEN PROYECTO */}
 
-                    <div className="d-flex flex-column flex-md-row justify-content-between gap-4 px-5 my-5 text-white">
-                        <ul className="list-unstyled d-flex flex-column text-md-start text-center gap-2">
-                            <li className="fs-5"><a href="#needs" className="index-item-hover">{t('projects.menuItems.itemOne')}</a></li>
-                            <li className="fs-5"><a href="#process" className="index-item-hover">{t('projects.menuItems.itemTwo')}</a></li>
-                            <li className="fs-5"><a href="#gallery" className="index-item-hover">{t('projects.menuItems.itemThree')}</a></li>
-                            <li className="fs-5"><a href="#credits" className="index-item-hover">{t('projects.menuItems.itemFour')}</a></li>
+                    <div className="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between gap-md-5 px-md-5 px-2 my-5 text-white">
+                        <ul className="list-unstyled d-flex flex-column justify-content-center mx-auto justify-content-lg-start mx-lg-0 w-100 text-lg-start text-center gap-2">
+                            <li className="font-p1 text-nowrap"><a href="#needs" className="index-item-hover">{t('projects.menuItems.itemOne')}</a></li>
+                            <li className="font-p1 text-nowrap"><a href="#process" className="index-item-hover">{t('projects.menuItems.itemTwo')}</a></li>
+                            <li className="font-p1 text-nowrap"><a href="#gallery" className="index-item-hover">{t('projects.menuItems.itemThree')}</a></li>
+                            <li className="font-p1 text-nowrap"><a href="#credits" className="index-item-hover">{t('projects.menuItems.itemFour')}</a></li>
                         </ul>
-                        <p className="ct-psummary text-lg-start text-center">{t(projectData.summary)}</p>
+                        <p className="font-p1 text-lg-start text-center">{t(projectData.summary)}</p>
                     </div>
 
                     {/* SECCIÓN ANÁLISIS DE NECESIDADES */}
 
                     <div id="needs" className="d-flex flex-column justify-content-center">
                         <div className="d-flex flex-column flex-lg-row gap-4 gap-lg-5 justify-content-center align-items-center">
-                            <h2 className="component-title fs-4">{t('projects.menuItems.itemOne')}</h2>
-                            <p className="text-white text-lg-start text-center ct-psummary">{t(projectData.need)}</p>
+                            <h2 className="component-title">{t('projects.menuItems.itemOne')}</h2>
+                            <p className="text-white text-lg-start text-center ct-psummary font-p1">{t(projectData.need)}</p>
                         </div>
                         <img src={projectData.needsArt} className="mt-5 rounded-4 img-fluid" alt="proceso analisis de necesidad CloudTech" />
                     </div>
@@ -85,8 +85,8 @@ export const SingleProjectView = () => {
 
                     <div id="process" className="d-flex flex-column justify-content-center gap-4">
                         <div className="d-flex flex-column flex-lg-row gap-4 gap-lg-5 justify-content-center align-items-center">
-                            <h2 className="component-title fs-4">{t('projects.menuItems.itemTwo')}</h2>
-                            <p className="text-white text-lg-start text-center ct-psummary">{t(projectData.process)}</p>
+                            <h2 className="component-title">{t('projects.menuItems.itemTwo')}</h2>
+                            <p className="text-white text-lg-start text-center font-p1">{t(projectData.process)}</p>
                         </div>
 
                         <ProjectProcess phases={projectData.phase} />
@@ -96,8 +96,8 @@ export const SingleProjectView = () => {
 
                     <div id="gallery" className="d-flex flex-column justify-content-center gap-4 my-5">
                         <div className="d-flex flex-column flex-lg-row gap-4 gap-lg-5 justify-content-center align-items-center">
-                            <h2 className="component-title fs-4">{t('projects.menuItems.itemThree')}</h2>
-                            <p className="text-white text-lg-start text-center ct-psummary">{t(projectData.solution)}</p>
+                            <h2 className="component-title">{t('projects.menuItems.itemThree')}</h2>
+                            <p className="text-white text-lg-start text-center font-p1">{t(projectData.solution)}</p>
                         </div>
                         <div className="row g-4">
                             {projectData.gallery?.map((item, index) => (
@@ -118,24 +118,24 @@ export const SingleProjectView = () => {
 
                     {/* SECCIÓN CRÉDITOS */}
 
-                    <div id="credits" className="d-flex flex-column justify-content-center gap-4 bg-credits py-5">
+                    <div id="credits" className="d-flex flex-column justify-content-center gap-4 bg-credits projects-wrapper">
                         <div className="d-flex flex-column gap-4 gap-lg-5 justify-content-center align-items-center">
-                            <h2 className="component-title fs-4">{t('projects.menuItems.itemFour')}</h2>
+                            <h2 className="component-title">{t('projects.menuItems.itemFour')}</h2>
                             <div className="d-flex flex-column gap-4">
 
                                 {projectData.credits.map((item, index) => (
-                                    <div key={index} className="d-flex flex-column flex-lg-row gap-2 gap-lg-5 justify-content-lg-center">
-                                        <p className="text-white text-center text-lg-end">{item.name}</p>
+                                    <div key={index} className="d-flex flex-column flex-lg-row align-items-md-end gap-0 gap-lg-5 justify-content-lg-center">
+                                        <p className="text-white text-center text-lg-end font-p1">{item.name}</p>
                                         <p className="text-white text-center fw-bold">{t(item.position)}</p>
                                     </div>
                                 ))}
 
                             </div>
-                            <div className="d-flex flex-column gap-2 mt-4">
-                                <h3 className="component-title text-white text-center">{t('projects.menuItems.tech')}</h3>
-                                <ul className="list-unstyled d-flex flex-column flex-lg-row gap-lg-5 text-center justify-content-center gap-2">
+                            <div className="d-flex flex-column gap-4 mt-4">
+                                <h3 className="component-title text-center">{t('projects.menuItems.tech')}</h3>
+                                <ul className="list-unstyled d-flex flex-column flex-lg-row gap-lg-5 text-center justify-content-center gap-3">
                                     {projectData.tech.map((item, index) => (
-                                        <li key={index} className="text-white">{item}</li>
+                                        <li key={index} className="text-white font-p1">{item}</li>
                                     ))}
                                 </ul>
                                 {projectData.collab ? <p className="text-white text-center mt-4"><a className="text-decoration-none text-white" href="https://www.colmenalab.com/" rel="noopener noreferrer" target="_blank">{t(projectData.collab)}</a></p> : ""}

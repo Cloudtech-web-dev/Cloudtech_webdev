@@ -31,7 +31,7 @@ export const Card = ({ id, cover, gallery = [], name, preview, index }) => {
 
             <div className={`col-12 col-lg-6 ${!isEven ? "order-lg-2" : "order-lg-1"}`}>
                 <div className="text-center text-lg-start px-lg-4">
-                    <h3 className="text-white fw-bold mb-3">
+                    <h3 className="text-white afterwards-step-title mb-3">
                         {t(name)}
                     </h3>
                     <p className="text-white ct-paragraph mb-4">

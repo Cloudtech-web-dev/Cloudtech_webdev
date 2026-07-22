@@ -144,14 +144,20 @@ h6 {
 
 .page-intro-title {
   color: #FBFF06;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
 .component-title {
   color: #FBFF06;
-  font-size: 3.5rem;
-  font-weight: 800;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  font-weight: bold;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+    padding: 0;
+  }
 
 }
 
@@ -169,16 +175,13 @@ h6 {
 }
 
 .ct-paragraph {
-  font-size: 16pt;
-  line-height: 170%;
-}
+  font-size: 1.2rem;
+  line-height: 1.4;
 
-/* .highlighted-text {
-  display: inline-block;
-  padding: 0 0.5rem;
-  line-height: 1.5;
-  white-space: nowrap;
-} */
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
 
 /* Cat transition effect */
 
@@ -267,6 +270,10 @@ h6 {
     display: block;
     left: 10px !important;
   }
+
+  .page-intro-title {
+    font-size: 4rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -303,6 +310,7 @@ h6 {
 .custom-gallery-img {
   width: 100%;
   height: 250px;
+  border-radius: 12px;
   object-fit: cover;
   object-position: center;
   transition: transform 0.3s ease;
@@ -708,26 +716,31 @@ h6 {
   gap: 6.6rem;
   justify-content: center;
   align-items: center;
-  padding: 6.6rem 0;
+  padding: 4.6rem 0;
 }
 
 .afterwards-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 800;
   text-align: center;
   color: #FBFF06;
   padding: 0 10px;
 
   @media (min-width: 768px) {
-    font-size: 5.8rem;
+    font-size: 4rem;
     padding: 0;
   }
 }
 
 .afterwards-step-title {
-  font-size: 2.6rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: white;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+    padding: 0;
+  }
 }
 
 .afterwards-step-description {
@@ -794,4 +807,26 @@ h6 {
 .invert-logo-filter {
   filter: brightness(0) saturate(100%) invert(8%) sepia(35%) saturate(5538%) hue-rotate(181deg) brightness(96%) contrast(99%);
   transition: filter 0.15s ease;
+}
+
+/* VISTA INDIVIDUAL PROYECTOS */
+
+.projects-wrapper {
+  padding: 100px 20px;
+}
+
+.other-project-card {
+  border-radius: 12px;
+}
+
+.phase-project-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #FBFF06;
+  line-height: 1.2;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+    padding: 0;
+  }
 }

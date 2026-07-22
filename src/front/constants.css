@@ -1,5 +1,6 @@
 :root {
-  /* =======  Color variables (a merge between the Figma design and Bootstrap defaults):  ======= */  --bs-primary: #0d6efd !important;
+  /* =======  Color variables (a merge between the Figma design and Bootstrap defaults):  ======= */
+  --bs-primary: #0d6efd !important;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary: #6c757d !important;
   --bs-secondary-rgb: 108, 117, 125;
@@ -68,7 +69,8 @@
   --font-size-alt-h1: 48px/96px;
 }
 
-h0, .font-h0 {
+h0,
+.font-h0 {
   font-weight: 700;
   font-size: 64px;
   font-family: "Outfit", sans-serif;
@@ -76,7 +78,8 @@ h0, .font-h0 {
   letter-spacing: -0.01em;
 }
 
-h1, .font-h1 {
+h1,
+.font-h1 {
   font-weight: 700;
   font-size: 48px;
   font-family: "Outfit", sans-serif;
@@ -84,7 +87,8 @@ h1, .font-h1 {
   letter-spacing: -0.01em;
 }
 
-h2, .font-h2 {
+h2,
+.font-h2 {
   font-weight: 700;
   font-size: 32px;
   font-family: "Outfit", sans-serif;
@@ -103,7 +107,7 @@ h3,
 
 .font-p1 {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-family: "Manrope", sans-serif;
   line-height: 1.4;
   letter-spacing: 0.03em;
@@ -125,4 +129,10 @@ h3,
   font-family: "Crimson Text", sans-serif;
   line-height: 96px;
   letter-spacing: -0.02em;
+}
+
+@media (max-width:768px) {
+  .font-p1 {
+    font-size: 1.2rem;
+  }
 }

@@ -113,7 +113,7 @@ export const Footer = ({ withBrandCard = true }) => {
 								</p>
 							</div>
 							<div className="footer-card col-auto w-100 d-flex flex-column d-md-none align-items-center border" style={{ maxWidth: 827, gap: 62, borderRadius: 12, userSelect: "none" }}>
-								<p className="w-75 font-h1" style={{ color: "var(--bs-secondary-2)", width: 429, lineHeight: "1.2" }}>
+								<p className="w-75 font-h1 text-center text-md-start" style={{ color: "var(--bs-secondary-2)", width: 429, lineHeight: "1.2" }}>
 									<Trans i18nKey="footer.footerSlogan" components={[<span className="highlighted-text" style={{ "--highlighted-text-bg": "var(--bs-secondary-2)" }} />]} />
 									{/* NOS ENCANTARÍA CONOCER TU <span className="highlighted-text" style={{"--highlighted-text-bg": "var(--bs-secondary-2)"}}>IDEA</span> */}
 								</p>
@@ -122,7 +122,7 @@ export const Footer = ({ withBrandCard = true }) => {
 						</Link>
 					</div>
 				)}
-				<div className="footer-main-info d-flex flex-column flex-md-row justify-content-between align-items-center font-p1 fw-bold text-nowrap" style={{ width: "100%", maxWidth: "100vw", gap: 80, fontSize: 18, lineHeight: "1.8", letterSpacing: "5.5%" }}>
+				<div className="footer-main-info d-flex flex-column flex-lg-row justify-content-between align-items-center fw-bold text-nowrap" style={{ width: "100%", maxWidth: "100vw", gap: 20, fontSize: 18, lineHeight: "1.8", letterSpacing: "5.5%" }}>
 
 					{/* Site Sections */}
 					<div className="d-none d-sm-flex align-items-center justify-content-start" style={{ gap: 40 }}>

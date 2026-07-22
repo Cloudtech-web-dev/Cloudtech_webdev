@@ -31,37 +31,26 @@ export const Navbar = () => {
 			const lightSections = document.querySelectorAll(".light-section");
 			let isOverLightSection = false;
 
-			// La línea de impacto: a cuántos píxeles desde arriba quieres que detecte la colisión
-			// Si tu navbar mide ~80px de alto, 60 es un punto ideal.
 			const triggerPoint = 60;
 
 			lightSections.forEach((section) => {
 				const rect = section.getBoundingClientRect();
-
-				// Lógica de oro: Si el inicio de la sección ya subió por el trigger
-				// Y el final de la sección TODAVÍA no ha subido por el trigger...
 				if (rect.top <= triggerPoint && rect.bottom >= triggerPoint) {
-					isOverLightSection = true; // ...entonces la navbar está sobre el fondo claro
+					isOverLightSection = true;
 				}
 			});
 
-			// React es inteligente: solo re-renderizará si el estado realmente cambia
 			setIsLightMode(isOverLightSection);
 		};
 
-		// 1. Al cambiar de página, le damos 50ms a React para que pinte la nueva sección antes de medir
 		const timeoutId = setTimeout(checkNavbarColor, 50);
-
-		// 2. Escuchamos el scroll de forma "pasiva" (no bloquea los fotogramas del navegador)
 		window.addEventListener("scroll", checkNavbarColor, { passive: true });
 
-		// 3. Limpiamos eventos al desmontar para evitar fugas de memoria
 		return () => {
 			clearTimeout(timeoutId);
 			window.removeEventListener("scroll", checkNavbarColor);
 		};
 
-		// Al pasar [location.pathname], obligamos al useEffect a reiniciar el radar cada que navegues a otra URL
 	}, [location.pathname]);
 
 	const textClass = isLightMode ? "dark-navbar-items" : "text-white";
@@ -94,7 +83,7 @@ export const Navbar = () => {
 							<LanguageSwitcher />
 						</li>
 						<li className="nav-item">
-							<Link className={`btn ${isLightMode ? 'btn-outline-dark' : 'btn-outline-custom-yellow'} rounded-pill py-2 px-4 fw-medium`} to="/contact">
+							<Link className={`btn ${isLightMode ? 'btn-outline-dark-custom' : 'btn-outline-custom-yellow'} rounded-pill py-2 px-4 fw-medium`} to="/contact">
 								{t('navbar.contact')}
 							</Link>
 						</li>
@@ -121,7 +110,7 @@ export const Navbar = () => {
 
 
 			<div className={`custom-menu-overlay ${isOpen ? 'active' : ''}`}>
-				<div className="d-flex justify-content-between align-items-center border border-2 border-white mx-3 my-4 p-3 rounded-pill">
+				<div className="d-flex justify-content-between align-items-center border-2 border-white mx-3 my-4 p-3 rounded-pill">
 					<img src={LogoNavMovil} alt="CloudTech Logo Movil" className="h-auto w-auto" />
 					<button
 						type="button"

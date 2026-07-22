@@ -4,8 +4,8 @@ export const Card = ({ icon, title, description }) => {
             <div className="text-ct-secondary">
                 {icon}
             </div>
-            <span className="section-title fs-5">{title}</span>
-            <p className="text-white">{description}</p>
+            <span className="phase-project-title">{title}</span>
+            <p className="text-white font-p1">{description}</p>
         </div>
     )
 }

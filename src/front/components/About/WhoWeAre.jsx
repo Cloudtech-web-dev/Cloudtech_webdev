@@ -11,7 +11,7 @@ export const WhoWeAre = () => {
                     <h2 className='section-title-positive'>
                         <Trans i18nKey={'about.sectionTitle'} components={[<span className="highlighted-text" />]} />
                     </h2>
-                    <p className='intro-text-positive'>
+                    <p className='font-p1 text-white'>
                         {t('about.sectionDescription')}
                     </p>
                 </div>

@@ -34,7 +34,7 @@ export const Accordion = () => {
                             <h2 className="service-category-title-main">
                                 {category.title}
                             </h2>
-                            <p className="service-category-description-main">
+                            <p className="font-p1">
                                 {category.description}
                             </p>
                         </div>
