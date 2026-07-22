@@ -1,10 +1,9 @@
 import { Card } from "./Card"
 import { servicesContent } from "../../utils/servicesContent"
-import serviceBg from "../../assets/img/servicesBackground.jpg"
 import { useTranslation, Trans } from "react-i18next"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faCode, faHexagonNodes, faPenRuler } from "@fortawesome/free-solid-svg-icons";
-import { faCustomBagCheck, faCustomMagicWand, faCustomPlanetWithSatellites , faCustomCodeMonitor } from "../../utils/customIcons";
+import { faCustomBagCheck, faCustomMagicWand, faCustomPlanetWithSatellites, faCustomCodeMonitor } from "../../utils/customIcons";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -64,10 +63,9 @@ export const Services = () => {
         <div className='intro-scroll-wrapper'>
             <div className='intro-sticky-box'>
                 <section className="min-vh-100 d-flex justify-content-md-center position-relative px-3 vw-100 align-self-start" style={{ backgroundColor: "var(--bs-gray-100)" }}>
-                    {/* <img src={serviceBg} alt="CloudTech services background image" className="z-n1 mx-auto ct-services-bg position-absolute w-100 h-100 object-fit-cover d-none d-sm-block" /> */}
 
                     <div className="container py-md-5 my-md-4 z-0 align-content-center" style={{ paddingTop: "5.7rem" }}>
-                        <div className="home-services-upper d-flex flex-column text-center justify-content-center align-items-center mx-auto" style={{ maxWidth: 574, paddingInline: "20px", marginBottom: 100, gap: 53 }}>
+                        <div className="home-services-upper d-flex flex-column text-center justify-content-center align-items-center mx-auto" style={{ maxWidth: 574, paddingInline: "20px", marginBottom: 100, gap: 40 }}>
                             <h2 className="home-services-title font-h1 position-relative" style={{ width: "fit-content", color: "var(--bs-accent-1)" }}>
                                 <span className="d-none d-md-block position-absolute" style={{ backgroundColor: "var(--bs-gray-1000)", top: "-30%", left: "-17.5%", zIndex: -1, width: "135%", height: "160%" }} />
                                 {t('services.sectionTitle')}
@@ -96,31 +94,12 @@ export const Services = () => {
                                     }
                                 `}</style>
                             </h2>
-                            {/* <h2 className="font-h1 position-relative" style={{ "--highlighted-text-color": "var(--bs-accent-1)", "--highlighted-text-bg": "var(--bs-gray-1000)", marginBottom: 53 }}>
-                                <Trans i18nKey='services.sectionTitle' components={[<span className="highlighted-text" />]} />
-                            </h2> */}
+
                             <p className="home-services-description font-p1" style={{ color: "var(--bs-gray-1000)" }}>
                                 {t('services.sectionDescription')}
                             </p>
                         </div>
 
-                        {/* {sections.map(section => (
-                            <div className="row my-3" key={section.id}>
-                                <h3 className="section-title mb-0 text-center text-md-start">{section.title}</h3>
-                                <h5 className="text-white mb-4 fw-normal fst-italic text-center text-md-start">{section.subtitle}</h5>
-                                {groupedServices[section.id] && groupedServices[section.id].map(service => (
-                                    <div key={service.title} className="col-md-6 col-lg-4 col-xl-3 mb-4">
-                                        <Card
-                                            title={t(service.title)}
-                                            icon={service.icon}
-                                            description={t(service.description)}
-                                            link={t(service.link)}
-                                        />
-                                    </div>
-                                ))
-                                }
-                            </div>
-                        ))} */}
 
                         <div className="home-services-middle row my-3 justify-content-center justify-content-md-between mx-auto w-100" style={{ maxWidth: 960, color: "var(--bs-gray-1000)", gap: 30 }}>
                             {services.map(service => (
@@ -145,7 +124,7 @@ export const Services = () => {
                             `}</style>
                         </div>
                         <div id="services-outline-btn" className="d-flex flex-column justify-content-center flex-md-row gap-3 w-100">
-                            <Link to="/services" className="btn btn-outline btn-lg rounded-pill border-4" style={{ padding: "18px 50px", fontWeight: 900, fontSize: 16, letterSpacing: 0, lineHeight: "1.125" }}>
+                            <Link to="/services" className="btn btn-outline btn-lg rounded-pill border-4 py-3" style={{ fontWeight: 900, fontSize: 16, letterSpacing: 0, lineHeight: "1.125" }}>
                                 {t("services.exploreServicesButton")}
                             </Link>
                             <style>{`

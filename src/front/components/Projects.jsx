@@ -22,7 +22,7 @@ export const Projects = ({ limit = 0 }) => {
                 </div>
 
                 {/* Projects */}
-                <div className="mt-5 ">
+                <div className="mt-5">
 
                     {projectsToDisplay.map((project, index) => (
                         <Card

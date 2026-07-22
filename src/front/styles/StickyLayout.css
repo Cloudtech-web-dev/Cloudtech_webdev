@@ -29,11 +29,11 @@
 }
 
 .section-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 800;
     color: #04171B;
     margin: 0;
-    max-width: 35%;
+    max-width: 100%;
     /* white-space: nowrap; */
 
 }
@@ -41,6 +41,7 @@
 .intro-text {
     font-size: 1.5rem;
     line-height: 1.4;
+    letter-spacing: 0.03em;
     color: #04171B;
     font-weight: 500;
     margin: 0;
@@ -85,7 +86,7 @@
 }
 
 .section-title-positive {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 800;
     color: #FBFF06;
     margin: 0;
@@ -98,9 +99,9 @@
         white-space: nowrap;
     }
 
-    @media (max-width: 991px) {
+    @media (min-width: 768px) {
         white-space: normal;
-        font-size: 2.5rem;
+        font-size: 4rem;
         max-width: 100%;
     }
 }
@@ -446,13 +447,22 @@
 /* ==========================================
    RESPONSIVE MÓVIL
    ========================================== */
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 4rem;
+        white-space: normal;
+        max-width: 80%;
+    }
+}
+
 @media (max-width: 768px) {
     .scroll-container {
         height: 950vh;
     }
 
     .content-text {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
     }
 
     .content-description p {
@@ -461,12 +471,6 @@
     }
 
     .intro-content-positive {
-        max-width: 100%;
-    }
-
-    .section-title {
-        font-size: 2rem;
-        white-space: normal;
         max-width: 100%;
     }
 
@@ -551,8 +555,14 @@
         max-width: 80%;
     }
 
-    .section-title {
+    /* .section-title {
         max-width: 80%;
+    } */
+}
+
+@media (min-width:1200px) {
+    .section-title {
+        max-width: 55%;
     }
 }
 
@@ -561,12 +571,18 @@
         max-width: 80%;
     }
 
-    .section-title {
+    /* .section-title {
         max-width: 70%;
-    }
+    } */
 
     .intro-text {
         max-width: 80%;
+    }
+}
+
+@media (min-width:1200px) {
+    .section-title {
+        max-width: 40%;
     }
 }
 
@@ -575,9 +591,9 @@
         max-width: 80%;
     }
 
-    .section-title {
+    /* .section-title {
         max-width: 60%;
-    }
+    } */
 
     .intro-text {
         max-width: 80%;

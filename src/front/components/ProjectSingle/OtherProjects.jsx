@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 import { useParams } from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Autoplay } from "swiper/modules"
+import '../../styles/StickyLayout.css';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -16,7 +17,7 @@ export const OtherProjects = () => {
 
     return (
         <section id="otros-proyectos" className="my-5">
-            <h1 className="component-title text-center">{t('projects.otherProjects')}</h1>
+            <h1 className="section-title-positive text-center">{t('projects.otherProjects')}</h1>
 
             <Swiper
                 modules={[Navigation, Autoplay]}

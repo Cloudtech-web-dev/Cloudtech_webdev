@@ -7,18 +7,18 @@ import PortfolioPDF from "../../assets/img/Portfolio/PORTFOLIO-CLOUDTECH.pdf";
 
 const ContactCard = ({ title, description, link = "", icon, isExternal = false, isEmail = false, email = "" }) => {
     return (
-        <div className="col-12 col-lg-4">
+        <div className="col-12 col-xl-4">
             <div className={`contact-card-custom h-100 p-4 d-flex flex-column position-relative`}>
 
                 {/* PARTE SUPERIOR: Título */}
                 <div className="card-top flex-grow-1">
-                    <h3 className="card-title-contact">{title}</h3>
+                    <h3 className="card-title-contact text-center text-md-start">{title}</h3>
                 </div>
 
                 {/* PARTE INFERIOR: Texto a la izquierda, Icono a la derecha */}
-                <div className="card-bottom d-flex justify-content-between align-items-end gap-2">
-                    <div className="description-container me-auto" style={{ maxWidth: '75%' }}>
-                        <p className={`card-description-contact`}>
+                <div className="card-bottom d-flex flex-column flex-md-row justify-content-between align-items-center align-items-md-end gap-2">
+                    <div className="d-flex justify-content-center justify-content-md-start me-md-auto">
+                        <p className={`card-description-contact text-center text-md-start`}>
                             {description}
                         </p>
                     </div>
@@ -28,7 +28,7 @@ const ContactCard = ({ title, description, link = "", icon, isExternal = false, 
                         {link && (
                             <a
                                 href={link}
-                                className="stretched-link"
+                                className=""
                                 target={isExternal ? "_blank" : "_self"}
                                 rel={isExternal ? "noopener noreferrer" : ""}
                             ></a>
