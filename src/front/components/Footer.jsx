@@ -150,7 +150,6 @@ export const Footer = ({ withBrandCard = true }) => {
 								className="link-custom-hover"
 								rel="noopener noreferrer"
 								aria-label={socialLink.ariaLabel}
-								style={{ display: "contents", color: "var(--bs-gray-100)" }}
 							>
 								<FontAwesomeIcon icon={socialLink.icon} style={{ width: 36, height: 36 }} />
 							</a>

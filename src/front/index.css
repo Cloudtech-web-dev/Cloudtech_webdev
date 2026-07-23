@@ -124,9 +124,10 @@ h6 {
 .link-custom-hover {
   display: inline-block;
   text-decoration: none;
-  color: #ffff;
+  color: var(--bs-gray-100);
   transition: transform 0.3s ease, color 0.3s ease;
   transform-origin: center;
+  line-height: 0;
 }
 
 .link-custom-hover:hover {
