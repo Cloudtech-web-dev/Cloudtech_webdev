@@ -87,7 +87,7 @@ export const HeaderHome = () => {
                     {/* <div className="position-absolute w-100 h-100 bg-dark bg-opacity-50 mx-auto"></div> */}
                     {transparentText || <img src={HomeOne} alt="CloudTech background image" className="z-n1 mx-auto position-absolute w-100 object-fit-cover d-sm-block" style={{ minHeight: "100dvh" }} />}
                     <div className="container w-100 z-1 py-5" style={{ minHeight: "100dvw" }}>
-                        <div className="row text-center z-1">
+                        <div className="row text-center z-1 h-100">
                             <div className="col pt-5 pt-lg-0 my-5 d-flex flex-column justify-content-center align-items-center z-1 gap-5">
                                 <h1 className="hero-title-home display-3 fw-bolder w-100 mt-sm-0 mb-4" style={{ color: "var(--bs-accent-1)" }}>
                                     <Trans i18nKey='headers.headerHome.headLine' components={[<span className={`highlighted-text${syncedBg()}`} />]} />
