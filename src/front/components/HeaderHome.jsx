@@ -116,7 +116,7 @@ export const HeaderHome = () => {
                             <div className="container z-1">
                                 <div className="row h-100 text-center z-1">
                                     <div className="col my-5 d-flex flex-column justify-content-center align-items-center z-1 g-0" style={{ flex: "0 1 677px", gap: 40 }}>
-                                        <h2 className="font-h1 mt-sm-0 mt-5 mb-4" style={{ color: "var(--bs-accent-1)", fontSize: "2rem" }} ref={node => node?.style.setProperty("line-height", "134%", "important")}>
+                                        <h2 className="font-h1 mt-sm-0 mt-5 mb-4" style={{ color: "var(--bs-accent-1)" }} ref={node => node?.style.setProperty("line-height", "134%", "important")}>
                                             <Trans i18nKey='headers.headerHome.servicesPresentation.headLine' components={[<span className="highlighted-text" />]} />
                                         </h2>
 

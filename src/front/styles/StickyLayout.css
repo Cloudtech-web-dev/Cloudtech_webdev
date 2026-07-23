@@ -420,6 +420,10 @@
     /* Espera un instante a que empiece a abrirse el alto */
 }
 
+.team-card-item {
+    scroll-margin-top: 100px;
+}
+
 /* ========================================================
    COMPONENTE TIPOS DE INICIOS DE PROYECTO PARA SERVICIOS
    ======================================================== */
