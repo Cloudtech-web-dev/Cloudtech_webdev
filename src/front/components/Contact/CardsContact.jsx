@@ -28,7 +28,6 @@ const ContactCard = ({ title, description, link = "", icon, isExternal = false, 
                         {link && (
                             <a
                                 href={link}
-                                className=""
                                 target={isExternal ? "_blank" : "_self"}
                                 rel={isExternal ? "noopener noreferrer" : ""}
                             ></a>

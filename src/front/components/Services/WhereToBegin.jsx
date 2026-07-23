@@ -39,11 +39,12 @@ export const WhereToBegin = () => {
 
 
             let interpolatedProgress = activeIndex;
+            const pauseThreshold = 0.4;
 
             // Creamos un "suavizado/pausa": de 0.0 a 0.7 se queda quieto (pausa en el centro), 
             // y de 0.7 a 1.0 hace la transición rápida hacia el siguiente elemento.
-            if (segmentProgress > 0.7) {
-                const transitionFactor = (segmentProgress - 0.7) / 0.3;
+            if (segmentProgress > pauseThreshold) {
+                const transitionFactor = (segmentProgress - pauseThreshold) / (1 - pauseThreshold);
                 // Ajuste de aceleración (ease-in-out manual)
                 interpolatedProgress += transitionFactor * transitionFactor * (3 - 2 * transitionFactor);
             }
@@ -83,17 +84,17 @@ export const WhereToBegin = () => {
                 </div>
             </div>
             {/* CONTENEDOR DE VALUES */}
-            <div ref={containerRef} className='scroll-container'>
+            <div ref={containerRef} className='scroll-phases-container'>
                 <div className='sticky-view'>
                     <div ref={trackRef} className='horizontal-track'>
                         {phaseData.map((item, index) => (
                             <div key={index} className='card-content-section'>
                                 <div className='phase-text-wrapper wtb-wrapper'>
-                                    <div className='d-flex gap-4 align-items-center phase-title-number'>
+                                    <div className='d-flex flex-column flex-md-row text-center text-md-start gap-4 align-items-center phase-title-number'>
                                         <span className="phase-number">[{index + 1 < 10 ? `0${index + 1}` : index + 1}]</span>
                                         <span className="phase-title">{item.title}</span>
                                     </div>
-                                    <div className='phase-description'>
+                                    <div className='phase-description text-center text-md-start'>
                                         <p>{item.desc}</p>
                                     </div>
                                 </div>

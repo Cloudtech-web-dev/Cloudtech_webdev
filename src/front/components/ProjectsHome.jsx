@@ -62,14 +62,15 @@ export const ProjectsHome = () => {
                         <span className="d-none d-md-block position-absolute" style={{ backgroundColor: "var(--bs-accent-1)", top: "-30%", left: "-7.5%", zIndex: -1, width: "115%", height: "160%" }} />
                         <span className="highlighted-text">{t('projects.sectionTitle')}</span>
                     </h2>
-                    <p className="home-projects-description font-p1" style={{ maxWidth: 600 }}>
+                    <p className="text-white font-p1" style={{ maxWidth: 600 }}>
                         {t('projects.sectionDescription')}
                     </p>
                     <style>{`
                         @media (width < 768px) {
                             .home-projects-upper {
                                 .home-projects-title {
-                                    font-size: calc(1.525rem + 3.3vw);
+                                    font-size: 3rem;
+                                    font-weight: 900;
                                     line-height: 1.4;
                                 }
                                 .home-projects-description {
@@ -81,16 +82,13 @@ export const ProjectsHome = () => {
                         }
                         @media (width >= 768px) {
                             .home-projects-title {
+                                font-size: 4rem;
+                                font-weight: 900;
                                 .highlighted-text { background: none; }
                             }
                         }
                     `}</style>
                 </div>
-
-                {/* Projects */}
-                {/* <div className="d-flex justify-content-center my-5">
-                    <img src={ProjectsPreview} alt="Vista previa de proyectos de CloudTech" className="img-fluid" />
-                </div> */}
 
                 <div className="container" style={{ maxWidth: 774, marginBottom: 60 }}>
                     <div className="row row-cols-2" style={{ "--gutter": "10px", "--bs-gutter-x": "var(--gutter)", "--bs-gutter-y": "var(--gutter)", justifyContent: "center" }}>
@@ -155,18 +153,6 @@ export const ProjectsHome = () => {
                         }
                     `}</style>
                 </div>
-
-                {/* <div className="container">
-                    <div className="row">
-                        <div className="col"></div>
-                        <div className="col"></div>
-                    </div>
-                    <div className="row">
-                        <div className="col"></div>
-                        <div className="col"></div>
-                    </div>
-                </div> */}
-
 
                 <div className="home-projects-portfolio-btn d-flex flex-column justify-content-center flex-md-row gap-3">
                     <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 font-p1 fw-bold fs-6" style={{ maxWidth: 419, width: "100%", padding: "18px 34px", lineHeight: "18px" }}>

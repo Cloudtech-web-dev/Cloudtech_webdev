@@ -80,16 +80,20 @@ h0,
 
 h1,
 .font-h1 {
-  font-weight: 700;
-  font-size: 48px;
+  font-weight: 900;
+  font-size: 4rem;
   font-family: "Outfit", sans-serif;
   line-height: 1;
   letter-spacing: -0.01em;
+
+  @media (max-width:768px) {
+    font-size: 3rem;
+  }
 }
 
 h2,
 .font-h2 {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 32px;
   font-family: "Outfit", sans-serif;
   line-height: 0.85;
@@ -111,6 +115,18 @@ h3,
   font-family: "Manrope", sans-serif;
   line-height: 1.4;
   letter-spacing: 0.03em;
+}
+
+.font-p2 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-family: "Manrope", sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+
+  @media (max-width:768px) {
+    font-size: 1.0rem;
+  }
 }
 
 .font-alt-h0 {

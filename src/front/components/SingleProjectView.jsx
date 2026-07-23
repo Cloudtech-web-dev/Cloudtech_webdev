@@ -52,7 +52,7 @@ export const SingleProjectView = () => {
                 description={projectData.preview}
                 url={window.location.href}
             />
-            <section id="project-view" className="mx-auto">
+            <section id="project-view" className="mx-auto mt-2 pt-2 mt-lg-5 pt-lg-5">
                 <div className="container mt-5 mt-lg-2 d-flex flex-column gap-5">
                     <div className="mt-3 d-lg-none"></div>
                     <div className="d-flex flex-column justify-content-center">

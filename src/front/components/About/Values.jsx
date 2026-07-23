@@ -36,9 +36,9 @@ export const Values = () => {
             const activeIndex = Math.min(Math.max(Math.floor(progress), 0), totalItems - 1);
             const segmentProgress = progress - activeIndex;
 
-            const OPEN_START = 0.40;
-            const OPEN_END = 0.60;
-            const EXIT_START = 0.80;
+            const OPEN_START = 0.10;
+            const OPEN_END = 0.50;
+            const EXIT_START = 0.65;
 
             const width = window.innerWidth;
             let openProgress = 0;
@@ -49,13 +49,20 @@ export const Values = () => {
                 openProgress = 0;
             } else if (segmentProgress < OPEN_END) {
                 horizontalTranslate = activeIndex * width;
-                openProgress = (segmentProgress - OPEN_START) / (OPEN_END - OPEN_START);
+                const rawOpen = (segmentProgress - OPEN_START) / (OPEN_END - OPEN_START);
+                // Ease-out para una apertura más suave y controlada
+                openProgress = 1 - Math.pow(1 - rawOpen, 2);
             } else if (segmentProgress < EXIT_START) {
                 horizontalTranslate = activeIndex * width;
                 openProgress = 1;
             } else {
-                const exitFactor = (segmentProgress - EXIT_START) / (1 - EXIT_START);
-                horizontalTranslate = activeIndex * width + exitFactor * width;
+                const rawExit = (segmentProgress - EXIT_START) / (1 - EXIT_START);
+                // Ease-in-out para que el inicio de la salida sea más amigable y no tan repentino
+                const smoothExit = rawExit < 0.5
+                    ? 2 * rawExit * rawExit
+                    : 1 - Math.pow(-2 * rawExit + 2, 2) / 2;
+
+                horizontalTranslate = activeIndex * width + smoothExit * width;
                 openProgress = 1;
             }
 
@@ -135,7 +142,5 @@ export const Values = () => {
                 </div>
             </div>
         </div>
-
-
     );
 };

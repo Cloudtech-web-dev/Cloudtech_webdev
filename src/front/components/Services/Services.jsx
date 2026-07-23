@@ -65,7 +65,7 @@ export const Services = () => {
                 <section className="min-vh-100 d-flex justify-content-md-center position-relative px-3 vw-100 align-self-start" style={{ backgroundColor: "var(--bs-gray-100)" }}>
 
                     <div className="container py-md-5 my-md-4 z-0 align-content-center" style={{ paddingTop: "5.7rem" }}>
-                        <div className="home-services-upper d-flex flex-column text-center justify-content-center align-items-center mx-auto" style={{ maxWidth: 574, paddingInline: "20px", marginBottom: 100, gap: 40 }}>
+                        <div className="home-services-upper d-flex flex-column text-center justify-content-center align-items-center mx-auto" style={{ maxWidth: "fit-content", paddingInline: "20px", marginBottom: 100, gap: 40 }}>
                             <h2 className="home-services-title font-h1 position-relative" style={{ width: "fit-content", color: "var(--bs-accent-1)" }}>
                                 <span className="d-none d-md-block position-absolute" style={{ backgroundColor: "var(--bs-gray-1000)", top: "-30%", left: "-17.5%", zIndex: -1, width: "135%", height: "160%" }} />
                                 {t('services.sectionTitle')}
@@ -78,24 +78,21 @@ export const Services = () => {
                                             .home-services-title {
                                                 background-color: var(--bs-gray-1000);
                                                 padding: 4% 8%;
-                                                margin: 0;
-                                                font-size: 2rem;
-                                                font-weight: 800;
+                                                margin: 0;                                                
                                                 line-height: 1.2;
+                                                white-space: nowrap;
                                             }
 
-                                            .home-services-description {
-                                                font-size: 1.2rem;
-                                                font-weight: 500;
+                                            .home-services-description {                                                
                                                 letter-spacing: 0;
-                                                margin: 0;
+                                                margin: 0;                                                
                                             }
                                         }
                                     }
                                 `}</style>
                             </h2>
 
-                            <p className="home-services-description font-p1" style={{ color: "var(--bs-gray-1000)" }}>
+                            <p className="home-services-description font-p1" style={{ color: "var(--bs-gray-1000)", maxWidth: "580px" }}>
                                 {t('services.sectionDescription')}
                             </p>
                         </div>

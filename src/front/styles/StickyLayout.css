@@ -254,7 +254,14 @@
    ========================================== */
 
 .scroll-container {
-    height: 900vh;
+    height: 1550vh;
+    /* Controla la velocidad total del scroll */
+    position: relative;
+    background-color: #E5E5E5;
+}
+
+.scroll-phases-container {
+    height: 550vh;
     /* Controla la velocidad total del scroll */
     position: relative;
     background-color: #E5E5E5;
@@ -413,6 +420,10 @@
     /* Espera un instante a que empiece a abrirse el alto */
 }
 
+.team-card-item {
+    scroll-margin-top: 100px;
+}
+
 /* ========================================================
    COMPONENTE TIPOS DE INICIOS DE PROYECTO PARA SERVICIOS
    ======================================================== */
@@ -439,9 +450,13 @@
 
 .phase-description {
     max-width: 450px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.4;
     color: #04171B;
+
+    @media (min-width: 768px) {
+        font-size: 2rem;
+    }
 }
 
 /* ==========================================
