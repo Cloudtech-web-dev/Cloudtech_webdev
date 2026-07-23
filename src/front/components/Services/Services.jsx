@@ -60,7 +60,7 @@ export const Services = () => {
     ];
 
     return (
-        <div className='intro-scroll-wrapper'>
+        <div className='intro-scroll-wrapper light-section'>
             <div className='intro-sticky-box'>
                 <section className="min-vh-100 d-flex justify-content-md-center position-relative px-3 vw-100 align-self-start" style={{ backgroundColor: "var(--bs-gray-100)" }}>
 
