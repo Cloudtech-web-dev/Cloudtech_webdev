@@ -30,5 +30,6 @@
       "extensionName": ".css",
       "savePath": "~/.."
     }
-  ]
+  ],
+  "liveSassCompile.settings.compileOnWatch": false
 }
