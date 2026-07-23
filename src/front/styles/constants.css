@@ -62,7 +62,7 @@
   --font-family-h3: "Outfit";
   --font-size-h3: 24px/1;
   --font-family-p1: "Manrope";
-  --font-size-p1: 18px/1.4;
+  --font-size-p1: 1.2rem/1.4;
   --font-family-alt-h0: "Crimson Text";
   --font-size-alt-h0: 96px/1;
   --font-family-alt-h1: "Crimson Text";
@@ -107,7 +107,7 @@ h3,
 
 .font-p1 {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: "Manrope", sans-serif;
   line-height: 1.4;
   letter-spacing: 0.03em;
@@ -131,8 +131,8 @@ h3,
   letter-spacing: -0.02em;
 }
 
-@media (max-width:768px) {
+@media (min-width:768px) { /* Equivalent to Bootstrap's `md` (Medium) */
   .font-p1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }

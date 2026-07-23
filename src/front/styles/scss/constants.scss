@@ -31,7 +31,7 @@ $fonts: (
   "h1": (family: "Outfit", size: 48px, weight: 700, line-height: 1, letter-spacing: -0.01em),
   "h2": (family: "Outfit", size: 32px, weight: 700, line-height: 0.85, letter-spacing: -0.01em),
   "h3": (family: "Outfit", size: 24px, weight: 700, line-height: 1, letter-spacing: -0.01em),
-  "p1": (family: "Manrope", size: 18px, weight: 400, line-height: 1.4, letter-spacing: 0.03em),
+  "p1": (family: "Manrope", size: 1.2rem, weight: 400, line-height: 1.4, letter-spacing: 0.03em),
   "alt-h0": (family: "Crimson Text", size: 96px, weight: 400, style: italic, line-height: 1, letter-spacing: -0.01em),
   "alt-h1": (family: "Crimson Text", size: 48px, weight: 400, style: italic, line-height: 96px, letter-spacing: -0.02em)
 );
@@ -74,4 +74,10 @@ $fonts: (
   $base-elements: ("p", "h0", "h1", "h2", "h3", "h4", "h5", "h6");
   $selector: if(index($base-elements, $font), "#{$font}, ", "") ".font-#{$font}";
   #{$selector} { @include new-font($value) }
+}
+
+@media (min-width: 768px) { /* Equivalent to Bootstrap's `md` (Medium) */
+  .font-p1 {
+    font-size: 1.5rem;
+  }
 }
