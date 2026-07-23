@@ -1,6 +1,5 @@
 import { teamContent } from "../../utils/teamContent"
 import { Card } from "./Card"
-import teamBg from "../../assets/img/teamBackground.jpg"
 import { Trans, useTranslation } from "react-i18next"
 import { useState } from "react"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
@@ -22,6 +21,27 @@ export const Team = () => {
         githubLink: teamContent[0].githubLink || null
     });
 
+    const handleMemberClick = (teamMember, event) => {
+        setSelectedMember({
+            name: teamMember.name,
+            position: t(teamMember.position),
+            description: t(teamMember.description),
+            mailLink: teamMember.mailLink,
+            linkedinLink: teamMember.linkedinLink,
+            githubLink: teamMember.githubLink || null
+        });
+
+        if (window.innerWidth < 992) {
+            const cardElement = event.currentTarget;
+            setTimeout(() => {
+                cardElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }, 180);
+        }
+    };
+
     return (
         <section className="d-flex justify-content-center">
             < div className="container py-4">
@@ -38,15 +58,8 @@ export const Team = () => {
                                 const isSelected = selectedMember && selectedMember.name === teamMember.name;
 
                                 return (
-                                    <div key={teamMember.id} className="col-12 col-sm-6 d-flex flex-column mb-4"
-                                        onClick={() => setSelectedMember({
-                                            name: teamMember.name,
-                                            position: t(teamMember.position),
-                                            description: t(teamMember.description),
-                                            mailLink: teamMember.mailLink,
-                                            linkedinLink: teamMember.linkedinLink,
-                                            githubLink: teamMember.githubLink || null
-                                        })}
+                                    <div key={teamMember.id} className="col-12 col-sm-6 d-flex flex-column mb-4 team-card-item"
+                                        onClick={(e) => handleMemberClick(teamMember, e)}
                                     >
                                         <Card
                                             name={teamMember.name}
