@@ -28,10 +28,11 @@ $custom-theme-colors: (
 $fonts: (
   // Format: (family:font-family, size:font-size[, weight:font-weight][, style:font-style][, line-height:line-height][, letter-spacing:letter-spacing])
   "h0": (family: "Outfit", size: 64px, weight: 700, line-height: 1.17, letter-spacing: -0.01em),
-  "h1": (family: "Outfit", size: 48px, weight: 700, line-height: 1, letter-spacing: -0.01em),
-  "h2": (family: "Outfit", size: 32px, weight: 700, line-height: 0.85, letter-spacing: -0.01em),
+  "h1": (family: "Outfit", size: 3rem, weight: 900, line-height: 1, letter-spacing: -0.01em),
+  "h2": (family: "Outfit", size: 32px, weight: 900, line-height: 0.85, letter-spacing: -0.01em),
   "h3": (family: "Outfit", size: 24px, weight: 700, line-height: 1, letter-spacing: -0.01em),
   "p1": (family: "Manrope", size: 1.2rem, weight: 400, line-height: 1.4, letter-spacing: 0.03em),
+  "p2": (family: "Manrope", size: 1.0rem, weight: 400, line-height: 1.4, letter-spacing: 0.03em),
   "alt-h0": (family: "Crimson Text", size: 96px, weight: 400, style: italic, line-height: 1, letter-spacing: -0.01em),
   "alt-h1": (family: "Crimson Text", size: 48px, weight: 400, style: italic, line-height: 96px, letter-spacing: -0.02em)
 );
@@ -77,7 +78,9 @@ $fonts: (
 }
 
 @media (min-width: 768px) { /* Equivalent to Bootstrap's `md` (Medium) */
+  h1, .font-h1 { font-size: 4rem }
   .font-p1 {
     font-size: 1.5rem;
   }
+  .font-p2 { font-size: 1.2rem }
 }

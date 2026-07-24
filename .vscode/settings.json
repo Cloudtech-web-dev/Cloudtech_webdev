@@ -31,5 +31,6 @@
       "savePath": "~/.."
     }
   ],
-  "liveSassCompile.settings.compileOnWatch": false
+  "liveSassCompile.settings.compileOnWatch": false,
+  "liveSassCompile.settings.useNewCompiler": true
 }

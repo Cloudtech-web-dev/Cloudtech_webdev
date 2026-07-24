@@ -56,13 +56,15 @@
   --font-family-h0: "Outfit";
   --font-size-h0: 64px/1.17;
   --font-family-h1: "Outfit";
-  --font-size-h1: 48px/1;
+  --font-size-h1: 3rem/1;
   --font-family-h2: "Outfit";
   --font-size-h2: 32px/0.85;
   --font-family-h3: "Outfit";
   --font-size-h3: 24px/1;
   --font-family-p1: "Manrope";
   --font-size-p1: 1.2rem/1.4;
+  --font-family-p2: "Manrope";
+  --font-size-p2: 1rem/1.4;
   --font-family-alt-h0: "Crimson Text";
   --font-size-alt-h0: 96px/1;
   --font-family-alt-h1: "Crimson Text";
@@ -81,14 +83,10 @@ h0,
 h1,
 .font-h1 {
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Outfit", sans-serif;
   line-height: 1;
   letter-spacing: -0.01em;
-
-  @media (max-width:768px) {
-    font-size: 3rem;
-  }
 }
 
 h2,
@@ -119,14 +117,10 @@ h3,
 
 .font-p2 {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Manrope", sans-serif;
   line-height: 1.4;
   letter-spacing: 0.03em;
-
-  @media (max-width:768px) {
-    font-size: 1.0rem;
-  }
 }
 
 .font-alt-h0 {
@@ -148,7 +142,13 @@ h3,
 }
 
 @media (min-width:768px) { /* Equivalent to Bootstrap's `md` (Medium) */
+  h1, .font-h1 {
+    font-size: 4rem;
+  }
   .font-p1 {
     font-size: 1.5rem;
+  }
+  .font-p2 {
+    font-size: 1.2rem;
   }
 }
