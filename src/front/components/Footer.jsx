@@ -95,11 +95,11 @@ export const Footer = ({ withBrandCard = true }) => {
 	const { t } = useTranslation();
 
 	return (
-		<footer className="footer mt-auto" style={{ color: "var(--bs-gray-100)", /* scrollSnapAlign: "end", */ padding: "80px 90px" }}>
-			<div className="container g-0">
+		<footer className="footer mt-auto d-flex flex-column justify-content-end" style={{ color: "var(--bs-gray-100)", scrollSnapAlign: "end", padding: "80px 90px", interpolateSize: "allow-keywords", transition: "height 0.5s ease" }}>
+			<div className="container g-0 flex-grow-1 d-flex flex-column justify-content-end">
 				{/* Optional Animated Brand Card */}
 				{withBrandCard && (
-					<div className="row justify-content-center mx-auto" style={{ width: "fit-content", maxWidth: "100%", marginBottom: 80 }}>
+					<div className="row flex-grow-1 justify-content-center align-content-center mx-auto" style={{ width: "fit-content", maxWidth: "100%", marginBottom: 80 }}>
 						<Link to='/contact' style={{ textDecoration: 'none' }}>
 							<div className="col-auto d-none d-md-flex align-items-center border" style={{ maxWidth: 827, gap: 62, padding: "60px 70px", borderRadius: 12, userSelect: "none" }}>
 								{/* <img src={logoFooter} alt="clooudTech logo" className="mb-3" style={{ width: 192 }} /> */}
@@ -207,6 +207,16 @@ export const Footer = ({ withBrandCard = true }) => {
 						}
 					}
 				}
+					
+				${withBrandCard && `
+					@media (width >= 768px) {
+						@container scroller not scroll-state(scrollable: bottom) {
+							footer {
+								height: 100dvh;
+							}
+						}
+					}
+				`}
 			`}</style>
 		</footer>
 	)

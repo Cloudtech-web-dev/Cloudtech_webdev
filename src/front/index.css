@@ -6,6 +6,11 @@
 
 html {
   scroll-snap-type: y proximity;
+
+  /* FOR FOOTER FULLSCREEN ON DESKTOP */
+  container-type: scroll-state;
+  container-name: scroller;
+  &, footer { will-change: height }
 }
 
 html:has(body.modal-open) {
