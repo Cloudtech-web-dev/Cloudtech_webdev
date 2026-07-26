@@ -2,33 +2,13 @@ import { Link } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
 import "../styles/StickyLayout.css";
 
-const transparentText = true;
-const syncedBgClassName = "synced-bg";
-const syncedBg = (isHeading = true) => transparentText ? ` ${syncedBgClassName}${isHeading ? " is-header" : ""}` : "";
-const syncedBgStyles = (BgImport) => <style>{`
-    .${syncedBgClassName} {
-        background-image: url(${BgImport});
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-    }
-    .is-header {                                            
-        color: transparent;
-        background-clip: text;
-    }
-`}</style>;
 
 const PageHeader = ({ title, description, backgroundImg, withProjectButton = true }) => {
   const { t } = useTranslation();
 
   return (
-    <section className={`position-relative min-vh-100 overflow-hidden${syncedBg(false)}`}>
-      {transparentText || (<img
-        src={backgroundImg}
-        alt="CloudTech background image"
-        className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-0"
-        style={{ objectPosition: "center, center" }} />)}
-
+    <section className="position-relative min-vh-100 overflow-hidden synced-bg">
+      
       <div className="position-absolute w-100 h-100 mx-auto" style={{ backgroundColor: "rgba(0, 0, 0, .55)", }} />
 
       <div className="container w-100 min-vh-100 py-5 d-flex align-items-center position-relative z-2">
@@ -38,10 +18,9 @@ const PageHeader = ({ title, description, backgroundImg, withProjectButton = tru
               <Trans
                 i18nKey={title}
                 components={[
-                  <span className={`highlighted-text ${syncedBg()}`} />
+                  <span className="highlighted-text synced-bg synced-bg-header" />
                 ]}
               />
-              {transparentText && syncedBgStyles(backgroundImg)}
             </h1>
 
             <p className="hero-subtitle-home fs-5 fw-bold text-white text-center w-75">
@@ -55,6 +34,20 @@ const PageHeader = ({ title, description, backgroundImg, withProjectButton = tru
           </div>
         </div>
       </div>
+
+      <style>{`
+          .synced-bg {
+              background-image: url(${backgroundImg});
+              background-size: cover;
+              background-position: center;
+              background-attachment: fixed;
+          }
+          .synced-bg-header {                                            
+              color: transparent;
+              background-clip: text;
+          }
+      `}</style>
+      
     </section>
   )
 }

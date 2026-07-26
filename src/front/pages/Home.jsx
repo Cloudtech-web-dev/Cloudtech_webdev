@@ -2,6 +2,7 @@ import { Services } from "../components/Services/Services.jsx";
 import { Process } from "../components/Process.jsx";
 import { Testimonials } from "../components/Testimonial/Testimonials.jsx";
 import { HeaderHome } from "../components/HeaderHome.jsx";
+import { Introduction } from "../components/Introduction.jsx";
 import { Benefits } from "../components/Benefits/Benefits.jsx";
 import { WorkWithUS } from "../components/WorkWithUs.jsx";
 import { ProjectsHome } from "../components/ProjectsHome.jsx";
@@ -17,13 +18,12 @@ export const Home = () => {
 			/>
 			<main>
 				<HeaderHome />
+				<Introduction />
 				<Services />
-				{/* <Process /> */}
 				<ProjectsHome />
 				<Testimonials />
-				{/* <Benefits /> */}
 				<WorkWithUS />
 			</main>
 		</>
 	);
-}; 
+};
