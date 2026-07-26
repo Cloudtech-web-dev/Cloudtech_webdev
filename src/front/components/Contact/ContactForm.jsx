@@ -38,9 +38,15 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
         
     };
 
+    const handlePreSubmit = (/**@type {React.FormEvent<HTMLButtonElement>}*/ e) => {
+        e.preventDefault();
+
+        handleSubmit && handleSubmit(e);
+    };
+
 
     return (
-        <form onSubmit={handleSubmit} className={`${styles.form} d-flex flex-column mx-auto`} style={{ maxWidth: 843, marginBlock: 28, gap: 40, color: "var(--bs-gray-1000)" }}>
+        <form onSubmit={handlePreSubmit} className={`${styles.form} d-flex flex-column mx-auto`} style={{ maxWidth: 843, marginBlock: 28, gap: 40, color: "var(--bs-gray-1000)" }}>
 
             {/* Top Section */}
             <div className={`${styles.top} d-flex justify-content-between font-h3`} style={{ fontSize: 20, userSelect: 'none' }}>

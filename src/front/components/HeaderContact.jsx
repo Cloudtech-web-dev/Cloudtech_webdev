@@ -22,7 +22,7 @@ export const HeaderContact = () => {
     };
 
     const handleSubmit = (/**@type {React.FormEvent<HTMLButtonElement>}*/e) => {
-        e.preventDefault();
+        
     };
 
 
