@@ -19,10 +19,8 @@ html:has(body.modal-open) {
 }
 
 body {
-  /* background-image: linear-gradient(0deg, #124652, #199ab7); */
   --bs-body-bg: var(--bs-gray-1000);
   font-family: "Manrope", sans-serif;
-  --bs-body-bg: #04171B;
 }
 
 /* h1 {
