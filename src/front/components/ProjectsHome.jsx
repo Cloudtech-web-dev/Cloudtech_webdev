@@ -44,7 +44,7 @@ export const ProjectsHome = () => {
                             <div key={projectKey} className="col" style={{ maxWidth: 380, minWidth: 330 }}>
                                 
                                 {/* Project Card */}
-                                <Link to={project.path && `projects/${project.path}`} className="project-card container d-flex flex-column h-100" style={{ gap: 20, paddingBlockEnd: 20, textDecoration: "none", color: "var(--bs-gray-100)" }}>
+                                <Link to={project.path && `projects/${project.path}`} className="project-card container d-flex flex-column h-100" onClick={e => project.path || e.preventDefault()} style={{ gap: 20, paddingBlockEnd: 20, textDecoration: "none", color: "var(--bs-gray-100)" }}>
                                     
                                     {/* Main Card Container */}
                                     <div className="card-main row text-center align-items-center position-relative overflow-hidden border" style={{ height: 655, paddingInline: 20, background: "var(--bs-gray-1000)" /* "#165766" */, borderRadius: 12, boxShadow: "5px 6px 7px 3px #00000040, 2px 4px 3.3px 1px #00000078" }} >
