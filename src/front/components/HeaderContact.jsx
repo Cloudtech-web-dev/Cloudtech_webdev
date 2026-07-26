@@ -29,7 +29,7 @@ export const HeaderContact = () => {
     return (<>
 
         {/* Page Header Section */}
-        <section className="contact-header container vh-100" style={{ maxWidth: 1440, color: "var(--bs-gray-100)", placeContent: "center", padding: 137.5, width: "100vw" }}>
+        <section className="contact-header container vh-100" style={{ maxWidth: 1440, color: "var(--bs-gray-100)", placeContent: "center", padding: 137.5, width: "100%" }}>
 
             {/* Section Contents */}
             <div className="row" style={{ gap: 50 }}>
