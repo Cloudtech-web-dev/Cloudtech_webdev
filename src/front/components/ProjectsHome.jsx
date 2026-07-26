@@ -98,9 +98,9 @@ export const ProjectsHome = () => {
                                 <Link to={project.path} className="project-card container d-flex flex-column h-100" style={{ gap: 20, paddingBlockEnd: 20, textDecoration: "none", color: "var(--bs-gray-100)" }}>
                                     {/* Main Card Container */}
                                     <div className="card-main row text-center align-items-center position-relative overflow-hidden border" style={{ height: 655, paddingInline: 20, background: "var(--bs-gray-1000)" /* "#165766" */, borderRadius: 12, boxShadow: "5px 6px 7px 3px #00000040, 2px 4px 3.3px 1px #00000078" }} >
-                                        <img src={project.bgPicture} alt={`Imagen de fondo de ${project.name}`} className="z-n1 position-absolute top-0 start-0 w-100 h-100 object-fit-cover d-sm-block p-0" />
+                                        <img src={project.bgPicture} alt={t('projects.aria.bgImage', { projectName: project.name })} className="z-n1 position-absolute top-0 start-0 w-100 h-100 object-fit-cover d-sm-block p-0" />
                                         <div className="col g-0">
-                                            <img src={project.logo} alt={`Logo de ${project.name}`} style={{ width: 221 }} />
+                                            <img src={project.logo} alt={t('projects.aria.logo', { projectName: project.name })} style={{ width: 221 }} />
                                             <div className="card-description-wrapper d-grid">
                                                 <p className="card-description m-0 overflow-hidden">{project.description}</p>
                                             </div>

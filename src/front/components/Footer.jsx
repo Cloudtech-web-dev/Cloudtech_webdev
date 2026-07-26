@@ -138,10 +138,10 @@ export const Footer = ({ withBrandCard = true }) => {
 					{/* Socials */}
 					<div className="d-flex justify-content-center align-items-center" style={{ gap: 15 }}>
 						{[
-							{ url: "https://www.facebook.com/CloudTechEc/", ariaLabel: "Visitar nuestra página de Facebook", icon: faFacebookSquare },
-							{ url: "https://www.instagram.com/cloudtechec/", ariaLabel: "Síguenos en Instagram", icon: faInstagram },
-							{ url: "https://www.linkedin.com/company/cloudtech-ec/", ariaLabel: "Conócenos en LinkedIn", icon: faLinkedin },
-							{ url: `https://wa.me/${whatsAppPhoneNo}?text=${whatsAppMessage}`, ariaLabel: "Habla con nosotros por WhatsApp", icon: faWhatsapp },
+							{ url: "https://www.facebook.com/CloudTechEc/", ariaLabel: t("footer.socials.facebook.ariaLabel"), icon: faFacebookSquare },
+							{ url: "https://www.instagram.com/cloudtechec/", ariaLabel: t("footer.socials.instagram.ariaLabel"), icon: faInstagram },
+							{ url: "https://www.linkedin.com/company/cloudtech-ec/", ariaLabel: t("footer.socials.linkedin.ariaLabel"), icon: faLinkedin },
+							{ url: `https://wa.me/${whatsAppPhoneNo}?text=${t("footer.socials.whatsapp.urlMessage")}`, ariaLabel: t("footer.socials.whatsapp.ariaLabel"), icon: faWhatsapp },
 						].map((socialLink, idx) => (
 							<a
 								key={idx}

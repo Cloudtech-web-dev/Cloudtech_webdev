@@ -46,7 +46,22 @@
       "projects": "Proyectos",
       "contact": "Contacto"
     },
-    "copywright": "Todos los Derechos Reservados."
+    "copywright": "Todos los Derechos Reservados.",
+    "socials": {
+      "facebook": {
+        "ariaLabel": "Visitar nuestra página de Facebook"
+      },
+      "instagram": {
+        "ariaLabel": "Síguenos en Instagram"
+      },
+      "linkedin": {
+        "ariaLabel": "Conócenos en LinkedIn"
+      },
+      "whatsapp": {
+        "urlMessage": "Hola, tengo una idea y me gustaría darle vida.",
+        "ariaLabel": "Habla con nosotros por WhatsApp"
+      }
+    }
   },
   "about": {
     "sectionTitle": "<0>¿Quiénes</0> somos?",
@@ -303,6 +318,10 @@
       "projectDescription7": "Revista digital de literatura, con una experiencia visual limpia y una estructura pensada para dar protagonismo al contenido.",
       "projectDescription9": "Una web pensada para presentar trabajo audiovisual y fotográfico de forma clara, visual y profesional.",
       "projectDescription6": "Una plataforma editorial en tres idiomas, diseñada para organizar contenidos, autores y traducciones de forma clara."
+    },
+    "aria": {
+      "bgImage": "Imagen de fondo de la tarjeta de proyecto de {{projectName}}",
+      "logo": "Logo de {{projectName}}"
     },
     "projectName1": "Librería Cosmonauta",
     "projectPreview1": "Conceptualizamos y desarrollamos el e-commerce de Librería Cosmonauta, integrando pagos seguros y gestión de inventario para potenciar sus ventas y el alcance de su comunidad lectora a nivel nacional.",
