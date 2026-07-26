@@ -12,19 +12,14 @@ export const Modal = ({ isOpen, onClose, children }) => {
         const dialog = dialogRef.current;
         if (!dialog) return;
 
-        if (isOpen) {
-            dialog.showModal();
-            document.body.classList.add("modal-open");
-        } else {
-            document.body.classList.remove("modal-open");
-            dialog.close();
-        }
+        isOpen ? dialog.showModal() : dialog.close();
+        
     }, [isOpen]);
 
 
     return createPortal(
         /* Modal itself (overlay customization goes here) */
-        <dialog ref={dialogRef} onMouseUp={e => e.target === dialogRef.current && onClose()} className={`${styles.modalOverlay}`}>
+        <dialog ref={dialogRef} onMouseUp={e => e.target === dialogRef.current && onClose()} onClose={onClose} className={`${styles.modalOverlay}`}>
 
             {/* Main Modal Container */}
             <div className={styles.modalContainer}>

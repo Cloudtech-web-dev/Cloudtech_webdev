@@ -13,9 +13,11 @@ export const HeaderContact = () => {
 
     const openForm = () => {
         setIsFormOpen(true);
+        document.body.classList.add("modal-open");
     }
 
     const closeForm = () => {
+        document.body.classList.remove("modal-open");
         setIsFormOpen(false);
     };
 
