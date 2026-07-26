@@ -3,13 +3,16 @@ import { useTranslation } from "react-i18next";
 import { Card } from "./Card";
 
 
-const gapBetweenCards = 20; // In `px`
-const maxCardsWidth = 587; // In `px`
-const minCardsWidth = 300; // In `px`
-const cardsHeight = 474; // In `px`
-
-
-export const CardsMarquee = ({ cardsArray = [], repeats = 2, minCards = 3, className: propClassNames }) => {
+export const CardsMarquee = ({
+  cardsArray = [],
+  repeats = 2,
+  minCards = 3,
+  gapBetweenCards = 20,
+  maxCardsWidth = 587,
+  minCardsWidth = 300,
+  cardsHeight = 474,
+  className: propClassNames
+}) => {
   const { t } = useTranslation();
 
   return (

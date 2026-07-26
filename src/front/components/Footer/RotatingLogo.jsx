@@ -1,7 +1,15 @@
-const size = 100, radius = 50, originalSize = 43, sizesRatio = 0.63;
+const originalSize = 43;
 
-export const RotatingLogo = ({ className, style: externalStyle, text: textProp = "Ingresa tu texto", duration = "20s" }) => {
-
+export const RotatingLogo = ({
+	className,
+	style: externalStyle,
+	text: textProp = "Ingresa tu texto",
+	duration = "20s",
+	size = 100,
+	radius = 50,
+	sizesRatio = 0.63,
+	svgProps
+}) => {
 	return (
 
 		<div className={className} style={{ color: "var(--bs-secondary-2)", ...externalStyle }}>
@@ -9,6 +17,7 @@ export const RotatingLogo = ({ className, style: externalStyle, text: textProp =
 				viewBox={`0 0 ${size} ${size}`}
 				xmlns="http://www.w3.org/2000/svg"
 				style={{ width: '100%' }}
+				{...svgProps}
 			>
 
 				<defs>
