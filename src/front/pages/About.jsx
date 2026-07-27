@@ -6,6 +6,7 @@ import { SEO } from "../utils/SEO"
 import { WhereToBegin } from "../components/Services/WhereToBegin"
 import PageHeader from "../components/PageHeader"
 import HomeAbout from "../assets/img/HomeAbout.jpg"
+import { GradientBg } from "../components/GradientBg"
 
 export const About = () => {
     return (
@@ -20,6 +21,7 @@ export const About = () => {
                     title="headers.headerAbout.headLine"
                     description='headers.headerAbout.headerDescription'
                     backgroundImg={HomeAbout}
+                    withSphereEffect={true}
                 />
                 <WhoWeAre />
                 <Team />
