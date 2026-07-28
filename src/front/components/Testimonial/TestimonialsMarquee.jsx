@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 
-import { Card } from "./Card";
+import { TestimonialsCard as Card } from "./TestimonialsCard";
 
 
-export const CardsMarquee = ({
+export const TestimonialsMarquee = ({
   cardsArray = [],
   repeats = 2,
   minCards = 3,
@@ -17,7 +17,7 @@ export const CardsMarquee = ({
 
   return (
     /* Wrapper */
-    <div className={"marquee-wrapper" + (propClassNames ? ` ${propClassNames}` : "")} style={{ overflow: "hidden", width: "100%", display: "flex" }}>
+    <div className={"marquee-wrapper" + (propClassNames || "")} style={{ overflow: "hidden", width: "100%", display: "flex" }}>
 
       {/* Track */}
       <div className="marquee-track" style={{ justifyContent: "center", width: "max-content", display: "flex" }}>
@@ -65,4 +65,4 @@ export const CardsMarquee = ({
   );
 };
 
-export default CardsMarquee;
+export default TestimonialsMarquee;

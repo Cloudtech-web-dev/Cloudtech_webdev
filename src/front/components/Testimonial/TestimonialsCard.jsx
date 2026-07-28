@@ -1,4 +1,4 @@
-export const Card = ({ name, position, review, profilePicture, logo }) => {
+export const TestimonialsCard = ({ name, position, review, profilePicture, logo }) => {
     return (
         <div className="testimonial-card d-flex flex-column card border h-100" style={{ borderRadius: 12, "--bs-border-color": "var(--bs-gray-300)", color: "var(--bs-gray-100)", padding: 40 }}>
             <div className="card-body flex-grow-1 overflow-hidden p-0" style={{ maxHeight: 327 }}>

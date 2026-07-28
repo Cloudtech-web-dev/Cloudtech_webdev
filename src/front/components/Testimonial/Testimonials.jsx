@@ -1,8 +1,8 @@
 import { Trans } from "react-i18next";
 
-import CardsMarquee from "./CardsMarquee";
+import { TestimonialsMarquee as Marquee } from "./TestimonialsMarquee";
 
-import { testimonialsContent } from "../../utils/testimonialsContent";
+import { testimonialsContent as testimonials } from "../../utils/testimonialsContent";
 
 
 export const Testimonials = () => (
@@ -22,7 +22,7 @@ export const Testimonials = () => (
             </div>
 
             {/* Section Body */}
-            <CardsMarquee cardsArray={testimonialsContent} />
+            <Marquee cardsArray={testimonials} />
 
         </div>
         
