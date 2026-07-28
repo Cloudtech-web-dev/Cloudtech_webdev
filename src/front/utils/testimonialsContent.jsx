@@ -1,9 +1,9 @@
-import client1 from "../assets/img/Testimonials/clientprofile1.jpg"
-import company1 from "../assets/img/Testimonials/companylogo1.png"
-import client2 from "../assets/img/Testimonials/clientProfile2.png"
-import company2 from "../assets/img/Testimonials/companylogo2.png"
+import client1 from "../assets/img/Testimonials/clientprofile1.webp"
+import company1 from "../assets/img/Testimonials/companylogo1.webp"
+import client2 from "../assets/img/Testimonials/clientProfile2.webp"
+import company2 from "../assets/img/Testimonials/companylogo2.webp"
 import client3 from "../assets/img/Testimonials/clientProfile3.webp"
-import company3 from "../assets/img/Testimonials/companylogo3.png"
+import company3 from "../assets/img/Testimonials/companylogo3.webp"
 
 export const testimonialsContent = [
     {

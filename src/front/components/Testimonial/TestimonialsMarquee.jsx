@@ -1,37 +1,32 @@
+import styles from "../../styles/components/HomeTestimonials.module.css";
+
 import { useTranslation } from "react-i18next";
 
 import { TestimonialsCard as Card } from "./TestimonialsCard";
 
 
+const duplicatesCount = 2;
+
+
 export const TestimonialsMarquee = ({
   cardsArray = [],
-  repeats = 2,
-  minCards = 3,
-  gapBetweenCards = 20,
-  maxCardsWidth = 587,
-  minCardsWidth = 300,
-  cardsHeight = 474,
+  // minCards = 3,
+  // gapBetweenCards = 20,
+  // maxCardsWidth = 587,
+  // minCardsWidth = 300,
+  // cardsHeight = 474,
   className: propClassNames
 }) => {
   const { t } = useTranslation();
 
   return (
-    /* Wrapper */
-    <div className={"marquee-wrapper" + (propClassNames || "")} style={{ overflow: "hidden", width: "100%", display: "flex" }}>
-
-      {/* Track */}
-      <div className="marquee-track" style={{ justifyContent: "center", width: "max-content", display: "flex" }}>
-        {Array.from({ length: repeats }).map((_, groupId) => (
-
-          /* Group */
-          <div key={groupId} className="marquee-group" aria-hidden={groupId > 0 && true} style={{ height: cardsHeight, display: "flex", gap: gapBetweenCards, paddingRight: gapBetweenCards }}>
-            {cardsArray.map((card, itemId) => (
-
-              /* Slide */
-              <div key={`g${groupId}-${itemId}`} className="marquee-slide" style={{ minWidth: minCardsWidth, width: "80vw", maxWidth: maxCardsWidth, height: cardsHeight }}>
-
-                {/* Slide Contents */}
-                <div className="h-100" style={{ paddingBlock: 1 }}>
+    <div className={styles["marquee-wrapper"] + (propClassNames || "")}>
+      <div className={styles["marquee-track"]}>
+        {Array.from({ length: duplicatesCount }).map( (_, groupId) => (
+          <div className={styles["marquee-group"]} key={groupId}>
+            {cardsArray.map( (card, itemId) => (
+              <div className={styles["marquee-slide"]} key={`g${groupId}-${itemId}`}>
+                <div className={styles["slide-contents"]}>
                   <Card
                     name={card.name}
                     position={t(card.position)}
@@ -39,28 +34,11 @@ export const TestimonialsMarquee = ({
                     profilePicture={card.profilePicture}
                     logo={card.logo} />
                 </div>
-
               </div>
-
             ))}
           </div>
-
         ))}
       </div>
-
-      {/* Component Styles */}
-      <style>{`
-        ${cardsArray.length >= minCards && `
-          .marquee-wrapper {
-            .marquee-track { animation: continuousScroll ${15 * repeats}s linear infinite }
-            &:hover .marquee-track { animation-play-state: paused }
-          }
-          @keyframes continuousScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-${100 / repeats}%); }
-          }
-      `}`}</style>
-      
     </div>
   );
 };
