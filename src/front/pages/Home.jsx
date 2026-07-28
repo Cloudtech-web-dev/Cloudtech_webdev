@@ -1,7 +1,7 @@
 import { Services } from "../components/Services/Services.jsx";
 import { Process } from "../components/Process.jsx";
 import { Testimonials } from "../components/Testimonial/Testimonials.jsx";
-import { HeaderHome } from "../components/HeaderHome.jsx";
+import { PageHeader } from  "../components/PageHeader";
 import { Introduction } from "../components/Introduction.jsx";
 import { Benefits } from "../components/Benefits/Benefits.jsx";
 import { WorkWithUS } from "../components/WorkWithUs.jsx";
@@ -17,7 +17,12 @@ export const Home = () => {
 				url={window.location.href}
 			/>
 			<main>
-				<HeaderHome />
+				<PageHeader
+					title={'headers.headerHome.headLine'}
+					description={'headers.headerHome.headerDescription'}
+					backgroundImg={"src/front/assets/img/HomeOne.jpg"}
+					withoutBackgroundFilter
+				/>
 				<Introduction />
 				<Services />
 				<ProjectsHome />

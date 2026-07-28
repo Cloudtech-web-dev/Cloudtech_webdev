@@ -19,7 +19,7 @@ const syncedBgStyles = (BgImport) => <style>{`
     }
 `}</style>;
 
-const PageHeader = ({ title, description, backgroundImg, withProjectButton = true, withSphereEffect = false }) => {
+export const PageHeader = ({ title, description, backgroundImg, withProjectButton = true, withSphereEffect = false, withoutBackgroundFilter = false }) => {
   const { t } = useTranslation();
 
   return (
@@ -39,7 +39,7 @@ const PageHeader = ({ title, description, backgroundImg, withProjectButton = tru
           />)
       )}
 
-      <div className="position-absolute top-0 start-0 w-100 h-100 mx-auto" style={{ backgroundColor: "rgba(0, 0, 0, .55)", zIndex: 1 }} />
+      {withoutBackgroundFilter || <div className="position-absolute top-0 start-0 w-100 h-100 mx-auto" style={{ backgroundColor: "rgba(0, 0, 0, .55)", zIndex: 1 }} />}
 
       <div className="container w-100 min-vh-100 py-5 d-flex align-items-center position-relative z-2">
         <div className="row w-100 z-0 d-flex justify-content-center">
