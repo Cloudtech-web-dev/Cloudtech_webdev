@@ -1,27 +1,44 @@
-import styles from "../../styles/components/HomeTestimonials.module.css";
-
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { TestimonialsCard as Card } from "./TestimonialsCard";
 
+import styles from "../../styles/components/HomeTestimonials.module.css";
 
-const duplicatesCount = 2;
 
-
-export const TestimonialsMarquee = ({
-  cardsArray = [],
-  // minCards = 3,
-  // gapBetweenCards = 20,
-  // maxCardsWidth = 587,
-  // minCardsWidth = 300,
-  // cardsHeight = 474,
-  className: propClassNames
-}) => {
+export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames, rollDuration = '30s' }) => {
   const { t } = useTranslation();
+
+  const [duplicatesCount, setDuplicatesCount] = useState(2);
+
+
+  useEffect(() => {
+
+    const adjustMarqueeDuplication = () => {
+      const
+        groupCardsCount = cardsArray.length,
+        totalGroupWidth = groupCardsCount * ( parseFloat(styles.maxCardWidth) + parseFloat(styles.gapBetweenCards) ),
+        totalGroupsNeeded = Math.ceil(window.innerWidth / totalGroupWidth) + 1
+      ;
+      setDuplicatesCount(Math.max(totalGroupsNeeded, 2));
+    };
+
+    adjustMarqueeDuplication();
+
+    window.addEventListener('resize', adjustMarqueeDuplication);
+    return () => {
+      window.removeEventListener('resize', adjustMarqueeDuplication);
+    };
+
+  }, []);
+  
 
   return (
     <div className={styles["marquee-wrapper"] + (propClassNames || "")}>
-      <div className={styles["marquee-track"]}>
+      <div className={styles["marquee-track"]} style={{
+        '--marquee-translate-delta': duplicatesCount,
+        '--roll-duration': rollDuration
+      }}>
         {Array.from({ length: duplicatesCount }).map( (_, groupId) => (
           <div className={styles["marquee-group"]} key={groupId}>
             {cardsArray.map( (card, itemId) => (

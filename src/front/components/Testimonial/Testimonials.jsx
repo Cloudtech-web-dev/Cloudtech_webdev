@@ -22,7 +22,7 @@ export const Testimonials = () => (
             </div>
 
             {/* Section Body */}
-            <Marquee cardsArray={testimonials} />
+            <Marquee cardsArray={testimonials} rollDuration="30s" />
 
         </div>
         

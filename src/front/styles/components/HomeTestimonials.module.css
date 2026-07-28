@@ -1,20 +1,23 @@
 @import "../constants.css";
 
+@value minCardWidth: 345px;
+@value maxCardWidth: 587px;
+@value minCardHeight: 474px;
+@value gapBetweenCards: 20px;
 
 /* •-------------------------• */
 /* ♦-----  CARD STYLES  -----♦ */
 /* •-------------------------• */
 
 .card-container {
-  min-width: 345px;
-  width: min(587px, 70vw);
-  /* Cambiar por 70cqw ↑ en caso de contenedor */
-  max-width: 587px;
+  min-width: minCardWidth;
+  width: min(maxCardWidth, 70vw);
+  max-width: maxCardWidth;
   height: 100%;
 
   .card {
     height: 100%;
-    min-height: 474px;
+    min-height: minCardHeight;
 
     border: 1px solid var(--bs-gray-300);
     border-radius: 12px;
@@ -127,7 +130,7 @@
 
 @keyframes continuousScroll {
     0% { transform: translateX(0) }
-    100% { transform: translateX(var(--translate-delta, -50%)) }
+    100% { transform: translateX(calc(-100% / var(--marquee-translate-delta, 2))) }
 }
 
 .marquee-wrapper {
@@ -149,8 +152,8 @@
       display: flex;
       align-items: stretch;
       width: fit-content;
-      gap: 20px;
-      padding-right: 20px;
+      gap: gapBetweenCards;
+      padding-right: gapBetweenCards;
 
       .marquee-slide {
         .slide-contents {
