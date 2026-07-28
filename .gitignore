@@ -92,7 +92,7 @@ yarn-error.log*
 /coverage
 
 # Archivos de editor
-.vscode/
+# .vscode/  ← Ya está subido y causa alertas en Git cada vez que se lo pasa por accidente a Staged
 .idea/
 
 # Archivos de sistema operativo
