@@ -766,9 +766,9 @@ h6 {
 }
 
 
-/* Palabra resaltada dentro de header */
+/* HIGHLIGHTED TEXT */
 
-/* Previous implementation */
+/* Previous implementation (only useful for transparency) */
 .highlighted-text.synced-bg-heading {
   position: relative;
   /* color: var(--highlighted-text-color, var(--bs-gray-1000)); */
@@ -790,7 +790,7 @@ h6 {
   }
 }
 
-/* Newer without ::before */
+/* Newer without ::before (much more straightforward) */
 .highlighted-text:not(.synced-bg-heading) {
   color: var(--highlighted-text-color, var(--bs-gray-1000));
   background-image: linear-gradient(var(--highlighted-text-bg, var(--bs-accent-1)));
@@ -799,6 +799,28 @@ h6 {
   box-decoration-break: clone;
   padding-inline: var(--highlighted-text-padding, 0.12lh);
   margin-inline: calc(-1*var(--highlighted-text-padding, 0.12lh));
+}
+
+/* New proposed implementation for transparency: */
+.highlight-transparency-box {
+  position: relative;
+  display: inline-flex;
+
+  * {
+    background-color: var(--bs-accent-1);
+    padding: 0 0.18em 0.08lh;
+    margin-bottom: -0.08lh;
+    
+    &:first-child {
+      position: absolute;
+      color: white;
+      mix-blend-mode: multiply;
+    }
+    &:last-child {
+      color: black;
+      mix-blend-mode: screen;
+    }
+  }
 }
 
 

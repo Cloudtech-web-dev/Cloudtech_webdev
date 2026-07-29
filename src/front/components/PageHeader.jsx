@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
 
 import { GradientBg } from "./GradientBg";
+import { HighlightTransparencyBox } from "./HighlightTransparencyBox.jsx";
 
 
 /**
@@ -39,18 +40,21 @@ export const PageHeader = ({
           withoutBackgroundFilter==='mobile' ? " d-none d-lg-block"
         : withoutBackgroundFilter==='desktop' ? " d-lg-none"
         : withoutBackgroundFilter ? " d-none" : ""
-      ]} style={{ backgroundColor: "rgba(0, 0, 0, .55)", zIndex: 1 }} />
+      ]} style={{ backgroundColor: "rgba(0, 0, 0, .55)" }} />
 
       {/* Section Contents */}
-      <div className="container w-100 min-vh-100 py-5 d-flex align-items-center position-relative z-2">
-        <div className="row w-100 z-0 d-flex justify-content-center g-0">
-          <div className="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center z-1 gap-5 w-auto">
+      <div className="container w-100 min-vh-100 py-5 d-flex align-items-center position-relative">
+        <div className="row w-100 d-flex justify-content-center g-0">
+          <div className="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center gap-5 w-auto">
 
             {/* Heading */}
             <h1 className="hero-title-home display-2 fw-bolder text-center">
-              <Trans
-                i18nKey={title}
-                components={[ <span className={"highlighted-text" + (withoutTransparencyEffect ? "" : " synced-bg synced-bg-heading")} /> ]} />
+              <Trans i18nKey={title} components={[
+                withoutTransparencyEffect
+                  ? <span className="highlighted-text" style={{ display: "inline-flex", padding: "0 0.18em 0.08lh", margin: "0 0 -0.08lh" }} />
+                  : <HighlightTransparencyBox />
+                ]}
+              />
             </h1>
 
             {/* Description */}
