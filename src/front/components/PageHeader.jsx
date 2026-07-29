@@ -36,7 +36,7 @@ export const PageHeader = ({
 
       {/* Section Contents */}
       <div className="container w-100 min-vh-100 py-5 d-flex align-items-center position-relative z-2">
-        <div className="row w-100 z-0 d-flex justify-content-center">
+        <div className="row w-100 z-0 d-flex justify-content-center g-0">
           <div className="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center z-1 gap-5 w-auto">
 
             {/* Heading */}
