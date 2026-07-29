@@ -18,7 +18,7 @@ export const Home = () => (<>
 			title={'headers.headerHome.headLine'}
 			description={'headers.headerHome.headerDescription'}
 			backgroundImg={"src/front/assets/img/HomeOne.jpg"}
-			withoutBackgroundFilter />
+			withoutBackgroundFilter={'desktop'} />
 		<Introduction />
 		<Services />
 		<ProjectsHome />

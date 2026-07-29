@@ -4,6 +4,9 @@ import { useTranslation, Trans } from "react-i18next";
 import { GradientBg } from "./GradientBg";
 
 
+/**
+ * @param {import("../utils/customTypes.js").PageHeaderProps} props
+ * */
 export const PageHeader = ({
   title,
   description,
@@ -32,7 +35,11 @@ export const PageHeader = ({
       )}
 
       {/* (optional) Background Filter */}
-      {withoutBackgroundFilter || <div className="position-absolute top-0 start-0 w-100 h-100 mx-auto" style={{ backgroundColor: "rgba(0, 0, 0, .55)", zIndex: 1 }} />}
+      <div className={["position-absolute top-0 start-0 w-100 h-100 mx-auto",
+          withoutBackgroundFilter==='mobile' ? " d-none d-lg-block"
+        : withoutBackgroundFilter==='desktop' ? " d-lg-none"
+        : withoutBackgroundFilter ? " d-none" : ""
+      ]} style={{ backgroundColor: "rgba(0, 0, 0, .55)", zIndex: 1 }} />
 
       {/* Section Contents */}
       <div className="container w-100 min-vh-100 py-5 d-flex align-items-center position-relative z-2">
