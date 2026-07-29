@@ -25,6 +25,16 @@ $custom-theme-colors: (
   "grad-secondary-primary": linear-gradient(180deg, #60E0A5 0,#165766 81.73%),
   "alt-gradient": radial-gradient(circle, rgba(#1bd5ff, 0.9) 22%, #128ba6 67%, #0c323b 100%)
 );
+$gradientbg-effect-colors: (
+  "bg-1": rgb(108, 0, 162),
+  "bg-2": rgb(0, 17, 82),
+  "1": rgb(18, 113, 255),
+  "2": rgb(221, 74, 255),
+  "3": rgb(100, 220, 255),
+  "4": rgb(200, 50, 50),
+  "5": rgb(180, 180, 50),
+  "interactive": rgb(140, 100, 255)
+);
 $fonts: (
   // Format: (family:font-family, size:font-size[, weight:font-weight][, style:font-style][, line-height:line-height][, letter-spacing:letter-spacing])
   "h0": (family: "Outfit", size: 64px, weight: 700, line-height: 1.17, letter-spacing: -0.01em),
@@ -65,6 +75,13 @@ $fonts: (
       --bs-#{$color}-rgb: #{to-rgb($value)};
     }
   }
+
+  /* =======  Gradient Background Effect (gbe) Colors  ======= */
+  @each $color, $value in $gradientbg-effect-colors {
+    --gbe-color-#{$color}: #{$value};
+    --gbe-color-#{$color}-rgb: #{to-rgb($value)};
+  }
+  
   /* =======  Font variables  ======= */
   @each $font, $value in $fonts {
     --font-family-#{$font}: "#{map-get($value, "family")}";
