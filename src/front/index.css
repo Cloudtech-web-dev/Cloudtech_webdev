@@ -769,7 +769,7 @@ h6 {
 /* Palabra resaltada dentro de header */
 
 /* Previous implementation */
-.highlighted-text.synced-bg-header {
+.highlighted-text.synced-bg-heading {
   position: relative;
   /* color: var(--highlighted-text-color, var(--bs-gray-1000)); */
 
@@ -791,7 +791,7 @@ h6 {
 }
 
 /* Newer without ::before */
-.highlighted-text:not(.synced-bg-header) {
+.highlighted-text:not(.synced-bg-heading) {
   color: var(--highlighted-text-color, var(--bs-gray-1000));
   background-image: linear-gradient(var(--highlighted-text-bg, var(--bs-accent-1)));
   background-size: 100%;
