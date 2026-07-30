@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import "../../styles/Accordion.css";
 // =============================================
 // CÓDIGO DEL CARRUSEL COMENTADO TEMPORALMENTE
 // =============================================
 // import { useEffect, useRef } from "react";
 // import * as bootstrap from "bootstrap";
 
-export const Card = ({ id, cover, gallery = [], name, preview, index }) => {
+export const Card = ({ id, cover, logo, name, preview, index }) => {
     const { t } = useTranslation();
     const isEven = index % 2 === 0;
     // =============================================
@@ -95,13 +96,24 @@ export const Card = ({ id, cover, gallery = [], name, preview, index }) => {
 
                 <Link
                     to={`/projects/${id}`}
-                    className="d-block"
+                    className="d-block text-decoration-none"
                 >
-                    <img
-                        src={cover}
-                        alt={name}
-                        className="img-fluid rounded-3 shadow-lg project-cover-img"
-                    />
+                    <div className="project-row-reveal project-reveal-container position-relative overflow-hidden rounded-4 border border-white border-opacity-5">
+                        <img
+                            src={cover}
+                            alt={name}
+                            className="project-reveal-bg"
+                        />
+                        <div className="project-reveal-overlay d-flex align-items-center justify-content-center">
+                            {logo && (
+                                <img
+                                    src={logo}
+                                    alt={`Logo ${name}`}
+                                    className="project-reveal-logo"
+                                />
+                            )}
+                        </div>
+                    </div>
                 </Link>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { useTranslation } from "react-i18next";
 import "../../styles/Accordion.css";
@@ -22,6 +22,14 @@ export const Accordion = () => {
             [categoryId]: prev[categoryId] === itemId ? null : itemId
         }));
     };
+
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     return (
         <section className="services-accordion-section">
@@ -72,10 +80,10 @@ export const Accordion = () => {
                                             <div className="accordion-body-content">
                                                 <div className="content-grid">
                                                     {/* Columna de Texto */}
-                                                    <div className="text-side">
+                                                    <div className="text-side text-sm-center text-md-start text-lg-start">
                                                         <p className="item-description">{item.description}</p>
-                                                        <Link to={item.link} className="btn-outline-accent">
-                                                            {item.buttonText}
+                                                        <Link to={item.link} className="btn-outline-accent w-lg-25 w-md-100 d-block d-md-inline-block">
+                                                            {isMobile ? "Ver nuestro portafolio" : item.buttonText}
                                                         </Link>
                                                     </div>
 
