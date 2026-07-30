@@ -9,51 +9,125 @@
   },
   "headers": {
     "headerHome": {
-      "headLine": "Moldeamos ideas para crear universos digitales",
-      "headerDescription": "Construimos entornos digitales que fortalecen tu marca y unen tus audiencias. Creamos presencias online que aseguran resultados medibles y un crecimiento escalable.",
+      "headLine": "Diseñamos sitios web y <0>experiencias</0> digitales para creativos y marcas con identidad",
+      "headerDescription": "Combinamos diseño, narrativa y desarrollo web para proyectos que necesitan una presencia digital a la altura de su trabajo.",
       "portfolioButton": "Proyectos",
-      "contactButton": "Contáctanos"
+      "contactButton": "Contáctanos",
+      "servicesPresentation": {
+        "headLine": "<0>Más que una web:</0> una forma clara de presentar lo que haces",
+        "description": "Creamos sitios web para proyectos que necesitan mostrar mejor su trabajo, sus productos o sus servicios. Convertimos ideas, contenido e identidad en experiencias digitales claras, atractivas e intuitivas.",
+        "portfolioButton": "Ver Proyectos"
+      }
     },
     "headerAbout": {
-      "headLine": "Tu visión, el motor de nuestra creatividad",
-      "headerDescription": "Moldeamos tus ideas en experiencias web poderosas que reflejan la esencia de tu marca y cumplen tus objetivos estratégicos.",
-      "portfolioButton": "Proyectos",
-      "contactButton": "Contáctanos"
+      "headLine": "Un estudio digital para proyectos con <0>identidad</0>",
+      "headerDescription": "Creamos sitios web y experiencias digitales para proyectos con identidad, cuidando cómo se ven, cómo se entienden y cómo funcionan.",
+      "portfolioButton": "Ver proyectos",
+      "contactButton": "Hablemos"
     },
     "headerServices": {
-      "headLine": "Tu Universo a Medida",
-      "headerDescription": "Nuestros servicios son el puente entre tus ideas y soluciones digitales potentes que impulsarán tu marca y generarán crecimiento sostenido.",
+      "headLine": "Sitios web, aplicaciones y tiendas online con <0>identidad</0>",
+      "headerDescription": "Creamos experiencias digitales claras, atractivas y funcionales, pensadas para mostrar mejor tu trabajo, tus productos o tus servicios.",
       "portfolioButton": "Proyectos",
       "contactButton": "Contáctanos"
     },
     "headerProjects": {
-      "headLine": "Diseñamos y conectamos tu ecosistema digital",
-      "headerDescription": "Exploramos la intersección entre estrategia, diseño y tecnología para construir soluciones digitales únicas que resuelven desafíos reales y canalizan los esfuerzos hacia una experiencia inigualable.",
+      "headLine": "Proyectos digitales con <0>identidad</0>",
+      "headerDescription": "Una selección de sitios web, tiendas online, portafolios y plataformas editoriales donde diseño, contenido y desarrollo se integran para presentar mejor una marca, un producto o una idea.",
       "contactButton": "Contáctanos"
     }
   },
   "footer": {
-    "footerSlogan": "Moldeamos ideas para crear universos digitales.",
+    "footerSlogan": "Nos encantaría conocer tu <0>idea</0>",
+    "welcomingSentence": "Hablemos de tu proyecto",
     "sections": {
       "about": "Nosotros",
       "services": "Servicios",
       "projects": "Proyectos",
       "contact": "Contacto"
-    }
+    },
+    "copywright": "Todos los Derechos Reservados."
   },
   "about": {
-    "sectionTitle": "¿Quiénes somos?",
-    "sectionDescription": "Somos una empresa que cree en el valor de unir la creatividad y la tecnología. Combinamos estrategia, diseño de vanguardia y tecnología robusta para crear una presencia online intuitiva y funcional."
+    "sectionTitle": "<0>¿Quiénes</0> somos?",
+    "sectionDescription": "CloudTech es un estudio digital que une diseño, narrativa y desarrollo web. Trabajamos con marcas, creativos y proyectos que necesitan una presencia digital clara, atractiva y funcional. Nos interesa cómo se ve un sitio, pero también cómo lo experimentan y cómo presenta de la mejor manera un trabajo, un producto o una idea.",
+    "workSteps": {
+      "opening": {
+        "openingTitle": "Cómo <0>trabajamos</0>",
+        "openingDescription": "Cada proyecto empieza por entender qué necesita comunicar, a quién debe llegar y cómo debe funcionar. A partir de ahí, ordenamos la información, definimos la experiencia, diseñamos la interfaz y desarrollamos una solución clara, funcional y alineada con los objetivos del proyecto."
+      },
+      "steps": {
+        "step1": {
+          "title": "<0>Escuchamos</0> y entendemos",
+          "description": "Ordenamos las ideas, definimos la estructura y construimos la web completa."
+        },
+        "step2": {
+          "title": "<0>Ordenamos</0> la información",
+          "description": "Definimos qué debe decir tu sitio, cómo se organiza el contenido y qué recorrido necesita hacer cada usuario."
+        },
+        "step3": {
+          "title": "<0>Diseñamos</0> la experiencia",
+          "description": "Trabajamos la estructura visual, los wireframes y las pantallas principales para que el proyecto se vea claro, atractivo y fácil de recorrer."
+        },
+        "step4": {
+          "title": "<0>Desarrollamos</0> la solución",
+          "description": "Construimos el sitio, tienda online, aplicación o plataforma con la tecnología adecuada para que funcione bien y pueda crecer."
+        },
+        "step5": {
+          "title": "<0>Publicamos</0> y acompañamos ",
+          "description": "Revisamos, ajustamos y dejamos una base lista para que el proyecto pueda continuar, actualizarse o escalar según sus necesidades. "
+        }
+      }
+    },
+    "values": {
+      "opening": {
+        "openingTitle": "Lo que guía nuestro <0>trabajo</0>",
+        "openingDescription": "Cada proyecto necesita algo distinto, pero nuestra forma de trabajar se sostiene en principios claros: entender antes de construir, diseñar con intención y desarrollar soluciones que funcionen para personas reales."
+      },
+      "valueContent": {
+        "value1": {
+          "title": "CLARIDAD",
+          "description": "Ordenamos ideas, contenidos y recorridos para que cada sitio sea fácil de entender, usar y explorar."
+        },
+        "value2": {
+          "title": "CRITERIO",
+          "description": "No trabajamos con fórmulas genéricas. Cada decisión de diseño, contenido y desarrollo responde a la identidad y los objetivos del proyecto."
+        },
+        "value3": {
+          "title": "SOLIDEZ TÉCNICA",
+          "description": "Cuidamos que cada sitio funcione bien: que sea estable, adaptable, fácil de usar y preparado para crecer y escalar."
+        },
+        "value4": {
+          "title": "COLABORACIÓN",
+          "description": "Trabajamos cerca de cada cliente para entender sus necesidades, resolver dudas y avanzar con comunicación clara durante todo el proceso."
+        },
+        "value5": {
+          "title": "INNOVACIÓN",
+          "description": "Exploramos nuevas herramientas y formas de trabajo cuando el proyecto lo necesita, sin perder de vista lo esencial: construir soluciones útiles y bien pensadas."
+        },
+        "value6": {
+          "title": "TRANSPARENCIA",
+          "description": "Mantenemos procesos claros, decisiones explicadas y expectativas realistas para que cada etapa del proyecto avance con confianza."
+        }
+      }
+    }
   },
   "services": {
-    "sectionTitle": "Conoce nuestros servicios",
-    "sectionDescription": "Cada uno de nuestros servicios está diseñado para construir y amplificar tu presencia digital, convirtiendo tus ideas en productos y resultados medibles. Explora cómo podemos dar forma a tu universo online.",
+    "sectionTitle": "Qué hacemos",
+    "sectionDescription": "Diseñamos y desarrollamos sitios web, aplicaciones y experiencias digitales para proyectos con identidad.",
     "webDevelopmentTitle": "Desarrollo Web",
     "webDevelopmentSubtitle": "Construyendo tu universo digital",
     "communicationTitle": "Comunicación",
     "communicationSubtitle": "Reunimos tus audiencias",
     "softwareSolutionsTitle": "Soluciones de software",
     "softwareSolutionsSubtitle": "Herramientas para materializar tus ideas",
+    "exploreServicesButton": "Explorar servicios",
+    "kinds": {
+      "webSites": "Sitios web",
+      "webApps": "Aplicaciones web",
+      "eCommerce": "E-commerce",
+      "visualIdentity": "Identidad y contenido visual"
+    },
     "card": {
       "wordpress": {
         "title": "Wordpress",
@@ -104,6 +178,30 @@
         "title": "AutoCAD IST",
         "description": "Diseña sin límites en 2D y 3D con la herramienta más completa para arquitectos e ingenieros. Acelera tus flujos de trabajo y crea diseños impactantes con potentes funciones de modelado, visualización y automatización.",
         "link": "Adquirir licencia completa"
+      }
+    },
+    "whereToBegin": {
+      "opening": {
+        "openingTitle": "No todos los proyectos empiezan en el mismo punto",
+        "openingDescription": "Puedes llegar con una idea, una marca ya creada, un diseño listo o una web que necesita mejorar. Nos adaptamos al punto en el que estás para ayudarte a avanzar, a lo que tu proyecto necesita hoy."
+      },
+      "phases": {
+        "phase1": {
+          "title": "EMPEZAR DESDE CERO",
+          "description": "Ordenamos las ideas, definimos la estructura y construimos la web completa."
+        },
+        "phase2": {
+          "title": "DISEÑO Y EXPERIENCIA",
+          "description": "No trabajamos con fórmulas genéricas. Cada decisión de diseño, contenido y desarrollo responde a la identidad y los objetivos del proyecto."
+        },
+        "phase3": {
+          "title": "LLEVA TU DISEÑO A LA WEB",
+          "description": "Tomamos diseños existentes y los convertimos en sitios funcionales, responsivos y fáciles de usar."
+        },
+        "phase4": {
+          "title": "OPTIMIZAR TU WEB",
+          "description": "Revisamos lo que ya tienes y proponemos mejoras en estructura, diseño, contenido, rendimiento o funcionalidad."
+        }
       }
     }
   },
@@ -181,7 +279,7 @@
   },
   "projects": {
     "sectionTitle": "Nuestros proyectos",
-    "sectionDescription": "Hemos creado universos digitales únicos que resuelven desafíos y conectan a las marcas con sus audiencias. Sabemos que cada proyecto es una historia que refleja innovación y resultados claros, y estamos dispuestos a plasmarlo en tu visión.",
+    "sectionDescription": "Algunos proyectos donde ayudamos a marcas y creativos a presentar mejor su trabajo, sus productos y sus ideas.",
     "sectionCTAButton": "Conectemos ahora",
     "discoverMore": "Descubre más",
     "sectionPortfolioButton": "Explora nuestro portafolio",
@@ -191,6 +289,20 @@
       "itemThree": "[03] Solución alcanzada",
       "itemFour": "[04] Créditos",
       "tech": "Tecnologías"
+    },
+    "tags": {
+      "eCommerce": "E-Commerce",
+      "webDev": "Desarrollo web",
+      "digitalMagazine": "Revista digital",
+      "webCinematographer": "Web cineasta",
+      "visualPortfolio": "Portafolio visual",
+      "multilingualSite": "Sitio multilingüe"
+    },
+    "featured": {
+      "projectDescription1": "Tienda online para una librería independiente, con catálogo, gestión de inventario y pagos seguros.",
+      "projectDescription7": "Revista digital de literatura, con una experiencia visual limpia y una estructura pensada para dar protagonismo al contenido.",
+      "projectDescription9": "Una web pensada para presentar trabajo audiovisual y fotográfico de forma clara, visual y profesional.",
+      "projectDescription6": "Una plataforma editorial en tres idiomas, diseñada para organizar contenidos, autores y traducciones de forma clara."
     },
     "projectName1": "Librería Cosmonauta",
     "projectPreview1": "Conceptualizamos y desarrollamos el e-commerce de Librería Cosmonauta, integrando pagos seguros y gestión de inventario para potenciar sus ventas y el alcance de su comunidad lectora a nivel nacional.",
@@ -213,6 +325,10 @@
     "projectName7": "MURA",
     "projectPreview7": "Implementamos la página web de MURA Revista Digital, integrando un diseño experimental y herramientas de autogestión para visibilizar literaturas y voces inusuales de toda Latinoamérica.",
     "projectSummary7": "MURA es una revista digital especializada en literatura y artes que busca desarmar las estructuras tradicionales de los géneros literarios. CloudTech materializó el proyecto de forma integral, diseñando su identidad visual desde cero e implementando una plataforma editorial dinámica sobre WordPress. El resultado es un ecosistema editorial fluido y autogestionado que visibiliza el talento disruptivo de Ecuador y Latinoamérica.",
+    "projectName8": "Piedra Negra",
+    "projectPreview8": "Estandarización visual y desarrollo de herramientas comerciales para una marca de café ecuatoriano que busca fortalecer su presencia en retail y abrir oportunidades B2B.",
+    "projectSummary8": "MURA es una revista digital especializada en literatura y artes que busca desarmar las estructuras tradicionales de los géneros literarios. CloudTech materializó el proyecto de forma integral, diseñando su identidad visual desde cero e implementando una plataforma editorial dinámica sobre WordPress. El resultado es un ecosistema editorial fluido y autogestionado que visibiliza el talento disruptivo de Ecuador y Latinoamérica.",
+    "projectName9": "Portfolio Jean-Pierre Olivares",
     "projectNeed1": "La librería requería un canal de ventas digital escalable para comercializar su catálogo a nivel nacional. El desafío técnico consistía en centralizar la gestión de inventario de múltiples editoriales independientes y sustituir procesos de venta manuales por una infraestructura automatizada, segura y capaz de manejar flujos de pago complejos sin fricciones para el usuario.",
     "projectProcess1": {
       "description": "Nuestra metodología para Cosmonauta se centró en construir una infraestructura técnica capaz de unificar la gestión compleja de inventarios con una experiencia de compra fluida. Abordamos el desarrollo priorizando la robustez del backend y la seguridad transaccional, asegurando que la plataforma escale al mismo ritmo que su catálogo literario.",
@@ -321,7 +437,7 @@
     "collab": "Proyecto realizado junto al equipo de Colmena Lab."
   },
   "testimonials": {
-    "sectionTitle": "Nuestros clientes",
+    "sectionTitle": "<0>Testimonios</0> de nuestros clientes",
     "testimony1": {
       "position": "Editor General",
       "review": "“El equipo no solo construyó un sitio web en WordPress que refleja fielmente nuestra identidad, sino que nos dotó de las funcionalidades editoriales y de seguridad. Comprendieron nuestra visión sobre la literatura y la autogestión, permitiéndonos construir una amplia comunidad de creadores en Ecuador y Latinoamérica.”"
@@ -336,8 +452,8 @@
     }
   },
   "team": {
-    "sectionTitle": "Conoce a nuestro equipo",
-    "sectionDescription": "Nuestro compromiso es generar conexiones reales y un crecimiento medible para tu negocio. En CloudTech, tu singularidad cobra vida en un universo digital a medida y sofisticado.",
+    "sectionTitle": "Conoce a nuestro <0>equipo</0>",
+    "sectionDescription": "Somos un equipo que combina estrategia, diseño, desarrollo, contenido y gestión comercial para construir sitios web y experiencias digitales con identidad.",
     "sectionCTAButton": "Hablemos de tu proyecto",
     "card": {
       "teamMember1": {
@@ -359,6 +475,14 @@
       "teamMember5": {
         "position": "Desarrollador de software",
         "description": "Desarrollador de software versátil en Android, React, Python y Node, con sólidos conocimientos en redes informáticas. Esta preparación integral le permite fluir con naturalidad por todo el ciclo de aplicaciones web y móviles, desde la concepción hasta su implementación efectiva."
+      },
+      "teamMember6": {
+        "position": "Ejecutiva de Cuenta",
+        "description": "Gestiona nuevos contactos y acompaña el proceso comercial. Su rol ayuda a que cada oportunidad avance con seguimiento, cercanía y claridad."
+      },
+      "teamMember7": {
+        "position": "Ejecutiva de Cuenta",
+        "description": "Especializada en la gestión de clientes y el desarrollo de oportunidades comerciales. Comprende las necesidades de cada cliente, coordina propuestas y asegura una comunicación fluida durante todo el proceso, fortaleciendo relaciones de largo plazo."
       }
     }
   },
@@ -423,9 +547,9 @@
     }
   },
   "workWithUs": {
-    "sectionTitle": "¿Por qué trabajar con nosotros? ",
-    "sectionDescription": "Moldeamos ideas para crear universos digitales que no solo lucen bien, sino que generan un impacto real y medible. Elegirnos significa aliarse con un equipo que combina creatividad, experiencia y un proceso estructurado para llevar tu marca al siguiente nivel con resultados reales.",
-    "workWithUsCTA": "Conectemos ahora",
+    "sectionTitle": "De la idea a una presencia digital a la altura de tu trabajo",
+    "sectionDescription": "Acompañamos cada proyecto desde la definición inicial hasta la publicación, cuidando la estructura, el diseño, el contenido y el desarrollo.\n\nEl resultado: una web clara, atractiva y funcional, pensada para representar mejor lo que haces y facilitar que las personas entiendan, exploren o compren.",
+    "workWithUsCTA": "Agenda una cita",
     "statistics": {
       "customerSatisfaction": "Satisfacción de clientes",
       "activeUsers": "Usuarios activos al año",
@@ -434,10 +558,66 @@
     }
   },
   "contact": {
-    "sectionTitle": "Conectemos",
-    "sectionDescription": "Tu proyecto es nuestro próximo reto.",
-    "formButton": "Enviar",
+    "sectionTitle": "<0>Cuéntanos</0> qué quieres contruir",
+    "sectionDescription": "Si necesitas una web, una tienda online, un portafolio o una experiencia digital para presentar mejor tu proyecto, podemos ayudarte a darle forma.",
+    "formButton": "¿Qué necesitas?",
     "whatsAppButton": "Cuéntanos tu idea",
+    "form": {
+      "top": {
+        "scrollDown": "Desplázate hacia abajo",
+        "closeButton": "Cerrar",
+        "description": "Completa el formulario y te responderemos para entender en qué etapa estás y cómo podemos acompañarte."
+      },
+      "section1": {
+        "title": "¿Qué necesitas construir?",
+        "options": {
+          "webSite": "Sitio web",
+          "webApp": "Aplicación web",
+          "onlineShop": "Tienda online",
+          "creativePortfolio": "Portafolio creativo",
+          "visualIndentity": "Identidad y contenido visual",
+          "webUpgrade": "Mejora una web existente",
+          "notSure": "No estoy seguro"
+        }
+      },
+      "section2": {
+        "title": "¿En qué etapa estás?",
+        "options": {
+          "placeholder": "Escoge una opción...",
+          "opt1": "Tengo una idea inicial",
+          "opt2": "Opción 2",
+          "opt3": "Opción 3",
+          "opt4": "Opción 4"
+        }
+      },
+      "section3": {
+        "title": "Cuéntanos brevemente qué necesitas"
+      },
+      "section4": {
+        "title": "Plazo ideal",
+        "options": {
+          "opt1": "Lo antes posible",
+          "opt2": "En 1 mes",
+          "opt3": "2 a 3 meses",
+          "opt4": "Más adelante",
+          "opt5": "No lo sé"
+        }
+      },
+      "section5": {
+        "title": "Tus datos",
+        "fieldsLabels": {
+          "fullName": "Nombre y apellido",
+          "email": "Correo electróncio",
+          "phone": "Whatsapp o Teléfono",
+          "projectName": "Nombre de tu proyecto"
+        }
+      },
+      "formSubmission": {
+        "termsDisclosure": "Acepto las condiciones y la política de privacidad.",
+        "newsletter": "Acepto recibir comunicaciones comerciales.",
+        "submitButton": "Enviar mensaje"
+      }
+    },
     "labels": {
       "nameLabel": "Nombre completo:",
       "phoneLabel": "Teléfono:",
@@ -456,6 +636,25 @@
       "alertSuccess": "¡Gracias! Tu mensaje ha sido enviado.",
       "alertError": "¡Ups! Ocurrió un problema, intenta nuevamente.",
       "loading": "Enviando..."
+    },
+    "afterwards": {
+      "opening": {
+        "title": "¿Qué pasa después? "
+      },
+      "steps": {
+        "step1": {
+          "title": "[01] Revisamos tu solicitud",
+          "description": "Leemos la información que nos compartes para entender qué necesitas."
+        },
+        "step2": {
+          "title": "[02] Te contactamos",
+          "description": "Coordinamos una llamada o conversación inicial para aclarar dudas."
+        },
+        "step3": {
+          "title": "[03] Definimos el camino",
+          "description": "Te proponemos el siguiente paso: diagnóstico, propuesta, diseño, desarrollo o mejora."
+        }
+      }
     }
   },
   "whatsapp": {

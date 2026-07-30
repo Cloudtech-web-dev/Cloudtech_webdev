@@ -1,10 +1,11 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import LogoNavbar from "../assets/img/LogoNavbar.svg";
 import LogoNavMovil from "../assets/img/LogoNavMovil.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import LanguageSwitcher from "./LanguageSwitcher";
+import "../styles/Accordion.css";
 
 import { useTranslation } from "react-i18next";
 
@@ -12,6 +13,8 @@ import { useTranslation } from "react-i18next";
 export const Navbar = () => {
 	const { t } = useTranslation();
 	const [isOpen, setIsOpen] = useState(false);
+	const [isLightMode, setIsLightMode] = useState(false);
+	const location = useLocation();
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
@@ -23,35 +26,66 @@ export const Navbar = () => {
 		document.body.style.overflow = 'auto';
 	};
 
+	useEffect(() => {
+		const checkNavbarColor = () => {
+			const lightSections = document.querySelectorAll(".light-section");
+			let isOverLightSection = false;
+
+			const triggerPoint = 60;
+
+			lightSections.forEach((section) => {
+				const rect = section.getBoundingClientRect();
+				if (rect.top <= triggerPoint && rect.bottom >= triggerPoint) {
+					isOverLightSection = true;
+				}
+			});
+
+			setIsLightMode(isOverLightSection);
+		};
+
+		const timeoutId = setTimeout(checkNavbarColor, 50);
+		window.addEventListener("scroll", checkNavbarColor, { passive: true });
+
+		return () => {
+			clearTimeout(timeoutId);
+			window.removeEventListener("scroll", checkNavbarColor);
+		};
+
+	}, [location.pathname]);
+
+	const textClass = isLightMode ? "dark-navbar-items" : "text-white";
+	const logoInvertClass = isLightMode ? "invert-logo-filter" : "";
+
 	return (
 		<>
 			{/* --- NAVBAR DE ESCRITORIO --- */}
 			{/* <div className="container w-100 mb-5"></div> */}
-			<nav className="navbar sticky-top navbar-expand-md d-none d-lg-block py-3 justify-content-center">
-				<div className="container bg-black rounded-pill px-5 py-1 d-flex justify-content-between align-items-center">
+			{/* <nav className="navbar fixed-top navbar-expand-md d-none d-lg-block py-3 justify-content-center" style={{ backgroundColor: "rgba(4, 23, 27, 0.16)", backdropFilter: "blur(20px)", boxShadow: "0px 3px 20.4px 0px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.29)" }}>
+				<div className="container rounded-pill px-5 py-1 d-flex justify-content-between align-items-center"> */}
+			<nav className={`navbar sticky-top navbar-expand-md d-none d-lg-block w-100 p-0 glass-effect glass-navbar ${isLightMode ? 'navbar-light-active' : ''}`}>
+				<div className="container px-5 py-3 d-flex justify-content-between align-items-center">
 					<Link className="navbar-brand" to="/">
-						<img src={LogoNavbar} alt="CloudTech Logo" className="h-auto w-auto" />
+						<img src={LogoNavbar} alt="CloudTech Logo" className={`h-auto w-auto ${logoInvertClass}`} />
 					</Link>
 
 					{/* <div className="d-none d-lg-flex justify-content-end w-100"> */}
 					<ul className="navbar-nav flex-row align-items-center gap-3">
 						<li className="nav-item">
-							<Link className="nav-link text-white" to="/">{t('navbar.home')}</Link>
+							<Link className={`nav-link ${textClass}`} to="/about">{t('navbar.about')}</Link>
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link text-white" to="/about">{t('navbar.about')}</Link>
+							<Link className={`nav-link ${textClass}`} to="/services">{t('navbar.services')}</Link>
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link text-white" to="/services">{t('navbar.services')}</Link>
-						</li>
-						<li className="nav-item">
-							<Link className="nav-link text-white" to="/projects">{t('navbar.projects')}</Link>
+							<Link className={`nav-link ${textClass}`} to="/projects">{t('navbar.projects')}</Link>
 						</li>
 						<li className="nav-item">
 							<LanguageSwitcher />
 						</li>
 						<li className="nav-item">
-							<Link className="btn btn-outline-custom-yellow rounded-pill py-2 px-4 fw-medium" to="/contact">{t('navbar.contact')}</Link>
+							<Link className={`btn ${isLightMode ? 'btn-outline-dark-custom' : 'btn-outline-custom-yellow'} rounded-pill py-2 px-4 fw-medium`} to="/contact">
+								{t('navbar.contact')}
+							</Link>
 						</li>
 					</ul>
 					{/* </div>	 */}
@@ -59,9 +93,9 @@ export const Navbar = () => {
 			</nav>
 
 			{/* --- NAVBAR MÓVIL (TRIGGER) --- */}
-			<div className="d-lg-none fixed-top bg-black d-flex justify-content-between align-items-center mx-3 mt-3 py-3 px-5 rounded-pill">
+			<div className="d-lg-none sticky-top w-100 glass-effect glass-mobile-navbar d-flex justify-content-between align-items-center py-3 px-4">
 				<Link className="navbar-brand" to="/" onClick={closeMenu}>
-					<img src={LogoNavbar} alt="CloudTech Logo" className="h-auto w-auto" />
+					<img src={LogoNavbar} alt="CloudTech Logo" className={`h-auto w-auto ${logoInvertClass}`} />
 				</Link>
 				<button
 					className="navbar-toggler"
@@ -69,15 +103,15 @@ export const Navbar = () => {
 					onClick={toggleMenu}
 					aria-label="Abrir menú de navegación"
 				>
-					<FontAwesomeIcon icon={faBars} className="fa-icon-yellow" size="xl" />
+					<FontAwesomeIcon icon={faBars} className={isLightMode ? "text-dark" : "fa-icon-yellow"} size="xl" />
 				</button>
 
 			</div>
 
 
 			<div className={`custom-menu-overlay ${isOpen ? 'active' : ''}`}>
-				<div className="d-flex justify-content-between align-items-center border border-2 border-white mx-3 my-4 p-3 rounded-pill">
-					<img src={LogoNavMovil} alt="CloudTech Logo Movil" className="h-auto w-auto" />
+				<div className="d-flex justify-content-between align-items-center border-2 border-white mx-3 my-4 p-3 rounded-pill">
+					<img src={LogoNavbar} alt="CloudTech Logo Movil" className="h-auto w-auto" />
 					<button
 						type="button"
 						className="btn"

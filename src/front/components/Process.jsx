@@ -36,7 +36,7 @@ export const Process = () => {
 
     return (
         <section>
-            <div className="container py-5">
+            <div className="container container-ct-layout">
                 <div className="row">
                     <div className="col pe-sm-4 pe-md-5">
                         <div className="d-flex justify-content-end">
@@ -63,8 +63,8 @@ export const Process = () => {
                     <div className="row d-flex justify-content-center">
                         {activeSection === 'capacidades' ? (
                             <>
-                                <div className="col-12 col-sm-6 pe-md-3">
-                                    <div className="d-flex justify-content-center justify-content-sm-end mb-4">
+                                <div className="col-12 col-sm-6">
+                                    <div className="d-flex justify-content-center justify-content-sm-end mb-5">
                                         <div className="row w-100 justify-content-sm-end">
                                             {/* Primera columna de botones */}
                                             <div className="col-12 col-md-6 d-flex flex-column align-items-center align-items-sm-end gap-3 mb-3 mb-md-0">
@@ -94,7 +94,7 @@ export const Process = () => {
                                     </div>
                                 </div>
 
-                                <div className="col ps-sm-5 text-center text-sm-start">
+                                <div className="col px-2 ps-md-5 text-center text-sm-start">
                                     <p className="text-white ct-paragraph">{getCurrentContent()}</p>
                                 </div>
                             </>

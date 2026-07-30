@@ -18,10 +18,10 @@ export const Home = () => {
 			<main>
 				<HeaderHome />
 				<Services />
-				<Process />
+				{/* <Process /> */}
 				<ProjectsHome />
 				<Testimonials />
-				<Benefits />
+				{/* <Benefits /> */}
 				<WorkWithUS />
 			</main>
 		</>

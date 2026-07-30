@@ -1,10 +1,16 @@
 import CoverCosmo from '../assets/img/ProjectHeaders/Cosmocover.jpg'
+import LogoCosmo from '../assets/img/Portfolio/Cosmonauta/logo.svg'
 import CoverFlora from '../assets/img/ProjectHeaders/floracover.jpg'
 import CoverFlotilla from '../assets/img/ProjectHeaders/flotillacover.jpg'
 import CoverLibreras from '../assets/img/ProjectHeaders/librerascover.jpg'
 import CoverAsocove from '../assets/img/ProjectHeaders/asocovecover.jpg'
 import CoverBusquedas from '../assets/img/ProjectHeaders/busquedascover.jpg'
+import LogoBusquedas from '../assets/img/Portfolio/Busquedas/logo.png'
 import CoverMura from '../assets/img/ProjectHeaders/muracover.jpg'
+import LogoMura from '../assets/img/Portfolio/Mura/logo.png'
+import PiedraNegraCover from '../assets/img/ProjectHeaders/piedranegraCover.jpg'
+import LogoPiedraNegra from '../assets/img/Portfolio/Piedra Negra/logo.png'
+
 import { galleryCosmo, galleryFlotilla, galleryFlora, galleryLibreras, galleryAsocove, galleryBusquedas, galleryMura } from './galleryContent'
 import { needsCover } from './needsCoverGallery'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -20,6 +26,7 @@ import { faLeanpub, faWix } from "@fortawesome/free-brands-svg-icons";
 export const projectsList = [
     {
         id: 'libreria-cosmonauta',
+        logo: LogoCosmo,
         cover: CoverCosmo,
         name: 'projects.projectName1',
         preview: 'projects.projectPreview1',
@@ -51,6 +58,68 @@ export const projectsList = [
         ],
         solution: 'projects.projectSolution1',
         gallery: galleryCosmo,
+        credits: [
+            {
+                name: 'David Pinto',
+                position: 'projects.credits.post4'
+            },
+            {
+                name: 'Marcelo Placencia',
+                position: 'projects.credits.post3'
+            },
+            {
+                name: 'Diego Figueroa',
+                position: 'projects.credits.post2'
+            },
+            {
+                name: 'José Miguel Pinto',
+                position: 'projects.credits.post1'
+            },
+            {
+                name: 'Santiago Montoya',
+                position: 'projects.credits.post3'
+            },
+            {
+                name: 'Santiago Montoya',
+                position: 'projects.credits.post5'
+            },
+        ],
+        tech: ['Figma', 'React', 'Javascript', 'Tailwind', 'FastAPI', 'Python', 'PostgreSQL']
+    },
+    {
+        id: 'piedra-negra',
+        logo: LogoPiedraNegra,
+        cover: PiedraNegraCover,
+        name: 'projects.projectName8',
+        preview: 'projects.projectPreview8',
+        summary: 'projects.projectSummary8',
+        need: 'projects.projectNeed1',
+        needsArt: needsCover[0],
+        process: 'projects.projectProcess1.description',
+        phase: [
+            {
+                icon: <FontAwesomeIcon icon={faArrowsSplitUpAndLeft} size="5x" />,
+                title: 'projects.projectProcess1.phase1Title',
+                description: 'projects.projectProcess1.phase1'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
+                title: 'projects.projectProcess1.phase2Title',
+                description: 'projects.projectProcess1.phase2'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faCode} size="5x" />,
+                title: 'projects.projectProcess1.phase3Title',
+                description: 'projects.projectProcess1.phase3'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faCreditCard} size="5x" />,
+                title: 'projects.projectProcess1.phase4Title',
+                description: 'projects.projectProcess1.phase4'
+            }
+        ],
+        solution: 'projects.projectSolution1',
+        // gallery: gallerypiedraNegra,
         credits: [
             {
                 name: 'David Pinto',
@@ -188,6 +257,122 @@ export const projectsList = [
     //     collab: 'projects.collab'
     // },
     {
+        id: 'busquedas',
+        logo: LogoBusquedas,
+        cover: CoverBusquedas,
+        name: 'projects.projectName6',
+        preview: 'projects.projectPreview6',
+        summary: 'projects.projectSummary6',
+        need: 'projects.projectNeed6',
+        needsArt: needsCover[5],
+        process: 'projects.projectProcess6.description',
+        phase: [
+            {
+                icon: <FontAwesomeIcon icon={faFingerprint} size="5x" />,
+                title: 'projects.projectProcess6.phase1Title',
+                description: 'projects.projectProcess6.phase1'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faLanguage} size="5x" />,
+                title: 'projects.projectProcess6.phase2Title',
+                description: 'projects.projectProcess6.phase2'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
+                title: 'projects.projectProcess6.phase3Title',
+                description: 'projects.projectProcess6.phase3'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faRobot} size="5x" />,
+                title: 'projects.projectProcess6.phase4Title',
+                description: 'projects.projectProcess6.phase4'
+            }
+        ],
+        solution: 'projects.projectSolution6',
+        gallery: galleryBusquedas,
+        credits: [
+            {
+                name: 'David Pinto',
+                position: 'projects.credits.post4'
+            },
+            {
+                name: 'Gabriel Pinto',
+                position: 'projects.credits.post7'
+            },
+            {
+                name: 'José Miguel Pinto',
+                position: 'projects.credits.post6'
+            },
+            {
+                name: 'Santiago Montoya',
+                position: 'projects.credits.post6'
+            },
+            {
+                name: 'David Pinto',
+                position: 'projects.credits.post5'
+            },
+        ],
+        tech: ['Figma', 'Wordpress', 'CSS', 'MailChimp', 'Yoast SEO']
+    },
+    {
+        id: 'mura',
+        logo: LogoMura,
+        cover: CoverMura,
+        name: 'projects.projectName7',
+        preview: 'projects.projectPreview7',
+        summary: 'projects.projectSummary7',
+        need: 'projects.projectNeed7',
+        needsArt: needsCover[6],
+        process: 'projects.projectProcess7.description',
+        phase: [
+            {
+                icon: <FontAwesomeIcon icon={faFingerprint} size="5x" />,
+                title: 'projects.projectProcess7.phase1Title',
+                description: 'projects.projectProcess7.phase1'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faFlask} size="5x" />,
+                title: 'projects.projectProcess7.phase2Title',
+                description: 'projects.projectProcess7.phase2'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
+                title: 'projects.projectProcess7.phase3Title',
+                description: 'projects.projectProcess7.phase3'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faHammer} size="5x" />,
+                title: 'projects.projectProcess7.phase4Title',
+                description: 'projects.projectProcess7.phase4'
+            }
+        ],
+        solution: 'projects.projectSolution7',
+        gallery: galleryMura,
+        credits: [
+            {
+                name: 'David Pinto',
+                position: 'projects.credits.post4'
+            },
+            {
+                name: 'Gabriel Pinto',
+                position: 'projects.credits.post7'
+            },
+            {
+                name: 'José Miguel Pinto',
+                position: 'projects.credits.post6'
+            },
+            {
+                name: 'Santiago Montoya',
+                position: 'projects.credits.post6'
+            },
+            {
+                name: 'David Pinto',
+                position: 'projects.credits.post5'
+            },
+        ],
+        tech: ['Figma', 'Wordpress', 'CSS', 'MailChimp', 'Yoast SEO']
+    },
+    {
         id: 'las-libreras-leen',
         cover: CoverLibreras,
         name: 'projects.projectName4',
@@ -298,118 +483,6 @@ export const projectsList = [
     //     tech: ['Figma', 'WixStudio', 'CSS', 'Wix Forms'],
     //     collab: 'projects.collab'
     // },
-    {
-        id: 'busquedas',
-        cover: CoverBusquedas,
-        name: 'projects.projectName6',
-        preview: 'projects.projectPreview6',
-        summary: 'projects.projectSummary6',
-        need: 'projects.projectNeed6',
-        needsArt: needsCover[5],
-        process: 'projects.projectProcess6.description',
-        phase: [
-            {
-                icon: <FontAwesomeIcon icon={faFingerprint} size="5x" />,
-                title: 'projects.projectProcess6.phase1Title',
-                description: 'projects.projectProcess6.phase1'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faLanguage} size="5x" />,
-                title: 'projects.projectProcess6.phase2Title',
-                description: 'projects.projectProcess6.phase2'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
-                title: 'projects.projectProcess6.phase3Title',
-                description: 'projects.projectProcess6.phase3'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faRobot} size="5x" />,
-                title: 'projects.projectProcess6.phase4Title',
-                description: 'projects.projectProcess6.phase4'
-            }
-        ],
-        solution: 'projects.projectSolution6',
-        gallery: galleryBusquedas,
-        credits: [
-            {
-                name: 'David Pinto',
-                position: 'projects.credits.post4'
-            },
-            {
-                name: 'Gabriel Pinto',
-                position: 'projects.credits.post7'
-            },
-            {
-                name: 'José Miguel Pinto',
-                position: 'projects.credits.post6'
-            },
-            {
-                name: 'Santiago Montoya',
-                position: 'projects.credits.post6'
-            },
-            {
-                name: 'David Pinto',
-                position: 'projects.credits.post5'
-            },
-        ],
-        tech: ['Figma', 'Wordpress', 'CSS', 'MailChimp', 'Yoast SEO']
-    },
-    {
-        id: 'mura',
-        cover: CoverMura,
-        name: 'projects.projectName7',
-        preview: 'projects.projectPreview7',
-        summary: 'projects.projectSummary7',
-        need: 'projects.projectNeed7',
-        needsArt: needsCover[6],
-        process: 'projects.projectProcess7.description',
-        phase: [
-            {
-                icon: <FontAwesomeIcon icon={faFingerprint} size="5x" />,
-                title: 'projects.projectProcess7.phase1Title',
-                description: 'projects.projectProcess7.phase1'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faFlask} size="5x" />,
-                title: 'projects.projectProcess7.phase2Title',
-                description: 'projects.projectProcess7.phase2'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
-                title: 'projects.projectProcess7.phase3Title',
-                description: 'projects.projectProcess7.phase3'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faHammer} size="5x" />,
-                title: 'projects.projectProcess7.phase4Title',
-                description: 'projects.projectProcess7.phase4'
-            }
-        ],
-        solution: 'projects.projectSolution7',
-        gallery: galleryMura,
-        credits: [
-            {
-                name: 'David Pinto',
-                position: 'projects.credits.post4'
-            },
-            {
-                name: 'Gabriel Pinto',
-                position: 'projects.credits.post7'
-            },
-            {
-                name: 'José Miguel Pinto',
-                position: 'projects.credits.post6'
-            },
-            {
-                name: 'Santiago Montoya',
-                position: 'projects.credits.post6'
-            },
-            {
-                name: 'David Pinto',
-                position: 'projects.credits.post5'
-            },
-        ],
-        tech: ['Figma', 'Wordpress', 'CSS', 'MailChimp', 'Yoast SEO']
-    }
+
+
 ];

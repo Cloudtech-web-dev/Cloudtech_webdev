@@ -1,40 +1,98 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect, useRef } from 'react';
+import { createPortal } from "react-dom";
+import { Link } from 'react-router-dom';
 import { AppContext } from '../pages/Layout.jsx';
 import HomeContact from '../assets/img/HomeContact.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
+import styles from "../styles/components/HeaderContact.module.css"
+import { element } from 'prop-types';
+
+const Modal = ({ isOpen, onClose, children }) => {
+    const dialogRef = useRef(null);
+
+    useEffect(() => {
+        const dialog = dialogRef.current;
+        if (!dialog) return;
+
+        if (isOpen) {
+            dialog.showModal();
+            document.body.classList.add("modal-open");
+        } else {
+            document.body.classList.remove("modal-open");
+            dialog.close();
+        }
+    }, [isOpen]);
+
+    return createPortal(
+        <dialog
+            ref={dialogRef}
+            className={`${styles.modalOverlay}`}
+            onMouseUp={e => e.target === dialogRef.current && onClose()}
+        >
+            <div className={styles.modalContainer}>
+                <div className={styles.scrollContainer}>
+                    {children}
+                </div>
+            </div>
+        </dialog>,
+        document.body
+    );
+}
+
+/** @type {DataStructure} */
+const initialData = {
+    needs: [], // ← A bunch of possible IDs (min 1)
+    stage: null, // ← An ID
+    problemDescription: null, // ← At least 3 characters (non space) [max? maybe 500 ch?]
+    idealTimeframe: null, // ← An ID
+    personalData: {
+        wholeName: null, // ← At least 2 words of 3 characters each, up to 10 words or 100ch total
+        email: null, // ← Proper email [max? maybe 50 ch?]
+        phone: null, // ← just numbers, with correct number of digits (country code?)
+        projectName: null, // ← At least 2 characters (non space) up to 30ch
+    },
+    newsletterOptIn: false
+};
+// ↪ All fields mandatory (right?)
+
+/** ### Form Data Structure
+ * 
+ * @typedef DataStructure
+ * @prop {string[]} needs
+ * @prop {number} stage
+ * @prop {string} problemDescription
+ * @prop {number} idealTimeframe
+ * @prop {PersonalData} personalData
+ * @prop {boolean} newsletterOptIn
+ * 
+ * @typedef PersonalData
+ * @prop {string} wholeName
+ * @prop {string} email
+ * @prop {string} phone
+ * @prop {string} projectName
+ * 
+*/
 
 const HeaderContact = () => {
     const { t } = useTranslation();
-    const { store, dispatch } = useContext(AppContext);
 
-    const [formData, setFormData] = useState({
-        name: '',
-        phone: '',
-        email: '',
-        company: '',
-        message: ''
-    });
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [data, setData] = useState(initialData);
+    const [termsAccepted, setTermsAccepted] = useState(false);
 
-    const { status, error } = store.contactForm;
-    const apiUrl = "";
-
-    useEffect(() => {
-        if (status === 'success') {
-            setFormData({ name: '', phone: '', email: '', company: '', message: '' });
-        }
-    }, [status]);
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        if (status === 'success' || status === 'error') {
-            dispatch({ type: 'CONTACT_RESET_STATUS' });
-        }
-        setFormData(prevState => ({ ...prevState, [name]: value }));
+    const handleInputs = (/**@type {React.ChangeEvent}*/ e) => {
+        // console.log(e.target);
+        // e.target.setCustomValidity("");
+        // e.target.reportValidity();
     };
 
-    const handleSubmit = async (e) => {
+    const handleTermsAgreement = (/**@type {React.ChangeEvent<HTMLInputElement>}*/ e) => {
+        // console.log(e);
+    };
+
+    const handleSubmit = async (/**@type {React.FormEvent<HTMLButtonElement>}*/e) => {
         e.preventDefault();
         dispatch({ type: 'CONTACT_SUBMIT_START' });
 
@@ -211,9 +269,7 @@ const HeaderContact = () => {
                     </div>
                 </div>
             </section>
-            <div className="h-100 mb-4">
-                <br />
-            </div>
+
         </>
     );
 };

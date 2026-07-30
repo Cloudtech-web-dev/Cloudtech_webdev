@@ -1,0 +1,353 @@
+:root {
+  /* =======  Color variables (a merge between the Figma design and Bootstrap defaults):  ======= */
+  --bs-primary: #0d6efd !important;
+  --bs-primary-rgb: 13, 110, 253;
+  --bs-secondary: #6c757d !important;
+  --bs-secondary-rgb: 108, 117, 125;
+  --bs-success: #198754 !important;
+  --bs-success-rgb: 25, 135, 84;
+  --bs-info: #0dcaf0 !important;
+  --bs-info-rgb: 13, 202, 240;
+  --bs-warning: #ffc107 !important;
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-danger: #dc3545 !important;
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-light: #f8f9fa !important;
+  --bs-light-rgb: 248, 249, 250;
+  --bs-dark: #212529 !important;
+  --bs-dark-rgb: 33, 37, 41;
+  --bs-primary-1: #199AB7 !important;
+  --bs-primary-1-rgb: 25, 154, 183;
+  --bs-primary-2: #217B8F !important;
+  --bs-primary-2-rgb: 33, 123, 143;
+  --bs-primary-3: #165766 !important;
+  --bs-primary-3-rgb: 22, 87, 102;
+  --bs-secondary-1: #60E0A5 !important;
+  --bs-secondary-1-rgb: 96, 224, 165;
+  --bs-secondary-2: #73BF9C !important;
+  --bs-secondary-2-rgb: 115, 191, 156;
+  --bs-secondary-3: #528C72 !important;
+  --bs-secondary-3-rgb: 82, 140, 114;
+  --bs-accent-1: #FBFF06 !important;
+  --bs-accent-1-rgb: 251, 255, 6;
+  --bs-accent-2: #E2E505 !important;
+  --bs-accent-2-rgb: 226, 229, 5;
+  --bs-accent-3: #A8AB02 !important;
+  --bs-accent-3-rgb: 168, 171, 2;
+  --bs-gray-100: #E5E5E5 !important;
+  --bs-gray-100-rgb: 229, 229, 229;
+  --bs-gray-300: #A6BCC2 !important;
+  --bs-gray-300-rgb: 166, 188, 194;
+  --bs-gray-500: #5F828B !important;
+  --bs-gray-500-rgb: 95, 130, 139;
+  --bs-gray-700: #264E58 !important;
+  --bs-gray-700-rgb: 38, 78, 88;
+  --bs-gray-1000: #04171B !important;
+  --bs-gray-1000-rgb: 4, 23, 27;
+  --bs-gradient-1: linear-gradient(180deg, #60E0A5 0, #165766 100%) !important;
+  --bs-radial-gradient-2: radial-gradient(circle, #1bd5ff 0%, #128ba6 60%, #0c323b 100%) !important;
+  --bs-grad-accent: linear-gradient(180deg, #FBFF06 0, #7E8101 87.98%) !important;
+  --bs-grad-primary: linear-gradient(180deg, #199AB7 12.02%, #124652 100%) !important;
+  --bs-grad-secondary: linear-gradient(180deg, #60E0A5 0, #124450 87.98%) !important;
+  --bs-grad-acc-second: linear-gradient(180deg, #FBFF06 0, #477D64 77.4%) !important;
+  --bs-grad-secondary-primary: linear-gradient(180deg, #60E0A5 0, #165766 81.73%) !important;
+  --bs-alt-gradient: radial-gradient(circle, rgba(27, 213, 255, 0.9) 22%, #128ba6 67%, #0c323b 100%) !important;
+
+  --color-bg1: rgb(108, 0, 162);
+  --color-bg2: rgb(0, 17, 82);
+  --color1: 18, 113, 255;
+  --color2: 221, 74, 255;
+  --color3: 100, 220, 255;
+  --color4: 200, 50, 50;
+  --color5: 180, 180, 50;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 80%;
+  --blending: hard-light;
+
+  /* =======  Font variables  ======= */
+  --font-family-h0: "Outfit";
+  --font-size-h0: 64px/1.17;
+  --font-family-h1: "Outfit";
+  --font-size-h1: 48px/1;
+  --font-family-h2: "Outfit";
+  --font-size-h2: 32px/0.85;
+  --font-family-h3: "Outfit";
+  --font-size-h3: 24px/1;
+  --font-family-p1: "Manrope";
+  --font-size-p1: 18px/1.4;
+  --font-family-alt-h0: "Crimson Text";
+  --font-size-alt-h0: 96px/1;
+  --font-family-alt-h1: "Crimson Text";
+  --font-size-alt-h1: 48px/96px;
+}
+
+h0,
+.font-h0 {
+  font-weight: 700;
+  font-size: 64px;
+  font-family: "Outfit", sans-serif;
+  line-height: 1.17;
+  letter-spacing: -0.01em;
+}
+
+h1,
+.font-h1 {
+  font-weight: 900;
+  font-size: 4rem;
+  font-family: "Outfit", sans-serif;
+  line-height: 1;
+  letter-spacing: -0.01em;
+
+  @media (max-width:768px) {
+    font-size: 3rem;
+  }
+}
+
+h2,
+.font-h2 {
+  font-weight: 900;
+  font-size: 32px;
+  font-family: "Outfit", sans-serif;
+  line-height: 0.85;
+  letter-spacing: -0.01em;
+}
+
+h3,
+.font-h3 {
+  font-weight: 700;
+  font-size: 24px;
+  font-family: "Outfit", sans-serif;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.font-p1 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-family: "Manrope", sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+}
+
+.font-p2 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-family: "Manrope", sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+
+  @media (max-width:768px) {
+    font-size: 1.0rem;
+  }
+}
+
+.font-alt-h0 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 96px;
+  font-family: "Crimson Text", sans-serif;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.font-alt-h1 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 48px;
+  font-family: "Crimson Text", sans-serif;
+  line-height: 96px;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width:768px) {
+  .font-p1 {
+    font-size: 1.2rem;
+  }
+}
+
+.gradient-bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+  top: 0;
+  left: 0;
+}
+
+svg {
+  display: none;
+}
+
+.gradient-container {
+  filter: url(#goo) blur(40px);
+  width: 100%;
+  height: 100%;
+}
+
+.g1 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+
+  transform-origin: center center;
+  animation: moveVertical 30s ease infinite;
+
+  opacity: 1;
+}
+
+.g2 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 20s reverse infinite;
+
+  opacity: 1;
+}
+
+.g3 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2 + 200px);
+  left: calc(50% - var(--circle-size) / 2 - 500px);
+
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 40s linear infinite;
+
+  opacity: 1;
+}
+
+.g4 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+
+  transform-origin: calc(50% - 400px);
+  animation: moveHorizontal 40s ease infinite;
+
+  opacity: 0.7;
+}
+
+.g5 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: moveInCircle 20s ease infinite;
+
+  opacity: 1;
+}
+
+.g6 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: calc(var(--circle-size) / 2);
+  height: calc(var(--circle-size) / 2);
+  top: calc(50% - var(--circle-size) / 4 - 100px);
+  left: calc(75% - var(--circle-size) / 4);
+
+  transform-origin: calc(50% - 250px) calc(50% + 150px);
+  animation: moveInCircle 35s linear infinite;
+
+  opacity: 0.9;
+}
+
+.g7 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 3);
+  left: calc(85% - var(--circle-size) / 3);
+
+  transform-origin: center center;
+  animation: moveVertical 28s ease infinite;
+
+  opacity: 0.8;
+}
+
+.interactive {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: 100%;
+  height: 100%;
+  top: -50%;
+  left: -50%;
+
+  opacity: 0.7;
+}
+
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  50% {
+    transform: translateY(50%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
