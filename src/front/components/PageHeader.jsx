@@ -11,36 +11,49 @@ import { HighlightTransparencyBox } from "./HighlightTransparencyBox.jsx";
 export const PageHeader = ({
   title,
   description,
-  backgroundImg,
-  withProjectButton = true,
-  withSphereEffect = false,
-  withoutTransparencyEffect = false,
-  withoutBackgroundFilter = false
+  backgroundImgURL,
+  withSphereEffect,
+  withoutProjectsButton,
+  withoutTransparencyEffect,
+  withoutBackgroundFilter,
+  withoutParallaxEffect
 }) => {
   const { t } = useTranslation();
-  
+
   return (
-    <section className={"position-relative min-vh-100 overflow-hidden" + (withoutTransparencyEffect ? "" : " synced-bg")}>
+    <section className="position-relative min-vh-100 overflow-hidden">
 
-      {/* Background Selection */}
-      {withSphereEffect ? (
-        <div className="position-absolute top-0 start-0 w-100 h-100 z-0 overflow-hidden">
-          <GradientBg />
+      {/* Background */}
+      <div className="position-absolute bottom-0 start-0 w-100 h-100 overflow-hidden" style={{ clipPath: "inset(0)" }}>
+
+        {/* Background Selection (between image or gradient background) */}
+        <div className={"bottom-0 start-0 w-100 h-100 " + (withoutParallaxEffect ? "position-absolute" : "position-fixed")}>
+          {(withSphereEffect || !backgroundImgURL) ?
+
+            (/* Gradient Spheres Background */
+
+              <GradientBg />
+              
+            ) : (/* Background Image */
+
+              <img
+                src={backgroundImgURL}
+                alt="CloudTech background image"
+                className="bottom-0 start-0 w-100 h-100 object-fit-cover"
+                style={{ objectPosition: "center center" }} />
+            )
+
+          }
         </div>
-      ) : withoutTransparencyEffect && (
-        <img  // ← Fallback if no transparency nor sphere effects
-          src={backgroundImg}
-          alt="CloudTech background image"
-          className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-0"
-          style={{ objectPosition: "center, center" }} />
-      )}
+        
+        {/* (optional) Background Filter */}
+        <div className={["position-absolute top-0 start-0 w-100 h-100 mx-auto",
+            withoutBackgroundFilter==='mobile' ? " d-none d-lg-block"
+          : withoutBackgroundFilter==='desktop' ? " d-lg-none"
+          : withoutBackgroundFilter ? " d-none" : ""
+        ]} style={{ backgroundColor: "rgba(0, 0, 0, .55)" }} />
 
-      {/* (optional) Background Filter */}
-      <div className={["position-absolute top-0 start-0 w-100 h-100 mx-auto",
-          withoutBackgroundFilter==='mobile' ? " d-none d-lg-block"
-        : withoutBackgroundFilter==='desktop' ? " d-lg-none"
-        : withoutBackgroundFilter ? " d-none" : ""
-      ]} style={{ backgroundColor: "rgba(0, 0, 0, .55)" }} />
+      </div>
 
       {/* Section Contents */}
       <div className="container w-100 min-vh-100 py-5 d-flex align-items-center position-relative">
@@ -50,9 +63,9 @@ export const PageHeader = ({
             {/* Heading */}
             <h1 className="hero-title-home display-2 fw-bolder text-center">
               <Trans i18nKey={title} components={[
-                withoutTransparencyEffect
-                  ? <span className="highlighted-text" style={{ display: "inline-flex", padding: "0 0.18em 0.08lh", margin: "0 0 -0.08lh" }} />
-                  : <HighlightTransparencyBox />
+                  withoutTransparencyEffect
+                    ? <span className="highlighted-text" style={{ display: "inline-flex", padding: "0 0.18em 0.08lh", margin: "0 0 -0.08lh" }} />
+                    : <HighlightTransparencyBox />
                 ]}
               />
             </h1>
@@ -66,7 +79,7 @@ export const PageHeader = ({
             <div className="d-flex flex-column justify-content-center flex-md-row gap-3 w-100">
 
               {/* (optional) Projects Button */}
-              {withProjectButton && (
+              {withoutProjectsButton || (
                 <Link to="/projects" className="btn btn-outline-light btn-lg rounded-pill px-5">
                   {t('headers.headerAbout.portfolioButton')}
                 </Link>
@@ -86,7 +99,7 @@ export const PageHeader = ({
       {/* Component Styles */}
       <style>{`
         .synced-bg {
-            background-image: url(${backgroundImg});
+            background-image: url(${backgroundImgURL});
             background-size: cover;
             background-position: center;
             background-attachment: fixed;

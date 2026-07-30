@@ -20,7 +20,7 @@ export const About = () => {
                 <PageHeader
                     title="headers.headerAbout.headLine"
                     description='headers.headerAbout.headerDescription'
-                    backgroundImg={HomeAbout}
+                    backgroundImgURL={HomeAbout}
                     withSphereEffect={true}
                 />
                 <WhoWeAre />
