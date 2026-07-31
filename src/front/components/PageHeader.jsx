@@ -59,8 +59,8 @@ const PageHeader = ({ title, description, backgroundImg, withProjectButton = tru
             </p>
 
             <div className="d-flex flex-column justify-content-center flex-md-row gap-3 w-100">
-              {withProjectButton && <Link to="/projects" className="btn btn-outline-light btn-lg rounded-pill px-5">{t('headers.headerAbout.portfolioButton')}</Link>}
-              <Link to="/contact" className="btn btn-outline btn-lg rounded-pill px-5">{t('headers.headerAbout.contactButton')}</Link>
+              {withProjectButton && <Link to="/projects" className="btn btn-outline-light btn-lg border-2 rounded-pill px-5 py-2">{t('headers.headerAbout.portfolioButton')}</Link>}
+              <Link to="/contact" className="btn btn-outline btn-lg border-2 rounded-pill px-5 py-2">{t('headers.headerAbout.contactButton')}</Link>
             </div>
           </div>
         </div>

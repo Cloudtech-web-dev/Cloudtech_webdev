@@ -69,7 +69,7 @@ export const HeaderHome = () => {
                                         </p>
 
 
-                                        <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 font-p1 fw-bold fs-6" style={{ width: 419, padding: "18px 34px", lineHeight: "18px" }}>
+                                        <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 fw-bold fs-5 py-2 px-5" style={{ width: 300 }}>
                                             {t('headers.headerHome.servicesPresentation.portfolioButton')}
                                         </Link>
 
@@ -125,7 +125,7 @@ export const HeaderHome = () => {
                                         </p>
 
 
-                                        <Link to="/projects" className="btn btn-outline btn-lg rounded-pill font-p1 px-5 py-3 w-100">
+                                        <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 font-p1 fs-5 px-5 py-2 w-75">
                                             {t('headers.headerHome.servicesPresentation.portfolioButton')}
                                         </Link>
 

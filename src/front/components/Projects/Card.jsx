@@ -39,7 +39,7 @@ export const Card = ({ id, cover, gallery = [], name, preview, index }) => {
                     </p>
                     <Link
                         to={`/projects/${id}`}
-                        className="btn btn-outline rounded-pill text-decoration-none py-2 px-4"
+                        className="btn btn-outline rounded-pill fs-5 fw-bold text-decoration-none py-2 px-5"
                     >
                         {t('projects.discoverMore')}
                     </Link>
