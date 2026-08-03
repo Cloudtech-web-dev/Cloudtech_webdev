@@ -154,19 +154,14 @@ export const ProjectsHome = () => {
                     `}</style>
                 </div>
 
-                <div className="home-projects-portfolio-btn d-flex flex-column justify-content-center flex-md-row gap-3">
-                    <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 font-p1 fw-bold fs-6" style={{ maxWidth: 419, width: "100%", padding: "18px 34px", lineHeight: "18px" }}>
+                <div className="home-projects-portfolio-btn d-flex flex-column justify-content-center align-items-center flex-md-row gap-3">
+                    <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 fw-bold fs-5 px-5 py-2" style={{ maxWidth: 419, width: "100%" }}>
                         {t('projects.sectionPortfolioButton')}
                     </Link>
                     <style>{`
                         @media (width < 768px) {
-                            .home-projects-portfolio-btn a {
-                                border-width: 1px !important;
-                                font-size: 20px !important;
-                                font-weight: 400 !important;
-                                letter-spacing: 0;
-                                line-height: var(--bs-btn-line-height) !important;
-                                padding: 0.5rem 3rem !important;
+                            .home-projects-portfolio-btn a {                                                                
+                                letter-spacing: 0;                                
                             }
                         }
                     `}</style>
