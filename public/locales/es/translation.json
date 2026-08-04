@@ -221,74 +221,70 @@
     }
   },
   "process": {
+    "processHeader": {
+      "title": "Cómo trabajamos",
+      "description": "Cada proyecto avanza con una metodología clara: entender, organizar, diseñar, desarrollar y ajustar. Así cuidamos que cada decisión —desde la estructura hasta la publicación— responda a tus objetivos y ayude a crear una experiencia clara, funcional y fácil de usar."
+    },
     "sectionToggleCapacities": "Capacidades",
     "sectionToggleProcess": "Proceso",
     "capacities": {
       "webConcept": {
-        "label": "Conceptualización Web",
-        "text": "Proceso creativo y estratégico que define los fundamentos visuales y estructurales de un sitio web. Identificamos los valores centrales y objetivos de tu marca, traduciéndolos en diseños de prueba alineados con la audiencia. Exploramos múltiples borradores de layout, paletas de color, tipografía y flujos de usuario. Generamos un marco claro y accionable para un sitio funcional, estéticamente impactante y alineado con las metas de tu negocio."
+        "label": "Estructura del sitio",
+        "text": "Ordenamos la información de tu proyecto para definir qué páginas necesita el sitio, cómo se organiza el contenido y qué recorrido debe hacer cada usuario. Esta base ayuda a que la experiencia sea clara desde el inicio."
       },
       "webAudit": {
-        "label": "Auditoría Web",
-        "text": "Evaluamos tu sitio web exhaustivamente para identificar mejoras en usabilidad, rendimiento, accesibilidad y diseño. Proporcionamos insights accionables, detectando barreras para la interacción del usuario y el crecimiento de tu negocio. Analizamos métricas clave (tiempos de carga, navegación). La auditoría identifica optimizaciones rápidas y a largo plazo (imágenes, estructura), entregando un informe detallado con recomendaciones priorizadas para mejoras impactantes en tu web."
+        "label": "Diseño y experiencia",
+        "text": "Diseñamos la estructura visual, los wireframes y las pantallas principales para que tu sitio sea atractivo, fácil de recorrer y coherente con la identidad de tu proyecto."
       },
       "webIntDev": {
-        "label": "Desarrollo Web Integral",
-        "text": "Servicio integral de creación web. Entregamos una presencia digital cohesiva y personalizada, alineada con tus objetivos y audiencia. Desarrollamos una arquitectura de información escalable para navegación fluida y comunicación efectiva. La fase de diseño crea una identidad visual completa con UI kits y elementos interactivos. El resultado es un sitio optimizado, de alto rendimiento y visualmente atractivo que impulsa la interacción y el crecimiento de tu negocio a largo plazo."
+        "label": "Desarrollo Web",
+        "text": "Construimos sitios funcionales, adaptables y fáciles de usar, cuidando rendimiento, seguridad y calidad técnica para que la experiencia funcione bien en distintos dispositivos."
       },
       "webDesignSystems": {
-        "label": "Sistemas de Diseño Web",
-        "text": "Creamos marcos reutilizables para simplificar actualizaciones y asegurar consistencia visual en tu ecosistema digital. Basados en estándares de la industria, organizamos elementos UI (botones, tipografía, colores) en módulos escalables para una creación eficiente de páginas, reduciendo recursos. Identificamos componentes clave, los ensamblamos en patrones y plantillas, y realizamos pruebas exhaustivas. Con documentación y capacitación, este sistema optimiza flujos, mejora la colaboración y apoya la escalabilidad web."
+        "label": "E-commerce",
+        "text": "Creamos tiendas online y catálogos digitales pensados para presentar productos con claridad, facilitar la compra y generar confianza durante todo el recorrido del usuario."
       },
       "webUpkeep": {
-        "label": "Mantenimiento Web",
-        "text": "Aseguramos que tu sitio web se mantenga seguro, funcional y alineado con tus objetivos de negocio. Nuestro servicio incluye actualizaciones rutinarias, monitoreo de rendimiento, corrección de errores y pruebas de calidad para anticipar problemas. Optimizamos el rendimiento, la velocidad de carga, la seguridad y realizamos actualizaciones menores de diseño o contenido. Esto garantiza un funcionamiento consistente, la satisfacción del usuario y una presencia digital confiable para tu marca."
+        "label": "Integraciones",
+        "text": "Conectamos tu sitio con herramientas externas como formularios, analítica, pasarelas de pago, sistemas de gestión o servicios de agendamiento, según lo que tu proyecto necesite."
       },
       "serviceIntegration": {
-        "label": "Integración de Servicios",
-        "text": "Mejoramos la funcionalidad de tu web conectándola con herramientas y servicios externos clave. Esto incluye plataformas de análisis, soporte al cliente, pasarelas de pago y agendamiento automático. Evaluamos tus necesidades y seleccionamos las herramientas adecuadas. Nuestro equipo gestiona la integración técnica para asegurar compatibilidad y un funcionamiento fluido, alineando todo con tu marca. El soporte post-integración garantiza sistemas eficientes, maximizando el valor."
+        "label": "Contenido para web ",
+        "text": "Te ayudamos a ordenar textos, imágenes y materiales clave para que tu sitio comunique mejor. El objetivo es que cada sección explique con claridad lo que haces, ofreces o vendes."
       },
       "strategicCommunication": {
-        "label": "Comunicación Estratégica",
-        "text": "Desarrollamos hojas de ruta completas para tu comunicación digital. Incluimos investigación exhaustiva de audiencia y competidores, definición de voz de marca, creación de pilares de contenido y planificación multicanal. Nuestro objetivo es que cada mensaje contribuya a tus metas de negocio, asegurando coherencia y efectividad a largo plazo."
+        "label": "Mantenimiento",
+        "text": "Acompañamos mejoras, actualizaciones y ajustes para que tu sitio siga funcionando correctamente después del lanzamiento."
       },
       "seoAndDigitalContent": {
-        "label": "SEO & Contenido Digital",
-        "text": "No solo escribimos, optimizamos. Creamos textos que captan la atención humana y la de los motores de búsqueda. Esto incluye redacción persuasiva, investigación de palabras clave, estructuración de contenido para la legibilidad (UX Writing) y adaptación de mensajes para cada plataforma, asegurando que tu contenido sea descubierto y genere la acción deseada."
-      },
-      "communityManagement": {
-        "label": "Gestión de Comunidades",
-        "text": "Vamos más allá de la publicación en redes. Construimos y nutrimos relaciones significativas con tu audiencia. Nuestra capacidad abarca la interacción activa, la moderación efectiva, la gestión de la reputación online y la creación de experiencias que aumentan tu audiencia y tus futuros clientes."
-      },
-      "metrics": {
-        "label": "Métricas y Resultados",
-        "text": "Medimos el impacto real de cada mensaje. Analizamos métricas clave en redes sociales, blogs y campañas para obtener insights accionables sobre el comportamiento de tu audiencia y el rendimiento del contenido. Esto nos permite optimizar estrategias en tiempo real y demostrar el retorno de inversión (ROI) de cada esfuerzo, ajustando el rumbo para asegurar el cumplimiento de tus objetivos de comunicación."
+        "label": "Optimización",
+        "text": "Revisamos estructura, contenido, velocidad, experiencia de usuario y detalles técnicos para detectar mejoras que ayuden a que tu sitio funcione mejor."
       }
     },
     "steps": {
       "firstStep": {
-        "label": "01. Recopilación de Información y Necesidades",
-        "text": "Antes de iniciar cualquier proyecto, nos enfocamos en comprender a fondo tus necesidades, metas de negocio y cualquier restricción o preferencia. Evaluamos riesgos potenciales y definimos los criterios de éxito y objetivos a cumplir. La comunicación es clave, y validamos la dirección del proyecto a través de presentaciones de resultados y reuniones para asegurar una comunicación ideal."
+        "label": "01. Entendemos el proyecto",
+        "text": "Conversamos contigo para conocer tus objetivos, tus referencias, tus necesidades y el punto en el que se encuentra tu proyecto. Esta etapa nos permite definir qué debe resolver la experiencia digital."
       },
       "secondStep": {
-        "label": "02. Onboarding y Descubrimiento",
-        "text": "Nuestro equipo se sumerge en tu marca y negocio. Exponemos los puntos esenciales de tu identidad, definimos objetivos claros, criterios de éxito y limitaciones. Si ya tienes presencia online, realizamos una auditoría inicial para mejoras. Analizamos la competencia para identificar oportunidades y soluciones UX/UI a tu beneficio."
+        "label": "02. Organizamos la información",
+        "text": "Definimos qué debe comunicar el sitio, cómo se organizará el contenido y qué recorrido necesita hacer cada usuario. Aquí construimos la base estratégica del proyecto."
       },
       "thirdStep": {
-        "label": "03. Arquitectura de Contenido Web",
-        "text": "Estructuramos la arquitectura de tu sitio. Definimos qué información va en cada página y cómo se conectan los elementos, creando un sitemap claro y una jerarquía de contenido intuitiva. Esto permite visualizar el flujo, planificar la experiencia del usuario y anticipar la ubicación estratégica de elementos clave, asegurando una navegación fluida y una experiencia de usuario optimizada."
+        "label": "03. Diseñamos la experiencia",
+        "text": "Creamos la estructura visual, los wireframes y las pantallas principales para definir cómo se verá y cómo se usará el sitio o plataforma."
       },
       "fourthStep": {
-        "label": "04. Wireframes de Baja Fidelidad (Low-Fidelity)",
-        "text": "Desarrollamos esquemas visuales básicos de tu web, enfocándonos en la estructura y diseño sin detalles estéticos. Determinamos la experiencia de Usuario, distribución de elementos, forma de bloques de contenido y posición de CTAs. Usamos textos de prueba para alinear contenido con lo visual y resolver conflictos. Desde desarrollo, evaluamos la complejidad para minimizar riesgos en la implementación."
+        "label": "04. Desarrollamos la solución",
+        "text": "Implementamos el sitio, tienda online, aplicación o plataforma con la tecnología adecuada, cuidando rendimiento, adaptabilidad y facilidad de uso."
       },
       "fifthStep": {
-        "label": "05. Conceptos Visuales",
-        "text": "Considerando tu industria, análisis competitivo, manual de marca y preferencias, creamos moodboards visuales. Estos muestran el tono emocional de tu producto, ejemplos de colores, formas y estilos que guiarán el diseño final. Aplicamos el diseño del moodboard elegido a los wireframes, definiendo colores, estilos de texto, tamaños de encabezados y seleccionando contenido ilustrativo e íconos."
+        "label": "05. Probamos y ajustamos",
+        "text": "Revisamos funcionamiento, navegación, contenidos y detalles visuales para corregir errores y afinar la experiencia antes del lanzamiento."
       },
       "sixthStep": {
-        "label": "06. Diseño Final y Desarrollo (Implementación)",
-        "text": "Una vez aprobada la dirección de diseño, finalizamos e integramos colores/estilos. Creamos una librería de elementos/reglas para construir páginas y módulos UI rápidamente, asegurando coherencia y eficiencia. El diseño pasa a desarrollo para programación completa (web dev, WordPress, otros CMS), optimizado, responsive y seguro. La coordinación diseño-desarrollo asegura que el resultado final cumpla los requisitos del cliente."
+        "label": "06. Publicamos y acompañamos",
+        "text": "Publicamos el proyecto y lo dejamos listo para operar, actualizarse o crecer. Si el proyecto lo necesita, también podemos acompañar mejoras posteriores."
       }
     }
   },

@@ -80,13 +80,13 @@ export const PageHeader = ({
 
               {/* (optional) Projects Button */}
               {withoutProjectsButton || (
-                <Link to="/projects" className="btn btn-outline-light btn-lg rounded-pill px-5">
+                <Link to="/projects" className="btn btn-outline-light btn-lg rounded-pill px-5 border-2 py-2">
                   {t('headers.headerAbout.portfolioButton')}
                 </Link>
               )}
 
               {/* Contact Button */}
-              <Link to="/contact" className="btn btn-outline btn-lg rounded-pill px-5">
+              <Link to="/contact" className="btn btn-outline btn-lg rounded-pill px-5 border-2 py-2">
                 {t('headers.headerAbout.contactButton')}
               </Link>
 

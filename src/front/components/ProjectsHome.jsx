@@ -96,8 +96,8 @@ export const ProjectsHome = () => {
                 </div>
 
                 {/* Navigate to All Projects Button */}
-                <div className="home-projects-portfolio-btn d-flex flex-column justify-content-center flex-md-row gap-3">
-                    <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 font-p1 fw-bold fs-6" style={{ maxWidth: 419, width: "100%", padding: "18px 34px", lineHeight: "18px" }}>
+                <div className="home-projects-portfolio-btn d-flex flex-column justify-content-center align-items-center flex-md-row gap-3">
+                    <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 fw-bold fs-5 px-5 py-2" style={{ maxWidth: 419, width: "100%" }}>
                         {t('projects.sectionPortfolioButton')}
                     </Link>
                 </div>
@@ -138,32 +138,7 @@ export const ProjectsHome = () => {
                 
                 @media (width >= 768px) {
                     .home-projects-title {
-                        font-size: 4rem;
-                        font-weight: 900;
                         .highlighted-text { background: none; }
-                    }
-                }
-                @media (width < 768px) {
-                    .home-projects-upper {
-                        .home-projects-title {
-                            font-size: 3rem;
-                            font-weight: 900;
-                            line-height: 1.4;
-                        }
-                        .home-projects-description {
-                            font-size: 1.5rem;
-                            font-weight: 500;
-                            letter-spacing: 0;
-                        }
-                    }
-
-                    .home-projects-portfolio-btn a {
-                        border-width: 1px !important;
-                        font-size: 20px !important;
-                        font-weight: 400 !important;
-                        letter-spacing: 0;
-                        line-height: var(--bs-btn-line-height) !important;
-                        padding: 0.5rem 3rem !important;
                     }
                 }
             `}</style>

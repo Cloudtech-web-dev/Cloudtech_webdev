@@ -51,7 +51,7 @@ h6 {
   border: 0.15rem #fbff06 solid;
   background-color: transparent;
   border-radius: 2rem;
-  padding: 0.5rem 5rem 0.5rem 5rem;
+
   color: white;
   font-weight: bold;
   transform: scale(1.02);
@@ -59,8 +59,8 @@ h6 {
 
 .ct-btn-outline-accent:hover {
   background-color: #fbff06;
-  padding: 0.5rem 5rem 0.5rem 5rem;
-  color: #217b8f;
+
+  color: #04171B;
   font-weight: bolder;
   transform: scale(1.02);
 }
@@ -678,26 +678,26 @@ h6 {
 
 /* Offcanvas mobile menu */
 
-.custom-menu-overlay {
+/* .custom-menu-overlay {
   position: fixed;
   top: 0;
-  left: -200%;
-  /* Escondido a la izquierda */
-  width: 100vw;
+  left: -200%; */
+/* Escondido a la izquierda */
+/* width: 100vw;
   height: 100vh;
-  background: linear-gradient(#60E0A5, #165766);
+  background: linear-gradient(#60E0A5, #165766); */
 
-  /* O el color de tu diseño */
-  z-index: 2000;
-  transition: left 0.3s ease-in-out;
+/* O el color de tu diseño */
+/* z-index: 2000; */
+/* transition: left 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* Cuando el estado es 'active' en React */
-.custom-menu-overlay.active {
+/* .custom-menu-overlay.active {
   left: 0;
-}
+} */
 
 /* Elementos servicios */
 

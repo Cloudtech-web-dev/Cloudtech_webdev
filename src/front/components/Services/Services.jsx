@@ -60,7 +60,7 @@ export const Services = () => {
 
                         {/* Link to Services Button */}
                         <div id="services-outline-btn" className="d-flex flex-column justify-content-center flex-md-row gap-3 w-100">
-                            <Link to="/services" className="btn btn-outline btn-lg rounded-pill border-4 py-3" style={{ fontWeight: 900, fontSize: 16, letterSpacing: 0, lineHeight: "1.125" }}>
+                            <Link to="/services" className="btn btn-outline btn-lg rounded-pill border-4 px-5 py-2 fs-5 fw-bold" style={{ letterSpacing: 0 }}>
                                 {t("services.exploreServicesButton")}
                             </Link>
                         </div>

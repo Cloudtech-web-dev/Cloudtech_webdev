@@ -1,11 +1,16 @@
 import CoverCosmo from '../assets/img/ProjectHeaders/Cosmocover.jpg'
+import LogoCosmo from '../assets/img/Portfolio/Cosmonauta/logo.svg'
 import CoverFlora from '../assets/img/ProjectHeaders/floracover.jpg'
 import CoverFlotilla from '../assets/img/ProjectHeaders/flotillacover.jpg'
 import CoverLibreras from '../assets/img/ProjectHeaders/librerascover.jpg'
 import CoverAsocove from '../assets/img/ProjectHeaders/asocovecover.jpg'
 import CoverBusquedas from '../assets/img/ProjectHeaders/busquedascover.jpg'
+import LogoBusquedas from '../assets/img/Portfolio/Busquedas/logo.png'
 import CoverMura from '../assets/img/ProjectHeaders/muracover.jpg'
+import LogoMura from '../assets/img/Portfolio/Mura/logo.png'
 import PiedraNegraCover from '../assets/img/ProjectHeaders/piedranegraCover.jpg'
+import LogoPiedraNegra from '../assets/img/Portfolio/Piedra Negra/logo.png'
+
 import { galleryCosmo, galleryFlotilla, galleryFlora, galleryLibreras, galleryAsocove, galleryBusquedas, galleryMura } from './galleryContent'
 import { needsCover } from './needsCoverGallery'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -21,6 +26,7 @@ import { faLeanpub, faWix } from "@fortawesome/free-brands-svg-icons";
 export const projectsList = [
     {
         id: 'libreria-cosmonauta',
+        logo: LogoCosmo,
         cover: CoverCosmo,
         name: 'projects.projectName1',
         preview: 'projects.projectPreview1',
@@ -82,6 +88,7 @@ export const projectsList = [
     },
     {
         id: 'piedra-negra',
+        logo: LogoPiedraNegra,
         cover: PiedraNegraCover,
         name: 'projects.projectName8',
         preview: 'projects.projectPreview8',
@@ -251,6 +258,7 @@ export const projectsList = [
     // },
     {
         id: 'busquedas',
+        logo: LogoBusquedas,
         cover: CoverBusquedas,
         name: 'projects.projectName6',
         preview: 'projects.projectPreview6',
@@ -308,6 +316,7 @@ export const projectsList = [
     },
     {
         id: 'mura',
+        logo: LogoMura,
         cover: CoverMura,
         name: 'projects.projectName7',
         preview: 'projects.projectPreview7',
