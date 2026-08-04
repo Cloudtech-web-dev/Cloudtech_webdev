@@ -17,6 +17,17 @@ const syncedBgStyles = (BgImport) => <style>{`
         color: transparent;
         background-clip: text;
     }
+        @media (max-width: 991px) {
+        .synced-bg {
+            background-attachment: scroll;
+        }
+        .hero-fix-container {
+            padding-top: 120px; 
+        }
+        .hero-title-home {
+            font-size: 2.8rem;
+        }
+    }
 `}</style>;
 
 const PageHeader = ({ title, description, backgroundImg, withProjectButton = true, withSphereEffect = false }) => {
@@ -24,6 +35,7 @@ const PageHeader = ({ title, description, backgroundImg, withProjectButton = tru
 
   return (
     <section className={`position-relative min-vh-100 overflow-hidden${syncedBg(false)}`}>
+      {syncedBgStyles(backgroundImg)}
 
       {withSphereEffect ? (
         <div className="position-absolute top-0 start-0 w-100 h-100 z-0 overflow-hidden">
@@ -41,7 +53,7 @@ const PageHeader = ({ title, description, backgroundImg, withProjectButton = tru
 
       <div className="position-absolute top-0 start-0 w-100 h-100 mx-auto" style={{ backgroundColor: "rgba(0, 0, 0, .55)", zIndex: 1 }} />
 
-      <div className="container w-100 min-vh-100 py-5 d-flex align-items-center position-relative z-2">
+      <div className="container hero-fix-container w-100 min-vh-100 py-5 d-flex align-items-center position-relative z-2">
         <div className="row w-100 z-0 d-flex justify-content-center">
           <div className="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center z-1 gap-5 w-auto">
             <h1 className="hero-title-home display-2 fw-bolder text-center">
@@ -51,7 +63,7 @@ const PageHeader = ({ title, description, backgroundImg, withProjectButton = tru
                   <span className={`highlighted-text ${syncedBg()}`} />
                 ]}
               />
-              {transparentText && syncedBgStyles(backgroundImg)}
+              {transparentText}
             </h1>
 
             <p className="hero-subtitle-home fs-5 fw-bold text-white text-center w-75">

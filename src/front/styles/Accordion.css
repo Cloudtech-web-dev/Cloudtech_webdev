@@ -20,7 +20,31 @@
     z-index: 1030;
     background-color: rgba(4, 23, 27, 0.16);
     border-radius: 0;
+    margin-bottom: -75px;
 }
+
+/* ==========================================
+   MENU MÓVIL OVERLAY (Efecto Glass)
+   ========================================== */
+.custom-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(4, 23, 27, 0.16);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 2000;
+    transition: left 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-menu-overlay.active {
+    left: 0;
+}
+
 
 /* ==========================================
    CONTENEDOR PRINCIPAL
@@ -204,6 +228,8 @@
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s ease;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .btn-outline-accent:hover {
@@ -247,6 +273,7 @@
     margin-top: 80px;
     /* Espacio generoso después del último acordeón */
     padding-bottom: 4rem;
+    padding: 0 20px;
     /* Espacio antes de que termine la sección */
 }
 
@@ -276,6 +303,34 @@
     .accordion-body-content {
         padding: 0 1.5rem 2rem 1.5rem;
     }
+
+    .synced-bg {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .accordion-footer-cta .btn-outline-accent {
+        width: 100%;
+    }
+
+    .item-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* .hero-content-container {
+        padding-top: 100px;
+    }
+
+    .hero-title-home.display-2 {
+        font-size: 2.8rem;
+        line-height: 1.1;
+    }
+
+    .hero-content-container.gap-5 {
+        gap: 2.5rem;
+    } */
 }
 
 @media (max-width: 576px) {
@@ -371,5 +426,82 @@
 
     .custom-gap-20 .col {
         width: 100%;
+    }
+}
+
+/* ==========================================
+   PROYECTOS: ESTÉTICA REVELADO (HOME STYLE)
+   ========================================== */
+
+/* Contenedor visual (El cuadro de la derecha/izquierda) */
+.project-reveal-container {
+    height: 450px;
+    /* Mantenemos el tamaño que tenías en Card */
+    /* background-color: #04171B; */
+    /* Color oscuro base de la card */
+    position: relative;
+    transition: background 0.4s ease;
+}
+
+/* Imagen de fondo (Cover) */
+.project-reveal-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    /* Totalmente oculta al inicio */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 1;
+}
+
+/* Capa del logo */
+.project-reveal-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0);
+    /* Oscurece un poco el fondo inicial */
+    transition: background 0.3s ease;
+}
+
+.project-reveal-logo {
+    width: 350px;
+    /* Tamaño del logo según ProjectsHome */
+    max-width: 80%;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 3;
+}
+
+/* --- EFECTOS HOVER (Activados por la fila completa) --- */
+
+.project-row-reveal:hover .project-reveal-bg {
+    opacity: 1;
+    /* Se revela la imagen de portada */
+    transform: scale(1);
+}
+
+.project-row-reveal:hover .project-reveal-overlay {
+    background: rgba(0, 0, 0, 0);
+    /* Se oscurece un poco más para contraste */
+}
+
+.project-row-reveal:hover .project-reveal-logo {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+
+/* El título cambia al amarillo de ProjectsHome */
+.project-row-reveal:hover .project-reveal-title {
+    transition: color 0.4s ease;
+}
+
+/* Ajuste responsivo para que no sean tan altas en móvil */
+@media (max-width: 991px) {
+    .project-reveal-container {
+        height: 320px;
     }
 }

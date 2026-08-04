@@ -111,7 +111,7 @@ export const Navbar = () => {
 
 			<div className={`custom-menu-overlay ${isOpen ? 'active' : ''}`}>
 				<div className="d-flex justify-content-between align-items-center border-2 border-white mx-3 my-4 p-3 rounded-pill">
-					<img src={LogoNavMovil} alt="CloudTech Logo Movil" className="h-auto w-auto" />
+					<img src={LogoNavbar} alt="CloudTech Logo Movil" className="h-auto w-auto" />
 					<button
 						type="button"
 						className="btn"
