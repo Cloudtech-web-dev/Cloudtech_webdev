@@ -206,6 +206,10 @@
     "exploreServicesButton": "Explore services"
   },
   "process": {
+    "processHeader": {
+      "title": "Cómo trabajamos",
+      "description": "Cada proyecto avanza con una metodología clara: entender, organizar, diseñar, desarrollar y ajustar. Así cuidamos que cada decisión —desde la estructura hasta la publicación— responda a tus objetivos y ayude a crear una experiencia clara, funcional y fácil de usar."
+    },
     "sectionToggleCapacities": "Capabilities",
     "sectionToggleProcess": "Process",
     "capacities": {

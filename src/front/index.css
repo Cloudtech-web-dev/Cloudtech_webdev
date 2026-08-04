@@ -48,7 +48,7 @@ h6 {
   border: 0.15rem #fbff06 solid;
   background-color: transparent;
   border-radius: 2rem;
-  padding: 0.5rem 5rem 0.5rem 5rem;
+
   color: white;
   font-weight: bold;
   transform: scale(1.02);
@@ -56,8 +56,8 @@ h6 {
 
 .ct-btn-outline-accent:hover {
   background-color: #fbff06;
-  padding: 0.5rem 5rem 0.5rem 5rem;
-  color: #217b8f;
+
+  color: #04171B;
   font-weight: bolder;
   transform: scale(1.02);
 }

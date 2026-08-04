@@ -14,7 +14,7 @@ export const WorkWithUS = () => {
     return (
 
         // <section className="py-5" style={{color: "var(--bs-gray-100)" , scrollSnapAlign: "end" }}>
-        <section className="py-5" style={{color: "var(--bs-gray-100)" }}>
+        <section className="py-5" style={{ color: "var(--bs-gray-100)" }}>
             <div className="container">
                 <div className="d-flex flex-column justify-content-center align-items-center">
                     <div className="home-workwithus-upper row" style={{ maxWidth: 1064, gap: 40, width: "100%" }}>
@@ -28,7 +28,7 @@ export const WorkWithUS = () => {
                                 {t('workWithUs.sectionDescription')}
                             </p>
                             <div className="mt-5 align-items-center justify-content-center">
-                                <Link className="btn btn-outline btn-lg rounded-pill border-2 font-p1 fw-bold fs-6 d-none d-lg-block mx-auto " to="/contact" style={{ minWidth: "50%", width: "fit-content", maxWidth: "80%", padding: "18px 34px", lineHeight: "18px" }}>
+                                <Link className="btn btn-outline btn-lg rounded-pill border-2 fw-bold fs-5 px-5 py-2 d-none d-lg-block mx-auto " to="/contact" style={{ minWidth: "50%", width: "fit-content", maxWidth: "80%" }}>
                                     {t('workWithUs.workWithUsCTA')}
                                 </Link>
                             </div>
