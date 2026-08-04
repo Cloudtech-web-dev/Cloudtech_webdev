@@ -1,83 +1,118 @@
 import { Link } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
-import { useRef, useEffect } from "react";
+
 import { GradientBg } from "./GradientBg";
+import { HighlightTransparencyBox } from "./HighlightTransparencyBox.jsx";
 
-const transparentText = true;
-const syncedBgClassName = "synced-bg";
-const syncedBg = (isHeading = true) => transparentText ? ` ${syncedBgClassName}${isHeading ? " is-header" : ""}` : "";
-const syncedBgStyles = (BgImport) => <style>{`
-    .${syncedBgClassName} {
-        background-image: url(${BgImport});
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-    }
-    .is-header {                                            
-        color: transparent;
-        background-clip: text;
-    }
-        @media (max-width: 991px) {
-        .synced-bg {
-            background-attachment: scroll;
-        }
-        .hero-fix-container {
-            padding-top: 120px; 
-        }
-        .hero-title-home {
-            font-size: 2.8rem;
-        }
-    }
-`}</style>;
 
-const PageHeader = ({ title, description, backgroundImg, withProjectButton = true, withSphereEffect = false }) => {
+/**
+ * @param {import("../utils/customTypes.js").PageHeaderProps} props
+ * */
+export const PageHeader = ({
+  title,
+  description,
+  backgroundImgURL,
+  withSphereEffect,
+  withoutProjectsButton,
+  withoutTransparencyEffect,
+  withoutBackgroundFilter,
+  withoutParallaxEffect
+}) => {
   const { t } = useTranslation();
 
   return (
-    <section className={`position-relative min-vh-100 overflow-hidden${syncedBg(false)}`}>
-      {syncedBgStyles(backgroundImg)}
+    <section className="position-relative min-vh-100 overflow-hidden">
 
-      {withSphereEffect ? (
-        <div className="position-absolute top-0 start-0 w-100 h-100 z-0 overflow-hidden">
-          <GradientBg />
+      {/* Background */}
+      <div className="position-absolute bottom-0 start-0 w-100 h-100 overflow-hidden" style={{ clipPath: "inset(0)" }}>
+
+        {/* Background Selection (between image or gradient background) */}
+        <div className={"bottom-0 start-0 w-100 h-100 " + (withoutParallaxEffect ? "position-absolute" : "position-fixed")}>
+          {(withSphereEffect || !backgroundImgURL) ?
+
+            (/* Gradient Spheres Background */
+
+              <GradientBg />
+              
+            ) : (/* Background Image */
+
+              <img
+                src={backgroundImgURL}
+                alt="CloudTech background image"
+                className="bottom-0 start-0 w-100 h-100 object-fit-cover"
+                style={{ objectPosition: "center center" }} />
+            )
+
+          }
         </div>
-      ) : (
-        !transparentText && (
-          <img
-            src={backgroundImg}
-            alt="CloudTech background image"
-            className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-0"
-            style={{ objectPosition: "center, center" }}
-          />)
-      )}
+        
+        {/* (optional) Background Filter */}
+        <div className={["position-absolute top-0 start-0 w-100 h-100 mx-auto",
+            withoutBackgroundFilter==='mobile' ? " d-none d-lg-block"
+          : withoutBackgroundFilter==='desktop' ? " d-lg-none"
+          : withoutBackgroundFilter ? " d-none" : ""
+        ]} style={{ backgroundColor: "rgba(0, 0, 0, .55)" }} />
 
-      <div className="position-absolute top-0 start-0 w-100 h-100 mx-auto" style={{ backgroundColor: "rgba(0, 0, 0, .55)", zIndex: 1 }} />
+      </div>
 
-      <div className="container hero-fix-container w-100 min-vh-100 py-5 d-flex align-items-center position-relative z-2">
-        <div className="row w-100 z-0 d-flex justify-content-center">
-          <div className="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center z-1 gap-5 w-auto">
+      {/* Section Contents */}
+      <div className="container w-100 min-vh-100 py-5 d-flex align-items-center position-relative">
+        <div className="row w-100 d-flex justify-content-center g-0">
+          <div className="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center gap-5 w-auto">
+
+            {/* Heading */}
             <h1 className="hero-title-home display-2 fw-bolder text-center">
-              <Trans
-                i18nKey={title}
-                components={[
-                  <span className={`highlighted-text ${syncedBg()}`} />
+              <Trans i18nKey={title} components={[
+                  withoutTransparencyEffect
+                    ? <span className="highlighted-text" style={{ display: "inline-flex", padding: "0 0.18em 0.08lh", margin: "0 0 -0.08lh" }} />
+                    : <HighlightTransparencyBox />
                 ]}
               />
-              {transparentText}
             </h1>
 
+            {/* Description */}
             <p className="hero-subtitle-home fs-5 fw-bold text-white text-center w-75">
               {t(description)}
             </p>
 
+            {/* Navigation Buttons */}
             <div className="d-flex flex-column justify-content-center flex-md-row gap-3 w-100">
-              {withProjectButton && <Link to="/projects" className="btn btn-outline-light btn-lg border-2 rounded-pill px-5 py-2">{t('headers.headerAbout.portfolioButton')}</Link>}
-              <Link to="/contact" className="btn btn-outline btn-lg border-2 rounded-pill px-5 py-2">{t('headers.headerAbout.contactButton')}</Link>
+
+              {/* (optional) Projects Button */}
+              {withoutProjectsButton || (
+                <Link to="/projects" className="btn btn-outline-light btn-lg rounded-pill px-5 border-2 py-2">
+                  {t('headers.headerAbout.portfolioButton')}
+                </Link>
+              )}
+
+              {/* Contact Button */}
+              <Link to="/contact" className="btn btn-outline btn-lg rounded-pill px-5 border-2 py-2">
+                {t('headers.headerAbout.contactButton')}
+              </Link>
+
             </div>
+
           </div>
         </div>
       </div>
+
+      {/* Component Styles */}
+      <style>{`
+        .synced-bg {
+            background-image: url(${backgroundImgURL});
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            
+            &.synced-bg-heading {
+                color: transparent;
+                background-clip: text;
+            }
+        }
+      `}</style>
+
     </section>
-  )
-}
+  );
+};
+
 export default PageHeader;

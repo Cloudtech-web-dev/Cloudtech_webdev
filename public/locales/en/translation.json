@@ -46,7 +46,22 @@
       "projects": "Projects",
       "contact": "Contact"
     },
-    "copywright": "All Rights Reserved."
+    "copywright": "All Rights Reserved.",
+    "socials": {
+      "facebook": {
+        "ariaLabel": "Visit our Facebook page"
+      },
+      "instagram": {
+        "ariaLabel": "Follow us on Instagram"
+      },
+      "linkedin": {
+        "ariaLabel": "Get to know us on LinkedIn"
+      },
+      "whatsapp": {
+        "ariaLabel": "Talk to us on WhatsApp",
+        "urlMessage": "Hello, I have an idea and I would like to bring it to life."
+      }
+    }
   },
   "about": {
     "sectionTitle": "<0>Who</0> are we?",
@@ -440,6 +455,10 @@
       "projectDescription6": "An editorial platform in three languages, designed to organize content, authors and translations clearly.",
       "projectDescription7": "Digital literature magazine, with a clean visual experience and a structure designed to give prominence to the content.",
       "projectDescription9": "A website designed to present audiovisual and photographic work in a clear, visual and professional way."
+    },
+    "aria": {
+      "bgImage": "Background image of {{projectName}}'s project card ",
+      "logo": "{{projectName}}'s logo"
     }
   },
   "testimonials": {

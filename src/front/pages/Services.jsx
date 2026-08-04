@@ -18,7 +18,7 @@ export const ServicesPage = () => {
                 <PageHeader
                     title="headers.headerServices.headLine"
                     description='headers.headerServices.headerDescription'
-                    backgroundImg={HomeServices}
+                    backgroundImgURL={HomeServices}
                 />
                 <Accordion />
                 <WhereToBegin />

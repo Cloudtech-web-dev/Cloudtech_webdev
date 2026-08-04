@@ -1,0 +1,165 @@
+@import "../constants.css";
+
+@value minCardWidth: 345px;
+@value maxCardWidth: 587px;
+@value minCardHeight: 474px;
+@value gapBetweenCards: 20px;
+
+/* •-------------------------• */
+/* ♦-----  CARD STYLES  -----♦ */
+/* •-------------------------• */
+
+.card-container {
+  min-width: minCardWidth;
+  width: min(maxCardWidth, 70vw);
+  max-width: maxCardWidth;
+  height: 100%;
+
+  .card {
+    height: 100%;
+    min-height: minCardHeight;
+
+    border: 1px solid var(--bs-gray-300);
+    border-radius: 12px;
+    padding: calc((10/121) * 100% - (1030px / 121));
+    /* ↑ 20px on min-width up to 40px on max-width */
+
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 20px;
+
+    color: var(--bs-gray-100);
+
+    .card-body {
+      flex: 1;
+
+      .user-review {
+        font-size: 19.2px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .card-separator {
+      border-color: var(--bs-gray-300);
+      opacity: 1;
+      margin-block: 4px 0;
+    }
+
+    .card-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+
+      container-type: inline-size;
+      container-name: footer-size;
+
+      @container footer-size (width < 465px) {
+        .user-info {
+          width: 100%;
+          justify-content: center;
+        }
+        .brand-logo-container {
+          max-width: 100%;
+        }
+      }
+
+      >* {
+        height: 68px;
+      }
+
+      .user-info {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        .profile-picture-container {
+          width: 60px;
+          height: 60px;
+          border-radius: 100%;
+          overflow: hidden;
+
+          .profile-picture {
+            width: 100%
+          }
+        }
+
+        .user-details {
+          display: flex;
+          flex-direction: column;
+          gap: 8.69px;
+          line-height: 1;
+          white-space: nowrap;
+
+          >* {
+            margin: 0
+          }
+
+          .user-name {
+            font-size: 20px;
+            text-box: cap alphabetic trim-start;
+          }
+
+          /* .user-position { } */
+        }
+      }
+
+      .brand-logo-container {
+        flex: 1;
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .brand-logo {
+          max-height: 100%;
+          object-fit: scale-down;
+        }
+      }
+    }
+  }
+}
+
+
+
+/* •----------------------------• */
+/* ♦-----  MARQUEE STYLES  -----♦ */
+/* •----------------------------• */
+
+@keyframes continuousScroll {
+    0% { transform: translateX(0) }
+    100% { transform: translateX(calc(-100% / var(--marquee-translate-delta, 2))) }
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+
+  &:hover .marquee-track {
+    animation-play-state: paused;
+  }
+  
+  .marquee-track {
+    display: flex;
+    justify-content: center;
+    width: max-content;
+
+    animation: continuousScroll var(--roll-duration, 30s) linear infinite;
+
+    .marquee-group {
+      display: flex;
+      align-items: stretch;
+      width: fit-content;
+      gap: gapBetweenCards;
+      padding-right: gapBetweenCards;
+
+      .marquee-slide {
+        .slide-contents {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

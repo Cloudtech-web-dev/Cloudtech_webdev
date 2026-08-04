@@ -17,7 +17,8 @@ export const Portfolio = () => {
                 <PageHeader
                     title="headers.headerProjects.headLine"
                     description='headers.headerProjects.headerDescription'
-                    backgroundImg={HomeProjects}
+                    backgroundImgURL={HomeProjects}
+                    withoutProjectsButton
                 />
                 <Projects />
                 <CallToAction />

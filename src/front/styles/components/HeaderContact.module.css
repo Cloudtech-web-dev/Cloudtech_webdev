@@ -1,13 +1,11 @@
 .form-bool-inputs label {
-  --transition-params: 0.2s ease;
 
   cursor: pointer;
   user-select: none;
   background-color: var(--switch-text-color, var(--bs-gray-100));
-  transition:
-    color var(--transition-params),
-    background-color var(--transition-params)
-  ;
+  transition: color, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 
   &:not(:has(input[type="text"])) {
 
@@ -45,24 +43,27 @@
     opacity: 1;
     transform: scaleY(1);
     transform-origin: top;
-    --picker-transition-params: 0.3s ease;
-    transition: opacity var(--picker-transition-params), transform var(--picker-transition-params);
+    transition: opacity, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
   }
 
   @starting-style {
     select::picker(select) {
       opacity: 0;
       transform: scaleY(0);
-      --picker-transition-params: 1s ease;
-      transition: opacity var(--picker-transition-params), transform var(--picker-transition-params);
+      transition: opacity, transform;
+      transition-duration: 1s;
+      transition-timing-function: ease;
     }
   }
 
   select option {
     padding: 12px;
     background-color: var(--bs-gray-100);
-    --option-transition-params: 0.2s ease;
-    transition: background var(--option-transition-params), color var(--option-transition-params);
+    transition: background, color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
 
     &::checkmark {
       opacity: 0
@@ -143,7 +144,7 @@
         width: 10px;
         height: 10px;
         transform: scale(0);
-        transition: 120ms transform ease-in-out;
+        transition: transform 120ms ease-in-out;
         background-color: var(--bs-gray-100);
 
         border-radius: 2px;
@@ -245,6 +246,7 @@
 
 .form {
   @media (width < 768px) {
+
     gap: 30px !important;
   
     .section {
