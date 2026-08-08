@@ -12,7 +12,7 @@ export const PageHeader = ({
   title,
   description,
   backgroundImgURL,
-  withSphereEffect,
+  withoutSphereEffect,
   withoutProjectsButton,
   withoutTransparencyEffect,
   withoutBackgroundFilter,
@@ -28,7 +28,7 @@ export const PageHeader = ({
 
         {/* Background Selection (between image or gradient background) */}
         <div className={"bottom-0 start-0 w-100 h-100 " + (withoutParallaxEffect ? "position-absolute" : "position-fixed")}>
-          {(withSphereEffect || !backgroundImgURL) ?
+          {(!withoutSphereEffect || !backgroundImgURL) ?
 
             (/* Gradient Spheres Background */
 
