@@ -600,9 +600,11 @@
         "options": {
           "placeholder": "Escoge una opción...",
           "opt1": "Tengo una idea inicial",
-          "opt2": "Opción 2",
-          "opt3": "Opción 3",
-          "opt4": "Opción 4"
+          "opt2": "Ya tengo marca o identidad visual",
+          "opt3": "Ya tengo diseño",
+          "opt4": "Ya tengo una web y quiero mejorarla",
+          "opt5": "Estoy listo para empezar",
+          "opt6": "Necesito orientación"
         }
       },
       "section3": {
