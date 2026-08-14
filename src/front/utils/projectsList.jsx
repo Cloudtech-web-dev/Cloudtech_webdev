@@ -3,6 +3,7 @@ import LogoCosmo from '../assets/img/Portfolio/Cosmonauta/logo.svg'
 import CoverFlora from '../assets/img/ProjectHeaders/floracover.jpg'
 import CoverFlotilla from '../assets/img/ProjectHeaders/flotillacover.jpg'
 import CoverLibreras from '../assets/img/ProjectHeaders/librerascover.jpg'
+import LogoLibreras from '../assets/img/Portfolio/Libreras/logo.png'
 import CoverAsocove from '../assets/img/ProjectHeaders/asocovecover.jpg'
 import CoverBusquedas from '../assets/img/ProjectHeaders/busquedascover.jpg'
 import LogoBusquedas from '../assets/img/Portfolio/Busquedas/logo.png'
@@ -93,32 +94,32 @@ export const projectsList = [
         name: 'projects.projectName8',
         preview: 'projects.projectPreview8',
         summary: 'projects.projectSummary8',
-        need: 'projects.projectNeed1',
+        need: 'projects.projectNeed8',
         needsArt: needsCover[0],
-        process: 'projects.projectProcess1.description',
+        process: 'projects.projectProcess8.description',
         phase: [
             {
                 icon: <FontAwesomeIcon icon={faArrowsSplitUpAndLeft} size="5x" />,
-                title: 'projects.projectProcess1.phase1Title',
-                description: 'projects.projectProcess1.phase1'
+                title: 'projects.projectProcess8.phase1Title',
+                description: 'projects.projectProcess8.phase1'
             },
             {
                 icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
-                title: 'projects.projectProcess1.phase2Title',
-                description: 'projects.projectProcess1.phase2'
+                title: 'projects.projectProcess8.phase2Title',
+                description: 'projects.projectProcess8.phase2'
             },
             {
                 icon: <FontAwesomeIcon icon={faCode} size="5x" />,
-                title: 'projects.projectProcess1.phase3Title',
-                description: 'projects.projectProcess1.phase3'
+                title: 'projects.projectProcess8.phase3Title',
+                description: 'projects.projectProcess8.phase3'
             },
             {
                 icon: <FontAwesomeIcon icon={faCreditCard} size="5x" />,
-                title: 'projects.projectProcess1.phase4Title',
-                description: 'projects.projectProcess1.phase4'
+                title: 'projects.projectProcess8.phase4Title',
+                description: 'projects.projectProcess8.phase4'
             }
         ],
-        solution: 'projects.projectSolution1',
+        solution: 'projects.projectSolution8',
         // gallery: gallerypiedraNegra,
         credits: [
             {
@@ -374,6 +375,7 @@ export const projectsList = [
     },
     {
         id: 'las-libreras-leen',
+        logo: LogoLibreras,
         cover: CoverLibreras,
         name: 'projects.projectName4',
         preview: 'projects.projectPreview4',

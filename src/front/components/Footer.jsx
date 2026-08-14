@@ -98,11 +98,27 @@ export const Footer = ({ withBrandCard = true }) => {
 						<span className="d-none d-md-inline"> | </span>
 						{t('footer.copywright')}
 					</span>
+					<span className="d-block d-md-inline text-ct-gray mt-2 mt-md-0">
+						<span className="d-none d-md-inline"> | </span>
+						<Link to="/terms-conditions" className="footer-legal-link">
+							{t('footer.termsAndPrivacy')}
+						</Link>
+					</span>
 				</p>
 			</div>
 			
 			{/* Component Styles */}
 			<style>{`
+				.footer-legal-link {
+					color: inherit;
+					text-decoration: underline;
+					text-underline-offset: 3px;
+					transition: opacity 0.3s ease, color 0.3s ease;
+				}
+				.footer-legal-link:hover {
+					opacity: 0.8;
+					color: var(--bs-secondary-1);
+				}
 				@media (width < 1400px) {
 					.footer-contact-info {
 						gap: 0 !important;

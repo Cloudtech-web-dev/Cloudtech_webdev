@@ -9,32 +9,32 @@
   },
   "headers": {
     "headerHome": {
-      "headLine": "We design websites and digital <0>experiences</0> for creatives and brands with identity",
+      "headLine": "We design websites and digital <0>experiences</0> for creatives and brands with <0>identity</0>",
       "headerDescription": "We combine design, narrative and web development for projects that need a digital presence at the level of their work.",
       "portfolioButton": "Projects",
-      "contactButton": "Contact Us",
+      "contactButton": "Let's Talk",
       "servicesPresentation": {
         "headLine": "<0>More than a website:</0> a clear way to present what you do",
-        "description": "We create websites for projects that need to better show their work, their products or their services. We turn ideas, content and identity into clear, attractive and intuitive digital experiences.",
-        "portfolioButton": "See Projects"
+        "description": "We create platforms for projects that need to elevate their work, products, or services. We transform your ideas, content, and DNA into clear, immersive, and intuitive digital experiences.",
+        "portfolioButton": "View Projects"
       }
     },
     "headerAbout": {
       "headLine": "A digital studio for projects with <0>identity</0>",
-      "headerDescription": "We mold your ideas into powerful web experiences that reflect your brand's essence and meet your strategic objectives.",
+      "headerDescription": "We create websites and digital experiences for projects with identity, taking care of how they look, how they are understood, and how they work.",
       "portfolioButton": "View Projects",
       "contactButton": "Let's Talk"
     },
     "headerServices": {
-      "headLine": "Your custom-made universe",
-      "headerDescription": "Our services are the bridge between your ideas and powerful digital solutions that will boost your brand and generate sustained growth.",
+      "headLine": "Websites, applications, and online stores with <0>identity</0>",
+      "headerDescription": "We create clear, attractive, and functional digital experiences, designed to show your work, your products, or your services better.",
       "portfolioButton": "View Projects",
-      "contactButton": "Contact Us"
+      "contactButton": "Let's Talk"
     },
     "headerProjects": {
-      "headLine": "We Design and Connect Your Digital Ecosystem",
-      "headerDescription": "We explore the intersection between strategy, design, and technology to build unique digital solutions that solve real challenges and channel efforts towards an unparalleled experience.",
-      "contactButton": "Contact Us"
+      "headLine": "Digital projects with <0>identity</0>",
+      "headerDescription": "A selection of websites, online stores, portfolios, and editorial platforms where design, content, and development integrate to better present a brand, a product, or an idea.",
+      "contactButton": "Let's Talk"
     }
   },
   "footer": {
@@ -47,6 +47,7 @@
       "contact": "Contact"
     },
     "copywright": "All Rights Reserved.",
+    "termsAndPrivacy": "Terms and Conditions / Privacy Policy",
     "socials": {
       "facebook": {
         "ariaLabel": "Visit our Facebook page"
@@ -65,64 +66,64 @@
   },
   "about": {
     "sectionTitle": "<0>Who</0> are we?",
-    "sectionDescription": "We are a company that believes in the value of uniting creativity and technology. We combine strategy, cutting-edge design, and robust technology to create an intuitive and functional online presence.",
+    "sectionDescription": "CloudTech is a digital studio that unites design, narrative, and web development. We work with brands, creatives, and projects that need a clear, attractive, and functional digital presence. We care about how a site looks, but also how it is experienced and how it presents a portfolio, a product, or an idea in the best possible way.",
     "workSteps": {
       "opening": {
         "openingTitle": "How <0>we work</0>",
-        "openingDescription": "Cada proyecto empieza por entender qué necesita comunicar, a quién debe llegar y cómo debe funcionar. A partir de ahí, ordenamos la información, definimos la experiencia, diseñamos la interfaz y desarrollamos una solución clara, funcional y alineada con los objetivos del proyecto."
+        "openingDescription": "Each project begins by understanding what it needs to communicate, who it must reach, and how it should work. From there, we organize the information, define the experience, design the interface, and develop a clear, functional solution aligned with the project's objectives."
       },
       "steps": {
         "step1": {
           "title": "<0>We listen</0> and understand",
-          "description": "Ordenamos las ideas, definimos la estructura y construimos la web completa."
+          "description": "Getting to know your project, your objectives, your references, and the real needs the website or digital experience must solve."
         },
         "step2": {
           "title": "<0>We organize</0> the information",
-          "description": "Definimos qué debe decir tu sitio, cómo se organiza el contenido y qué recorrido necesita hacer cada usuario."
+          "description": "Defining what your site should say, how the content is organized, and what journey each user needs to take."
         },
         "step3": {
           "title": "<0>We design</0> the experience",
-          "description": "Trabajamos la estructura visual, los wireframes y las pantallas principales para que el proyecto se vea claro, atractivo y fácil de recorrer."
+          "description": "Working on the visual structure, wireframes, and main screens to ensure the project is clear, attractive, and easy to navigate."
         },
         "step4": {
           "title": "<0>We develop</0> the solution",
-          "description": "Construimos el sitio, tienda online, aplicación o plataforma con la tecnología adecuada para que funcione bien y pueda crecer."
+          "description": "Building the website, online store, application or platform with the appropriate technology to ensure it functions well and can grow."
         },
         "step5": {
           "title": "<0>We publish</0> and accompany",
-          "description": "Revisamos, ajustamos y dejamos una base lista para que el proyecto pueda continuar, actualizarse o escalar según sus necesidades. "
+          "description": "Reviewing, adjusting, and leaving a solid foundation for the project to continue, update, or scale according to its needs."
         }
       }
     },
     "values": {
       "opening": {
         "openingTitle": "What guides our <0>work</0>",
-        "openingDescription": "Cada proyecto necesita algo distinto, pero nuestra forma de trabajar se sostiene en principios claros: entender antes de construir, diseñar con intención y desarrollar soluciones que funcionen para personas reales."
+        "openingDescription": "Every project needs something different, but our way of working is sustained by clear principles: understanding before building, designing with intention, and developing solutions that work for real people."
       },
       "valueContent": {
         "value1": {
-          "title": "CLARIDAD",
-          "description": "Ordenamos ideas, contenidos y recorridos para que cada sitio sea fácil de entender, usar y explorar."
+          "title": "CLARITY",
+          "description": "We organize ideas, content, and journeys so that each site is easy to understand, use, and explore."
         },
         "value2": {
-          "title": "CRITERIO",
-          "description": "No trabajamos con fórmulas genéricas. Cada decisión de diseño, contenido y desarrollo responde a la identidad y los objetivos del proyecto."
+          "title": "JUDGEMENT",
+          "description": "We don't work with generic formulas. Each design, content, and development decision responds to the project's identity and objectives."
         },
         "value3": {
-          "title": "SOLIDEZ TÉCNICA",
-          "description": "Cuidamos que cada sitio funcione bien: que sea estable, adaptable, fácil de usar y preparado para crecer y escalar."
+          "title": "TECHNICAL SOLIDITY",
+          "description": "We ensure each site functions well: that it is stable, adaptable, easy to use, and ready to grow and scale."
         },
         "value4": {
-          "title": "COLABORACIÓN",
-          "description": "Trabajamos cerca de cada cliente para entender sus necesidades, resolver dudas y avanzar con comunicación clara durante todo el proceso."
+          "title": "COLLABORATION",
+          "description": "We work closely with each client to understand their needs, resolve questions, and move forward with clear communication throughout the process."
         },
         "value5": {
-          "title": "INNOVACIÓN",
-          "description": "Exploramos nuevas herramientas y formas de trabajo cuando el proyecto lo necesita, sin perder de vista lo esencial: construir soluciones útiles y bien pensadas."
+          "title": "INNOVATION",
+          "description": "We explore new tools and ways of working when the project requires it, without losing sight of the essential: building useful and well-thought-out solutions."
         },
         "value6": {
-          "title": "TRANSPARENCIA",
-          "description": "Mantenemos procesos claros, decisiones explicadas y expectativas realistas para que cada etapa del proyecto avance con confianza."
+          "title": "TRANSPARENCY",
+          "description": "We maintain clear processes, explained decisions, and realistic expectations so that each stage of the project progresses with confidence."
         }
       }
     }
@@ -136,6 +137,13 @@
     "communicationSubtitle": "Uniting your audiences",
     "softwareSolutionsTitle": "Software Solutions",
     "softwareSolutionsSubtitle": "Tools to bring your ideas to life",
+    "exploreServicesButton": "Explore Services",
+    "kinds": {
+      "webSites": "Websites",
+      "webApps": "Web Applications",
+      "eCommerce": "E-commerce",
+      "visualIdentity": "Visual Identity and Content"
+    },
     "card": {
       "wordpress": {
         "title": "Wordpress",
@@ -190,40 +198,133 @@
     },
     "whereToBegin": {
       "opening": {
-        "openingTitle": "No todos los proyectos empiezan en el mismo punto",
-        "openingDescription": "Puedes llegar con una idea, una marca ya creada, un diseño listo o una web que necesita mejorar. Nos adaptamos al punto en el que estás para ayudarte a avanzar, a lo que tu proyecto necesita hoy."
+        "openingTitle": "Not all <0>projects</0> start at the same point",
+        "openingDescription": "You can arrive with an idea, an already created brand, a ready design, or a website that needs to improve. We adapt to the point where you are to help you advance, to what your project needs today."
       },
       "phases": {
         "phase1": {
-          "title": "EMPEZAR DESDE CERO",
-          "description": "Ordenamos las ideas, definimos la estructura y construimos la web completa."
+          "title": "START FROM SCRATCH",
+          "description": "We organize ideas, define the structure, and build the complete website."
         },
         "phase2": {
-          "title": "DISEÑO Y EXPERIENCIA",
-          "description": "No trabajamos con fórmulas genéricas. Cada decisión de diseño, contenido y desarrollo responde a la identidad y los objetivos del proyecto."
+          "title": "DESIGN AND EXPERIENCE",
+          "description": "We don't work with generic formulas. Each design, content, and development decision responds to the project's identity and objectives."
         },
         "phase3": {
-          "title": "LLEVA TU DISEÑO A LA WEB",
-          "description": "Tomamos diseños existentes y los convertimos en sitios funcionales, responsivos y fáciles de usar."
+          "title": "TAKE YOUR DESIGN TO THE WEB",
+          "description": "We take existing designs and convert them into functional, responsive, and easy-to-use websites."
         },
         "phase4": {
-          "title": "OPTIMIZAR TU WEB",
-          "description": "Revisamos lo que ya tienes y proponemos mejoras en estructura, diseño, contenido, rendimiento o funcionalidad."
+          "title": "OPTIMIZE YOUR WEBSITE",
+          "description": "We review what you already have and propose improvements in structure, design, content, performance, or functionality."
         }
       }
     },
-    "kinds": {
-      "webSites": "Websites",
-      "webApps": "Web applications",
-      "eCommerce": "E-commerce",
-      "visualIdentity": "Identity and visual content"
+    "servicesList": {
+      "websites": {
+        "title": "Websites",
+        "description": "For brands, creatives, and projects that need to better showcase their work, products, or services.",
+        "brandSites": {
+          "title": "Brand Sites",
+          "description": "We create clear, attractive, and user-friendly sites to present your project, services, or brand with identity.",
+          "button": "Discover our portfolio"
+        },
+        "creativePortfolios": {
+          "title": "Creative Portfolios",
+          "description": "We design websites to showcase visual, audiovisual, or editorial work in a professional and easy-to-navigate way.",
+          "button": "Discover our portfolio"
+        },
+        "editorialSites": {
+          "title": "Editorial Sites",
+          "description": "We build platforms for magazines, cultural projects, and content-driven sites that need to organize publications and authors.",
+          "button": "Discover our portfolio"
+        },
+        "implementation": {
+          "title": "Implementation",
+          "description": "We adapt technology to your project: WordPress, Webflow, or custom web development.",
+          "button": "Discover our portfolio"
+        }
+      },
+      "webApps": {
+        "title": "Web Applications",
+        "description": "For projects that need custom-made tools, platforms, or specialized functionalities.",
+        "customPlatforms": {
+          "title": "Custom Platforms",
+          "description": "We develop digital tools with specific features to solve the concrete needs of your project.",
+          "button": "Discover our portfolio"
+        },
+        "dashboards": {
+          "title": "Dashboards & Management",
+          "description": "We create systems to manage content, products, users, or information in a clear and organized manner.",
+          "button": "Discover our portfolio"
+        },
+        "specialFeatures": {
+          "title": "Special Features",
+          "description": "We develop filters, search engines, advanced forms, private areas, and personalized interactions.",
+          "button": "Discover our portfolio"
+        },
+        "integrations": {
+          "title": "Integrations",
+          "description": "We connect your platform with external tools such as forms, analytics, payments, or management systems.",
+          "button": "Discover our portfolio"
+        }
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "For brands that want to sell products online with a clear and reliable experience.",
+        "onlineStore": {
+          "title": "Online Stores",
+          "description": "We build stores designed to present products clearly and facilitate a trustworthy shopping experience.",
+          "button": "Discover our portfolio"
+        },
+        "catalogues": {
+          "title": "Digital Catalogues",
+          "description": "We organize products, categories, and key information so your customers find exactly what they need.",
+          "button": "Discover our portfolio"
+        },
+        "payments": {
+          "title": "Payments & Integrations",
+          "description": "We integrate payment gateways, forms, or external management tools based on your project's scope.",
+          "button": "Discover our portfolio"
+        },
+        "shoppingExperience": {
+          "title": "Shopping Experience",
+          "description": "We take care of the user journey so that exploring, choosing, and buying is clear, simple, and secure.",
+          "button": "Discover our portfolio"
+        }
+      },
+      "visualIdentity": {
+        "title": "Identity & Visual Content",
+        "description": "For projects that need to align their image and prepare visual materials that best accompany their digital presence.",
+        "webContent": {
+          "title": "Web Content",
+          "description": "We help you organize texts, images, and key materials so that each section communicates with clarity.",
+          "button": "Discover our portfolio"
+        },
+        "visualDirection": {
+          "title": "Visual Direction",
+          "description": "We align the site's aesthetics with the project's identity so that everything looks coherent and polished.",
+          "button": "Discover our portfolio"
+        },
+        "photoVideo": {
+          "title": "Photography & Video",
+          "description": "When required, we coordinate visual production with specialized teams to strengthen your digital presence.",
+          "button": "Discover our portfolio"
+        },
+        "presentation": {
+          "title": "Presentations & Materials",
+          "description": "We prepare complementary pieces to explain, launch, or better present your project.",
+          "button": "Discover our portfolio"
+        }
+      }
     },
-    "exploreServicesButton": "Explore services"
+    "ServicesProjectsButton": "View Portfolio",
+    "ServicesCTAButton": "Schedule a Call"
   },
   "process": {
     "processHeader": {
-      "title": "Cómo trabajamos",
-      "description": "Cada proyecto avanza con una metodología clara: entender, organizar, diseñar, desarrollar y ajustar. Así cuidamos que cada decisión —desde la estructura hasta la publicación— responda a tus objetivos y ayude a crear una experiencia clara, funcional y fácil de usar."
+      "title": "How We Work",
+      "description": "Each project progresses with a clear methodology: understand, organize, design, develop, and adjust. This way we ensure that every decision — from the structure to the publication — responds to your goals and helps create a clear, functional, and easy-to-use experience."
     },
     "sectionToggleCapacities": "Capabilities",
     "sectionToggleProcess": "Process",
@@ -299,11 +400,15 @@
   "projects": {
     "sectionTitle": "Our Projects",
     "sectionDescription": "Some projects where we help brands and creatives to better present their work, their products and their ideas.",
-    "sectionCTAButton": "Conectemos ahora",
+    "sectionCTAButton": "Let's talk about your project",
     "sectionPortfolioButton": "Explore our portfolio",
     "discoverMore": "Discover More",
     "sectionTitle2": "Our Projects",
     "sectionDescription2": "Each project starts with a different need: selling products, organizing content, showcasing a project, or building a clear digital identity. These projects demonstrate how we combine structure, design and development to create useful, attractive and easy-to-use digital experiences.",
+    "sectionCTA": {
+      "sectionTitle": "<0>Explore</0> our complete portfolio",
+      "sectionDescription": "We created a downloadable version with selected projects, services, and examples of how we combine design, content, and development to build digital experiences with identity."
+    },
     "menuItems": {
       "itemOne": "[01] The Need",
       "itemTwo": "[02] Our Process",
@@ -320,7 +425,7 @@
     "projectName3": "Flotilla Amazónica",
     "projectPreview3": "The multilingual website for the Flotilla Amazónica, integrating a digital asset hub and a secure press room to amplify the global visibility of their 3,000 km journey toward COP30. ",
     "projectSummary3": "The Flotilla Amazónica is a climate action journey navigating from the Andes to Belém toward COP30. CloudTech, alongside Colmena Lab, developed a multilingual platform designed to centralize the journey's narrative and manage critical resources for the press and global allies. The result is a website that amplifies the visibility of Amazonian territories and peoples, facilitating the secure distribution of content in Spanish, English, and Portuguese. ",
-    "projectName4": "Las libreras leen",
+    "projectName4": "Las Libreras Leen",
     "projectPreview4": "A digital magazine and content platform for Las Libreras Leen, integrating a specialized CMS and membership features to attract qualified traffic and strengthen conversion toward their e-commerce.",
     "projectSummary4": "Las Libreras Leen is a digital magazine linked to Librería Cosmonauta. The project developed a space with specialized content to foster reading and cultural debate. The result is a website that strengthens the reading community in Quito, Ecuador, and increases conversion toward Librería Cosmonauta’s e-commerce through product integration. ",
     "projectName5": "ASOCOVE",
@@ -334,9 +439,11 @@
     "projectSummary7": "MURA is a digital magazine specialized in literature and arts that seeks to dismantle the traditional structures of literary genres. CloudTech materialized the project comprehensively, designing its visual identity from scratch and implementing a dynamic editorial platform on WordPress. The result is a fluid, self-managed editorial ecosystem that showcases the disruptive talent of Ecuador and Latin America. ",
     "projectName8": "Piedra Negra",
     "projectPreview8": "Visual branding and commercial tool development for an Ecuadorian coffee brand seeking to strengthen its retail presence and open up B2B opportunities. ",
-    "projectSummary8": "MURA is a digital magazine specialized in literature and arts that seeks to dismantle the traditional structures of literary genres. CloudTech materialized the project comprehensively, designing its visual identity from scratch and implementing a dynamic editorial platform on WordPress. The result is a fluid, self-managed editorial ecosystem that showcases the disruptive talent of Ecuador and Latin America. ",
-    "projectName9": "Portfolio Jean-Pierre Olivares",
-    "projectNeed1": "The bookstore required a scalable digital sales channel to market its catalog nationwide. The technical challenge was to centralize inventory management for multiple independent publishers and replace manual sales processes with an automated, secure infrastructure capable of handling complex payment flows without user friction. ",
+    "projectSummary8": "Piedra Negra is an Ecuadorian coffee brand with a presence in retail and a trajectory built around coffee roasted at origin. The project consisted of updating and ordering its visual identity through a base brand manual, and developing two commercial presentations to support its expansion: one focused on retail and another oriented to corporate clients of white label and private label. ",
+    "projectName9": "Creative Portfolio — Jean-Pierre Olivares",
+    "projectSummary9": "Jean Pierre Olivares is a director of photography, director, and photographer based in Paris. The project consists of designing and developing a portfolio website capable of presenting his audiovisual and photographic work in a clear, sober, and visual way. The experience is designed to organize projects of cinematography, direction, short films, and photography without competing with the power of the images. ",
+    "projectPreview9": "A portfolio website for Jean-Pierre Olivares, a director of photography and photographer based in Paris, designed to showcase his audiovisual and photographic work in a clear and visual manner.",
+    "projectNeed1": "The bookstore needed a digital channel to sell its catalog nationwide and leave manual sales processes behind. The challenge was to organize products from different publishers, facilitate book searching, manage inventory, and enable secure payments without generating friction for the user.",
     "projectProcess1": {
       "description": "For Cosmonauta, the methodology centered on building a technical infrastructure capable of unifying complex inventory management with a seamless shopping experience. The development approach prioritized backend robustness and transactional security, ensuring the platform scales perfectly alongside its growing literary catalog.",
       "phase1Title": "1. Information Architecture",
@@ -427,9 +534,35 @@
       "phase4": "Managed to create a robust, customized core in WordPress, ensuring that the MURA team can manage editions and handle multimedia assets with complete operational autonomy. "
     },
     "projectSolution7": "The team delivered a 360° solution that equipped MURA with a unique visual personality and top-tier digital infrastructure. The magazine now has a solid brand and a dynamic portal that functions as a living, enduring archive for regional cultural criticism. The core of the solution is strategic autonomy: by centralizing management on a custom platform, we empowered the editorial team to lead their project without technical dependencies. Thanks to this technical and visual foundation, MURA projects its artistic vision onto a global stage, ensuring that every artwork is presented in a professional, secure, and aesthetically flawless environment. ",
+    "projectNeed8": "La marca necesitaba recuperar coherencia visual y contar con materiales comerciales más sólidos para presentarse ante supermercados, distribuidores y potenciales clientes B2B. Aunque el producto ya tenía buen desempeño en percha, la identidad visual se había fragmentado con el tiempo y las presentaciones comerciales existentes no reflejaban la calidad, trayectoria y capacidad productiva de la empresa. El reto era construir una base visual clara y preparar herramientas que ayudaran al equipo comercial a comunicar mejor el valor de Piedra Negra: café ecuatoriano, tostado en origen, con capacidad industrial y una oferta adaptable a distintos canales.",
+    "projectProcess8": {
+      "description": "Para resolver la fragmentación visual y fortalecer su perfil corporativo, dividimos el trabajo en la normalización de la identidad de marca y la creación de herramientas B2B. Nuestro enfoque fue recuperar la esencia del café tostado en origen y traducirla en materiales profesionales que respaldaran al equipo comercial frente a distribuidores y supermercados.",
+      "phase1Title": "1. Diagnóstico de Marca",
+      "phase1": "Revisamos el estado visual de Piedra Negra y la necesidad de construir una base gráfica coherente para futuras aplicaciones comerciales, digitales y de retail.",
+      "phase2Title": "2. Manual de Marca",
+      "phase2": "Desarrollamos una guía de identidad visual con lineamientos de logotipo, símbolo, versiones de marca, zonas de protección, reducciones, tipografías, cromática y aplicaciones.",
+      "phase3Title": "3. Presentación Retail",
+      "phase3": "Diseñamos una herramienta comercial para supermercados, organizada alrededor de la trayectoria de la empresa, sus procesos, productos, clientes y fichas comerciales.",
+      "phase4Title": "4. Presentación Private Label",
+      "phase4": "Creamos una presentación corporativa enfocada en marcas blancas, destacando capacidades productivas, desarrollo de producto, formatos, procesos, economía de marca propia y ventajas para supermercados o distribuidores."
+    },
+    "projectSolution8": "El resultado fue un sistema base de identidad y dos herramientas comerciales listas para apoyar conversaciones B2B. El manual de marca permite que Piedra Negra mantenga coherencia visual en futuras piezas, campañas, presentaciones, redes o desarrollos web. Las presentaciones comerciales ayudan a mostrar la empresa de forma más profesional: una desde el enfoque retail y otra desde la oferta corporativa de desarrollo de marcas privadas. Con estos materiales, Piedra Negra cuenta con una presencia comercial más clara, consistente y preparada para abrir conversaciones con supermercados, distribuidores y clientes potenciales en nuevos mercados.",
+    "projectNeed9": "El proyecto necesitaba una presencia digital profesional que permitiera mostrar distintos tipos de trabajo visual en una misma plataforma. El reto era construir una web flexible, fácil de recorrer y pensada para productores, directores, agencias y posibles colaboradores que necesitan entender rápidamente el alcance, el estilo y la sensibilidad visual del portafolio.",
+    "projectProcess9": {
+      "description": "Para lograr que la obra audiovisual y fotográfica hablara por sí misma, centramos nuestro enfoque en la organización y la limpieza de la interfaz. Diseñamos un recorrido directo, capaz de mostrar la sensibilidad del director a clientes internacionales sin generar distracciones.",
+      "phase1Title": "1. Arquitectura de contenido",
+      "phase1": "Organizamos las distintas líneas de trabajo, dirección de fotografía, dirección, cortometrajes y fotografía, para que cada área tenga un lugar claro dentro del portafolio.",
+      "phase2Title": "2. Diseño de Experiencia",
+      "phase2": "Diseñamos una navegación limpia, visual y directa, pensada para que las imágenes, videos y proyectos seleccionados sean protagonistas.",
+      "phase3Title": "3. Dirección Visual",
+      "phase3": "Definimos una experiencia sobria y flexible, que acompaña el estilo del trabajo sin competir con las piezas audiovisuales y fotográficas.",
+      "phase4Title": "4. Desarrollo Web",
+      "phase4": "Construimos una base adaptable para actualizar nuevos proyectos, fotografías, videos y piezas seleccionadas con facilidad."
+    },
+    "projectSolution9": "El resultado es una web de portafolio clara, visual y profesional, diseñada para presentar obra audiovisual y fotográfica en un contexto internacional. La plataforma permite organizar proyectos, mostrar piezas seleccionadas y facilitar el contacto con posibles clientes, productoras, agencias o colaboradores. La experiencia funciona como una presencia digital sobria y cuidada, pensada para que el trabajo visual hable con claridad.",
     "projectsCTA": "Do you have a similar challenge? ",
     "projectsCTADescritpion": "It's time to design the technical solution your brand needs to scale its impact. ",
-    "projectsCTAButton": "Contact Us",
+    "projectsCTAButton": "Let's talk",
     "otherProjects": "Other Projects",
     "credits": {
       "post1": "Frontend Development",
@@ -439,6 +572,10 @@
       "post5": "UX/UI Design",
       "post6": "Web Development",
       "post7": "Project Manager"
+    },
+    "CTAsingleview": {
+      "sectionTitle": "Do you have a project that needs to take <0>digital</0> form?",
+      "sectionDescription": "We can help you organize the idea, design the experience, and build a website, online store, platform, or portfolio that is clear, functional, and aligned with your identity."
     },
     "downloadPortfolio": "Download our portfolio",
     "collab": "Project carried out alongside the Colmena Lab team. ",
@@ -482,32 +619,32 @@
     "sectionCTAButton": "Let's talk about your project",
     "card": {
       "teamMember1": {
-        "position": "Strategic Communicator",
-        "description": "Digital communicator and strategist with over a decade of experience. Expert in creating impactful content and campaigns with multimedia pieces and custom strategies, he uses his versatility to create complex narratives that reflect desired objectives and generate impact."
+        "position": "Project and Communication Direction",
+        "description": "Defines the strategic and narrative direction of the projects. He organizes ideas, messages, and content so that each site communicates clearly and reflects the identity of the brand or creative behind it."
       },
       "teamMember2": {
-        "position": "Fullstack Developer",
-        "description": "Fullstack Developer in JavaScript, React, and Python, with a focus on interaction and communication. His background in translation allows him to make technology understandable, creating dynamic platforms that optimize user experience, fostering global connection."
+        "position": "Fullstack Development and Translation",
+        "description": "Develops clear, functional, and well-implemented platforms. He also accompanies the adaptation of content in Spanish, French, and English, helping projects communicate better in different languages."
       },
       "teamMember3": {
-        "position": "Fullstack Developer",
-        "description": "Fullstack Developer expert in JavaScript, React, and Python, passionate about optimizing processes and designing responsive interfaces. He transforms complex technical concepts into clear solutions, ensuring functional and user-friendly software and interfaces that enhance user experience."
+        "position": "Fullstack Developer and UX/UI Design",
+        "description": "Combines UX/UI and web development to create clear, useful, and technically viable sites. He builds wireframes, prototypes, and high-fidelity designs, accompanying the client in key experience decisions."
       },
       "teamMember4": {
-        "position": "Project Manager",
-        "description": "Experienced professional in social impact and innovation with a proven track record in administrative operations, workflow management, and community outreach. I excel at coordinating cross-functional activities and preparing strategic documentation while safeguarding the financial and operational integrity of all resources."
+        "position": "Project Management",
+        "description": "Provides follow-up to the projects. He helps organize priorities, detect critical points, and maintain clarity at each stage of the process alongside the team direction."
       },
       "teamMember5": {
         "position": "Software Developer",
-        "description": "Versatile Developer (Android, React, Python, Node) & Networking Specialist. His broad technical expertise enables him to oversee the full software development lifecycle. He excels at bridging the gap between initial concept and successful implementation for both web and mobile platforms."
+        "description": "Brings deep technical judgment to solve complex developments in websites, web apps, and applications. His work helps turn demanding ideas into functional, solid, and scalable solutions."
       },
       "teamMember6": {
-        "position": "Ejecutiva de Cuenta",
-        "description": "Gestiona nuevos contactos y acompaña el proceso comercial. Su rol ayuda a que cada oportunidad avance con seguimiento, cercanía y claridad."
+        "position": "Account Executive",
+        "description": "Manages new contacts and accompanies the commercial process. Her role helps each opportunity progress with follow-up, proximity, and clarity."
       },
       "teamMember7": {
-        "position": "Ejecutiva de Cuenta",
-        "description": "Especializada en la gestión de clientes y el desarrollo de oportunidades comerciales. Comprende las necesidades de cada cliente, coordina propuestas y asegura una comunicación fluida durante todo el proceso, fortaleciendo relaciones de largo plazo."
+        "position": "Account Executive",
+        "description": "Specialized in client management and the development of commercial opportunities. She understands the needs of each client, coordinates proposals, and ensures fluid communication throughout the entire process, strengthening long-term relationships."
       }
     }
   },
@@ -610,7 +747,8 @@
       "formSubmission": {
         "newsletter": "I agree to receive commercial communications.",
         "submitButton": "Send message",
-        "termsDisclosure": "I accept the conditions and privacy policy."
+        "termsDisclosure": "I accept the ",
+        "termsAndPrivacy": "Terms and Conditions / Privacy Policy"
       },
       "section1": {
         "title": "What do you need to build?",
@@ -666,28 +804,101 @@
     },
     "afterwards": {
       "opening": {
-        "title": "¿Qué pasa después? "
+        "title": "What happens next?"
       },
       "steps": {
         "step1": {
-          "title": "[01] Revisamos tu solicitud",
-          "description": "Leemos la información que nos compartes para entender qué necesitas."
+          "title": "[01] Request review",
+          "description": "We read the information you share to understand what you need."
         },
         "step2": {
-          "title": "[02] Te contactamos",
-          "description": "Coordinamos una llamada o conversación inicial para aclarar dudas."
+          "title": "[02] Initial Contact",
+          "description": "We schedule an initial call or conversation to clarify any questions."
         },
         "step3": {
-          "title": "[03] Definimos el camino",
-          "description": "Te proponemos el siguiente paso: diagnóstico, propuesta, diseño, desarrollo o mejora."
+          "title": "[03] Defining the Path",
+          "description": "We propose the next step: diagnosis, proposal, design, development or improvement."
         }
+      }
+    },
+    "ContactCards": {
+      "meeting": {
+        "title": "Prefer to talk directly?",
+        "description": "Schedule a short call to tell us about your idea and see how we can help."
+      },
+      "email": {
+        "title": "You can also write to us directly at:"
+      },
+      "Portfolio":{
+        "title": "Want to see how we work first?",
+      "desc": "Check out our portfolio"
       }
     }
   },
-  "whatsapp": {
-    "accountName": "CloudTech Sistemas",
-    "statusMessage": "Usually replies within an hour",
-    "chatMessage": "¡Hi there! 👋 How can we help you?",
-    "placeholder": "Type your message..."
+  "legal": {
+    "terms": {
+      "title": "Terms and Conditions of Use",
+      "lastUpdate": "Last updated: August 10, 2026",
+      "sections": [
+        {
+          "heading": "1. Introduction and Acceptance",
+          "text": "The present Terms and Conditions govern the access and use of CloudTech's website. By browsing this site, you fully accept these conditions. If you do not agree with any of them, we ask that you refrain from using our services or providing information through our forms."
+        },
+        {
+          "heading": "2. Intellectual Property",
+          "text": "All graphic content, source code, logos, texts, designs and software structures presented on this site are the exclusive property of CloudTech or their respective clients (under license). Strictly prohibited is the reproduction, distribution or modification of any element without prior written authorization."
+        },
+        {
+          "heading": "3. Use of Services",
+          "text": "Our web design and development services are intended for companies, creatives, and professionals. Users agree to provide accurate information in forms and not to use the site for unlawful activities, unsolicited communications or spam, or the distribution of malicious software."
+        },
+        {
+          "heading": "4. Limitation of Liability",
+          "text": "CloudTech works to ensure the highest availability and security of the site. However, we are not responsible for technical interruptions outside our control, nor for damages arising from the use of information contained in the portal or the malfunction of the user's browser."
+        },
+        {
+          "heading": "5. Governing Law and Jurisdiction",
+          "text": "CloudTech works to ensure the highest possible availability and security of the site. However, we are not responsible for technical interruptions beyond our control, damages arising from the use of information contained on the portal, or malfunctioning of the user’s browser."
+        },
+        {
+          "heading": "6. Changes to Terms and Conditions",
+          "text": "These Terms are governed by the laws of the Republic of Ecuador. Any dispute shall be resolved before the competent courts of the city of Quito, Ecuador, without prejudice to applicable international consumer protection regulations."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdate": "Last updated: August 10, 2026",
+      "sections": [
+        {
+          "heading": "1. Data Controller",
+          "text": "CloudTech, located in Ecuador, is the controller responsible for processing your personal data. We are committed to protecting your privacy in accordance with Ecuador’s Organic Law on Personal Data Protection (LOPDP) and the standards of the European Union General Data Protection Regulation (GDPR), as well as applicable privacy principles for users in the United States where relevant."
+        },
+        {
+          "heading": "2. Data We Collect",
+          "text": "We collect identifying information such as name, email address, and telephone number only when you voluntarily provide it to request services. We also collect technical data through cookies, including IP address, browser type, and time spent on the site, to improve your browsing experience."
+        },
+        {
+          "heading": "3. Purpose of Processing",
+          "text": "Your data is used to: a) Respond to quotation requests; b) Manage the commercial relationship in the event of a contract; c) Send updates about our services only with prior consent; and d) Optimize the technical performance of our platform."
+        },
+        {
+          "heading": "4. International Data Transfers",
+          "text": "Because we operate globally, your data may be processed on secure servers outside your country of residence. CloudTech ensures that its technology providers comply with international encryption standards and contractual data protection clauses designed to safeguard personal data during international transfers."
+        },
+        {
+          "heading": "5. Your Rights (ARCO)",
+          "text": "You have the right to access, rectify, cancel, and object to the processing of your data. To exercise these rights or withdraw your consent, you may write to us at: dev@cloudtech.com.ec, indicating “Data Protection” in the subject line."
+        },
+        {
+          "heading": "6. Information Security",
+          "text": "We implement SSL certificates, firewalls, and technical security measures to prevent unauthorized access to, or loss of, your personal information."
+        },
+        {
+          "heading": "7. Cookie Policy",
+          "text": "This website uses first-party and third-party cookies for statistical analysis and experience personalization. Cookies are small files stored in your browser. You may configure your browser to reject or delete cookies at any time, although doing so may affect the operation of some sections of the site. Where required by applicable law, including the European Union and European Economic Area, non-essential cookies should be used only after obtaining the user’s consent. For users in the United States, CloudTech will provide applicable opt-out mechanisms where required by state privacy laws."
+        }
+      ]
+    }
   }
 }
