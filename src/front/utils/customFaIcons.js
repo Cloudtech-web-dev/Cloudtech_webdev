@@ -1,3 +1,6 @@
+/** @import {Icon} from "@fortawesome/fontawesome-svg-core" */
+
+/**@type {Icon} */
 export const faCustomBagCheck = {
   prefix: 'fac',
   iconName: 'custom-bag-check',
@@ -10,6 +13,7 @@ export const faCustomBagCheck = {
   ]
 };
 
+/**@type {Icon} */
 export const faCustomMagicWand = {
   prefix: 'fac',
   iconName: 'custom-magic-wand',
@@ -22,6 +26,7 @@ export const faCustomMagicWand = {
   ]
 };
 
+/**@type {Icon} */
 export const faCustomPlanetWithSatellites = {
   prefix: 'fac',
   iconName: 'custom-planet-with-satellites',
@@ -34,6 +39,7 @@ export const faCustomPlanetWithSatellites = {
   ]
 };
 
+/**@type {Icon} */
 export const faCustomCodeMonitor = {
   prefix: 'fac',
   iconName: 'custom-code-monitor',
