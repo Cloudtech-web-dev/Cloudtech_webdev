@@ -2,7 +2,7 @@ import styles from "../../styles/components/HeaderContact.module.css";
 
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
-
+import { Link } from "react-router-dom";
 
 /**
  * @type {import("../../utils/customTypes.js").DataStructure}
@@ -347,10 +347,20 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
                         <label htmlFor="terms-conditions">
 
                             {/* Checkbox element */}
-                            <input required onChange={handleTermsAgreement} checked={termsAccepted} type="checkbox" id="terms-conditions" name="agreements" />
+                            <input required onChange={handleTermsAgreement} checked={termsAccepted} type="checkbox" id="terms-conditions" name="agreements"/>
 
                             {/* Checkbox label */}
-                            {t('contact.form.formSubmission.termsDisclosure')}
+                            <span>
+                                {t('contact.form.formSubmission.termsDisclosure')}
+                                <Link
+                                    to="/terms-conditions"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-decoration-underline"
+                                >
+                                    {t('contact.form.formSubmission.termsAndPrivacy')}
+                                </Link>
+                            </span>
 
                         </label>
 

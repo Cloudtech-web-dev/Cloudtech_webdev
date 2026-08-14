@@ -1,9 +1,9 @@
 import '../../styles/StickyLayout.css';
 import PortfolioPDF from "../../assets/img/Portfolio/PORTFOLIO-CLOUDTECH.pdf";
-// import { useTranslation } from "react-i18next"
+import { useTranslation, Trans } from "react-i18next"
 
 export const CallToAction = () => {
-    // const { t } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <section className="intro-scroll-wrapper light-section">
@@ -11,13 +11,16 @@ export const CallToAction = () => {
             <div className="intro-sticky-box">
                 <div className="intro-content">
                     <h2 className="section-title">
-                        <span className="bg-negative-title">
-                            Explora
-                        </span>
-                        nuestro portafolio completo
+                        <Trans 
+                            i18nKey="projects.sectionCTA.sectionTitle" 
+                            components={[
+                                <span className="bg-negative-title" /> 
+                            ]} 
+                        />
                     </h2>
 
-                    <p className="intro-text">Preparamos una versión descargable con proyectos seleccionados, servicios y ejemplos de cómo combinamos diseño, contenido y desarrollo para construir experiencias digitales con identidad.
+                    <p className="intro-text">
+                        {t('projects.sectionCTA.sectionDescription')}
                     </p>
                     <a
                         href={PortfolioPDF}
@@ -25,8 +28,7 @@ export const CallToAction = () => {
                         rel="noopener noreferrer"
                         className="btn btn-outline-dark-custom btn-lg px-4 mx-auto w-lg-auto"
                     >
-                        Descarga el portafolio
-                        {/* {t('projects.downloadPortfolio')} */}
+                        {t('projects.downloadPortfolio')}
                     </a>
 
                 </div>

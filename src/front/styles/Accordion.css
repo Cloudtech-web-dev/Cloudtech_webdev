@@ -32,20 +32,24 @@
 .custom-menu-overlay {
     position: fixed;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(4, 23, 27, 0.16);
+    background-color: rgba(4, 23, 27, 0.25);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 2000;
-    transition: left 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
     display: flex;
     flex-direction: column;
 }
 
 .custom-menu-overlay.active {
     left: 0;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
 }
 
 
