@@ -628,9 +628,11 @@
         "title": "What stage are you in?",
         "options": {
           "opt1": "I have an initial idea",
-          "opt2": "Option 2",
-          "opt3": "Option 3",
-          "opt4": "Option 4",
+          "opt2": "I have a brand or visual identity",
+          "opt3": "I have a design",
+          "opt4": "I have a website and want to improve it",
+          "opt5": "I am ready to start",
+          "opt6": "I need guidance",
           "placeholder": "Choose an option..."
         }
       },
