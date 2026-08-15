@@ -71,51 +71,7 @@ def validate_lead_data(data):
         "project_name": project_name.strip() if project_name else None,
         "newsletter_opt_in": newsletter_opt_in
     }
-
-
-@api.route('/admin/login', methods=['POST'])
-def admin_login():
-    admin_data = request.get_json()
-
-    if not admin_data:
-        return jsonify({"message": "Invalid Json or empty request body"}), 400
-
-    email = admin_data.get("email")
-    password = admin_data.get("password")
-
-    if not email:
-        return jsonify({"message": "No email entered"}), 400
-    if not password:
-        return jsonify({"message": "Password is required"}), 400
-
-    ct_admin = None
-
-    try:
-        ct_admin = db.session.execute(select(CTAdmin).where(
-            CTAdmin.email == email)).scalar_one_or_none()
-
-        if ct_admin is None:
-            return jsonify({"message": "Invalid credentials"}), 401
-
-        if not ct_admin.check_password(password):
-            return jsonify({"message": "Invalid credentials"}), 401
-
-        token = create_access_token(
-            identity=ct_admin.id,
-            additional_claims={"role": "ct_admin"}
-        )
-
-        return jsonify({
-            "token": token,
-            "user_id": ct_admin.id,
-            "message": "Login successful"
-        }), 200
-
-    except Exception as e:
-        print(f"Login error: {e}")
-        return jsonify({"message": "Failed login. Please try again later"}), 500
-
-
+    
 @api.route('/contact', methods=['POST'])
 def add_lead():
     lead_data = request.get_json()
@@ -167,3 +123,46 @@ def add_lead():
         db.session.rollback()
         print(f"Registration error (General): {e}")
         return jsonify({"message": "Unable to process your request at this time"}), 500
+
+
+@api.route('/admin/login', methods=['POST'])
+def admin_login():
+    admin_data = request.get_json()
+
+    if not admin_data:
+        return jsonify({"message": "Invalid Json or empty request body"}), 400
+
+    email = admin_data.get("email")
+    password = admin_data.get("password")
+
+    if not email:
+        return jsonify({"message": "No email entered"}), 400
+    if not password:
+        return jsonify({"message": "Password is required"}), 400
+
+    ct_admin = None
+
+    try:
+        ct_admin = db.session.execute(select(CTAdmin).where(
+            CTAdmin.email == email)).scalar_one_or_none()
+
+        if ct_admin is None:
+            return jsonify({"message": "Invalid credentials"}), 401
+
+        if not ct_admin.check_password(password):
+            return jsonify({"message": "Invalid credentials"}), 401
+
+        token = create_access_token(
+            identity=ct_admin.id,
+            additional_claims={"role": "ct_admin"}
+        )
+
+        return jsonify({
+            "token": token,
+            "user_id": ct_admin.id,
+            "message": "Login successful"
+        }), 200
+
+    except Exception as e:
+        print(f"Login error: {e}")
+        return jsonify({"message": "Failed login. Please try again later"}), 500

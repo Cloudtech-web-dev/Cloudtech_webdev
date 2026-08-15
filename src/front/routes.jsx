@@ -35,8 +35,8 @@ export const router = createBrowserRouter(
       <Route path="/projects/:projectId" element={<SingleProjectView />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/login" element={<Login />} />
-      {/* <Route path="/admin" element={<Admin />} /> */}
-      <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+      <Route path="/admin" element={<Admin />} />
+      {/* <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} /> */}
     </Route>
   )
 );
