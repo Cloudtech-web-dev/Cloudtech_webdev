@@ -43,10 +43,10 @@ export const Admin = () => {
         <div className="container-fluid">
             <div className="row">
                 <div className="d-flex flex-column col-md-3 col-lg-2 bg-dark text-white p-3" style={{ "height": "100vh" }}>
-                    <h3 className="fw-bold section-title mb-3 text-center">Panel de Administrador</h3>
+                    <h3 className="fw-bold component-title mb-3 text-center">Panel Admin</h3>
                     <h4 className="mb-4 border-bottom pb-3 text-center">¡Bienvenido!</h4>
                     <ul className="nav flex-column">
-                        <li><hr class="dropdown-divider" /></li>
+                        <li><hr className="dropdown-divider" /></li>
                         <li className="nav-item">
                             <Link
                                 to={""}

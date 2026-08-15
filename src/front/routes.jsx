@@ -37,8 +37,8 @@ export const router = createBrowserRouter(
       <Route path="/contact" element={<Contact />} />
       <Route path="/terms-conditions" element={<TermsConditions />} />
       <Route path="/login" element={<Login />} />
-      {/* <Route path="/admin" element={<Admin />} /> */}
-      <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+      <Route path="/admin" element={<Admin />} />
+      {/* <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} /> */}
     </Route>
   )
 );

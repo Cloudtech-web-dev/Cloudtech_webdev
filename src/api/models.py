@@ -3,6 +3,7 @@ from sqlalchemy import String, Boolean, Text, Integer, JSON
 from sqlalchemy.orm import Mapped, mapped_column
 from flask_bcrypt import Bcrypt
 from flask_login import UserMixin
+from .utils import NEEDS_MAP, STAGE_MAP, TIMEFRAME_MAP
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
@@ -53,12 +54,16 @@ class Lead(db.Model):
     newsletter_opt_in: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)        
 
     def serialize(self):
+        translated_needs = [NEEDS_MAP.get(n_id, f"Opción {n_id}") for n_id in (self.needs or [])]
+        translated_stage = STAGE_MAP.get(self.stage, "No especificado")
+        translated_timeframe = TIMEFRAME_MAP.get(self.ideal_timeframe, "No especificado")
+        
         return {
             "id": self.id,
-            "needs": self.needs,
-            "stage": self.stage,
+            "needs": translated_needs,
+            "stage": translated_stage,
             "problemDescription": self.problem_description,
-            "idealTimeframe": self.ideal_timeframe,
+            "idealTimeframe": translated_timeframe,
             "personalData": {
                 "fullName": self.full_name,
                 "email": self.email,
