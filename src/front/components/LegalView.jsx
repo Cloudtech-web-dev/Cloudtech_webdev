@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import "../styles/Accordion.css"; // Verifica que esta ruta sea correcta según tu estructura
+import "../styles/Accordion.css";
 
 export const LegalView = () => {
     const { t } = useTranslation();

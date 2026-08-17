@@ -1,8 +1,8 @@
-import needs1 from '../assets/img/Needs/need1.jpg'
-import needs2 from '../assets/img/Needs/need2.jpg'
-import needs3 from '../assets/img/Needs/need3.jpg'
+import needs1 from '../assets/img/Needs/cosmoneed.jpg'
+import needs2 from '../assets/img/Needs/piedraneed.jpg'
+import needs3 from '../assets/img/Needs/busquedasneed.jpg'
 import needs4 from '../assets/img/Needs/need4.jpg'
-import needs5 from '../assets/img/Needs/need5.jpg'
+import needs5 from '../assets/img/Needs/jpneed.jpg'
 import needs6 from '../assets/img/Needs/need6.jpg'
 import needs7 from '../assets/img/Needs/need7.jpg'
 

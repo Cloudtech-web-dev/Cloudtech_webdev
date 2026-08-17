@@ -565,13 +565,17 @@
     "projectsCTAButton": "Let's talk",
     "otherProjects": "Other Projects",
     "credits": {
+      "team": "Cloudtech Team",
       "post1": "Frontend Development",
       "post2": "Backend Development",
       "post3": "Fullstack Development",
-      "post4": "Project Leader",
+      "post4": "Project Management",
       "post5": "UX/UI Design",
       "post6": "Web Development",
-      "post7": "Project Manager"
+      "post7": "Project Manager",
+      "post8": "Brand Manual",
+      "post9": "Retail Presentation and Private Label Presentation",
+      "post10": "Content ans Structure"
     },
     "CTAsingleview": {
       "sectionTitle": "Do you have a project that needs to take <0>digital</0> form?",

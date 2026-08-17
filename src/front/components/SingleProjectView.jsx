@@ -125,7 +125,7 @@ export const SingleProjectView = () => {
 
                                 {projectData.credits.map((item, index) => (
                                     <div key={index} className="d-flex flex-column flex-lg-row align-items-md-end gap-0 gap-lg-5 justify-content-lg-center">
-                                        <p className="text-white text-center text-lg-end font-p1">{item.name}</p>
+                                        <p className="text-white text-center text-lg-end font-p1">{item.name.includes('projects.') ? t(item.name) : item.name}</p>
                                         <p className="text-white text-center fw-bold">{t(item.position)}</p>
                                     </div>
                                 ))}

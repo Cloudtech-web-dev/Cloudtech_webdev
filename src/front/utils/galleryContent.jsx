@@ -4,6 +4,12 @@ import Cosmo3 from '../assets/img/Portfolio/Cosmonauta/cosmo3.jpg'
 import Cosmo4 from '../assets/img/Portfolio/Cosmonauta/cosmo4.jpg'
 import Cosmo5 from '../assets/img/Portfolio/Cosmonauta/cosmo5.jpg'
 import Cosmo6 from '../assets/img/Portfolio/Cosmonauta/cosmo6.jpg'
+import Piedra1 from '../assets/img/Portfolio/PiedraNegra/piedra1.jpg'
+import Piedra2 from '../assets/img/Portfolio/PiedraNegra/piedra2.jpg'
+import Piedra3 from '../assets/img/Portfolio/PiedraNegra/piedra3.jpg'
+import Piedra4 from '../assets/img/Portfolio/PiedraNegra/piedra4.jpg'
+import Piedra5 from '../assets/img/Portfolio/PiedraNegra/piedra5.jpg'
+import Piedra6 from '../assets/img/Portfolio/PiedraNegra/piedra6.jpg'
 import Flora1 from '../assets/img/Portfolio/Flora/flora1.jpg'
 import Flora2 from '../assets/img/Portfolio/Flora/flora2.jpg'
 import Flora3 from '../assets/img/Portfolio/Flora/flora3.jpg'
@@ -49,3 +55,4 @@ export const galleryLibreras = [Libreras1, Libreras2, Libreras3, Libreras4, Libr
 export const galleryAsocove = [Asocove1, Asocove2, Asocove3, Asocove4, Asocove5, Asocove6];
 export const galleryBusquedas = [Busquedas1, Busquedas2, Busquedas3, Busquedas4, Busquedas5, Busquedas6];
 export const galleryMura = [Mura1, Mura2, Mura3, Mura4, Mura5, Mura6];
+export const galleryPiedra = [Piedra1, Piedra2, Piedra3, Piedra4, Piedra5, Piedra6];
