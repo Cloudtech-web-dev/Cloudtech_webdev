@@ -560,13 +560,17 @@
     "projectsCTAButton": "Parlons-en",
     "otherProjects": "Autres projets",
     "credits": {
+      "team": "Équipe CloudTech",
       "post1": "Développement Frontend",
       "post2": "Développement Backend",
       "post3": "Développement Fullstack",
-      "post4": "Direction de projet",
+      "post4": "Gestion de projet",
       "post5": "Design UX/UI",
       "post6": "Développement web",
-      "post7": "Gestion de projet"
+      "post7": "Gestion de projet",
+      "post8": "Guide de marque",
+      "post9": "Présentation retail & Présentation marque distributeur",
+      "post10": "Contenu et structure"
     },
     "CTAsingleview": {
       "sectionTitle": "Avez-vous un projet qui a besoin de prendre une forme <0>digitale</0> ?",

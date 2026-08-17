@@ -9,10 +9,12 @@ import CoverBusquedas from '../assets/img/ProjectHeaders/busquedascover.jpg'
 import LogoBusquedas from '../assets/img/Portfolio/Busquedas/logo.png'
 import CoverMura from '../assets/img/ProjectHeaders/muracover.jpg'
 import LogoMura from '../assets/img/Portfolio/Mura/logo.png'
-import PiedraNegraCover from '../assets/img/ProjectHeaders/piedranegraCover.jpg'
-import LogoPiedraNegra from '../assets/img/Portfolio/Piedra Negra/logo.png'
+import CoverPiedraNegra from '../assets/img/ProjectHeaders/piedranegraCover.jpg'
+import LogoPiedraNegra from '../assets/img/Portfolio/PiedraNegra/logo.png'
+import LogoJPPortafolio from '../assets/img/Portfolio/JPPortfolio/logo.svg'
+import CoverJPPortafolio from '../assets/img/Portfolio/JPPortfolio/cardBg.jpg'
 
-import { galleryCosmo, galleryFlotilla, galleryFlora, galleryLibreras, galleryAsocove, galleryBusquedas, galleryMura } from './galleryContent'
+import { galleryCosmo, galleryFlotilla, galleryFlora, galleryLibreras, galleryAsocove, galleryBusquedas, galleryMura, galleryPiedra } from './galleryContent'
 import { needsCover } from './needsCoverGallery'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -90,12 +92,12 @@ export const projectsList = [
     {
         id: 'piedra-negra',
         logo: LogoPiedraNegra,
-        cover: PiedraNegraCover,
+        cover: CoverPiedraNegra,
         name: 'projects.projectName8',
         preview: 'projects.projectPreview8',
         summary: 'projects.projectSummary8',
         need: 'projects.projectNeed8',
-        needsArt: needsCover[0],
+        needsArt: needsCover[1],
         process: 'projects.projectProcess8.description',
         phase: [
             {
@@ -120,34 +122,34 @@ export const projectsList = [
             }
         ],
         solution: 'projects.projectSolution8',
-        // gallery: gallerypiedraNegra,
+        gallery: galleryPiedra,
         credits: [
             {
                 name: 'David Pinto',
                 position: 'projects.credits.post4'
             },
             {
-                name: 'Marcelo Placencia',
-                position: 'projects.credits.post3'
+                name: 'Daniela Torres',
+                position: 'projects.credits.post8'
             },
             {
-                name: 'Diego Figueroa',
-                position: 'projects.credits.post2'
+                name: 'projects.credits.team',
+                position: 'projects.credits.post9'
             },
-            {
-                name: 'José Miguel Pinto',
-                position: 'projects.credits.post1'
-            },
-            {
-                name: 'Santiago Montoya',
-                position: 'projects.credits.post3'
-            },
-            {
-                name: 'Santiago Montoya',
-                position: 'projects.credits.post5'
-            },
+            // {
+            //     name: 'José Miguel Pinto',
+            //     position: 'projects.credits.post1'
+            // },
+            // {
+            //     name: 'Santiago Montoya',
+            //     position: 'projects.credits.post3'
+            // },
+            // {
+            //     name: 'Santiago Montoya',
+            //     position: 'projects.credits.post5'
+            // },
         ],
-        tech: ['Figma', 'React', 'Javascript', 'Tailwind', 'FastAPI', 'Python', 'PostgreSQL']
+        tech: ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'Affinity', 'Canva']
     },
     // {
     //     id: 'flora-nueva',
@@ -265,7 +267,7 @@ export const projectsList = [
         preview: 'projects.projectPreview6',
         summary: 'projects.projectSummary6',
         need: 'projects.projectNeed6',
-        needsArt: needsCover[5],
+        needsArt: needsCover[2],
         process: 'projects.projectProcess6.description',
         phase: [
             {
@@ -372,6 +374,68 @@ export const projectsList = [
             },
         ],
         tech: ['Figma', 'Wordpress', 'CSS', 'MailChimp', 'Yoast SEO']
+    },
+    {
+        id: 'jpportafolio',
+        logo: LogoJPPortafolio,
+        cover: CoverJPPortafolio,
+        name: 'projects.projectName9',
+        preview: 'projects.projectPreview9',
+        summary: 'projects.projectSummary9',
+        need: 'projects.projectNeed9',
+        needsArt: needsCover[4],
+        process: 'projects.projectProcess9.description',
+        phase: [
+            {
+                icon: <FontAwesomeIcon icon={faFingerprint} size="5x" />,
+                title: 'projects.projectProcess9.phase1Title',
+                description: 'projects.projectProcess9.phase1'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faLanguage} size="5x" />,
+                title: 'projects.projectProcess9.phase2Title',
+                description: 'projects.projectProcess9.phase2'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
+                title: 'projects.projectProcess9.phase3Title',
+                description: 'projects.projectProcess9.phase3'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faRobot} size="5x" />,
+                title: 'projects.projectProcess9.phase4Title',
+                description: 'projects.projectProcess9.phase4'
+            }
+        ],
+        solution: 'projects.projectSolution9',
+        // gallery: galleryJPPortafolio,
+        credits: [
+            {
+                name: 'David Pinto',
+                position: 'projects.credits.post4'
+            },
+            {
+                name: 'Santiago Montoya',
+                position: 'projects.credits.post5'
+            },
+            {
+                name: 'Marcelo Placencia',
+                position: 'projects.credits.post6'
+            },
+            {
+                name: 'Santiago Montoya',
+                position: 'projects.credits.post6'
+            },
+            {
+                name: 'Marcelo Placencia',
+                position: 'projects.credits.post10'
+            },
+            {
+                name: 'Santiago Montoya',
+                position: 'projects.credits.post10'
+            },
+        ],
+        tech: [ ]
     },
     {
         id: 'las-libreras-leen',

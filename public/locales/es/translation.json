@@ -560,13 +560,17 @@
     "projectsCTAButton": "Hablemos",
     "otherProjects": "Otros proyectos",
     "credits": {
+      "team": "Equipo CloudTech",
       "post1": "Desarrollo Frontend",
       "post2": "Desarrollo Backend",
       "post3": "Desarrollo Fullstack",
-      "post4": "Líder de proyecto",
+      "post4": "Gestión de Proyecto",
       "post5": "Diseño UX/UI",
       "post6": "Desarrollo Web",
-      "post7": "Gestor de proyectos"
+      "post7": "Gestor de proyectos",
+      "post8": "Manual de Marca",
+      "post9": "Presentación retail y Presentación Private Label",
+      "post10": "Contenido y estructura"
     },
     "CTAsingleview": {
       "sectionTitle": "¿Tienes un proyecto que necesita tomar forma <0>digital</0>?",
@@ -754,9 +758,10 @@
         }
       },
       "formSubmission": {
-        "termsDisclosure": "Acepto los términos y condiciones y la política de privacidad.",
+        "termsDisclosure": "Acepto los ",
         "newsletter": "Acepto recibir comunicaciones comerciales.",
-        "submitButton": "Enviar mensaje"
+        "submitButton": "Enviar mensaje",
+        "termsAndPrivacy": "Términos y Condiciones / Políticas de Privacidad"
       }
     },
     "labels": {
