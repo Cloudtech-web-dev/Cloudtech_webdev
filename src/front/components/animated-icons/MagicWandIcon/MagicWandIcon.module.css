@@ -1,0 +1,127 @@
+/* Icon styles */
+
+div.iconWrapper {
+
+  width: 1em;
+  display: flex;
+  
+  > svg.icon {
+    
+    --gradient-color-1: #ff0000;
+    --gradient-color-2: #ff7f00;
+    --gradient-color-3: #ffff00;
+    --gradient-color-4: #00ff00;
+    --gradient-color-5: #0000ff;
+    --gradient-color-6: #4b0082;
+    
+    fill: var(--icon-color, currentColor);
+    &, * { transform-origin: center }
+
+    > g.rainbow.layer {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    > defs > linearGradient#brushRainbow {
+
+      transform-box: fill-box;
+      rotate: var(--gradient-rotation, 0deg);
+      
+      > stop {
+          
+        &.stop2 { --stop-offset: 16 }
+        &.stop3 { --stop-offset: 33 }
+        &.stop4 { --stop-offset: 50 }
+        &.stop5 { --stop-offset: 66 }
+        &.stop6 { --stop-offset: 83 }
+
+        animation: colorCycle 6s calc(-1s * var(--stop-offset, 0)) linear infinite paused;
+      }
+    }
+  }
+}
+
+div.iconWrapper > svg.icon:hover,
+div.iconWrapper:hover > svg.icon,
+:global(.group):hover > svg.icon,
+:global(.group):hover > div.iconWrapper > svg.icon {
+
+  overflow: visible;
+
+  > g.layer {
+      
+    > use.star { animation: tada 1s ease infinite }
+    
+    > g.brush {
+
+      animation:
+        initBrushPosition 0.3s ease forwards,
+        floatAround 1.5s 0.3s ease-in-out alternate infinite
+      ;
+
+      > path.head { animation:
+        initBrushHead 0.3s ease forwards,
+        brushHeadFlip 1.5s 0.3s ease-in-out alternate infinite
+      }
+    }
+
+    &.rainbow { opacity: 1 }
+  }
+
+  > defs > linearGradient#brushRainbow {
+
+    animation: rotateGradient 8s ease-in-out infinite alternate;
+    
+    > stop { animation-play-state: running }
+  }
+}
+
+/* Icon Utils */
+
+@property --gradient-rotation {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@keyframes tada { /* From https://animate.style/ */
+    0% { transform: scale3d(1.0, 1.0, 1.0) }
+
+  10%,
+  20% { transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1,-3deg) }
+
+  30%, 50%, 70%,
+  90% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg) }
+
+  40%, 60%,
+  80% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1,-3deg) }
+
+  100% { transform: scale3d(1.0, 1.0, 1.0) }
+}
+@keyframes floatAround {
+  from { translate: 0 -5%; rotate: 30deg }
+  to { translate: 0 5%; rotate: 0deg }
+}
+@keyframes initBrushPosition {
+  to { translate: 0 -5%; rotate: 30deg }
+}
+@keyframes initBrushHead {
+  to { d: path("M 43.690421,89.718113 30.997062,75.839207 c -1.018211,0.04688 -3.686483,0.254824 -5.460919,0.464542 -3.752084,0.481422 -6.859374,2.301167 -9.706091,4.7231 -1.987954,1.712062 -2.277023,2.706758 -3.841274,5.702742 l -0.561146,1.942932 c -0.508691,1.746805 -0.784048,2.915728 -1.058803,4.079487 -0.7018485,3.078043 -0.9313651,4.117255 -1.1624012,7.161775 -0.1427306,1.812965 -0.1473371,7.163085 -0.00743,8.925455 0.3219594,4.30027 1.5042992,6.13045 2.0187042,7.09341 0.394223,0.72878 2.462602,1.75692 3.234876,1.81982 1.400549,0.0815 3.412211,-0.76626 4.025589,-1.68723 0.79402,-1.16732 2.792517,-4.20782 4.440362,-5.18061 6.12909,-3.74647 1.679921,-1.19475 8.114979,-4.30983 9.075585,-4.52238 11.380765,-6.42857 12.699225,-12.278228 0.820562,-3.67075 -0.167055,-3.005145 -0.04231,-4.578459 z") }
+}
+@keyframes brushHeadFlip {
+  to { d: path("M 43.690421,89.718113 30.997062,75.839207 c -0.873035,0.366263 -1.392708,-0.383949 -2.208984,-0.435547 -3.7775,-0.201 -8.441862,1.088737 -12.101563,6.210937 -1.524899,2.1349 -2.736603,4.109553 -3.783203,5.876953 l -0.8125,1.373047 c -0.714,1.213 -1.329781,2.273385 -1.988281,3.271485 -1.6773701,2.5853 -3.2788557,4.359103 -6.0097658,5.724609 -1.00503,0.49899 -2.5368425,1.43481 -3.19531252,3.132809 -0.38707,0.985 -0.39657375,2.08027 -0.0273438,3.07227 0.29309002,0.775 0.77998252,1.46209 1.41406252,1.99609 0.95847,0.77 2.0550687,1.34994 3.2304688,1.71094 1.2741901,0.405 2.5751813,0.71755 3.8945312,0.93555 7.1045006,1.062 14.3464846,0.75293 21.3339846,-0.91407 7.2154,-1.809 10.446743,-7.49284 11.839843,-12.060542 0.693054,-2.286818 0.982678,-4.442311 1.107422,-6.015625 z") }
+}
+@keyframes colorCycle {
+   0% { stop-color: var(--gradient-color-1) }
+  16% { stop-color: var(--gradient-color-2) }
+  33% { stop-color: var(--gradient-color-3) }
+  50% { stop-color: var(--gradient-color-4) }
+  66% { stop-color: var(--gradient-color-5) }
+  83% { stop-color: var(--gradient-color-6) }
+ 100% { stop-color: var(--gradient-color-1) }
+}
+@keyframes rotateGradient {
+   0% { --gradient-rotation:   0deg }
+  50% { --gradient-rotation:  45deg }
+ 100% { --gradient-rotation: -45deg }
+}
