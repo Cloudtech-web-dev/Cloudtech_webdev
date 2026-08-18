@@ -768,30 +768,8 @@ h6 {
 
 /* HIGHLIGHTED TEXT */
 
-/* Previous implementation (only useful for transparency) */
-.highlighted-text.synced-bg-heading {
-  position: relative;
-  /* color: var(--highlighted-text-color, var(--bs-gray-1000)); */
-
-  isolation: isolate;
-
-  &::before {
-    content: '';
-    position: absolute;
-    background-color: var(--highlighted-text-bg, var(--bs-accent-1));
-    z-index: -1;
-    --oy: 8%;
-    --gy: -2%;
-    --gx: 1.5%;
-    top: calc(-1*var(--gy) + var(--oy));
-    left: calc(-1*var(--gx));
-    height: calc(100% + 2*var(--gy));
-    width: calc(100% + 2*var(--gx));
-  }
-}
-
 /* Newer without ::before (much more straightforward) */
-.highlighted-text:not(.synced-bg-heading) {
+.highlighted-text {
   color: var(--highlighted-text-color, var(--bs-gray-1000));
   background-image: linear-gradient(var(--highlighted-text-bg, var(--bs-accent-1)));
   background-size: 100%;
@@ -806,7 +784,7 @@ h6 {
   position: relative;
   display: inline-flex;
 
-  * {
+  > span {
     background-color: var(--bs-accent-1);
     padding: 0 0.18em 0.08lh;
     margin-bottom: -0.08lh;

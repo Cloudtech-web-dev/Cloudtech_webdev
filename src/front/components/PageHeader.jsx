@@ -114,21 +114,6 @@ export const PageHeader = ({
         </div>
       </div>
 
-      {/* Component Styles */}
-      <style>{`
-        .synced-bg {
-            background-image: url(${backgroundImgURL});
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            
-            &.synced-bg-heading {
-                color: transparent;
-                background-clip: text;
-            }
-        }
-      `}</style>
-
     </section>
   );
 };
