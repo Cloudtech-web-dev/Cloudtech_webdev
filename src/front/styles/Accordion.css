@@ -80,14 +80,22 @@
    ========================================== */
 .category-header-centered {
     text-align: center;
-    padding: 100px 20px;
-    width: 600px;
-    max-width: 100%;
+    padding: 100px 20px;    
     display: flex;
     flex-direction: column;
     gap: 40px;
     margin-left: auto;
     margin-right: auto;
+
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+    @media (min-width: 1200px) {
+        width: 65%;
+    }
+    @media (min-width: 1440px) {
+        width: 55%;
+    }
 }
 
 .service-category-title-main {
