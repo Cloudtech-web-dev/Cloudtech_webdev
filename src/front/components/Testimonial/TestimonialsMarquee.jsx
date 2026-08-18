@@ -9,6 +9,16 @@ import styles from "../../styles/components/HomeTestimonials.module.css";
 const scrollProgressCSSVar = '--marquee-scroll-progress-percentage';
 
 
+/**
+ * @typedef {`${number}${'ms' | 's' | 'm' | 'h'}`} stringTime
+ * 
+ * @typedef TestimonialsMarqueeProps
+ * @prop {import('./TestimonialsCard').TestimonialsCard[]} cardsArray
+ * @prop {string=} className
+ * @prop {stringTime=} rollDuration @end
+ * 
+ * @type {(props:TestimonialsMarqueeProps)=>JSX.Element}
+*/
 export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames, rollDuration = '30s' }) => {
   const { t } = useTranslation();
 
@@ -36,13 +46,16 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
   }, []);
   
 
+  /** @type {React.MutableRefObject<HTMLDivElement?>} */
   const wrapperRef = useRef(null);
+  /** @type {React.MutableRefObject<HTMLDivElement?>} */
   const trackRef = useRef(null);
 
   const isDragging = useRef(false);
   const startX = useRef(0);
   const currentDragOffset = useRef(0);
   const currentProgress = useRef(0);
+  /** @type {React.MutableRefObject<NodeJS.Timeout|undefined>} */
   const wheelTimeout = useRef();
 
   const startDrag = () => {
@@ -70,11 +83,11 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
       ? parseFloat(getComputedStyle(trackRef.current).getPropertyValue(scrollProgressCSSVar))
       : 0
   );
-  const setUpdatedProgress = (progress) => {
+  const setUpdatedProgress = (/**@type{number}*/progress) => {
     trackRef.current?.style.setProperty(scrollProgressCSSVar, String(progress))
   };
 
-  const handlePointerDown = (e) => {
+  const handlePointerDown = (/**@type{React.PointerEvent<HTMLDivElement>}*/e) => {
     if (!wrapperRef.current || !trackRef.current) return;
 
     startDrag();
@@ -84,7 +97,7 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
 
     e.currentTarget.setPointerCapture(e.pointerId);
   };
-  const handlePointerMove = (e) => {
+  const handlePointerMove = (/**@type{React.PointerEvent<HTMLDivElement>}*/e) => {
     if (!wrapperRef.current || !trackRef.current || !isDragging.current) return;
 
     currentDragOffset.current = e.clientX - startX.current;
@@ -96,27 +109,27 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
 
     setUpdatedProgress(newProgress);
   };
-  const handlePointerEnd = (e) => {
+  const handlePointerEnd = (/**@type{React.PointerEvent<HTMLDivElement>}*/e) => {
     if (!wrapperRef.current || !trackRef.current) return;
 
     stopDrag();
     e.currentTarget.releasePointerCapture(e.pointerId);
   };
 
-  const handleTouchStart = (e) => {
+  const handleTouchStart = (/**@type{React.TouchEvent<HTMLDivElement>}*/e) => {
     if (!wrapperRef.current || !trackRef.current) return;
 
     e.preventDefault();
 
     startDrag();
   };
-  const handleTouchEnd = (e) => {
+  const handleTouchEnd = (/**@type{React.TouchEvent<HTMLDivElement>}*/e) => {
     if (!wrapperRef.current || !trackRef.current) return;
 
     stopDrag();
   };
 
-  const handleHorizontalScroll = (e) => {
+  const handleHorizontalScroll = (/**@type{WheelEvent}*/e) => {
     if (!wrapperRef.current || !trackRef.current) return;
 
     // console.log({x: e.deltaX, y: e.deltaY})
