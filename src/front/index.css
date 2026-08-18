@@ -823,6 +823,26 @@ h6 {
   }
 }
 
+.highlighted-text.is-glitching,
+.highlight-transparency-box.is-glitching > span {
+  font-family: monospace;
+  letter-spacing: -0.09em;
+  filter:
+    drop-shadow(-0.05em -0.025em #ff0055)
+    drop-shadow(0.05em 0.025em #00ffff)
+  ;
+  animation: glitch-jitter var(--glitching-text-jitter-duration, 0.12s) infinite steps(2);
+}
+
+@keyframes glitch-jitter {
+   0% { transform: translate(   0,   0) skew( 0deg) }
+  20% { transform: translate(-2px, 1px) skew(-3deg) }
+  40% { transform: translate( 2px,-1px) skew( 2deg) }
+  60% { transform: translate(-1px,-2px) skew( 1deg) }
+  80% { transform: translate( 2px, 1px) skew(-1deg) }
+ 100% { transform: translate(   0,   0) skew( 0deg) }
+}
+
 
 /* DARKMODE NAVBAR */
 

@@ -1,8 +1,10 @@
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
 
 import { GradientBg } from "./GradientBg";
 import { HighlightTransparencyBox } from "./HighlightTransparencyBox.jsx";
+import { HighlightGlitchingBox } from "./HighlightGlitchingBox.jsx";
 
 
 /**
@@ -16,9 +18,13 @@ export const PageHeader = ({
   withoutProjectsButton,
   withoutTransparencyEffect,
   withoutBackgroundFilter,
-  withoutParallaxEffect
+  withoutParallaxEffect,
+  withoutWordGlitchEffect
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  
+  const words = useMemo(() => t(`${title}GlitchWords`, { returnObjects: true }) ?? [''], [t, title]);
+  const [currentWord, setCurrentWord] = useState(words[0]);
 
   return (
     <section className="position-relative min-vh-100 overflow-hidden">
@@ -62,12 +68,24 @@ export const PageHeader = ({
 
             {/* Heading */}
             <h1 className="hero-title-home display-2 fw-bolder text-center">
-              <Trans i18nKey={title} components={[
-                  withoutTransparencyEffect
-                    ? <span className="highlighted-text" style={{ display: "inline-flex", padding: "0 0.18em 0.08lh", margin: "0 0 -0.08lh" }} />
-                    : <HighlightTransparencyBox />
-                ]}
-              />
+              { withoutWordGlitchEffect
+                ? <Trans i18nKey={title} components={[
+                      withoutTransparencyEffect
+                        ? <span className="highlighted-text" style={{ display: "inline-flex", padding: "0 0.18em 0.08lh", margin: "0 0 -0.08lh" }} />
+                        : <HighlightTransparencyBox />
+                    ]}
+                  />
+                : <Trans i18nKey={title}
+                    context={['glitch',i18n.exists(`${title}_glitch_phonicI`) && /^(i|hi)(?!e)/i.test(currentWord) && 'phonicI'].filter(x=>x).join('_')}
+                    components={{
+                      word: <HighlightGlitchingBox
+                        key={i18n.language}
+                        words={words}
+                        onWordChange={setCurrentWord}
+                      />
+                    }}
+                  />
+              }
             </h1>
 
             {/* Description */}

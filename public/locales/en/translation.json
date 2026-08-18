@@ -10,6 +10,8 @@
   "headers": {
     "headerHome": {
       "headLine": "We design websites and digital <0>experiences</0> for creatives and brands with identity",
+      "headLine_glitch": "We design websites and digital <word /> for creatives and brands with identity",
+      "headLineGlitchWords": ["experiences", "interactions", "interfaces", "platforms"],
       "headerDescription": "We combine design, narrative and web development for projects that need a digital presence at the level of their work.",
       "portfolioButton": "Projects",
       "contactButton": "Contact Us",
@@ -21,18 +23,24 @@
     },
     "headerAbout": {
       "headLine": "A digital studio for projects with <0>identity</0>",
+      "headLine_glitch": "A digital studio for projects with <word />",
+      "headLineGlitchWords": ["identity"],
       "headerDescription": "We mold your ideas into powerful web experiences that reflect your brand's essence and meet your strategic objectives.",
       "portfolioButton": "View Projects",
       "contactButton": "Let's Talk"
     },
     "headerServices": {
       "headLine": "Your custom-made universe",
+      "headLine_glitch": "Your custom-made universe",
+      "headLineGlitchWords": [],
       "headerDescription": "Our services are the bridge between your ideas and powerful digital solutions that will boost your brand and generate sustained growth.",
       "portfolioButton": "View Projects",
       "contactButton": "Contact Us"
     },
     "headerProjects": {
       "headLine": "We Design and Connect Your Digital Ecosystem",
+      "headLine_glitch": "We Design and Connect Your Digital Ecosystem",
+      "headLineGlitchWords": [],
       "headerDescription": "We explore the intersection between strategy, design, and technology to build unique digital solutions that solve real challenges and channel efforts towards an unparalleled experience.",
       "contactButton": "Contact Us"
     }
