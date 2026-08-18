@@ -10,6 +10,8 @@
   "headers": {
     "headerHome": {
       "headLine": "We design websites and digital <0>experiences</0> for creatives and brands with <0>identity</0>",
+      "headLine_glitch": "We design websites and digital <word /> for creatives and brands with <secondary>identity</secondary>",
+      "headLineGlitchWords": ["experiences", "interactions", "interfaces", "platforms"],
       "headerDescription": "We combine design, narrative and web development for projects that need a digital presence at the level of their work.",
       "portfolioButton": "Projects",
       "contactButton": "Let's Talk",
@@ -21,18 +23,24 @@
     },
     "headerAbout": {
       "headLine": "A digital studio for projects with <0>identity</0>",
+      "headLine_glitch": "A digital studio for projects with <word />",
+      "headLineGlitchWords": ["identity"],
       "headerDescription": "We create websites and digital experiences for projects with identity, taking care of how they look, how they are understood, and how they work.",
       "portfolioButton": "View Projects",
       "contactButton": "Let's Talk"
     },
     "headerServices": {
       "headLine": "Websites, applications, and online stores with <0>identity</0>",
+      "headLine_glitch": "Websites, applications, and online stores with <word />",
+      "headLineGlitchWords": ["identity"],
       "headerDescription": "We create clear, attractive, and functional digital experiences, designed to show your work, your products, or your services better.",
       "portfolioButton": "View Projects",
       "contactButton": "Let's Talk"
     },
     "headerProjects": {
       "headLine": "Digital projects with <0>identity</0>",
+      "headLine_glitch": "Digital projects with <word />",
+      "headLineGlitchWords": ["identity"],
       "headerDescription": "A selection of websites, online stores, portfolios, and editorial platforms where design, content, and development integrate to better present a brand, a product, or an idea.",
       "contactButton": "Let's Talk"
     }

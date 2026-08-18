@@ -10,6 +10,8 @@
   "headers": {
     "headerHome": {
       "headLine": "Nous créons des sites web et des <0>expériences</0> digitales pour les créatifs et les marques qui portent une identité.",
+      "headLine_glitch": "Nous créons des sites web et des <word /> digitales pour les créatifs et les marques qui portent une identité.",
+      "headLineGlitchWords": [ "expériences", "interactions", "interfaces", "plateformes" ],
       "headerDescription": "Nous combinons design, narration et développement web pour les projets qui nécessitent une présence digitale à la hauteur de leur travail.",
       "portfolioButton": "Découvrir nos projets",
       "contactButton": "Parlons-en",
@@ -21,18 +23,24 @@
     },
     "headerAbout": {
       "headLine": "Un studio digital dédié aux projets à forte <0>identité</0>.",
+      "headLine_glitch": "Un studio digital dédié aux projets à forte <word />.",
+      "headLineGlitchWords": [ "identité" ],
       "headerDescription": "Nous créons des sites web et des expériences digitales pour des projets avec une identité, en soignant leur apparence, leur compréhension et leur fonctionnement.",
       "portfolioButton": "Voir les projets",
       "contactButton": "Parlons-en"
     },
     "headerServices": {
       "headLine": "Sites web, applications et boutiques en ligne avec une <0>identité</0>.",
+      "headLine_glitch": "Sites web, applications et boutiques en ligne avec une <word />.",
+      "headLineGlitchWords": [ "identité" ],
       "headerDescription": "Nous créons des expériences digitales claires, attrayantes et fonctionnelles, conçues pour mieux montrer votre travail, vos produits ou vos services.",
       "portfolioButton": "Voir les projets",
       "contactButton": "Parlons-en"
     },
     "headerProjects": {
       "headLine": "Projets digitaux avec une <0>identité</0>.",
+      "headLine_glitch": "Projets digitaux avec une <word />.",
+      "headLineGlitchWords": [ "identité" ],
       "headerDescription": "Une sélection de sites web, de boutiques en ligne, de portfolios et de plateformes éditoriales où le design, le contenu et le développement s'intègrent pour mieux présenter une marque, un produit ou une idée.",
       "contactButton": "Parlons-en"
     }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 
 import { Modal } from './Contact/Modal.jsx';
@@ -9,11 +9,13 @@ export const HeaderContact = () => {
     const { t } = useTranslation();
 
     const [isFormOpen, setIsFormOpen] = useState(false);
+    const formWasOpened = useRef(false);
 
 
     const openForm = () => {
         setIsFormOpen(true);
         document.body.classList.add("modal-open");
+        formWasOpened.current = true;
     }
 
     const closeForm = () => {
@@ -24,6 +26,28 @@ export const HeaderContact = () => {
     const handleSubmit = (/**@type {React.FormEvent<HTMLButtonElement>}*/e) => {
         
     };
+
+
+    /* OPEN FORM ON SCROLL BEHAVIOR */
+    
+    const handleScroll = (/**@type {WheelEvent}*/e) => {
+        e.preventDefault();
+
+        if (e.defaultPrevented) console.info("The scroll has been locked...");
+        else console.warn("Default was not prevented ノ┬─┬ノ ︵ ( \\o°o)\\");
+
+        if (e.deltaY > 0) {
+            openForm();
+            e.currentTarget.removeEventListener('wheel', handleScroll);
+        }
+    };
+
+    useEffect(() => {
+        if (formWasOpened.current) return;
+        
+        addEventListener('wheel', handleScroll, { passive: false });
+
+    }, []);
 
 
     return (<>

@@ -16,9 +16,7 @@ export const Home = () => (<>
 	<main>
 		<PageHeader
 			title={'headers.headerHome.headLine'}
-			description={'headers.headerHome.headerDescription'}
-			backgroundImgURL={"src/front/assets/img/HomeOne.jpg"}
-			withoutBackgroundFilter={'desktop'} />
+			description={'headers.headerHome.headerDescription'} />
 		<Introduction />
 		<Services />
 		<ProjectsHome />

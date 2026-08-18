@@ -1,0 +1,80 @@
+/* ICON STYLES */
+    
+div.iconWrapper {
+
+  width: 1em;
+  display: flex;
+  fill: var(--icon-color, currentColor);
+
+  > svg.icon {
+
+    > path.monitorScreen {
+      fill: none;
+    }
+
+    > path.character {
+
+      display: var(--display-var, inline);
+
+      &.lessThan { --display-var: var(--display-lt) }
+      &.slash { --display-var: var(--display-s) }
+      &.greaterThan { --display-var: var(--display-gt) }
+    }
+
+    > g.matrixText {
+      opacity: 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 6px;
+      font-weight: bold;
+      fill: #33ff33;
+      filter: url(#glow);
+      text-anchor: middle;
+
+      > text.rainColumn {
+        animation: fall linear infinite paused;
+        
+        &.c1 { animation-duration: 4.5s; animation-delay: 0.0s; opacity: 0.9; font-size: 1.125em; }
+        &.c2 { animation-duration: 3.2s; animation-delay: -1.5s; opacity: 0.6; font-size: 0.875em; }
+        &.c3 { animation-duration: 5.8s; animation-delay: -3.0s; opacity: 0.8; font-size: 1em; }
+        &.c4 { animation-duration: 2.5s; animation-delay: -0.5s; opacity: 1.0; font-size: 1.1875em; fill: #99ff99; }
+        &.c5 { animation-duration: 4.0s; animation-delay: -2.2s; opacity: 0.5; font-size: 0.8125em; }
+        &.c6 { animation-duration: 5.0s; animation-delay: -1.0s; opacity: 0.7; font-size: 0.9375em; }
+        &.c7 { animation-duration: 3.7s; animation-delay: -4.1s; opacity: 0.8; font-size: 1.0625em; }
+      }
+    }
+  }
+}
+
+div.iconWrapper:hover > svg.icon,
+div.iconWrapper > svg.icon:hover,
+:global(.group):hover > svg.icon,
+:global(.group):hover > div.iconWrapper > svg.icon {
+
+  animation: backspace 2s 0.3s linear forwards;
+
+  > path.monitorScreen {
+    fill: var(--monitorScreenColor, var(--bs-gray-500));
+  }
+
+  > g.matrixText {
+    opacity: 1;
+
+    > text.rainColumn {
+      animation-play-state: running;
+    }
+  }
+
+}
+
+
+/* ICON UTILS */
+
+@keyframes backspace {
+    0% { --display-gt: none }
+    65% { --display-s: none }
+    100% { --display-gt: none; --display-s: none; --display-lt: none }
+}
+@keyframes fall {
+    0% { transform: translateY(-76.6666666667px) }
+    100% { transform: translateY(76.6666666667px) }
+}

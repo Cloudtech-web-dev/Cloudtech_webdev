@@ -30,7 +30,7 @@ export const Footer = ({ withBrandCard = true }) => {
 
 
 	return (
-		<footer className="footer mt-auto d-flex flex-column justify-content-end" style={{ color: "var(--bs-gray-100)", scrollSnapAlign: "end", padding: "80px 90px", interpolateSize: "allow-keywords", transition: "height 0.5s ease" }}>
+		<footer className="footer mt-auto d-flex flex-column justify-content-end" style={{ color: "var(--bs-gray-100)", scrollSnapAlign: "end", padding: "80px 90px", interpolateSize: "allow-keywords", transition: "height 0.5s 0.5s ease" }}>
 			
 			{/* Upper half => Brand Card & Main Links */}
 			<div className="container g-0 flex-grow-1 d-flex flex-column justify-content-end">
