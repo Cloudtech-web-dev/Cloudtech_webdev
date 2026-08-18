@@ -231,76 +231,10 @@ h6 {
   opacity: 1;
 }
 
-/* Swiper para otros proyectos */
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fbff06 !important;
-  /* Tu color amarillo */
-  transform: scale(0.7);
-  /* Para que no sean gigantes */
-}
-
-.swiper {
-  padding: 0 40px 0px 40px !important;
-}
-
-/* Swiper para testimonials */
-
-.testimonial-swiper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 60px;
-}
-
-@media (min-width: 350px) {
-  .testimonial-swiper .swiper-button-next {
-    display: none;
-    padding: 0px !important;
-  }
-
-  .testimonial-swiper .swiper-button-prev {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .testimonial-swiper .swiper-button-next {
-    display: block;
-    right: 10px !important;
-  }
-
-  .testimonial-swiper .swiper-button-prev {
-    display: block;
-    left: 10px !important;
-  }
-
+@media (min-width: 768px) {  
   .page-intro-title {
     font-size: 4rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .testimonial-swiper .swiper-button-next {
-    display: block;
-    right: 40px !important;
-  }
-
-  .testimonial-swiper .swiper-button-prev {
-    display: block;
-    left: 40px !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .testimonial-swiper .swiper-button-next {
-    display: block;
-    right: 150px !important;
-  }
-
-  .testimonial-swiper .swiper-button-prev {
-    display: block;
-    left: 150px !important;
   }
 }
 

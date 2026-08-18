@@ -499,6 +499,39 @@
     }
 }
 
+/* ========================================================
+   COMPONENTE SWIPER DE PROYECTOS RELACIONADOS
+   ======================================================== */
+
+.custom-projects-swiper {
+    width: 100%;
+    overflow: hidden !important;
+}
+
+/* Estilos y posición de las flechas nativas de Swiper */
+.custom-swiper-arrow {
+    color: var(--bs-yellow, #FBFF06) !important; /* Tu color amarillo/dorado */
+    top: 50%; 
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Empujar las flechas hacia los extremos del contenedor */
+.swiper-button-prev.custom-swiper-arrow {
+    left:-10px !important;
+}
+
+.swiper-button-next.custom-swiper-arrow {
+    right: -10px !important;
+}
+
+/* Efecto hover elegante */
+.custom-swiper-arrow:hover {
+    transform: translateY(-5%) scale(1.02) !important;
+}
+
+
+
+
 /* ==========================================
    RESPONSIVE MÓVIL
    ========================================== */
