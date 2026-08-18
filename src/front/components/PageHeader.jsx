@@ -82,7 +82,10 @@ export const PageHeader = ({
                         key={i18n.language}
                         words={/**@type{string[]}*/(words)}
                         onWordChange={setCurrentWord}
-                      />
+                      />,
+                      secondary: withoutTransparencyEffect
+                        ? <span className="highlighted-text" style={{ display: "inline-flex", padding: "0 0.18em 0.08lh", margin: "0 0 -0.08lh" }} />
+                        : <HighlightTransparencyBox />
                     }}
                   />
               }

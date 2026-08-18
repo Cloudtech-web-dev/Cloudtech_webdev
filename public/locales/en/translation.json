@@ -10,7 +10,7 @@
   "headers": {
     "headerHome": {
       "headLine": "We design websites and digital <0>experiences</0> for creatives and brands with <0>identity</0>",
-      "headLine_glitch": "We design websites and digital <word /> for creatives and brands with <0>identity</0>",
+      "headLine_glitch": "We design websites and digital <word /> for creatives and brands with <secondary>identity</secondary>",
       "headLineGlitchWords": ["experiences", "interactions", "interfaces", "platforms"],
       "headerDescription": "We combine design, narrative and web development for projects that need a digital presence at the level of their work.",
       "portfolioButton": "Projects",
