@@ -24,7 +24,7 @@ export const PageHeader = ({
   const { t, i18n } = useTranslation();
   
   const words = useMemo(() => t(`${title}GlitchWords`, { returnObjects: true }) ?? [''], [t, title]);
-  const [currentWord, setCurrentWord] = useState(words[0]);
+  const [currentWord, setCurrentWord] = useState(/**@type{Array<string>}*/(words)[0]);
 
   return (
     <section className="position-relative min-vh-100 overflow-hidden">
@@ -54,10 +54,10 @@ export const PageHeader = ({
         
         {/* (optional) Background Filter */}
         <div className={["position-absolute top-0 start-0 w-100 h-100 mx-auto",
-            withoutBackgroundFilter==='mobile' ? " d-none d-lg-block"
-          : withoutBackgroundFilter==='desktop' ? " d-lg-none"
-          : withoutBackgroundFilter ? " d-none" : ""
-        ]} style={{ backgroundColor: "rgba(0, 0, 0, .55)" }} />
+            withoutBackgroundFilter==='mobile' ? "d-none d-lg-block"
+          : withoutBackgroundFilter==='desktop' ? "d-lg-none"
+          : withoutBackgroundFilter ? "d-none" : ""
+        ].filter(x=>x).join(" ")} style={{ backgroundColor: "rgba(0, 0, 0, .55)" }} />
 
       </div>
 
@@ -80,7 +80,7 @@ export const PageHeader = ({
                     components={{
                       word: <HighlightGlitchingBox
                         key={i18n.language}
-                        words={words}
+                        words={/**@type{string[]}*/(words)}
                         onWordChange={setCurrentWord}
                       />
                     }}

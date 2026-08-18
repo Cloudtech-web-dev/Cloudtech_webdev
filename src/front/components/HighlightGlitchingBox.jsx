@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const GLITCH_GLYPHS = '!@#$%^&*()_+-=[]{}|;:,.<>?/0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-export const HighlightGlitchingBox = ({
+export const HighlightGlitchingBox = (/**@type{{words:Array<string>,onWordChange:(string)=>void}}*/{
   words = [],
   onWordChange,
   scrambleDuration = 600,
