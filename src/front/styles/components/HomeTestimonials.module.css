@@ -129,6 +129,8 @@
 /* •----------------------------• */
 
 
+/* BASIC LAYOUT AND STYLES */
+
 .marquee-wrapper {
   width: 100%;
   overflow: hidden;
@@ -155,6 +157,8 @@
   }
 }
 
+
+/* ANIMATION AND INTERACTIVITY */
 
 .marquee-wrapper {
 

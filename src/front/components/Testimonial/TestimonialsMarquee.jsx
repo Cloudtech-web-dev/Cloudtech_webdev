@@ -132,8 +132,6 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
   const handleHorizontalScroll = (/**@type{WheelEvent}*/e) => {
     if (!wrapperRef.current || !trackRef.current) return;
 
-    // console.log({x: e.deltaX, y: e.deltaY})
-
     let deltaX, deltaY;
     if (e.shiftKey) {
       deltaX = e.deltaY ; deltaY = e.deltaX
@@ -170,54 +168,12 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
 
   }, [wrapperRef.current]);
   
-  
-  // const containerRef = useRef(null);
-  // const trackRef = useRef(null);
-  // const [isDown, setIsDown] = useState(false);
-  // const [startX, setStartX] = useState(0);
-  // const [scrollRight, setScrollRight] = useState(0);
-  // const [scrollLeft, setScrollLeft] = useState(0);
-
-  // const handleMouseDown = (e) => {
-  //   setIsDown(true);
-  //   setStartX(e.pageX - containerRef.current.offsetLeft);
-  //   setScrollLeft(containerRef.current.scrollLeft);
-  // };
-
-  // const handleMouseLeaveOrUp = () => {
-  //   setIsDown(false);
-  // };
-
-  // const handleMouseMove = (/**@type{MouseEvent}*/e) => {
-    // if (!isDown) return;
-    // e.preventDefault();
-
-    // const x = e.pageX - containerRef.current.offsetLeft;
-    // const walk = (x - startX);
-
-    // containerRef.current.scrollLeft = scrollLeft - walk;
-    // containerRef.current.scrollRight = scrollRight - walk;
-
-    // console.log({scrollLeft, walk, curTrans: trackRef.current.style.transform})
-    /**@type{HTMLElement}*/
-    // const cur = trackRef.current;
-    // const cur = document.querySelector(`.${styles["marquee-track"]}`);
-    // cur.computedStyleMap()
-    // console.log(window.getComputedStyle(cur).transform)
-    // const transform = window.getComputedStyle(cur).transform;
-    // const matrixValues = transform.match(/matrix.*\((.+)\)/)[1].split(', '); 
-    // const translateX = parseFloat(matrixValues[4]);
-
-    // console.log(translateX - walk)
-    // cur.style.transform = `translateX(${translateX - 20}px)`;
-    // trackRef.current.style.translate = trackRef.current.style.translate - walk;
-  // };
-  
 
   return (
     <div className={styles["marquee-wrapper"] + (propClassNames || "")}
 
       ref={wrapperRef}
+
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerEnd}
@@ -226,12 +182,6 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       onTouchCancel={handleTouchEnd}
-
-      // ref={containerRef}
-      // onMouseDown={handleMouseDown}
-      // onMouseLeave={handleMouseLeaveOrUp}
-      // onMouseUp={handleMouseLeaveOrUp}
-      // onMouseMove={handleMouseMove}
     >
       <div className={styles["marquee-track"]} ref={trackRef} style={{
         '--marquee-translate-delta': duplicatesCount,
