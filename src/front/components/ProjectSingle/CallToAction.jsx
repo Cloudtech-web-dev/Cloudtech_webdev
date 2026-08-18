@@ -1,19 +1,25 @@
 import '../../styles/StickyLayout.css';
 import PortfolioPDF from "../../assets/img/Portfolio/PORTFOLIO-CLOUDTECH.pdf";
-// import { useTranslation } from "react-i18next"
+import { useTranslation, Trans } from "react-i18next"
 
 export const CallToAction = () => {
-    // const { t } = useTranslation();
+    const { t } = useTranslation();
 
     return (
-        <section className="intro-scroll-wrapper">
+        <section className="light-section intro-scroll-wrapper">
             {/* Call to Action Section */}
             <div className="intro-sticky-box">
                 <div className="intro-content">
                     <h2 className="section-title">
-                        ¿Tienes un proyecto que necesita tomar forma digital?
+                        <Trans 
+                            i18nKey="projects.CTAsingleview.sectionTitle" 
+                            components={[
+                                <span className="bg-negative-title" /> 
+                            ]} 
+                        />
                     </h2>
-                    <p className="intro-text">Podemos ayudarte a ordenar la idea, diseñar la experiencia y construir una web, tienda online, plataforma o portafolio claro, funcional y alineado con tu identidad.
+                    <p className="intro-text">
+                        <Trans i18nKey="projects.CTAsingleview.sectionDescription" />
                     </p>
                     <a
                         href={PortfolioPDF}
@@ -21,8 +27,7 @@ export const CallToAction = () => {
                         rel="noopener noreferrer"
                         className="btn btn-outline-dark-custom btn-lg px-4 mx-auto w-lg-auto"
                     >
-                        Descarga el portafolio
-                        {/* {t('projects.downloadPortfolio')} */}
+                        {t('projects.downloadPortfolio')}
                     </a>
 
                 </div>

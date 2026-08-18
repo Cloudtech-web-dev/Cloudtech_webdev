@@ -121,7 +121,7 @@ def setup_admin(app):
     app.secret_key = os.environ.get('FLASK_APP_KEY', 'sample key')
     app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
     app.register_blueprint(admin_auth, url_prefix='/dashboard')
-    admin = Admin(app, name='CloudTech Admin', template_mode='bootstrap3',
+    admin = Admin(app, name='CloudTech Admin',
                   url='/dashboard',
                   index_view=SecureAdminIndexView(name="Home", url="/dashboard"))
     admin.add_view(SecureModelView(Lead, db.session))

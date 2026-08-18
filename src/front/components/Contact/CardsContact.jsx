@@ -3,12 +3,13 @@ import FolderIcon from "../../assets/Icons/Contact/folder1.svg";
 import CalendarIcon from "../../assets/Icons/Contact/calendar.svg";
 import EmailIcon from "../../assets/Icons/Contact/mail.svg";
 import PortfolioPDF from "../../assets/img/Portfolio/PORTFOLIO-CLOUDTECH.pdf";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const ContactCard = ({ title, description, link = "", icon, isExternal = false, isEmail = false, email = "" }) => {
     return (
         <div className="col-12 col-xl-4">
             <div className={`contact-card-custom h-100 p-4 d-flex flex-column position-relative`}>
+                {link && <a href={link} target={isExternal ? "_blank" : "_self"} rel={isExternal ? "noopener noreferrer" : ""} className="stretched-link"></a>}
 
                 {/* PARTE SUPERIOR: Título */}
                 <div className="card-top flex-grow-1">
@@ -30,6 +31,7 @@ const ContactCard = ({ title, description, link = "", icon, isExternal = false, 
                                 href={link}
                                 target={isExternal ? "_blank" : "_self"}
                                 rel={isExternal ? "noopener noreferrer" : ""}
+                                className="stretched-link"
                             ></a>
                         )}
                     </div>
@@ -40,7 +42,7 @@ const ContactCard = ({ title, description, link = "", icon, isExternal = false, 
 }
 
 export const CardsContact = () => {
-    // const { t } = useTranslation();
+    const { t } = useTranslation();
     const contactEmail = "ventas@cloudtech.com.ec";
 
     return (
@@ -49,21 +51,21 @@ export const CardsContact = () => {
                 <div className="row g-4 justify-content-center align-items-stretch">
 
                     <ContactCard
-                        title="¿Prefieres conversar directamente?"
-                        description="Agenda una llamada corta para contarnos tu idea y ver cómo podemos ayudarte."
+                        title={t("contact.ContactCards.meeting.title")}
+                        description={t("contact.ContactCards.meeting.description")}
                         icon={CalendarIcon}
                     />
 
                     <ContactCard
-                        title="También puedes escribirnos directamente a:"
+                        title={t("contact.ContactCards.email.title")}
                         description={contactEmail}
                         icon={EmailIcon}
                         link={`mailto:${contactEmail}`}
                     />
 
                     <ContactCard
-                        title="¿Quieres ver primero cómo trabajamos?"
-                        description="Mira nuestro portafolio"
+                        title={t("contact.ContactCards.Portfolio.title")}
+                        description={t("contact.ContactCards.Portfolio.desc")}
                         icon={FolderIcon}
                         link={PortfolioPDF}
                         isExternal={true}

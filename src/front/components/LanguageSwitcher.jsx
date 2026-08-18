@@ -2,14 +2,20 @@ import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import flagES from '../assets/img/Flags/es.svg'
 import flagEN from '../assets/img/Flags/us.svg'
+import flagFR from '../assets/img/Flags/fr.svg'
 
 function LanguageSwitcher() {
     const { i18n } = useTranslation();
-    const [activeFlag, setActiveFlag] = useState(i18n.language === 'es' ? flagES : flagEN);
     const [isOpen, setIsOpen] = useState(false);
+    const flags = {
+        es: flagES,
+        en: flagEN,
+        fr: flagFR
+    };
+    const [activeFlag, setActiveFlag] = useState(flags[i18n.language] || flagEN);
 
     useEffect(() => {
-        setActiveFlag(i18n.language === 'es' ? flagES : flagEN);
+        setActiveFlag(flags[i18n.language] || flagEN);
     }, [i18n.language])
 
     const changeLanguage = (lng) => {
@@ -50,7 +56,11 @@ function LanguageSwitcher() {
                         <img src={flagEN} alt="English" className='flag-icon-dropdown' />
                     </button>
                 </li>
-
+                <li>
+                    <button className='dropdown-item' onClick={() => changeLanguage('fr')}>
+                        <img src={flagFR} alt="Français" className='flag-icon-dropdown' />
+                    </button>
+                </li>
             </ul>
         </div>
 

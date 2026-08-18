@@ -2,7 +2,7 @@ import styles from "../../styles/components/HeaderContact.module.css";
 
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
-
+import { Link } from "react-router-dom";
 
 /**
  * @type {import("../../utils/customTypes.js").DataStructure}
@@ -29,21 +29,126 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
     const [data, setData] = useState(initialData);
     const [termsAccepted, setTermsAccepted] = useState(false);
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [statusMessage, setStatusMessage] = useState(null);
 
-    const handleInputs = (/**@type {React.ChangeEvent}*/ e) => {
 
+    // const handleInputs = (/**@type {React.ChangeEvent}*/ e) => {
+
+    // };
+
+    // const handleTermsAgreement = (/**@type {React.ChangeEvent<HTMLInputElement>}*/ e) => {
+
+    // };
+
+    // const handlePreSubmit = (/**@type {React.FormEvent<HTMLButtonElement>}*/ e) => {
+    //     e.preventDefault();
+
+    //     handleSubmit && handleSubmit(e);
+    // };
+
+    // 1. Manejador unificado de inputs
+    const handleInputs = (e) => {
+        const { name, value, type, checked, id } = e.target;
+
+        // Sección 1: Checkboxes multiselect (needs)
+        if (name === "needs") {
+            const optionId = parseInt(id.replace("type-", ""), 10);
+            setData(prev => {
+                const currentNeeds = prev.needs || [];
+                const updatedNeeds = checked
+                    ? [...currentNeeds, optionId]
+                    : currentNeeds.filter(item => item !== optionId);
+                return { ...prev, needs: updatedNeeds };
+            });
+            return;
+        }
+
+        // Sección 2: Dropdown (stage)
+        if (name === "stage") {
+            setData(prev => ({ ...prev, stage: parseInt(value, 10) }));
+            return;
+        }
+
+        // Sección 3: Textarea (problemDescription)
+        if (name === "problemDescription") {
+            setData(prev => ({ ...prev, problemDescription: value }));
+            return;
+        }
+
+        // Sección 4: Radio buttons (idealTimeframe)
+        if (name === "idealTimeframe") {
+            const optionId = parseInt(id.replace("term-", ""), 10);
+            setData(prev => ({ ...prev, idealTimeframe: optionId }));
+            return;
+        }
+
+        // Sección 5: Campos Personales (personalData)
+        if (name.startsWith("personalData.")) {
+            const field = name.split(".")[1];
+            setData(prev => ({
+                ...prev,
+                personalData: {
+                    ...prev.personalData,
+                    [field]: value
+                }
+            }));
+            return;
+        }
+
+        // Newsletter Checkbox
+        if (name === "newsletterOptIn") {
+            setData(prev => ({ ...prev, newsletterOptIn: checked }));
+            return;
+        }
     };
 
-    const handleTermsAgreement = (/**@type {React.ChangeEvent<HTMLInputElement>}*/ e) => {
-        
+    const handleTermsAgreement = (e) => {
+        setTermsAccepted(e.target.checked);
     };
 
-    const handlePreSubmit = (/**@type {React.FormEvent<HTMLButtonElement>}*/ e) => {
+    // 2. Manejador del envío (Fetch POST)
+    const handlePreSubmit = async (e) => {
         e.preventDefault();
 
-        handleSubmit && handleSubmit(e);
-    };
+        if (!termsAccepted) {
+            setStatusMessage({ type: 'error', text: 'Por favor acepta los términos y condiciones.' });
+            return;
+        }
 
+        setIsSubmitting(true);
+        setStatusMessage(null);
+
+        try {
+            // Usa tu variable de entorno o fallback a localhost
+            const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
+
+            const response = await fetch(`${backendUrl}/api/contact`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.message || "Error al enviar el formulario.");
+            }
+
+            setStatusMessage({ type: 'success', text: '¡Mensaje enviado con éxito!' });
+            setData(initialData); // Reiniciar formulario
+
+            if (handleSubmit) handleSubmit(e);
+
+        } catch (error) {
+            console.error("Error enviando lead:", error);
+            setStatusMessage({ type: 'error', text: error.message || "Ocurrió un error inesperado." });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     return (
         <form onSubmit={handlePreSubmit} className={`${styles.form} d-flex flex-column mx-auto`} style={{ maxWidth: 843, marginBlock: 28, gap: 40, color: "var(--bs-gray-1000)" }}>
@@ -104,7 +209,8 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
 
                         {/* Invisible checkbox (for behavior) */}
                         <input type="checkbox" required
-                            name={`type`} id={`type-${option.id}`}
+                            name="needs" id={`type-${option.id}`}
+                            checked={data.needs.includes(option.id)}
                             style={{ opacity: 0, width: 1, height: 1, position: 'absolute', top: 0, left: 0 }}
                             onChange={handleInputs}
                         />
@@ -126,13 +232,15 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
 
                 {/* Dropdown menu */}
                 <div className={`d-flex flex-wrap ${styles["form-dropdown"]} form-dropdown`} style={{ paddingLeft: 72, gap: "21px 17px", gridAutoFlow: "column" }}>
-                    <select onChange={handleInputs} name="stage" id="stage" defaultValue={0} className='w-100 bg-transparent font-p1' style={{ padding: "10px 20px", border: "1px solid var(--bs-gray-1000)", borderRadius: 12 }}>
+                    <select onChange={handleInputs} name="stage" id="stage" value={data.stage || 0} className='w-100 bg-transparent font-p1' style={{ padding: "10px 20px", border: "1px solid var(--bs-gray-1000)", borderRadius: 12 }}>
                         <option value={0} disabled>{t('contact.form.section2.options.placeholder')}</option>
                         {[
                             { id: 1, label: t('contact.form.section2.options.opt1') },
                             { id: 2, label: t('contact.form.section2.options.opt2') },
                             { id: 3, label: t('contact.form.section2.options.opt3') },
                             { id: 4, label: t('contact.form.section2.options.opt4') },
+                            { id: 5, label: t('contact.form.section2.options.opt5') },
+                            { id: 6, label: t('contact.form.section2.options.opt6') },
                         ].map(stage => (
                             <option key={stage.id} value={stage.id}>{stage.label}</option>
                         ))}
@@ -153,7 +261,7 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
 
                 {/* Text area field */}
                 <div className="d-flex flex-wrap font-p1" style={{ paddingLeft: 72, gap: "21px 17px", gridAutoFlow: "column", lineHeight: "1" }}>
-                    <textarea name="request" id="request" onChange={handleInputs} className='font-p1 bg-transparent w-100' style={{ color: "var(--bs-gray-1000)", height: "4lh", padding: "10px 20px", boxSizing: "content-box", border: "1px solid var(--bs-gray-1000)", borderRadius: 12 }} />
+                    <textarea name="problemDescription" id="problemDescription" value={data.problemDescription || ""} onChange={handleInputs} className='font-p1 bg-transparent w-100' style={{ color: "var(--bs-gray-1000)", height: "4lh", padding: "10px 20px", boxSizing: "content-box", border: "1px solid var(--bs-gray-1000)", borderRadius: 12 }} />
                 </div>
 
             </div>
@@ -182,11 +290,11 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
                         {option.label}
 
                         {/* Invisible radio button (for behavior) */}
-                        <input onChange={handleInputs} type="radio" id={`term-${option.id}`} name={`term`} style={{ visibility: 'hidden', width: 0 }} />
+                        <input onChange={handleInputs} type="radio" id={`term-${option.id}`} name="idealTimeframe" checked={data.idealTimeframe === option.id} style={{ visibility: 'hidden', width: 0 }} />
 
                     </label>
                 ))}</div>
-                
+
             </div>
 
             {/* Section 5 */}
@@ -201,10 +309,10 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
 
                 {/* Input data fields array */}
                 <div className={`d-flex flex-column ${styles['form-data-input']} form-data-input font-p1`} style={{ paddingLeft: 72, gap: 20, lineHeight: "1" }}>{[
-                    { id: 1, label: t('contact.form.section5.fieldsLabels.fullName') },
-                    { id: 2, label: t('contact.form.section5.fieldsLabels.email'), inputType: "email" },
-                    { id: 3, label: t('contact.form.section5.fieldsLabels.phone'), inputType: "tel" },
-                    { id: 4, label: t('contact.form.section5.fieldsLabels.projectName') },
+                    { id: 1, fieldName: "wholeName", label: t('contact.form.section5.fieldsLabels.fullName') },
+                    { id: 2, fieldName: "email", label: t('contact.form.section5.fieldsLabels.email'), inputType: "email" },
+                    { id: 3, fieldName: "phone", label: t('contact.form.section5.fieldsLabels.phone'), inputType: "tel" },
+                    { id: 4, fieldName: "projectName", label: t('contact.form.section5.fieldsLabels.projectName') },
                 ].map(field => (
                     <label key={field.id} htmlFor={`data-${field.id}`} className='d-flex align-items-end text-center font-h3' style={{ gap: 30 }}>
 
@@ -212,11 +320,20 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
                         {field.label}
 
                         {/* Field input element */}
-                        <input required onChange={handleInputs} type={field.inputType || "text"} id={`data-${field.id}`} name={`data`} className='bg-transparent font-p1' style={{ flex: 1, height: 36 }} />
+                        <input
+                            required
+                            onChange={handleInputs}
+                            value={data.personalData[field.fieldName] || ""}
+                            type={field.inputType || "text"} 
+                            id={`data-${field.id}`}
+                            name={`personalData.${field.fieldName}`}
+                            className='bg-transparent font-p1'
+                            style={{ flex: 1, height: 36 }}
+                        />
 
                     </label>
                 ))}</div>
-                
+
             </div>
 
             {/* Submit handles */}
@@ -230,29 +347,45 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
                         <label htmlFor="terms-conditions">
 
                             {/* Checkbox element */}
-                            <input required onChange={handleTermsAgreement} type="checkbox" id="terms-conditions" name="agreements" />
+                            <input required onChange={handleTermsAgreement} checked={termsAccepted} type="checkbox" id="terms-conditions" name="agreements"/>
 
                             {/* Checkbox label */}
-                            {t('contact.form.formSubmission.termsDisclosure')}
-                            
+                            <span>
+                                {t('contact.form.formSubmission.termsDisclosure')}
+                                <Link
+                                    to="/terms-conditions"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-decoration-underline"
+                                >
+                                    {t('contact.form.formSubmission.termsAndPrivacy')}
+                                </Link>
+                            </span>
+
                         </label>
 
                         {/* Newsletter subscription agreement */}
                         <label htmlFor="newsletter">
-                            
+
                             {/* Checkbox element */}
-                            <input onChange={handleInputs} type="checkbox" id="newsletter" name="agreements" />
-                            
+                            <input onChange={handleInputs} checked={data.newsletterOptIn} type="checkbox" id="newsletter" name="newsletterOptIn" />
+
                             {/* Checkbox label */}
                             {t('contact.form.formSubmission.newsletter')}
-                            
+
                         </label>
 
                     </div>
 
+                    {statusMessage && (
+                        <div className={`alert alert-${statusMessage.type === 'error' ? 'danger' : 'success'} py-2 px-3 text-center`} role="alert">
+                            {statusMessage.text}
+                        </div>
+                    )}
+
                     {/* Submit form button */}
-                    <button type="submit" className="btn btn-outline btn-lg rounded-pill border-4 font-p1 fs-6 d-lg-block" style={{ padding: "18px 34px", fontWeight: 900, lineHeight: "1.125", letterSpacing: 0 }}>
-                        {t('contact.form.formSubmission.submitButton')}
+                    <button type="submit" disabled={isSubmitting} className="btn btn-outline btn-lg rounded-pill border-4 font-p1 fs-6 d-lg-block" style={{ padding: "18px 34px", fontWeight: 900, lineHeight: "1.125", letterSpacing: 0 }}>
+                        {isSubmitting ? 'Enviando...' : t('contact.form.formSubmission.submitButton')}
                     </button>
 
                 </div>

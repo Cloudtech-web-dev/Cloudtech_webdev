@@ -1,8 +1,9 @@
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import String, Boolean, Text
+from sqlalchemy import String, Boolean, Text, Integer, JSON
 from sqlalchemy.orm import Mapped, mapped_column
 from flask_bcrypt import Bcrypt
 from flask_login import UserMixin
+from .utils import NEEDS_MAP, STAGE_MAP, TIMEFRAME_MAP
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
@@ -36,24 +37,40 @@ class CTAdmin(db.Model, UserMixin):
 
 
 class Lead(db.Model):
+    __tablename__ = 'lead'
+    
     id: Mapped[int] = mapped_column(primary_key=True)
-    name: Mapped[str] = mapped_column(
-        String(120), unique=False, nullable=False)
-    email: Mapped[str] = mapped_column(
-        String(120), unique=True, nullable=False)
-    phone: Mapped[str] = mapped_column(String(15), unique=True, nullable=False)
-    company: Mapped[str] = mapped_column(
-        String(50), unique=False, nullable=True)
-    message: Mapped[str] = mapped_column(Text, nullable=True)
+    
+    needs: Mapped[list] = mapped_column(JSON, nullable=False, default=list)
+    stage: Mapped[int] = mapped_column(Integer, nullable=True)
+    problem_description: Mapped[str] = mapped_column(Text, nullable=True)
+    ideal_timeframe: Mapped[int] = mapped_column(Integer, nullable=True)
+    
+    full_name: Mapped[str] = mapped_column(String(120), nullable=False)
+    email: Mapped[str] = mapped_column(String(120), nullable=False, index=True)
+    phone: Mapped[str] = mapped_column(String(30), nullable=True)
+    project_name: Mapped[str] = mapped_column(String(100), nullable=True)   
+    
+    newsletter_opt_in: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)        
 
     def serialize(self):
+        translated_needs = [NEEDS_MAP.get(n_id, f"Opción {n_id}") for n_id in (self.needs or [])]
+        translated_stage = STAGE_MAP.get(self.stage, "No especificado")
+        translated_timeframe = TIMEFRAME_MAP.get(self.ideal_timeframe, "No especificado")
+        
         return {
             "id": self.id,
-            "name": self.name,
-            "email": self.email,
-            "phone": self.phone,
-            "company": self.company,
-            "message": self.message
+            "needs": translated_needs,
+            "stage": translated_stage,
+            "problemDescription": self.problem_description,
+            "idealTimeframe": translated_timeframe,
+            "personalData": {
+                "fullName": self.full_name,
+                "email": self.email,
+                "phone": self.phone,
+                "projectName": self.project_name,
+            },
+            "newsletterOptIn": self.newsletter_opt_in
         }
 
 

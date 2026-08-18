@@ -2,6 +2,7 @@ import { useState } from "react"
 import { capacitiesData, processData } from "../utils/processContent";
 import { useTranslation } from "react-i18next";
 import "../styles/Accordion.css";
+import "../styles/StickyLayout.css";
 
 
 export const Process = () => {
@@ -37,7 +38,7 @@ export const Process = () => {
 
     return (
         <section className="py-5">
-            <div className="category-header-centered">
+            <div className="intro-content-positive py-5 mx-auto mb-5">
                 <h2 className="service-category-title-main">
                     {t('process.processHeader.title')}
                 </h2>

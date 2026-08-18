@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import "../../styles/Accordion.css";
 import { servicesList } from "../../utils/servicesList";
 import PlusIcon from "../../assets/Icons/plus.svg"
 import MinusIcon from "../../assets/Icons/minus.svg"
 
 export const Accordion = () => {
-    // const { t } = useTranslation();
+    const { t } = useTranslation();
     const [openItems, setOpenItems] = useState({
         // Item abierto por defecto
         "websites": "brand-sites",
@@ -40,10 +40,10 @@ export const Accordion = () => {
                         {/* CABECERA DE CATEGORÍA CENTRADA */}
                         <div className="category-header-centered">
                             <h2 className="service-category-title-main">
-                                {category.title}
+                                {t(category.title)}
                             </h2>
                             <p className="font-p1">
-                                {category.description}
+                                {t(category.description)}
                             </p>
                         </div>
 
@@ -62,7 +62,7 @@ export const Accordion = () => {
                                         >
                                             <div className="accordion-header-left">
                                                 <img src={item.icon} alt="" className="header-icon-svg" />
-                                                <span className="accordion-header-title">{item.title}</span>
+                                                <span className="accordion-header-title">{t(item.title)}</span>
                                             </div>
 
                                             {/* Icono de + / - */}
@@ -81,9 +81,9 @@ export const Accordion = () => {
                                                 <div className="content-grid">
                                                     {/* Columna de Texto */}
                                                     <div className="text-side text-sm-center text-md-start text-lg-start">
-                                                        <p className="item-description">{item.description}</p>
+                                                        <p className="item-description">{t(item.description)}</p>
                                                         <Link to={item.link} className="btn-outline-accent w-lg-25 w-md-100 d-block d-md-inline-block">
-                                                            {isMobile ? "Ver nuestro portafolio" : item.buttonText}
+                                                            {isMobile ? t("services.ServicesProjectsButton") : t(item.buttonText)   }
                                                         </Link>
                                                     </div>
 
@@ -106,7 +106,7 @@ export const Accordion = () => {
                 ))}
                 <div className="accordion-footer-cta">
                     <Link to="/contact" className="btn-outline-accent">
-                        Agenda una llamada
+                        {t("services.ServicesCTAButton")}
                     </Link>
                 </div>
             </div>

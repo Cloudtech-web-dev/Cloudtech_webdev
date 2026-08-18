@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import '../../styles/StickyLayout.css';
-import { useTranslation } from "react-i18next"
+import { useTranslation, Trans } from "react-i18next"
 
 export const WhereToBegin = () => {
     const { t } = useTranslation();
@@ -112,7 +112,12 @@ export const WhereToBegin = () => {
             <div className='intro-scroll-wrapper'>
                 <div className='intro-sticky-box'>
                     <div className='intro-content'>
-                        <h2 className='section-title'>No todos los <span className='bg-negative-title'>proyectos</span> empiezan en el mismo punto</h2>
+                        <h2 className='section-title'>
+                            <Trans i18nKey="services.whereToBegin.opening.openingTitle"
+                            components={[
+                                <span className="bg-negative-title" /> 
+                            ]} />
+                        </h2>
                         <p className='intro-text'>
                             {t('services.whereToBegin.opening.openingDescription')}
                         </p>
