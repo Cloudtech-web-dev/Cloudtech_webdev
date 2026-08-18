@@ -12,9 +12,9 @@ import LogoMura from '../assets/img/Portfolio/Mura/logo.png'
 import CoverPiedraNegra from '../assets/img/ProjectHeaders/piedranegraCover.jpg'
 import LogoPiedraNegra from '../assets/img/Portfolio/PiedraNegra/logo.png'
 import LogoJPPortafolio from '../assets/img/Portfolio/JPPortfolio/logo.svg'
-import CoverJPPortafolio from '../assets/img/Portfolio/JPPortfolio/cardBg.jpg'
+import CoverJPPortafolio from '../assets/img/ProjectHeaders/jpportafoliocover.jpg'
 
-import { galleryCosmo, galleryFlotilla, galleryFlora, galleryLibreras, galleryAsocove, galleryBusquedas, galleryMura, galleryPiedra } from './galleryContent'
+import { galleryCosmo, galleryFlotilla, galleryFlora, galleryLibreras, galleryAsocove, galleryBusquedas, galleryMura, galleryPiedra, galleryJPPortafolio } from './galleryContent'
 import { needsCover } from './needsCoverGallery'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -217,7 +217,7 @@ export const projectsList = [
         preview: 'projects.projectPreview7',
         summary: 'projects.projectSummary7',
         need: 'projects.projectNeed7',
-        needsArt: needsCover[6],
+        needsArt: needsCover[3],
         process: 'projects.projectProcess7.description',
         phase: [
             {
@@ -300,7 +300,7 @@ export const projectsList = [
             }
         ],
         solution: 'projects.projectSolution9',
-        // gallery: galleryJPPortafolio,
+        gallery: galleryJPPortafolio,
         credits: [
             {
                 name: 'David Pinto',
@@ -337,7 +337,7 @@ export const projectsList = [
         preview: 'projects.projectPreview4',
         summary: 'projects.projectSummary4',
         need: 'projects.projectNeed4',
-        needsArt: needsCover[3],
+        needsArt: needsCover[5],
         process: 'projects.projectProcess4.description',
         phase: [
             {
