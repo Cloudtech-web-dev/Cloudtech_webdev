@@ -1,10 +1,7 @@
 import CoverCosmo from '../assets/img/ProjectHeaders/Cosmocover.jpg'
 import LogoCosmo from '../assets/img/Portfolio/Cosmonauta/logo.svg'
-import CoverFlora from '../assets/img/ProjectHeaders/floracover.jpg'
-import CoverFlotilla from '../assets/img/ProjectHeaders/flotillacover.jpg'
 import CoverLibreras from '../assets/img/ProjectHeaders/librerascover.jpg'
 import LogoLibreras from '../assets/img/Portfolio/Libreras/logo.png'
-import CoverAsocove from '../assets/img/ProjectHeaders/asocovecover.jpg'
 import CoverBusquedas from '../assets/img/ProjectHeaders/busquedascover.jpg'
 import LogoBusquedas from '../assets/img/Portfolio/Busquedas/logo.png'
 import CoverMura from '../assets/img/ProjectHeaders/muracover.jpg'
@@ -14,7 +11,7 @@ import LogoPiedraNegra from '../assets/img/Portfolio/PiedraNegra/logo.png'
 import LogoJPPortafolio from '../assets/img/Portfolio/JPPortfolio/logo.svg'
 import CoverJPPortafolio from '../assets/img/Portfolio/JPPortfolio/cardBg.jpg'
 
-import { galleryCosmo, galleryFlotilla, galleryFlora, galleryLibreras, galleryAsocove, galleryBusquedas, galleryMura, galleryPiedra } from './galleryContent'
+import { galleryCosmo, galleryLibreras, galleryBusquedas, galleryMura, galleryPiedra } from './galleryContent'
 import { needsCover } from './needsCoverGallery'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -23,6 +20,7 @@ import {
     faCode, faSignsPost, faMicroscope, faRobot,
     faFingerprint, faFlask
 } from "@fortawesome/free-solid-svg-icons";
+import { faStethoscope, faBookOpen, faStore, faTags, faFolderTree, faFaceSmile, faPhotoFilm } from "@fortawesome/free-solid-svg-icons";
 import { faLeanpub, faWix } from "@fortawesome/free-brands-svg-icons";
 
 
@@ -101,22 +99,22 @@ export const projectsList = [
         process: 'projects.projectProcess8.description',
         phase: [
             {
-                icon: <FontAwesomeIcon icon={faArrowsSplitUpAndLeft} size="5x" />,
+                icon: <FontAwesomeIcon icon={faStethoscope} size="5x" />,
                 title: 'projects.projectProcess8.phase1Title',
                 description: 'projects.projectProcess8.phase1'
             },
             {
-                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
+                icon: <FontAwesomeIcon icon={faBookOpen} size="5x" />,
                 title: 'projects.projectProcess8.phase2Title',
                 description: 'projects.projectProcess8.phase2'
             },
             {
-                icon: <FontAwesomeIcon icon={faCode} size="5x" />,
+                icon: <FontAwesomeIcon icon={faStore} size="5x" />,
                 title: 'projects.projectProcess8.phase3Title',
                 description: 'projects.projectProcess8.phase3'
             },
             {
-                icon: <FontAwesomeIcon icon={faCreditCard} size="5x" />,
+                icon: <FontAwesomeIcon icon={faTags} size="5x" />,
                 title: 'projects.projectProcess8.phase4Title',
                 description: 'projects.projectProcess8.phase4'
             }
@@ -150,7 +148,7 @@ export const projectsList = [
             // },
         ],
         tech: ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'Affinity', 'Canva']
-    },    
+    },
     {
         id: 'busquedas',
         logo: LogoBusquedas,
@@ -279,22 +277,22 @@ export const projectsList = [
         process: 'projects.projectProcess9.description',
         phase: [
             {
-                icon: <FontAwesomeIcon icon={faFingerprint} size="5x" />,
+                icon: <FontAwesomeIcon icon={faFolderTree} size="5x" />,
                 title: 'projects.projectProcess9.phase1Title',
                 description: 'projects.projectProcess9.phase1'
             },
             {
-                icon: <FontAwesomeIcon icon={faLanguage} size="5x" />,
+                icon: <FontAwesomeIcon icon={faFaceSmile} size="5x" />,
                 title: 'projects.projectProcess9.phase2Title',
                 description: 'projects.projectProcess9.phase2'
             },
             {
-                icon: <FontAwesomeIcon icon={faWandMagicSparkles} size="5x" />,
+                icon: <FontAwesomeIcon icon={faPhotoFilm} size="5x" />,
                 title: 'projects.projectProcess9.phase3Title',
                 description: 'projects.projectProcess9.phase3'
             },
             {
-                icon: <FontAwesomeIcon icon={faRobot} size="5x" />,
+                icon: <FontAwesomeIcon icon={faCode} size="5x" />,
                 title: 'projects.projectProcess9.phase4Title',
                 description: 'projects.projectProcess9.phase4'
             }
