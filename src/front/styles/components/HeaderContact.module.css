@@ -41,20 +41,19 @@
 
   select::picker(select) {
     opacity: 1;
-    transform: scaleY(1);
+    transform: scale(1) translateY(0);
     transform-origin: top;
     transition: opacity, transform;
     transition-duration: 0.3s;
     transition-timing-function: ease;
+    width: anchor-size(width);
+    overflow-x: hidden;
   }
 
   @starting-style {
     select::picker(select) {
       opacity: 0;
-      transform: scaleY(0);
-      transition: opacity, transform;
-      transition-duration: 1s;
-      transition-timing-function: ease;
+      transform: scale(0.95) translateY(-2.5%);
     }
   }
 
@@ -64,6 +63,7 @@
     transition: background, color;
     transition-duration: 0.2s;
     transition-timing-function: ease;
+    white-space: normal;
 
     &::checkmark {
       opacity: 0

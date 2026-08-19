@@ -277,14 +277,14 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
                 </h3>
 
                 {/* Radio buttons array */}
-                <div className={`d-flex flex-wrap ${styles['form-bool-inputs']} form-bool-inputs font-p1`} style={{ paddingLeft: 72, gap: "21px 17px", gridAutoFlow: "column", lineHeight: "1" }}>{[
+                <div className={`d-flex flex-wrap ${styles['form-bool-inputs']} form-bool-inputs font-p1`} style={{ paddingLeft: 72, gap: "21px 17px", lineHeight: "1" }}>{[
                     { id: 1, label: t('contact.form.section4.options.opt1') },
                     { id: 2, label: t('contact.form.section4.options.opt2') },
                     { id: 3, label: t('contact.form.section4.options.opt3') },
                     { id: 4, label: t('contact.form.section4.options.opt4') },
                     { id: 5, label: t('contact.form.section4.options.opt5') },
                 ].map(option => (
-                    <label key={option.id} htmlFor={`term-${option.id}`} className='d-flex align-items-end justify-content-center text-center' style={{ width: 140, height: 88, border: "1px solid var(--bs-gray-1000)", borderRadius: 12, padding: "20px 17px" }}>
+                    <label key={option.id} htmlFor={`term-${option.id}`} className='d-flex align-items-end justify-content-center text-center' style={{ width: 140, minHeight: 88, border: "1px solid var(--bs-gray-1000)", borderRadius: 12, padding: "20px 17px" }}>
 
                         {/* Option label */}
                         {option.label}
