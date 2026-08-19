@@ -31,6 +31,9 @@ export const HeaderContact = () => {
     /* OPEN FORM ON SCROLL BEHAVIOR */
     
     const handleScroll = (/**@type {WheelEvent}*/e) => {
+        if (formWasOpened.current)
+            return e.currentTarget.removeEventListener('wheel', handleScroll);
+        
         e.preventDefault();
 
         // if (e.defaultPrevented) console.info("The scroll has been locked...");
