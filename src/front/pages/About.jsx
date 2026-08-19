@@ -3,10 +3,7 @@ import { Values } from "../components/About/Values"
 import { WorkSteps } from "../components/About/WorkSteps"
 import { WhoWeAre } from "../components/About/WhoWeAre"
 import { SEO } from "../utils/SEO"
-import { WhereToBegin } from "../components/Services/WhereToBegin"
 import PageHeader from "../components/PageHeader"
-import HomeAbout from "../assets/img/HomeAbout.jpg"
-import { GradientBg } from "../components/GradientBg"
 
 export const About = () => {
     return (
@@ -19,10 +16,7 @@ export const About = () => {
             <main>
                 <PageHeader
                     title="headers.headerAbout.headLine"
-                    description='headers.headerAbout.headerDescription'
-                    backgroundImgURL={HomeAbout}
-                    withSphereEffect={true}
-                />
+                    description='headers.headerAbout.headerDescription' />
                 <WhoWeAre />
                 <Team />
                 <WorkSteps />

@@ -93,7 +93,7 @@ export const Team = () => {
                     </div>
                     {selectedMember && (
                         <div className="col-lg-5 d-none d-lg-flex flex-column col-md-12 mb-4 d-flex flex-column justify-content-start gap-3 sticky-sidebar-column">
-                            <div className="bg-positive-title section-title-positive">{selectedMember.name}</div>
+                            <div><span className="section-title-for-highlight highlighted-text m-0">{selectedMember.name}</span></div>
                             <span className="text-white fs-4">{selectedMember.position}</span>
                             <p className="fs-5 text-white">
                                 {selectedMember.description}

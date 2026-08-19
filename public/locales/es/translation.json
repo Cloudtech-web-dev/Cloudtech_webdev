@@ -10,6 +10,9 @@
   "headers": {
     "headerHome": {
       "headLine": "Diseñamos sitios web y <0>experiencias</0> digitales para creativos y marcas con identidad",
+      "headLine_glitch": "Diseñamos sitios web y <word /> digitales para creativos y marcas con identidad",
+      "headLine_glitch_phonicI": "Diseñamos sitios web e <word /> digitales para creativos y marcas con identidad",
+      "headLineGlitchWords": ["experiencias", "interacciones", "interfaces", "plataformas"],
       "headerDescription": "Combinamos diseño, narrativa y desarrollo web para proyectos que necesitan una presencia digital a la altura de su trabajo.",
       "portfolioButton": "Proyectos",
       "contactButton": "Contáctanos",
@@ -21,18 +24,24 @@
     },
     "headerAbout": {
       "headLine": "Un estudio digital para proyectos con <0>identidad</0>",
+      "headLine_glitch": "Un estudio digital para proyectos con <word />",
+      "headLineGlitchWords": ["identidad"],
       "headerDescription": "Creamos sitios web y experiencias digitales para proyectos con identidad, cuidando cómo se ven, cómo se entienden y cómo funcionan.",
       "portfolioButton": "Ver proyectos",
       "contactButton": "Hablemos"
     },
     "headerServices": {
       "headLine": "Sitios web, aplicaciones y tiendas online con <0>identidad</0>",
+      "headLine_glitch": "Sitios web, aplicaciones y tiendas online con <word />",
+      "headLineGlitchWords": ["identidad"],
       "headerDescription": "Creamos experiencias digitales claras, atractivas y funcionales, pensadas para mostrar mejor tu trabajo, tus productos o tus servicios.",
       "portfolioButton": "Proyectos",
       "contactButton": "Contáctanos"
     },
     "headerProjects": {
       "headLine": "Proyectos digitales con <0>identidad</0>",
+      "headLine_glitch": "Proyectos digitales con <word />",
+      "headLineGlitchWords": ["identidad"],
       "headerDescription": "Una selección de sitios web, tiendas online, portafolios y plataformas editoriales donde diseño, contenido y desarrollo se integran para presentar mejor una marca, un producto o una idea.",
       "contactButton": "Contáctanos"
     }
@@ -564,10 +573,10 @@
       "post1": "Desarrollo Frontend",
       "post2": "Desarrollo Backend",
       "post3": "Desarrollo Fullstack",
-      "post4": "Gestión de Proyecto",
+      "post4": "Dirección de Proyecto",
       "post5": "Diseño UX/UI",
       "post6": "Desarrollo Web",
-      "post7": "Gestor de proyectos",
+      "post7": "Gestión de proyectos",
       "post8": "Manual de Marca",
       "post9": "Presentación retail y Presentación Private Label",
       "post10": "Contenido y estructura"

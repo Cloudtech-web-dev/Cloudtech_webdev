@@ -1,8 +1,10 @@
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
 
 import { GradientBg } from "./GradientBg";
 import { HighlightTransparencyBox } from "./HighlightTransparencyBox.jsx";
+import { HighlightGlitchingBox } from "./HighlightGlitchingBox.jsx";
 
 
 /**
@@ -12,13 +14,17 @@ export const PageHeader = ({
   title,
   description,
   backgroundImgURL,
-  withSphereEffect,
+  withoutSphereEffect,
   withoutProjectsButton,
   withoutTransparencyEffect,
   withoutBackgroundFilter,
-  withoutParallaxEffect
+  withoutParallaxEffect,
+  withWordGlitchEffect
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  
+  const words = useMemo(() => t(`${title}GlitchWords`, { returnObjects: true }) ?? [''], [t, title]);
+  const [currentWord, setCurrentWord] = useState(/**@type{Array<string>}*/(words)[0]);
 
   return (
     <section className="position-relative min-vh-100 overflow-hidden">
@@ -28,7 +34,7 @@ export const PageHeader = ({
 
         {/* Background Selection (between image or gradient background) */}
         <div className={"bottom-0 start-0 w-100 h-100 " + (withoutParallaxEffect ? "position-absolute" : "position-fixed")}>
-          {(withSphereEffect || !backgroundImgURL) ?
+          {(!withoutSphereEffect || !backgroundImgURL) ?
 
             (/* Gradient Spheres Background */
 
@@ -48,10 +54,10 @@ export const PageHeader = ({
         
         {/* (optional) Background Filter */}
         <div className={["position-absolute top-0 start-0 w-100 h-100 mx-auto",
-            withoutBackgroundFilter==='mobile' ? " d-none d-lg-block"
-          : withoutBackgroundFilter==='desktop' ? " d-lg-none"
-          : withoutBackgroundFilter ? " d-none" : ""
-        ]} style={{ backgroundColor: "rgba(0, 0, 0, .55)" }} />
+            withoutBackgroundFilter==='mobile' ? "d-none d-lg-block"
+          : withoutBackgroundFilter==='desktop' ? "d-lg-none"
+          : withoutBackgroundFilter ? "d-none" : ""
+        ].filter(x=>x).join(" ")} style={{ backgroundColor: "rgba(0, 0, 0, .55)" }} />
 
       </div>
 
@@ -62,12 +68,27 @@ export const PageHeader = ({
 
             {/* Heading */}
             <h1 className="hero-title-home display-2 fw-bolder text-center">
-              <Trans i18nKey={title} components={[
-                  withoutTransparencyEffect
-                    ? <span className="highlighted-text" style={{ display: "inline-flex", padding: "0 0.18em 0.08lh", margin: "0 0 -0.08lh" }} />
-                    : <HighlightTransparencyBox />
-                ]}
-              />
+              { !withWordGlitchEffect
+                ? <Trans i18nKey={title} components={[
+                      withoutTransparencyEffect
+                        ? <span className="highlighted-text" style={{ display: "inline-flex", padding: "0 0.18em 0.08lh", margin: "0 0 -0.08lh" }} />
+                        : <HighlightTransparencyBox />
+                    ]}
+                  />
+                : <Trans i18nKey={title}
+                    context={['glitch',i18n.exists(`${title}_glitch_phonicI`) && /^(i|hi)(?!e)/i.test(currentWord) && 'phonicI'].filter(x=>x).join('_')}
+                    components={{
+                      word: <HighlightGlitchingBox
+                        key={i18n.language}
+                        words={/**@type{string[]}*/(words)}
+                        onWordChange={setCurrentWord}
+                      />,
+                      secondary: withoutTransparencyEffect
+                        ? <span className="highlighted-text" style={{ display: "inline-flex", padding: "0 0.18em 0.08lh", margin: "0 0 -0.08lh" }} />
+                        : <HighlightTransparencyBox />
+                    }}
+                  />
+              }
             </h1>
 
             {/* Description */}
@@ -95,21 +116,6 @@ export const PageHeader = ({
           </div>
         </div>
       </div>
-
-      {/* Component Styles */}
-      <style>{`
-        .synced-bg {
-            background-image: url(${backgroundImgURL});
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            
-            &.synced-bg-heading {
-                color: transparent;
-                background-clip: text;
-            }
-        }
-      `}</style>
 
     </section>
   );

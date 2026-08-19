@@ -702,30 +702,8 @@ h6 {
 
 /* HIGHLIGHTED TEXT */
 
-/* Previous implementation (only useful for transparency) */
-.highlighted-text.synced-bg-heading {
-  position: relative;
-  /* color: var(--highlighted-text-color, var(--bs-gray-1000)); */
-
-  isolation: isolate;
-
-  &::before {
-    content: '';
-    position: absolute;
-    background-color: var(--highlighted-text-bg, var(--bs-accent-1));
-    z-index: -1;
-    --oy: 8%;
-    --gy: -2%;
-    --gx: 1.5%;
-    top: calc(-1*var(--gy) + var(--oy));
-    left: calc(-1*var(--gx));
-    height: calc(100% + 2*var(--gy));
-    width: calc(100% + 2*var(--gx));
-  }
-}
-
 /* Newer without ::before (much more straightforward) */
-.highlighted-text:not(.synced-bg-heading) {
+.highlighted-text {
   color: var(--highlighted-text-color, var(--bs-gray-1000));
   background-image: linear-gradient(var(--highlighted-text-bg, var(--bs-accent-1)));
   background-size: 100%;
@@ -740,7 +718,7 @@ h6 {
   position: relative;
   display: inline-flex;
 
-  * {
+  > span {
     background-color: var(--bs-accent-1);
     padding: 0 0.18em 0.08lh;
     margin-bottom: -0.08lh;
@@ -755,6 +733,26 @@ h6 {
       mix-blend-mode: screen;
     }
   }
+}
+
+.highlighted-text.is-glitching,
+.highlight-transparency-box.is-glitching > span {
+  font-family: monospace;
+  letter-spacing: -0.09em;
+  filter:
+    drop-shadow(-0.05em -0.025em #ff0055)
+    drop-shadow(0.05em 0.025em #00ffff)
+  ;
+  animation: glitch-jitter var(--glitching-text-jitter-duration, 0.12s) infinite steps(2);
+}
+
+@keyframes glitch-jitter {
+   0% { transform: translate(   0,   0) skew( 0deg) }
+  20% { transform: translate(-2px, 1px) skew(-3deg) }
+  40% { transform: translate( 2px,-1px) skew( 2deg) }
+  60% { transform: translate(-1px,-2px) skew( 1deg) }
+  80% { transform: translate( 2px, 1px) skew(-1deg) }
+ 100% { transform: translate(   0,   0) skew( 0deg) }
 }
 
 

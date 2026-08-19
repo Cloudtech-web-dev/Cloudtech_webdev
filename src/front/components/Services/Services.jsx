@@ -4,15 +4,16 @@ import { useTranslation } from "react-i18next";
 import { Card } from "./Card";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faCode, faHexagonNodes, faPenRuler } from "@fortawesome/free-solid-svg-icons";
-import { faCustomBagCheck, faCustomMagicWand, faCustomPlanetWithSatellites, faCustomCodeMonitor } from "../../utils/customIcons";
+import { faCustomBagCheck } from "../../utils/customFaIcons";
+import { PlanetWithSatellitesIcon, CodeMonitorIcon, MagicWandIcon, BagCheckIcon } from "../animated-icons";
 
 
 const services = [
-    { id: 'webSites', icon: faCustomPlanetWithSatellites },
-    { id: 'webApps', icon: faCustomCodeMonitor },
-    { id: 'eCommerce', icon: faCustomBagCheck },
-    { id: 'visualIdentity', icon: faCustomMagicWand },
+    { id: 'webSites', Icon: PlanetWithSatellitesIcon },
+    { id: 'webApps', Icon: CodeMonitorIcon },
+    { id: 'eCommerce', Icon: (props) => <FontAwesomeIcon icon={faCustomBagCheck} className={["fa-bounce", props.className].join(" ")} size={props.size} /> },
+    // { id: 'eCommerce', Icon: BagCheckIcon },
+    { id: 'visualIdentity', Icon: MagicWandIcon },
 ];
 
 
@@ -46,10 +47,10 @@ export const Services = () => {
                         {/* Services Icons Array */}
                         <div className="home-services-middle row my-3 justify-content-center justify-content-md-between mx-auto w-100" style={{ maxWidth: 960, color: "var(--bs-gray-1000)", gap: 30 }}>
                             {services.map(service => (
-                                <div key={service.id} className="home-services-icon col-6 col-md row flex-column align-items-center text-center g-0" style={{ gap: 30 }}>
+                                <div key={service.id} className="home-services-icon group col-6 col-md row flex-column align-items-center text-center g-0" style={{ gap: 30 }}>
 
                                     {/* Service Icon */}
-                                    <FontAwesomeIcon icon={service.icon} size="7x" />
+                                    <service.Icon size="7x" className="service-icon" />
 
                                     {/* Service Label */}
                                     <h3 style={{ fontSize: 24, fontWeight: 700, lineHeight: "1", letterSpacing: "0.01rem" }}>{t(`services.kinds.${service.id}`)}</h3>
@@ -93,7 +94,7 @@ export const Services = () => {
                                 margin-bottom: 2.5rem !important;
                                 .home-services-icon {
                                     gap: 10px !important;
-                                    svg { height: fit-content; width: 40% }
+                                    > svg, .service-icon { height: fit-content; width: 40% }
                                     h3 { font-size: 1.2rem !important }
                                 }
                             }
@@ -109,6 +110,15 @@ export const Services = () => {
                                     background-color: var(--bs-gray-1000) !important;
                                 }
                             }
+                        }
+                        
+                        .home-services-icon {
+                            .service-icon { transition: scale 0.3s ease }
+                            &:hover .service-icon { scale: 1.2 }
+                            &:hover .service-icon { @media (width > 768px) { scale: 1.5 } }
+                        }
+                        .home-services-icon:not(:hover) svg {
+                            animation: none;
                         }
                     `}</style>
 

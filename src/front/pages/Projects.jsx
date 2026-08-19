@@ -2,7 +2,6 @@
 import { Projects } from "../components/Projects";
 import { CallToAction } from "../components/Projects/CallToAction";
 import { SEO } from "../utils/SEO";
-import HomeProjects from "../assets/img/HomeProjects.jpg"
 import PageHeader from "../components/PageHeader";
 
 export const Portfolio = () => {
@@ -16,10 +15,8 @@ export const Portfolio = () => {
             <main>
                 <PageHeader
                     title="headers.headerProjects.headLine"
-                    description='headers.headerProjects.headerDescription'
-                    backgroundImgURL={HomeProjects}
-                    withoutProjectsButton
-                />
+                    description='headers.headerProjects.headerDescription' 
+                    withoutProjectsButton />
                 <Projects />
                 <CallToAction />
             </main>
