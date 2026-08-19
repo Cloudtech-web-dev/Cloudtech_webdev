@@ -33,8 +33,8 @@ export const HeaderContact = () => {
     const handleScroll = (/**@type {WheelEvent}*/e) => {
         e.preventDefault();
 
-        if (e.defaultPrevented) console.info("The scroll has been locked...");
-        else console.warn("Default was not prevented ノ┬─┬ノ ︵ ( \\o°o)\\");
+        // if (e.defaultPrevented) console.info("The scroll has been locked...");
+        // else console.warn("Default was not prevented ノ┬─┬ノ ︵ ( \\o°o)\\");
 
         if (e.deltaY > 0) {
             openForm();

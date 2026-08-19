@@ -152,7 +152,7 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
       newProgress = getCurrentProgress() + progressDelta
     ;
 
-    console.table({ deltaX, adjustedScrollDelta, currentProgress: currentProgress.current, currentProgressMethod: getCurrentProgress(), progressDelta, newProgress })
+    // console.table({ deltaX, adjustedScrollDelta, currentProgress: currentProgress.current, currentProgressMethod: getCurrentProgress(), progressDelta, newProgress })
 
     setUpdatedProgress(newProgress);
 
