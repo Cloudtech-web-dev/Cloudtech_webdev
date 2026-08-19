@@ -59,6 +59,15 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
                 const updatedNeeds = checked
                     ? [...currentNeeds, optionId]
                     : currentNeeds.filter(item => item !== optionId);
+                if (updatedNeeds.length) {
+                    document.querySelectorAll('input[name="needs"]').forEach(checkbox => {
+                        checkbox.required = false;
+                    })
+                } else {
+                    document.querySelectorAll('input[name="needs"]').forEach(checkbox => {
+                        checkbox.required = true;
+                    })
+                }
                 return { ...prev, needs: updatedNeeds };
             });
             return;
