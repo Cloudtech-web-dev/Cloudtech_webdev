@@ -27,7 +27,7 @@
  * @prop {boolean} [withoutTransparencyEffect] Remove the transparency effect on the highlighted text.
  * @prop {boolean | 'mobile' | 'desktop'} [withoutBackgroundFilter] Remove the dark filter that usually sits on top of the background. It is possible to remove it only on ***mobile***, on ***desktop*** (`lg`), or on both if just `true`.
  * @prop {boolean} [withoutParallaxEffect] Remove the *False Parallax Effect* when scrolling down the page.
- * @prop {boolean} [withoutWordGlitchEffect] Remove the *Glitch Effect* on the heading's highlighted word.
+ * @prop {boolean} [withWordGlitchEffect] Add the *Glitch Effect* to the heading's highlighted word.
  */
 
 export default {};

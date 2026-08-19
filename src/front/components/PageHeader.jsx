@@ -19,7 +19,7 @@ export const PageHeader = ({
   withoutTransparencyEffect,
   withoutBackgroundFilter,
   withoutParallaxEffect,
-  withoutWordGlitchEffect
+  withWordGlitchEffect
 }) => {
   const { t, i18n } = useTranslation();
   
@@ -68,7 +68,7 @@ export const PageHeader = ({
 
             {/* Heading */}
             <h1 className="hero-title-home display-2 fw-bolder text-center">
-              { withoutWordGlitchEffect
+              { !withWordGlitchEffect
                 ? <Trans i18nKey={title} components={[
                       withoutTransparencyEffect
                         ? <span className="highlighted-text" style={{ display: "inline-flex", padding: "0 0.18em 0.08lh", margin: "0 0 -0.08lh" }} />
