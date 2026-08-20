@@ -1,38 +1,34 @@
-name: "ct_web"
-
 services:
+
   # Servicio del Backend (Python/Flask API)
   server:
-    container_name: ct_api
     build: .
+    container_name: cloudtech_server
     restart: always
-    ports:
-      - "3001:8000"
+    volumes:
+      - ./src:/app
+      - ./migrations:/app/migrations
     env_file: ./.env
-    environment:
-      - FLASK_APP=app.py
-      - FLASK_ENV=production
     networks:
-      - ct-network
+      - app-network
     depends_on:
       - db
 
   # Servicio de la Base de Datos (PostgreSQL)
   db:
-    container_name: ct_db
     image: postgres:15-alpine
+    container_name: cloudtech_db
     restart: always
     env_file: ./.env
-    ports:
-      - "5433:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
     networks:
-      - ct-network
+      - app-network
 
 networks:
-  ct-network:
+  app-network:
     driver: bridge
 
 volumes:
-  postgres_data:
+  postgres-data:
+    driver: local
