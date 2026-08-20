@@ -159,7 +159,7 @@ def admin_login():
             return jsonify({"message": "Invalid credentials"}), 401
 
         token = create_access_token(
-            identity=ct_admin.id,
+            identity=str(ct_admin.id),
             additional_claims={"role": "ct_admin"}
         )
 
