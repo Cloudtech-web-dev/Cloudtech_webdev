@@ -143,11 +143,16 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
             const result = await response.json();
 
             if (!response.ok) {
-                throw new Error(result.message || "Error al enviar el formulario.");
+                throw new Error((result.errors && Object.values(result.errors)[0]) || (result.message || "Error al enviar el formulario."));
             }
 
             setStatusMessage({ type: 'success', text: '¡Mensaje enviado con éxito!' });
             setData(initialData); // Reiniciar formulario
+            setTermsAccepted(false); // ← Faltaba en el reinicio del formulario
+            document.querySelectorAll('input[name="needs"]').forEach(checkbox => {
+                checkbox.required = true;
+            }); // ← Y esto también
+            // TODO: Optimizar reinicios y mejorar verificación así como retroalimentación con el usuario.
 
             if (handleSubmit) handleSubmit(e);
 

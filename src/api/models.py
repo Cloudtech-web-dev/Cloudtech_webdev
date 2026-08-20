@@ -1,8 +1,9 @@
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import String, Boolean, Text, Integer, JSON
-from sqlalchemy.orm import Mapped, mapped_column
 from flask_bcrypt import Bcrypt
 from flask_login import UserMixin
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import JSON, Boolean, Integer, String, Text
+from sqlalchemy.orm import Mapped, mapped_column
+
 from .utils import NEEDS_MAP, STAGE_MAP, TIMEFRAME_MAP
 
 db = SQLAlchemy()
@@ -10,20 +11,17 @@ bcrypt = Bcrypt()
 
 class CTAdmin(db.Model, UserMixin):
     id: Mapped[int] = mapped_column(primary_key=True)
-    email: Mapped[str] = mapped_column(
-        String(120), unique=True, nullable=False)
-    _password: Mapped[str] = mapped_column(
-        "password", String(128), nullable=False)
+    email: Mapped[str] = mapped_column(String(120), unique=True, nullable=False)
+    _password: Mapped[str] = mapped_column("password", String(128), nullable=False)
     is_admin: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
 
     @property
-    def password(self):
+    def password(self) -> str:
         raise AttributeError('Password is not a readable attribute.')
 
     @password.setter
     def password(self, password):
-        self._password = bcrypt.generate_password_hash(
-            password).decode('utf-8')
+        self._password = bcrypt.generate_password_hash(password).decode('utf-8')
 
     # Método para verificar el password
     def check_password(self, password):
@@ -79,4 +77,4 @@ class TokenBlockedList(db.Model):
     jti: Mapped[str] = mapped_column(String(50), unique=True, nullable=False)
 
     def __repr__(self):
-        return f'<CTAdmin {self.email}>'
+        return f'<TokenBlockedList id={self.id} token={self.jti}>'

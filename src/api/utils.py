@@ -1,4 +1,4 @@
-from flask import jsonify, url_for
+from flask import url_for
 
 NEEDS_MAP = {
     1: "Sitio web",
