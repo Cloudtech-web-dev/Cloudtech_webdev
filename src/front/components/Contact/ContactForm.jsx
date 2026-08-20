@@ -143,7 +143,7 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
             const result = await response.json();
 
             if (!response.ok) {
-                throw new Error(result.message || "Error al enviar el formulario.");
+                throw new Error((result.errors && Object.values(result.errors)[0]) || (result.message || "Error al enviar el formulario."));
             }
 
             setStatusMessage({ type: 'success', text: '¡Mensaje enviado con éxito!' });
