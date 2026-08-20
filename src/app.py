@@ -2,6 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 import os
+from datetime import timedelta
 
 from flask import Flask, jsonify, redirect, request, send_from_directory, url_for
 from flask_jwt_extended import JWTManager
@@ -37,6 +38,7 @@ def handle_unauthorized():
 bcrypt.init_app(app)
 jwt = JWTManager(app)
 app.config["JWT_SECRET_KEY"] = os.environ.get("JWT_SECRET_KEY", "super-secret-jwt-key")
+app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(days=7)
 app.url_map.strict_slashes = False
 
 # database condiguration
