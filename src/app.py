@@ -3,7 +3,7 @@ This module takes care of starting the API Server, Loading the DB and Adding the
 """
 import os
 
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, redirect, request, send_from_directory, url_for
 from flask_jwt_extended import JWTManager
 from flask_login import LoginManager
 from flask_migrate import Migrate
@@ -27,6 +27,12 @@ login_manager.init_app(app)
 @login_manager.user_loader
 def load_user(user_id):
     return db.session.get(CTAdmin, int(user_id))
+
+@login_manager.unauthorized_handler
+def handle_unauthorized():
+    if request.path.startswith('/api/'):
+        return jsonify({"error": "Unauthorized. Please log in first."}), 401
+    return redirect(url_for('admin_auth.login', next=request.url))
 
 bcrypt.init_app(app)
 jwt = JWTManager(app)

@@ -72,7 +72,7 @@ export const Login = () => {
                 email: "",
                 password: ""
             })
-            navigate("/admin")
+            navigate("/admin", {replace: true})
         } catch (error) {
             console.error("Error de logueo", error)
             alert("Credenciales incorrectas")

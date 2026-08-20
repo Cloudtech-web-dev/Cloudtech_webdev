@@ -3,7 +3,7 @@ This module takes care of starting the API Server, Loading the DB and Adding the
 """
 from flask import Blueprint, jsonify, request
 from flask_cors import CORS
-from flask_jwt_extended import create_access_token
+from flask_jwt_extended import create_access_token, jwt_required
 from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 
@@ -14,8 +14,14 @@ api = Blueprint('api', __name__)
 # Allow CORS requests to this API
 CORS(api)
 
+# @api.before_request  # ← Useful to protect all the blueprint at once (with exceptions if needed)
+# def protect_api_blueprint():
+#     if request.endpoint == 'api.admin_login':
+#         return
+#     verify_jwt_in_request()
 
 @api.route('/leads', methods=['GET'])
+@jwt_required()
 def get_leads():
     all_leads = Lead.query.all()
     serialized_leads = [lead.serialize() for lead in all_leads]

@@ -6,7 +6,12 @@ const fetchAllLeads = async (dispatch) => {
     const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
     dispatch({ type: 'GET_ALL_LEADS_START' })
     try {
-        const response = await fetch(`${backendUrl}/api/leads`)
+        const response = await fetch(`${backendUrl}/api/leads`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('accessToken') ?? ''}`
+            }
+        })
 
         if (!response.ok) {
             const errorData = await response.json();
