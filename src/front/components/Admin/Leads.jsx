@@ -1,5 +1,5 @@
 
-import { useEffect, useReducer } from "react";
+import { useEffect, useReducer, Fragment } from "react";
 import storeReducer, { initialStore } from "../../store";
 
 const fetchAllLeads = async (dispatch) => {
@@ -77,7 +77,16 @@ export const Leads = () => {
                                 {leads.map((lead, index) => (
                                     <tr key={lead.id || index}>
                                         <th className="text-white" scope="row">{lead.id || index + 1}</th>
-                                        <td className="text-white">{lead.needs}</td>
+                                        <td className="text-white">
+                                            { (()=>{
+                                                const needs = Array.from(lead.needs ?? []);
+                                                const first = needs.shift();
+                                                return (<ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                                                    <li>{first}</li>
+                                                    {needs.map((need, idx) => <Fragment key={idx}><hr style={{ marginBlock: "0.25rem" }} /><li>{need}</li></Fragment>)}
+                                                </ul>);
+                                            })() }
+                                        </td>
                                         <td className="text-white">{lead.stage}</td>
                                         <td className="text-white">{lead.problemDescription}</td>
                                         <td className="text-white">{lead.idealTimeframe}</td>                                        
