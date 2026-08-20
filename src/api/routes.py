@@ -1,13 +1,13 @@
 """
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
-from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, Lead, CTAdmin
-from api.utils import generate_sitemap, APIException
-from sqlalchemy import select
+from flask import Blueprint, jsonify, request
 from flask_cors import CORS
-from sqlalchemy.exc import IntegrityError
 from flask_jwt_extended import create_access_token
+from sqlalchemy import select
+from sqlalchemy.exc import IntegrityError
+
+from api.models import CTAdmin, Lead, db
 
 api = Blueprint('api', __name__)
 
