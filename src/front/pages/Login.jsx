@@ -3,12 +3,13 @@ import storeReducer, { initialStore } from "../store";
 import { useNavigate } from "react-router-dom"
 import { AppContext } from "./Layout"
 import yellowLogo from '../assets/img/LogoNavbar.svg'
+import '../styles/StickyLayout.css';
 
 const adminLogin = async (dispatch, loginData) => {
-    const apiUrl = "";
-    dispatch({ type: 'ADMIN_LOGIN_START' })
     try {
-        const response = await fetch(`${apiUrl}/api/admin/login`, {
+        const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
+
+        const response = await fetch(`${backendUrl}/api/admin/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(loginData)
@@ -71,7 +72,7 @@ export const Login = () => {
                 email: "",
                 password: ""
             })
-            navigate("/admin")
+            navigate("/admin", {replace: true})
         } catch (error) {
             console.error("Error de logueo", error)
             alert("Credenciales incorrectas")
@@ -88,13 +89,13 @@ export const Login = () => {
 
                 <div className="col-md-6 col-lg-4">
 
-                    <h1 className="text-center section-title mb-5">Welcome back!</h1>
+                    <h1 className="text-center section-title-positive mb-5">Welcome back!</h1>
                     <form onSubmit={handleLogin}>
                         <div className="mb-3">
-                            <label htmlFor="email" className="form-label section-title">Email address</label>
+                            <label htmlFor="email" className="form-label component-title">Email address</label>
                             <input
                                 type="email"
-                                className="form-control"
+                                className="form-control text-white rounded-4 px-3 py-2"
                                 id="email"
                                 aria-describedby="emailHelp"
                                 required
@@ -102,13 +103,13 @@ export const Login = () => {
                                 value={loginData.email}
                                 onChange={handleChange}
                             />
-                            <div id="emailHelp" className="form-text text-white">We'll never share your email with anyone else.</div>
+                            <div id="emailHelp" className="form-text mt-2 text-white">We'll never share your email with anyone else.</div>
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="password" className="form-label section-title">Password</label>
+                            <label htmlFor="password" className="form-label component-title">Password</label>
                             <input
                                 type="password"
-                                className="form-control"
+                                className="form-control text-white rounded-4 px-3 py-2"
                                 id="password"
                                 required
                                 name="password"
@@ -117,7 +118,7 @@ export const Login = () => {
                             />
                         </div>
                         <div className="text-center">
-                            <button type="submit" className="ct-btn-outline-accent mt-3 rounded-4" disabled={loginStatus?.status === 'loading'}>
+                            <button type="submit" className="ct-btn-outline-accent mt-3 py-2 px-4 rounded-pill w-100" disabled={loginStatus?.status === 'loading'}>
                                 {loginStatus?.status === 'loading' ? 'Logueando...' : 'Submit'}
                             </button>
                         </div>

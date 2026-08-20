@@ -1,12 +1,17 @@
 
-import { useEffect, useReducer } from "react";
+import { useEffect, useReducer, Fragment } from "react";
 import storeReducer, { initialStore } from "../../store";
 
 const fetchAllLeads = async (dispatch) => {
-    const apiUrl = "";
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
     dispatch({ type: 'GET_ALL_LEADS_START' })
     try {
-        const response = await fetch(`${apiUrl}/api/leads`)
+        const response = await fetch(`${backendUrl}/api/leads`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('accessToken') ?? ''}`
+            }
+        })
 
         if (!response.ok) {
             const errorData = await response.json();
@@ -54,26 +59,41 @@ export const Leads = () => {
                     {leads.length === 0 ? (
                         <p className="text-white">No se encontraron leads</p>
                     ) : (
-                        <table class="table ">
+                        <table className="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Teléfono</th>
-                                    <th scope="col">Proyecto</th>
-                                    <th scope="col">Mensaje</th>
+                                    <th className="text-warning" scope="col">#</th>
+                                    <th className="text-warning" scope="col">Necesidad</th>
+                                    <th className="text-warning" scope="col">Etapa</th>
+                                    <th className="text-warning" scope="col">Mensaje</th>
+                                    <th className="text-warning" scope="col">Plazo</th>
+                                    <th className="text-warning" scope="col">Nombre</th>
+                                    <th className="text-warning" scope="col">Email</th>
+                                    <th className="text-warning" scope="col">Teléfono</th>
+                                    <th className="text-warning" scope="col">Proyecto</th>                                    
                                 </tr>
                             </thead>
                             <tbody>
                                 {leads.map((lead, index) => (
                                     <tr key={lead.id || index}>
-                                        <th scope="row">{lead.id || index + 1}</th>
-                                        <td>{lead.name}</td>
-                                        <td>{lead.email}</td>
-                                        <td>{lead.phone}</td>
-                                        <td>{lead.company}</td>
-                                        <td>{lead.message}</td>
+                                        <th className="text-white" scope="row">{lead.id || index + 1}</th>
+                                        <td className="text-white">
+                                            { (()=>{
+                                                const needs = Array.from(lead.needs ?? []);
+                                                const first = needs.shift();
+                                                return (<ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                                                    <li>{first}</li>
+                                                    {needs.map((need, idx) => <Fragment key={idx}><hr style={{ marginBlock: "0.25rem" }} /><li>{need}</li></Fragment>)}
+                                                </ul>);
+                                            })() }
+                                        </td>
+                                        <td className="text-white">{lead.stage}</td>
+                                        <td className="text-white">{lead.problemDescription}</td>
+                                        <td className="text-white">{lead.idealTimeframe}</td>                                        
+                                        <td className="text-white">{lead.personalData.fullName}</td>
+                                        <td className="text-white">{lead.personalData.email}</td>
+                                        <td className="text-white">{lead.personalData.phone}</td>
+                                        <td className="text-white">{lead.personalData.projectName}</td>
                                     </tr>
                                 ))}
                             </tbody>

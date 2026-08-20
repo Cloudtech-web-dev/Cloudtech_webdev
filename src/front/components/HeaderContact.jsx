@@ -1,277 +1,126 @@
-import React, { useState, useContext, useEffect, useRef } from 'react';
-import { createPortal } from "react-dom";
-import { Link } from 'react-router-dom';
-import { AppContext } from '../pages/Layout.jsx';
-import HomeContact from '../assets/img/HomeContact.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
-import styles from "../styles/components/HeaderContact.module.css"
-import { element } from 'prop-types';
 
-const Modal = ({ isOpen, onClose, children }) => {
-    const dialogRef = useRef(null);
+import { Modal } from './Contact/Modal.jsx';
+import { ContactForm } from './Contact/ContactForm.jsx';
 
-    useEffect(() => {
-        const dialog = dialogRef.current;
-        if (!dialog) return;
 
-        if (isOpen) {
-            dialog.showModal();
-            document.body.classList.add("modal-open");
-        } else {
-            document.body.classList.remove("modal-open");
-            dialog.close();
-        }
-    }, [isOpen]);
-
-    return createPortal(
-        <dialog
-            ref={dialogRef}
-            className={`${styles.modalOverlay}`}
-            onMouseUp={e => e.target === dialogRef.current && onClose()}
-        >
-            <div className={styles.modalContainer}>
-                <div className={styles.scrollContainer}>
-                    {children}
-                </div>
-            </div>
-        </dialog>,
-        document.body
-    );
-}
-
-/** @type {DataStructure} */
-const initialData = {
-    needs: [], // ← A bunch of possible IDs (min 1)
-    stage: null, // ← An ID
-    problemDescription: null, // ← At least 3 characters (non space) [max? maybe 500 ch?]
-    idealTimeframe: null, // ← An ID
-    personalData: {
-        wholeName: null, // ← At least 2 words of 3 characters each, up to 10 words or 100ch total
-        email: null, // ← Proper email [max? maybe 50 ch?]
-        phone: null, // ← just numbers, with correct number of digits (country code?)
-        projectName: null, // ← At least 2 characters (non space) up to 30ch
-    },
-    newsletterOptIn: false
-};
-// ↪ All fields mandatory (right?)
-
-/** ### Form Data Structure
- * 
- * @typedef DataStructure
- * @prop {string[]} needs
- * @prop {number} stage
- * @prop {string} problemDescription
- * @prop {number} idealTimeframe
- * @prop {PersonalData} personalData
- * @prop {boolean} newsletterOptIn
- * 
- * @typedef PersonalData
- * @prop {string} wholeName
- * @prop {string} email
- * @prop {string} phone
- * @prop {string} projectName
- * 
-*/
-
-const HeaderContact = () => {
+export const HeaderContact = () => {
     const { t } = useTranslation();
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [data, setData] = useState(initialData);
-    const [termsAccepted, setTermsAccepted] = useState(false);
+    const [isFormOpen, setIsFormOpen] = useState(false);
+    const formWasOpened = useRef(false);
 
-    const handleInputs = (/**@type {React.ChangeEvent}*/ e) => {
-        // console.log(e.target);
-        // e.target.setCustomValidity("");
-        // e.target.reportValidity();
+
+    const openForm = () => {
+        setIsFormOpen(true);
+        document.body.classList.add("modal-open");
+        formWasOpened.current = true;
+    }
+
+    const closeForm = () => {
+        document.body.classList.remove("modal-open");
+        setIsFormOpen(false);
     };
 
-    const handleTermsAgreement = (/**@type {React.ChangeEvent<HTMLInputElement>}*/ e) => {
-        // console.log(e);
+    const handleSubmit = (/**@type {React.FormEvent<HTMLButtonElement>}*/e) => {
+        
     };
 
-    const handleSubmit = async (/**@type {React.FormEvent<HTMLButtonElement>}*/e) => {
+
+    /* OPEN FORM ON SCROLL BEHAVIOR */
+    
+    const handleScroll = (/**@type {WheelEvent}*/e) => {
+        if (formWasOpened.current)
+            return e.currentTarget.removeEventListener('wheel', handleScroll);
+        
         e.preventDefault();
-        dispatch({ type: 'CONTACT_SUBMIT_START' });
 
-        try {
-            const response = await fetch(`${apiUrl}/api/contact`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
-            });
-            const result = await response.json();
-            if (!response.ok) {
-                dispatch({ type: 'CONTACT_SUBMIT_FAILURE', payload: result.errors || { general: result.message } });
-                return;
-            }
-            dispatch({ type: 'CONTACT_SUBMIT_SUCCESS' });
-        } catch (networkError) {
-            dispatch({ type: 'CONTACT_SUBMIT_FAILURE', payload: { general: 'No se pudo conectar al servidor.' } });
+        // if (e.defaultPrevented) console.info("The scroll has been locked...");
+        // else console.warn("Default was not prevented ノ┬─┬ノ ︵ ( \\o°o)\\");
+
+        if (e.deltaY > 0) {
+            openForm();
+            e.currentTarget.removeEventListener('wheel', handleScroll);
         }
     };
 
-    return (
-        <>
-            <section className="header w-100 h-100 position-relative ">
-                <img
-                    src={HomeContact}
-                    alt="CloudTech background image"
-                    className="z-n1 mx-auto position-absolute w-100 h-100 object-fit-cover d-sm-block mb-5" />
+    useEffect(() => {
+        if (formWasOpened.current) return;
+        
+        addEventListener('wheel', handleScroll, { passive: false });
 
-                <div className="position-absolute w-100 h-100 bg-dark bg-opacity-50 mx-auto"></div>
-                <div className="container w-100 h-100 py-2">
-                    <div className="row align-items-center justify-content-center justify-content-lg-end mb-5">
-                        <div className="col-12 col-lg-6 z-1 align-items-center pt-5 mt-5 pt-lg-0 mt-lg-3">
-                            <h1 className="hero-title-home display-4 fw-bolder w-100 mt-2 text-lg-center text-center d-none d-lg-block">
-                                {t('contact.sectionTitle')}
-                            </h1>
-
-                            <h1 className="hero-title-home display-4 fw-bolder w-100 mt-5 text-center d-lg-none">
-                                {t('contact.sectionTitle')}
-                            </h1>
-
-                            <p className="hero-subtitle-home fs-5 text-white fw-bold w-100 mb-4 d-none d-lg-block text-lg-center">
-                                {t('contact.sectionDescription')}
-                            </p>
-
-                            <p className="hero-subtitle-home fs-5 text-white fw-bold w-100 mb-4 text-center d-lg-none">
-                                {t('contact.sectionDescription')}
-                            </p>
-
-                            <form onSubmit={handleSubmit} noValidate className="text-start">
-                                <div className="mb-3">
-                                    <label htmlFor="name" className="form-label fw-bold form-label-contact">
-                                        {t('contact.labels.nameLabel')}
-                                    </label>
-
-                                    <input
-                                        type="text"
-                                        className={`form-control rounded-3 ${status === 'error' && error?.name ? 'is-invalid' : ''}`}
-                                        id="name" name="name" value={formData.name} onChange={handleChange}
-                                        placeholder={t('contact.placeholders.nameHolder')}
-                                        required
-                                    />
-                                    {status === 'error' && error?.name && <div className="invalid-feedback fw-bold">{error.name}</div>}
-                                </div>
-
-                                <div className="row mb-3">
-                                    <div className="col-6">
-                                        <label
-                                            htmlFor="phone"
-                                            className="form-label fw-bold form-label-contact">
-                                            {t('contact.labels.phoneLabel')}
-                                        </label>
-
-                                        <input
-                                            type="tel"
-                                            className={`form-control rounded-3 ${status === 'error' && error?.phone ? 'is-invalid' : ''}`}
-                                            id="phone" name="phone"
-                                            value={formData.phone}
-                                            onChange={handleChange}
-                                            placeholder={t('contact.placeholders.phoneHolder')}
-                                            required
-                                        />
-
-                                        {status === 'error' && error?.phone &&
-                                            <div className="invalid-feedback fw-bold">{error.phone}</div>}
-                                    </div>
-
-                                    <div className="col-6">
-                                        <label htmlFor="email" className="form-label fw-bold form-label-contact">
-                                            {t('contact.labels.emailLabel')}
-                                        </label>
-
-                                        <input
-                                            type="email"
-                                            className={`form-control rounded-3 ${status === 'error' && error?.email ? 'is-invalid' : ''}`}
-                                            id="email" name="email"
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            placeholder={t('contact.placeholders.emailHolder')}
-                                            required
-                                        />
-
-                                        {status === 'error' && error?.email &&
-                                            <div className="invalid-feedback fw-bold">{error.email}</div>}
-                                    </div>
-                                </div>
-
-                                <div className="mb-3">
-                                    <label
-                                        htmlFor="company"
-                                        className="form-label fw-bold form-label-contact">
-                                        {t('contact.labels.projectNameLabel')}
-                                    </label>
-
-                                    <input
-                                        type="text"
-                                        className="form-control rounded-3"
-                                        id="company" name="company"
-                                        value={formData.company}
-                                        onChange={handleChange}
-                                        placeholder={t('contact.placeholders.projectHolder')}
-                                    />
-                                </div>
-
-                                <div className="mb-4">
-                                    <label
-                                        htmlFor="message"
-                                        className="form-label fw-bold form-label-contact">
-                                        {t('contact.labels.messageLabel')}
-                                    </label>
-
-                                    <textarea
-                                        className="form-control textarea-contact rounded-3"
-                                        id="message"
-                                        name="message"
-                                        rows="4"
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                        placeholder={t('contact.placeholders.messageHolder')}
-                                    >
-                                    </textarea>
-                                </div>
-
-                                {status === 'success' &&
-                                    <div className="alert alert-success">
-                                        {t('contact.alerts.alertSuccess')}
-                                    </div>}
-
-                                {status === 'error' && error?.general &&
-                                    <div className="alert alert-danger">
-                                        {t('contact.alerts.alertError')}
-                                    </div>}
+    }, []);
 
 
-                                <div className="d-flex flex-column flex-lg-row gap-3">
-                                    <button
-                                        type="submit"
-                                        className="btn btn-submit-contact fw-semibold btn-lg rounded-pill px-5"
-                                        disabled={status === 'loading'}
-                                    >
-                                        {status === 'loading' ? `${t('contact.alerts.loading')}` : `${t('contact.formButton')}`}
-                                    </button>
-                                    <a
-                                        href="https://wa.me/593978879838"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="btn btn-outline btn-lg rounded-pill px-5 w-100"
-                                    >
-                                        {t('contact.whatsAppButton')} <FontAwesomeIcon icon={faWhatsapp} />
-                                    </a>
-                                </div>
-                            </form>
+    return (<>
 
-                        </div>
-                    </div>
+        {/* Page Header Section */}
+        <section className="contact-header container vh-100" style={{ maxWidth: 1440, color: "var(--bs-gray-100)", placeContent: "center", padding: 137.5, width: "100%" }}>
+
+            {/* Section Contents */}
+            <div className="row" style={{ gap: 50 }}>
+
+                {/* Header */}
+                <div className="col g-0">
+
+                    {/* Heading */}
+                    <h2 className="font-h0" style={{ color: "var(--bs-accent-1)", fontSize: 70, lineHeight: 1, letterSpacing: "0" }}>
+                        <Trans i18nKey='contact.sectionTitle' components={[<span className="highlighted-text" />]} />
+                    </h2>
+
                 </div>
-            </section>
 
-        </>
-    );
+                {/* Body */}
+                <div className="col g-0">
+
+                    {/* Description */}
+                    <p className="font-p1" style={{ whiteSpace: 'pre-line' }}>
+                        {t('contact.sectionDescription')}
+                    </p>
+
+                    {/* Open Form Button */}
+                    <div className="row justify-content-center g-0" style={{ marginTop: 40 }}>
+                        <button className="btn btn-outline btn-lg rounded-pill border-2 font-p1 fw-bold fs-6" onClick={openForm} style={{ minWidth: "50%", padding: "18px 34px", lineHeight: "18px" }}>
+                            {t('contact.formButton')}
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            {/* Component Styles */}
+            <style>{`
+                @media (width < 768px) { section.contact-header {
+
+                    padding-inline: 40px !important;
+
+                    > div {
+
+                        flex-direction: column;
+
+                        h2 { font-size: calc(1.525rem + 3.3vw) !important }
+
+                        button {
+                            margin-top: 30px;
+                            padding: 8px 48px !important;
+                            border-width: 1px !important;
+                            font-size: 20px !important;
+                            font-weight: 400 !important;
+                            line-height: var(--bs-btn-line-height) !important;
+                            letter-spacing: normal;
+                        }
+                    }
+                }}
+            `}</style>
+
+        </section>
+
+        {/* Contact Form (modal) */}
+        <Modal isOpen={isFormOpen} onClose={closeForm}>
+            <ContactForm handleSubmit={handleSubmit} handleCloseForm={closeForm} />
+        </Modal >
+
+    </>);
 };
-
-export default HeaderContact

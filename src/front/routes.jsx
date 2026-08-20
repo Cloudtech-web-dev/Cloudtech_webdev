@@ -15,6 +15,7 @@ import { Login } from "./pages/Login";
 import { Admin } from "./pages/Admin";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { SingleProjectView } from "./components/SingleProjectView";
+import { TermsConditions } from "./pages/TermsConditions";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -34,8 +35,8 @@ export const router = createBrowserRouter(
       <Route path="/projects" element={<Portfolio />} />
       <Route path="/projects/:projectId" element={<SingleProjectView />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/terms-conditions" element={<TermsConditions />} />
       <Route path="/login" element={<Login />} />
-      {/* <Route path="/admin" element={<Admin />} /> */}
       <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
     </Route>
   )

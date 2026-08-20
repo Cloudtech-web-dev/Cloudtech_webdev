@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { capacitiesData, processData } from "../utils/processContent";
 import { useTranslation } from "react-i18next";
+import "../styles/Accordion.css";
+import "../styles/StickyLayout.css";
 
 
 export const Process = () => {
@@ -35,8 +37,16 @@ export const Process = () => {
     const secondColumnCapacities = capacitiesData.slice(Math.ceil(capacitiesData.length / 2));
 
     return (
-        <section>
-            <div className="container container-ct-layout">
+        <section className="py-5">
+            <div className="intro-content-positive py-5 mx-auto mb-5">
+                <h2 className="service-category-title-main">
+                    {t('process.processHeader.title')}
+                </h2>
+                <p className="font-p1 text-white">
+                    {t('process.processHeader.description')}
+                </p>
+            </div>
+            <div className="container pb-5">
                 <div className="row">
                     <div className="col pe-sm-4 pe-md-5">
                         <div className="d-flex justify-content-end">
@@ -95,7 +105,7 @@ export const Process = () => {
                                 </div>
 
                                 <div className="col px-2 ps-md-5 text-center text-sm-start">
-                                    <p className="text-white ct-paragraph">{getCurrentContent()}</p>
+                                    <p className="text-white font-p1">{getCurrentContent()}</p>
                                 </div>
                             </>
                         ) : (
@@ -117,7 +127,7 @@ export const Process = () => {
                                 </div>
 
                                 <div className="col ps-sm-5 text-center text-sm-start">
-                                    <p className="text-white ct-paragraph">{getCurrentContent()}</p>
+                                    <p className="text-white font-p1">{getCurrentContent()}</p>
                                 </div>
                             </>
                         )

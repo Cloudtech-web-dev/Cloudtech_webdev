@@ -19,33 +19,44 @@ export const OtherProjects = () => {
         <section id="otros-proyectos" className="my-5">
             <h1 className="section-title-positive text-center">{t('projects.otherProjects')}</h1>
 
-            <Swiper
-                modules={[Navigation, Autoplay]}
-                spaceBetween={30}
-                slidesPerView={1}
-                navigation
-                autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false
-                }}
-                breakpoints={{
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 }
-                }}
-                className="my-5"
-            >
-                {filteredProjects.map(project => (
-                    <SwiperSlide key={project.id}>
-                        <div className="h-100">
+           <div className="position-relative px-4 px-md-5">
+
+                {/* Flecha Prev Nativa de Swiper */}
+                <div className="swiper-button-prev custom-swiper-arrow d-none d-md-block"></div>
+
+                <Swiper
+                    modules={[Navigation, Autoplay]}
+                    spaceBetween={30}
+                    slidesPerView={1}
+                    navigation={{
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    }}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false
+                    }}
+                    breakpoints={{
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 2 }
+                    }}
+                    className="custom-projects-swiper my-3 py-3"
+                >
+                    {filteredProjects.map(project => (
+                        <SwiperSlide key={project.id} className="h-auto">
                             <ProjectCard
                                 id={project.id}
                                 cover={project.cover}
                                 name={t(project.name)}
                             />
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+
+                {/* Flecha Next Nativa de Swiper */}
+                <div className="swiper-button-next custom-swiper-arrow d-none d-md-block"></div>
+
+            </div>
 
         </section>
     )

@@ -1,4 +1,4 @@
-@import "constants.css";
+@import "styles/constants.css";
 
 * {
   scrollbar-width: thin
@@ -6,6 +6,11 @@
 
 html {
   scroll-snap-type: y proximity;
+
+  /* FOR FOOTER FULLSCREEN ON DESKTOP */
+  container-type: scroll-state;
+  container-name: scroller;
+  &, footer { will-change: height }
 }
 
 html:has(body.modal-open) {
@@ -14,10 +19,8 @@ html:has(body.modal-open) {
 }
 
 body {
-  /* background-image: linear-gradient(0deg, #124652, #199ab7); */
   --bs-body-bg: var(--bs-gray-1000);
   font-family: "Manrope", sans-serif;
-  --bs-body-bg: #04171B;
 }
 
 /* h1 {
@@ -48,7 +51,7 @@ h6 {
   border: 0.15rem #fbff06 solid;
   background-color: transparent;
   border-radius: 2rem;
-  padding: 0.5rem 5rem 0.5rem 5rem;
+
   color: white;
   font-weight: bold;
   transform: scale(1.02);
@@ -56,8 +59,8 @@ h6 {
 
 .ct-btn-outline-accent:hover {
   background-color: #fbff06;
-  padding: 0.5rem 5rem 0.5rem 5rem;
-  color: #217b8f;
+
+  color: #04171B;
   font-weight: bolder;
   transform: scale(1.02);
 }
@@ -124,9 +127,10 @@ h6 {
 .link-custom-hover {
   display: inline-block;
   text-decoration: none;
-  color: #ffff;
+  color: var(--bs-gray-100);
   transition: transform 0.3s ease, color 0.3s ease;
   transform-origin: center;
+  line-height: 0;
 }
 
 .link-custom-hover:hover {
@@ -227,76 +231,10 @@ h6 {
   opacity: 1;
 }
 
-/* Swiper para otros proyectos */
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fbff06 !important;
-  /* Tu color amarillo */
-  transform: scale(0.7);
-  /* Para que no sean gigantes */
-}
-
-.swiper {
-  padding: 0 40px 0px 40px !important;
-}
-
-/* Swiper para testimonials */
-
-.testimonial-swiper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 60px;
-}
-
-@media (min-width: 350px) {
-  .testimonial-swiper .swiper-button-next {
-    display: none;
-    padding: 0px !important;
-  }
-
-  .testimonial-swiper .swiper-button-prev {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .testimonial-swiper .swiper-button-next {
-    display: block;
-    right: 10px !important;
-  }
-
-  .testimonial-swiper .swiper-button-prev {
-    display: block;
-    left: 10px !important;
-  }
-
+@media (min-width: 768px) {  
   .page-intro-title {
     font-size: 4rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .testimonial-swiper .swiper-button-next {
-    display: block;
-    right: 40px !important;
-  }
-
-  .testimonial-swiper .swiper-button-prev {
-    display: block;
-    left: 40px !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .testimonial-swiper .swiper-button-next {
-    display: block;
-    right: 150px !important;
-  }
-
-  .testimonial-swiper .swiper-button-prev {
-    display: block;
-    left: 150px !important;
   }
 }
 
@@ -762,32 +700,10 @@ h6 {
 }
 
 
-/* Palabra resaltada dentro de header */
+/* HIGHLIGHTED TEXT */
 
-/* Previous implementation */
-.highlighted-text.is-header {
-  position: relative;
-  /* color: var(--highlighted-text-color, var(--bs-gray-1000)); */
-
-  isolation: isolate;
-
-  &::before {
-    content: '';
-    position: absolute;
-    background-color: var(--highlighted-text-bg, var(--bs-accent-1));
-    z-index: -1;
-    --oy: 8%;
-    --gy: -2%;
-    --gx: 1.5%;
-    top: calc(-1*var(--gy) + var(--oy));
-    left: calc(-1*var(--gx));
-    height: calc(100% + 2*var(--gy));
-    width: calc(100% + 2*var(--gx));
-  }
-}
-
-/* Newer without ::before */
-.highlighted-text:not(.is-header) {
+/* Newer without ::before (much more straightforward) */
+.highlighted-text {
   color: var(--highlighted-text-color, var(--bs-gray-1000));
   background-image: linear-gradient(var(--highlighted-text-bg, var(--bs-accent-1)));
   background-size: 100%;
@@ -796,6 +712,49 @@ h6 {
   padding-inline: var(--highlighted-text-padding, 0.12lh);
   margin-inline: calc(-1*var(--highlighted-text-padding, 0.12lh));
 }
+
+/* New proposed implementation for transparency: */
+.highlight-transparency-box {
+  position: relative;
+  display: inline-flex;
+
+  > span {
+    background-color: var(--bs-accent-1);
+    padding: 0 0.18em 0.08lh;
+    margin-bottom: -0.08lh;
+    
+    &:first-child {
+      position: absolute;
+      color: white;
+      mix-blend-mode: multiply;
+    }
+    &:last-child {
+      color: black;
+      mix-blend-mode: screen;
+    }
+  }
+}
+
+.highlighted-text.is-glitching,
+.highlight-transparency-box.is-glitching > span {
+  font-family: monospace;
+  letter-spacing: -0.09em;
+  filter:
+    drop-shadow(-0.05em -0.025em #ff0055)
+    drop-shadow(0.05em 0.025em #00ffff)
+  ;
+  animation: glitch-jitter var(--glitching-text-jitter-duration, 0.12s) infinite steps(2);
+}
+
+@keyframes glitch-jitter {
+   0% { transform: translate(   0,   0) skew( 0deg) }
+  20% { transform: translate(-2px, 1px) skew(-3deg) }
+  40% { transform: translate( 2px,-1px) skew( 2deg) }
+  60% { transform: translate(-1px,-2px) skew( 1deg) }
+  80% { transform: translate( 2px, 1px) skew(-1deg) }
+ 100% { transform: translate(   0,   0) skew( 0deg) }
+}
+
 
 /* DARKMODE NAVBAR */
 
@@ -808,6 +767,7 @@ h6 {
   filter: brightness(0) saturate(100%) invert(8%) sepia(35%) saturate(5538%) hue-rotate(181deg) brightness(96%) contrast(99%);
   transition: filter 0.15s ease;
 }
+
 
 /* VISTA INDIVIDUAL PROYECTOS */
 
@@ -829,4 +789,175 @@ h6 {
     font-size: 2rem;
     padding: 0;
   }
+}
+
+
+/* GRADIENT BACKGROUND EFFECT */
+
+:root {
+  --gradientbg-circle-size: 80%;
+  --gradientbg-blending: hard-light;
+}
+
+.gradient-bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(40deg, var(--gbe-color-bg-1), var(--gbe-color-bg-2));
+  top: 0;
+  left: 0;
+}
+
+.gradient-bg svg {
+  display: none
+}
+
+.gradient-container {
+  filter: url(#goo) blur(40px);
+  width: 100%;
+  height: 100%;
+}
+
+.g1 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--gbe-color-1-rgb), 0.8) 0, rgba(var(--gbe-color-1-rgb), 0) 50%) no-repeat;
+  mix-blend-mode: var(--gradientbg-blending);
+
+  width: var(--gradientbg-circle-size);
+  height: var(--gradientbg-circle-size);
+  top: calc(50% - var(--gradientbg-circle-size) / 2);
+  left: calc(50% - var(--gradientbg-circle-size) / 2);
+
+  transform-origin: center center;
+  animation: moveVertical 30s ease infinite;
+
+  opacity: 1;
+}
+
+.g2 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--gbe-color-2-rgb), 0.8) 0, rgba(var(--gbe-color-2-rgb), 0) 50%) no-repeat;
+  mix-blend-mode: var(--gradientbg-blending);
+
+  width: var(--gradientbg-circle-size);
+  height: var(--gradientbg-circle-size);
+  top: calc(50% - var(--gradientbg-circle-size) / 2);
+  left: calc(50% - var(--gradientbg-circle-size) / 2);
+
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 20s reverse infinite;
+
+  opacity: 1;
+}
+
+.g3 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--gbe-color-3-rgb), 0.8) 0, rgba(var(--gbe-color-3-rgb), 0) 50%) no-repeat;
+  mix-blend-mode: var(--gradientbg-blending);
+
+  width: var(--gradientbg-circle-size);
+  height: var(--gradientbg-circle-size);
+  top: calc(50% - var(--gradientbg-circle-size) / 2 + 200px);
+  left: calc(50% - var(--gradientbg-circle-size) / 2 - 500px);
+
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 40s linear infinite;
+
+  opacity: 1;
+}
+
+.g4 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--gbe-color-4-rgb), 0.8) 0, rgba(var(--gbe-color-4-rgb), 0) 50%) no-repeat;
+  mix-blend-mode: var(--gradientbg-blending);
+
+  width: var(--gradientbg-circle-size);
+  height: var(--gradientbg-circle-size);
+  top: calc(50% - var(--gradientbg-circle-size) / 2);
+  left: calc(50% - var(--gradientbg-circle-size) / 2);
+
+  transform-origin: calc(50% - 400px);
+  animation: moveHorizontal 40s ease infinite;
+
+  opacity: 0.7;
+}
+
+.g5 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--gbe-color-5-rgb), 0.8) 0, rgba(var(--gbe-color-5-rgb), 0) 50%) no-repeat;
+  mix-blend-mode: var(--gradientbg-blending);
+
+  width: var(--gradientbg-circle-size);
+  height: var(--gradientbg-circle-size);
+  top: calc(50% - var(--gradientbg-circle-size) / 2);
+  left: calc(50% - var(--gradientbg-circle-size) / 2);
+
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: moveInCircle 20s ease infinite;
+
+  opacity: 1;
+}
+
+.g6 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--gbe-color-3-rgb), 0.8) 0, rgba(var(--gbe-color-3-rgb), 0) 50%) no-repeat;
+  mix-blend-mode: var(--gradientbg-blending);
+
+  width: calc(var(--gradientbg-circle-size) / 2);
+  height: calc(var(--gradientbg-circle-size) / 2);
+  top: calc(50% - var(--gradientbg-circle-size) / 4 - 100px);
+  left: calc(75% - var(--gradientbg-circle-size) / 4);
+
+  transform-origin: calc(50% - 250px) calc(50% + 150px);
+  animation: moveInCircle 35s linear infinite;
+
+  opacity: 0.9;
+}
+
+.g7 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--gbe-color-2-rgb), 0.8) 0, rgba(var(--gbe-color-2-rgb), 0) 50%) no-repeat;
+  mix-blend-mode: var(--gradientbg-blending);
+
+  width: var(--gradientbg-circle-size);
+  height: var(--gradientbg-circle-size);
+  top: calc(50% - var(--gradientbg-circle-size) / 3);
+  left: calc(85% - var(--gradientbg-circle-size) / 3);
+
+  transform-origin: center center;
+  animation: moveVertical 28s ease infinite;
+
+  opacity: 0.8;
+}
+
+.interactive {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--gbe-color-interactive-rgb), 0.8) 0, rgba(var(--gbe-color-interactive-rgb), 0) 50%) no-repeat;
+  mix-blend-mode: var(--gradientbg-blending);
+
+  width: 100%;
+  height: 100%;
+  top: -50%;
+  left: -50%;
+
+  opacity: 0.7;
+}
+
+@keyframes moveInCircle {
+    0% { transform: rotate(0deg)   }
+   50% { transform: rotate(180deg) }
+  100% { transform: rotate(360deg) }
+}
+
+@keyframes moveVertical {
+    0% { transform: translateY(-50%) }
+   50% { transform: translateY(50%)  }
+  100% { transform: translateY(-50%) }
+}
+
+@keyframes moveHorizontal {
+    0% { transform: translateX(-50%) translateY(-10%) }
+   50% { transform: translateX(50%)  translateY(10%)  }
+  100% { transform: translateX(-50%) translateY(-10%) }
 }

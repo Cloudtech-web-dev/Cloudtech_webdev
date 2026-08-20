@@ -1,0 +1,118 @@
+/* ICON STYLES */
+
+div.iconWrapper {
+
+  width: 1em;
+  display: flex;
+  fill: var(--icon-color, currentColor);
+  
+  > svg.icon {
+
+    &, * { transform-origin: center }
+
+    > g.orbit {
+
+      transition: rotate 0.3s ease;
+
+      > g.satellites {
+
+        transform:
+          rotateX(calc(var(--x-angle, 0) * 1deg))
+          rotateZ(calc(var(--spin-progress, 0) * 360deg));
+        transition: transform 0.1s ease;
+
+        > path.satellite {
+
+          --individual-scale: calc(1 + var(--scale-delta-amplitude, 0.2)*sin((var(--spin-progress, 0) + var(--offset, 0) - 0.25) * 360deg));
+
+          transform-box: fill-box;
+          will-change: filter, opacity, transform, scale;
+
+          transition: transform, scale, opacity;
+          transition-duration: 0.1s;
+          transition-timing-function: ease;
+
+          scale: 1 calc(1 + var(--y-compensation-scale-delta, 0));
+          rotate: calc(var(--spin-progress, 0) * -360deg);
+          transform: scale(var(--individual-scale));
+
+          &:nth-child(1) { --offset: 0/8 }
+          &:nth-child(2) { --offset: 1/8 }
+          &:nth-child(3) { --offset: 2/8 }
+          &:nth-child(4) { --offset: 3/8 }
+          &:nth-child(5) { --offset: 4/8 }
+          &:nth-child(6) { --offset: 5/8 }
+          &:nth-child(7) { --offset: 6/8 }
+          &:nth-child(8) { --offset: 7/8 }
+        }
+
+        &.background > path.satellite {
+          opacity: calc(-1 * round(down, -1 * var(--individual-scale, 1), 1));
+        }
+        &.foreground > path.satellite {
+          opacity: round(down, var(--individual-scale, 1), 1);
+        }
+      }
+    }
+  }
+}
+
+div.iconWrapper:hover > svg.icon,
+div.iconWrapper > svg.icon:hover,
+:global(.group):hover > svg.icon,
+:global(.group):hover > div.iconWrapper > svg.icon {
+
+  stroke: var(--svg-stroke, var(--bs-gray-100));
+
+  > path.planet {
+    filter: drop-shadow(0px 0px 10px var(--planet-shadow-color, var(--bs-gray-100)));
+  }
+
+  > g.orbit {
+
+    rotate: -45deg;
+
+    > g.satellites {
+      --x-angle: 73;
+      animation:
+        spinAround 1.5s 0.3s linear infinite,
+        angleLookupTable 100s linear calc(-1s * var(--x-angle, 0)) paused both;
+    }
+  }
+}
+
+/* ICON UTILS */
+
+@property --spin-progress {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0.0;
+}
+@property --y-compensation-scale-delta {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0.0;
+}
+@property --scale-delta-amplitude {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0.0;
+}
+
+@keyframes spinAround {
+  from { --spin-progress: 0 }
+  to { --spin-progress: 1 }
+  0%, 100% { filter: blur(1.5px) }
+}
+@keyframes angleLookupTable {
+   0% { --y-compensation-scale-delta: 0.00; --scale-delta-amplitude: 0.01 }
+  30% { --y-compensation-scale-delta: 0.25; --scale-delta-amplitude: 0.10 }
+  50% { --y-compensation-scale-delta: 0.70; --scale-delta-amplitude: 0.20 }
+  60% { --y-compensation-scale-delta: 1.10; --scale-delta-amplitude: 0.30 }
+  65% { --y-compensation-scale-delta: 1.50; --scale-delta-amplitude: 0.35 }
+  70% { --y-compensation-scale-delta: 2.00; --scale-delta-amplitude: 0.40 }
+  75% { --y-compensation-scale-delta: 3.00; --scale-delta-amplitude: 0.42 }
+  80% { --y-compensation-scale-delta: 5.00; --scale-delta-amplitude: 0.45 }
+  85% { --y-compensation-scale-delta: 10.0; --scale-delta-amplitude: 0.50 }
+ 100% { --y-compensation-scale-delta: 10.0; --scale-delta-amplitude: 0.50 }
+}

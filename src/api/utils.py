@@ -1,4 +1,31 @@
-from flask import jsonify, url_for
+from flask import url_for
+
+NEEDS_MAP = {
+    1: "Sitio web",
+    2: "Aplicación web",
+    3: "Tienda online",
+    4: "Portafolio creativo",
+    5: "Identidad y contenido visual",
+    6: "Mejorar una web existente",
+    7: "No estoy seguro"
+}
+
+STAGE_MAP = {
+    1: "Tengo una idea inicial",
+    2: "Ya tengo marca o identidad visual",
+    3: "Ya tengo diseño",
+    4: "Tengo una web y quiero mejorarla",
+    5: "Estoy listo para empezar",
+    6: "Necesito orientación"
+}
+
+TIMEFRAME_MAP = {
+    1: "Lo antes posible",
+    2: "En 1 mes",
+    3: "2 a 3 meses",
+    4: "Más adelante",
+    5: "No lo sé"
+}
 
 class APIException(Exception):
     status_code = 400

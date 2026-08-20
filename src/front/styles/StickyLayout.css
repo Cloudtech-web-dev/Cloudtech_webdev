@@ -106,6 +106,21 @@
     }
 }
 
+.section-title-for-highlight {
+    font-size: 3rem;
+    font-weight: 800;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    width: fit-content;
+    padding-bottom: 0.2rem;
+    max-width: 100%;
+    
+    @media (min-width: 768px) {
+        font-size: 4rem;
+    }
+}
+
 .intro-text-positive {
     font-size: 1.5rem;
     line-height: 1.4;
@@ -345,6 +360,46 @@
 }
 
 /* ==========================================
+   FONDOS PARA BARRIDO DE COLOR (COLOR WIPE)
+   ========================================== */
+.base-background,
+.flash-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.base-background {
+    /* No lleva transición para que el "relevo" sea instantáneo e invisible */
+    will-change: background-color;
+}
+
+.flash-background {
+    transform-origin: left;
+    /* Asegura que la ola siempre nazca desde la izquierda */
+    opacity: 0;
+    will-change: transform, opacity, background-color;
+}
+
+/* ==========================================
+   AJUSTE DE CAPAS
+   ========================================== */
+.horizontal-track {
+    display: flex;
+    height: 100%;
+    width: max-content;
+    position: relative;
+    /* Indispensable para que funcione el z-index */
+    z-index: 10;
+    /* Fuerza a que el contenido pase por encima del color */
+    will-change: transform;
+}
+
+/* ==========================================
    COLUMNA DETALLE MIEMBROS DE EQUIPO STICKY
    ========================================== */
 
@@ -458,6 +513,39 @@
         font-size: 2rem;
     }
 }
+
+/* ========================================================
+   COMPONENTE SWIPER DE PROYECTOS RELACIONADOS
+   ======================================================== */
+
+.custom-projects-swiper {
+    width: 100%;
+    overflow: hidden !important;
+}
+
+/* Estilos y posición de las flechas nativas de Swiper */
+.custom-swiper-arrow {
+    color: var(--bs-yellow, #FBFF06) !important; /* Tu color amarillo/dorado */
+    top: 50%; 
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Empujar las flechas hacia los extremos del contenedor */
+.swiper-button-prev.custom-swiper-arrow {
+    left:-10px !important;
+}
+
+.swiper-button-next.custom-swiper-arrow {
+    right: -10px !important;
+}
+
+/* Efecto hover elegante */
+.custom-swiper-arrow:hover {
+    transform: translateY(-5%) scale(1.02) !important;
+}
+
+
+
 
 /* ==========================================
    RESPONSIVE MÓVIL

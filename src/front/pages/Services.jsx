@@ -1,10 +1,8 @@
 import { Process } from "../components/Process"
-import { HeaderServices } from "../components/HeaderServices"
 import { SEO } from "../utils/SEO"
 import { Accordion } from "../components/Services/Accordion"
 import { WhereToBegin } from "../components/Services/WhereToBegin"
 import PageHeader from "../components/PageHeader"
-import HomeServices from "../assets/img/HomeServices.jpg"
 
 export const ServicesPage = () => {
     return (
@@ -17,9 +15,7 @@ export const ServicesPage = () => {
             <main>
                 <PageHeader
                     title="headers.headerServices.headLine"
-                    description='headers.headerServices.headerDescription'
-                    backgroundImg={HomeServices}
-                />
+                    description='headers.headerServices.headerDescription' />
                 <Accordion />
                 <WhereToBegin />
                 <Process />

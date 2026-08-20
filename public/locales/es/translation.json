@@ -10,6 +10,9 @@
   "headers": {
     "headerHome": {
       "headLine": "Diseñamos sitios web y <0>experiencias</0> digitales para creativos y marcas con identidad",
+      "headLine_glitch": "Diseñamos sitios web y <word /> digitales para creativos y marcas con identidad",
+      "headLine_glitch_phonicI": "Diseñamos sitios web e <word /> digitales para creativos y marcas con identidad",
+      "headLineGlitchWords": ["experiencias", "interacciones", "interfaces", "plataformas"],
       "headerDescription": "Combinamos diseño, narrativa y desarrollo web para proyectos que necesitan una presencia digital a la altura de su trabajo.",
       "portfolioButton": "Proyectos",
       "contactButton": "Contáctanos",
@@ -21,18 +24,24 @@
     },
     "headerAbout": {
       "headLine": "Un estudio digital para proyectos con <0>identidad</0>",
+      "headLine_glitch": "Un estudio digital para proyectos con <word />",
+      "headLineGlitchWords": ["identidad"],
       "headerDescription": "Creamos sitios web y experiencias digitales para proyectos con identidad, cuidando cómo se ven, cómo se entienden y cómo funcionan.",
       "portfolioButton": "Ver proyectos",
       "contactButton": "Hablemos"
     },
     "headerServices": {
       "headLine": "Sitios web, aplicaciones y tiendas online con <0>identidad</0>",
+      "headLine_glitch": "Sitios web, aplicaciones y tiendas online con <word />",
+      "headLineGlitchWords": ["identidad"],
       "headerDescription": "Creamos experiencias digitales claras, atractivas y funcionales, pensadas para mostrar mejor tu trabajo, tus productos o tus servicios.",
       "portfolioButton": "Proyectos",
       "contactButton": "Contáctanos"
     },
     "headerProjects": {
       "headLine": "Proyectos digitales con <0>identidad</0>",
+      "headLine_glitch": "Proyectos digitales con <word />",
+      "headLineGlitchWords": ["identidad"],
       "headerDescription": "Una selección de sitios web, tiendas online, portafolios y plataformas editoriales donde diseño, contenido y desarrollo se integran para presentar mejor una marca, un producto o una idea.",
       "contactButton": "Contáctanos"
     }
@@ -46,7 +55,8 @@
       "projects": "Proyectos",
       "contact": "Contacto"
     },
-    "copywright": "Todos los Derechos Reservados."
+    "copywright": "Todos los Derechos Reservados.",
+    "termsAndPrivacy": "Términos y Condiciones / Políticas de Privacidad"
   },
   "about": {
     "sectionTitle": "<0>¿Quiénes</0> somos?",
@@ -182,7 +192,7 @@
     },
     "whereToBegin": {
       "opening": {
-        "openingTitle": "No todos los proyectos empiezan en el mismo punto",
+        "openingTitle": "No todos los <0>proyectos</0> empiezan en el mismo punto",
         "openingDescription": "Puedes llegar con una idea, una marca ya creada, un diseño listo o una web que necesita mejorar. Nos adaptamos al punto en el que estás para ayudarte a avanzar, a lo que tu proyecto necesita hoy."
       },
       "phases": {
@@ -203,7 +213,107 @@
           "description": "Revisamos lo que ya tienes y proponemos mejoras en estructura, diseño, contenido, rendimiento o funcionalidad."
         }
       }
-    }
+    },
+    "servicesList": {
+      "websites": {
+        "title": "Sitios web",
+        "description": "Para marcas, creativos y proyectos que necesitan mostrar mejor su trabajo, sus productos o sus servicios.",
+        "brandSites": {
+          "title": "Sitios para marcas",
+          "description": "Creamos sitios claros, atractivos y fáciles de usar para presentar tu proyecto, tus servicios o tu marca con identidad.",
+          "button": "Descubre nuestro portafolio"
+        },
+        "creativePortfolios": {
+          "title": "Portafolios creativos",
+          "description": "Diseñamos webs para mostrar trabajo visual, audiovisual o editorial de forma clara, profesional y fácil de recorrer.",
+          "button": "Descubre nuestro portafolio"
+        },
+        "editorialSites": {
+          "title": "Sitios editoriales",
+          "description": "Construimos plataformas para revistas, contenidos y proyectos culturales que necesitan ordenar publicaciones, autores y experiencias de lectura.",
+          "button": "Descubre nuestro portafolio"
+        },
+        "implementation": {
+          "title": "Implementación",
+          "description": "Adaptamos la tecnología a tu proyecto: WordPress, Webflow o desarrollo web.",
+          "button": "Descubre nuestro portafolio"
+        }
+      },
+      "webApps": {
+        "title": "Aplicaciones web",
+        "description": "Para proyectos que necesitan herramientas, plataformas o funcionalidades hechas a medida.",
+        "customPlatforms": {
+          "title": "Plataformas a medida",
+          "description": "Desarrollamos herramientas digitales con funcionalidades específicas para resolver necesidades concretas de tu proyecto.",
+          "button": "Descubre nuestro portafolio"
+        },
+        "dashboards": {
+          "title": "Dashboards y gestión",
+          "description": "Creamos sistemas para administrar contenidos, productos, usuarios o información de forma clara y ordenada.",
+          "button": "Descubre nuestro portafolio"
+        },
+        "specialFeatures": {
+          "title": "Funcionalidades especiales",
+          "description": "Desarrollamos filtros, buscadores, formularios avanzados, áreas privadas e interacciones personalizadas.",
+          "button": "Descubre nuestro portafolio"
+        },
+        "integrations": {
+          "title": "Integraciones",
+          "description": "Conectamos tu plataforma con herramientas externas como formularios, analítica, pagos, agendas o sistemas de gestión.",
+          "button": "Descubre nuestro portafolio"
+        }
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Para marcas que quieren vender productos online con una experiencia clara y confiable.",
+        "onlineStore": {
+          "title": "Tiendas online",
+          "description": "Construimos tiendas pensadas para presentar productos con claridad y facilitar una experiencia de compra confiable.",
+          "button": "Descubre nuestro portafolio"
+        },
+        "catalogues": {
+          "title": "Catálogos digitales",
+          "description": "Organizamos productos, categorías, fichas e información clave para que tus clientes encuentren lo que necesitan.",
+          "button": "Descubre nuestro portafolio"
+        },
+        "payments": {
+          "title": "Pagos e integraciones",
+          "description": "Integramos pasarelas de pago, formularios, sistemas de gestión o herramientas externas según el alcance del proyecto.",
+          "button": "Descubre nuestro portafolio"
+        },
+        "shoppingExperience": {
+          "title": "Experiencia de compra",
+          "description": "Cuidamos el recorrido del usuario para que explorar, elegir y comprar sea claro, simple y seguro.",
+          "button": "Descubre nuestro portafolio"
+        }
+      },
+      "visualIdentity": {
+        "title": "Identidad y contenido visual",
+        "description": "Para proyectos que necesitan alinear su imagen y preparar materiales visuales que acompañen mejor su presencia digital.",
+        "webContent": {
+          "title": "Contenido para web",
+          "description": "Te ayudamos a ordenar textos, imágenes y materiales clave para que cada sección comunique con claridad.",
+          "button": "Descubre nuestro portafolio"
+        },
+        "visualDirection": {
+          "title": "Dirección visual",
+          "description": "Alineamos la estética del sitio con la identidad del proyecto para que todo se vea coherente y cuidado.",
+          "button": "Descubre nuestro portafolio"
+        },
+        "photoVideo": {
+          "title": "Fotografía y video",
+          "description": "Cuando el proyecto lo requiere, articulamos producción visual con equipos especializados para fortalecer tu presencia digital.",
+          "button": "Descubre nuestro portafolio"
+        },
+        "presentation": {
+          "title": "Presentaciones y materiales",
+          "description": "Preparamos piezas complementarias para explicar, lanzar o presentar mejor tu proyecto.",
+          "button": "Descubre nuestro portafolio"
+        }
+      }
+    },
+    "ServicesProjectsButton": "Ver portafolio",
+    "ServicesCTAButton": "Agenda una llamada"
   },
   "process": {
     "sectionToggleCapacities": "Capacidades",
@@ -281,8 +391,14 @@
     "sectionTitle": "Nuestros proyectos",
     "sectionDescription": "Algunos proyectos donde ayudamos a marcas y creativos a presentar mejor su trabajo, sus productos y sus ideas.",
     "sectionCTAButton": "Conectemos ahora",
-    "discoverMore": "Descubre más",
     "sectionPortfolioButton": "Explora nuestro portafolio",
+    "discoverMore": "Descubre más",
+    "sectionTitle2": "Nuestros proyectos",
+    "sectionDescription2": "Cada proyecto parte de una necesidad distinta: vender productos, organizar contenidos, presentar una obra o construir una identidad digital clara. Estos trabajos muestran cómo combinamos estructura, diseño y desarrollo para crear experiencias digitales útiles, atractivas y fáciles de usar.",
+    "sectionCTA": {
+      "sectionTitle": "<0>Explora</0> nuestro portafolio completo",
+      "sectionDescription": "Preparamos una versión descargable con proyectos seleccionados, servicios y ejemplos de cómo combinamos diseño, contenido y desarrollo para construir experiencias digitales con identidad."
+    },
     "menuItems": {
       "itemOne": "[01] Necesidad",
       "itemTwo": "[02] Nuestro proceso",
@@ -305,43 +421,45 @@
       "projectDescription6": "Una plataforma editorial en tres idiomas, diseñada para organizar contenidos, autores y traducciones de forma clara."
     },
     "projectName1": "Librería Cosmonauta",
-    "projectPreview1": "Conceptualizamos y desarrollamos el e-commerce de Librería Cosmonauta, integrando pagos seguros y gestión de inventario para potenciar sus ventas y el alcance de su comunidad lectora a nivel nacional.",
-    "projectSummary1": "Cosmonauta es una librería especializada en la distribución de literatura independiente. Este proyecto desarrolló una tienda online de alto rendimiento. El resultado es un flujo continuo donde el contenido editorial de alta profundidad actúa como el motor principal de conversión y ventas.",
+    "projectPreview1": "Tienda online para una librería independiente, diseñada para organizar un catálogo editorial amplio, facilitar la compra y gestionar pagos seguros.",
+    "projectSummary1": "Librería Cosmonauta es una librería especializada en literatura independiente. El proyecto consistió en diseñar y desarrollar una tienda online capaz de organizar su catálogo, facilitar la compra y permitir ventas digitales de forma segura. La plataforma convierte la curaduría editorial de la librería en una experiencia de compra clara, accesible y pensada para lectores de todo el país.",
     "projectName2": "Flora Nueva",
     "projectPreview2": "Colaboramos con Flora Nueva para crear su página web, proyectando su modelo y agrocadenas regenerativas para visibilizar su impacto social y facilitar la comercialización ética de sus ingredientes y productos naturales refinados. ",
     "projectSummary2": "Flora Nueva es una organización de desarrollo rural que implementa el modelo de 'Village Industry' para procesar ingredientes naturales como miel de abejas nativas y aceites esenciales y café directamente en su origen. CloudTech junto a Colmena Lab desarrolló una plataforma digital diseñada para demostrar sus agrocadenas regenerativas e impulsar la comercialización ética de sus productos refinados.",
     "projectName3": "Flotilla Amazónica",
     "projectPreview3": "Desarrollamos la página web multilingüe de la Flotilla Amazónica, integrando un centro de activos digitales y una sala de prensa protegida para amplificar la visibilidad global de su travesía de 3,000 km hacia la COP30.",
     "projectSummary3": "La Flotilla Amazónica es una travesía de acción climática que navega desde los Andes hasta Belém hacia la COP30. CloudTech junto a Colmena Lab desarrolló una plataforma multilingüe diseñada para centralizar la narrativa del viaje y gestionar recursos críticos para la prensa y aliados globales. El resultado es una página que amplifica la visibilidad de los territorios y pueblos amazónicos, facilitando la difusión de contenidos seguros en español, inglés y portugués.",
-    "projectName4": "Las libreras leen",
-    "projectPreview4": "Diseñamos la revista digital y plataforma de contenidos de Las Libreras Leen, integrando un CMS especializado y funciones de membresía para captar tráfico cualificado y fortalecer la conversión hacia su e-commerce.",
-    "projectSummary4": "Las Libreras Leen es una revista digital vinculada a Librería Cosmonauta. El proyecto desarrolló un espacio con contenidos especializados para fomentar la lectura y el debate cultural. El resultado es una página que fortalece la comunidad lectora en Quito-Ecuador y aumenta la conversión hacia el e-commerce de la Librería Cosmonauta mediante una integración de productos.",
+    "projectName4": "Las Libreras Leen",
+    "projectPreview4": "Revista digital vinculada a Librería Cosmonauta, creada para publicar contenidos editoriales, fortalecer comunidad lectora y conectar artículos con productos del e-commerce.",
+    "projectSummary4": "Las Libreras Leen es una revista digital vinculada a Librería Cosmonauta, creada para publicar contenidos editoriales, fomentar comunidad lectora y conectar la conversación cultural con la tienda online. El proyecto consistió en diseñar y desarrollar una plataforma editorial clara, autogestionable y conectada al ecommerce, capaz de organizar artículos, autores, categorías y recomendaciones de libros.",
     "projectName5": "ASOCOVE",
     "projectPreview5": "Cocreamos la página web de CUDECA, posicionando sus rutas de ríos turquesas y bosques restaurados como un destino de ecoturismo sostenible que financia directamente la conservación comunitaria de la asociación ASOCOVE.",
     "projectSummary5": "Desarrollamos una página web para la gestión turística de la asociación comunitaria ASOCOVE en el Corredor Rincón-Cacao. CloudTech junto a Colmena Lab implementó la página en Wix Studio, con el objetivo de posicionar este santuario natural de ríos turquesas y bosques restaurados. El resultado es un portal que conecta a viajeros con experiencias auténticas, transformando cada visita en financiamiento directo para las comunidades y la conservación.",
     "projectName6": "Búsquedas",
-    "projectPreview6": "Desarrollamos la plataforma digital multilingüe de la revista Búsquedas, un espacio diseñado para el intercambio de ideas, reflexiones y experiencias relacionadas con la espiritualidad y la interconexión de diversas corrientes del mundo.",
-    "projectSummary6": "Búsquedas es una revista digital dedicada a la indagación espiritual y el diálogo de diversas corrientes de búsquedas. CloudTech materializó este proyecto desde sus cimientos, creando la identidad visual completa y desarrollando una plataforma web trilingüe basada en WordPress. El resultado es un espacio digital seguro y autogestionable que facilita el intercambio global de ideas y reflexiones.",
+    "projectPreview6": "Revista digital trilingüe diseñada para organizar contenidos, autores y traducciones en una experiencia de lectura clara, sobria y autogestionable.",
+    "projectSummary6": "Búsquedas es una revista digital dedicada a la reflexión, la lectura profunda y el diálogo entre distintas corrientes de pensamiento. El proyecto consistió en crear una identidad visual sobria y desarrollar una plataforma editorial trilingüe, clara y autogestionable, capaz de organizar contenidos, autores y traducciones en español, inglés y francés.",
     "projectName7": "MURA",
-    "projectPreview7": "Implementamos la página web de MURA Revista Digital, integrando un diseño experimental y herramientas de autogestión para visibilizar literaturas y voces inusuales de toda Latinoamérica.",
-    "projectSummary7": "MURA es una revista digital especializada en literatura y artes que busca desarmar las estructuras tradicionales de los géneros literarios. CloudTech materializó el proyecto de forma integral, diseñando su identidad visual desde cero e implementando una plataforma editorial dinámica sobre WordPress. El resultado es un ecosistema editorial fluido y autogestionado que visibiliza el talento disruptivo de Ecuador y Latinoamérica.",
+    "projectPreview7": "Revista digital de literatura y artes, diseñada para dar protagonismo al contenido, explorar nuevas formas de navegación y facilitar la gestión editorial.",
+    "projectSummary7": "MURA es una revista digital de literatura y artes que busca abrir espacio a voces, formatos y recorridos editoriales no convencionales. El proyecto consistió en crear una identidad visual y desarrollar una plataforma editorial flexible, autogestionable y diseñada para dar protagonismo al contenido.",
     "projectName8": "Piedra Negra",
     "projectPreview8": "Estandarización visual y desarrollo de herramientas comerciales para una marca de café ecuatoriano que busca fortalecer su presencia en retail y abrir oportunidades B2B.",
-    "projectSummary8": "MURA es una revista digital especializada en literatura y artes que busca desarmar las estructuras tradicionales de los géneros literarios. CloudTech materializó el proyecto de forma integral, diseñando su identidad visual desde cero e implementando una plataforma editorial dinámica sobre WordPress. El resultado es un ecosistema editorial fluido y autogestionado que visibiliza el talento disruptivo de Ecuador y Latinoamérica.",
-    "projectName9": "Portfolio Jean-Pierre Olivares",
-    "projectNeed1": "La librería requería un canal de ventas digital escalable para comercializar su catálogo a nivel nacional. El desafío técnico consistía en centralizar la gestión de inventario de múltiples editoriales independientes y sustituir procesos de venta manuales por una infraestructura automatizada, segura y capaz de manejar flujos de pago complejos sin fricciones para el usuario.",
+    "projectSummary8": "Piedra Negra es una marca ecuatoriana de café con presencia en retail y una trayectoria construida alrededor del café tostado en origen. El proyecto consistió en actualizar y ordenar su identidad visual mediante un manual de marca base, y desarrollar dos presentaciones comerciales para apoyar su expansión: una enfocada en retail y otra orientada a clientes corporativos de marcas blancas y private label.",
+    "projectName9": "Portafolio creativo — Jean Pierre Olivares",
+    "projectSummary9": "Jean Pierre Olivares es director de fotografía, director y fotógrafo radicado en París. El proyecto consiste en diseñar y desarrollar una web de portafolio capaz de presentar su trabajo audiovisual y fotográfico de forma clara, sobria y visual. La experiencia está pensada para organizar proyectos de cinematografía, dirección, cortometrajes y fotografía sin competir con la fuerza de las imágenes.",
+    "projectPreview9": "Web para un director de fotografía, director y fotógrafo en París, diseñada para presentar proyectos audiovisuales y fotográficos de forma clara, visual y profesional.",
+    "projectNeed1": "La librería necesitaba un canal digital para vender su catálogo a nivel nacional y dejar atrás procesos de venta manuales. El reto era organizar productos de distintas editoriales, facilitar la búsqueda de libros, gestionar inventario y habilitar pagos seguros sin generar fricción para el usuario.",
     "projectProcess1": {
-      "description": "Nuestra metodología para Cosmonauta se centró en construir una infraestructura técnica capaz de unificar la gestión compleja de inventarios con una experiencia de compra fluida. Abordamos el desarrollo priorizando la robustez del backend y la seguridad transaccional, asegurando que la plataforma escale al mismo ritmo que su catálogo literario.",
-      "phase1Title": "1. Arquitectura de Información",
-      "phase1": "Definimos la lógica del e-commerce y los flujos de navegación para garantizar una experiencia de compra rápida.",
-      "phase2Title": "2. Diseño UX/UI",
-      "phase2": "Creamos prototipos en baja y alta resolución enfocados en la legibilidad y el rendimiento en dispositivos móviles, priorizando el catálogo de productos.",
-      "phase3Title": "3. Desarrollo de Sistemas",
-      "phase3": "Programamos un backend robusto en Go y Python para soportar búsquedas avanzadas y filtros por autores, categorías y editoriales.",
+      "description": "Para dejar atrás las ventas manuales y llevar su catálogo a nivel nacional, abordamos el proyecto de forma integral. Nos enfocamos en organizar la información y construir un ecosistema de ecommerce robusto que priorizara la fluidez, el diseño y la seguridad en cada compra.",
+      "phase1Title": "1. Estructura del catálogo",
+      "phase1": "Ordenamos la información de libros, editoriales, autores y categorías para que la navegación fuera clara y fácil de usar.",
+      "phase2Title": "2. Diseño de experiencia",
+      "phase2": "Diseñamos recorridos de compra simples, priorizando la búsqueda, la legibilidad y la experiencia en dispositivos móviles.",
+      "phase3Title": "3. Desarrollo Web",
+      "phase3": "Construimos una plataforma capaz de gestionar productos, inventario, filtros y búsquedas de forma eficiente.",
       "phase4Title": "4. Integración de Pagos",
-      "phase4": "Gestionamos la configuración técnica de la pasarela Nuvei, cumpliendo con los estándares de seguridad y protocolos requeridos por las instituciones bancarias para la validación de transacciones y permitir compras directas desde los artículos."
+      "phase4": "Implementamos pagos seguros mediante Nuvei para que la librería pudiera vender online con confianza."
     },
-    "projectSolution1": "Entregamos una infraestructura digital integral que profesionaliza la operación comercial de la librería. La plataforma incluye un panel administrativo para la gestión total de productos (CRUD), alertas de stock en tiempo real y un sistema de búsqueda optimizado que mejora la tasa de conversión. El núcleo de la solución es un sistema 100% seguro y blindado: implementamos la pasarela de pagos Nuvei bajo rigurosos estándares de cumplimiento bancario, gestionando toda la conexión técnica y los requerimientos normativos para garantizar transacciones protegidas. ",
+    "projectSolution1": "El resultado fue una tienda online clara, segura y autogestionable, pensada para que Librería Cosmonauta pudiera vender su catálogo de forma más ordenada y profesional. La plataforma permite administrar productos, actualizar inventario, facilitar la búsqueda de libros y recibir pagos en línea. Esto convirtió su presencia digital en un canal comercial activo, alineado con la identidad editorial de la librería.",
     "projectNeed2": "Flora Nueva necesitaba una página web que demuestre la compleja interdependencia entre naturaleza, comunidad e industria rural en su modelo. El desafío consistía en visibilizar el impacto social de sus agrocadenas y facilitar la comercialización ética de productos refinados, asegurando que se demuestre el valor agregado del contacto directo con el territorio y los productores.",
     "projectProcess2": {
       "description": "Transformamos un modelo operativo de impacto rural en una experiencia digital sofisticada, equilibrando la narrativa del territorio con herramientas de gestión autogestionables. El proceso se enfocó en crear una estructura web transparente que proyecte la trazabilidad de sus productos y la solidez de sus agrocadenas regenerativas.",
@@ -368,19 +486,19 @@
       "phase4": "Configuramos el sitio en WordPress con Elementor para otorgar al equipo de comunicación total autonomía, permitiendo actualizaciones frecuentes y carga de materiales de prensa sin dependencia técnica."
     },
     "projectSolution3": "Entregamos una página web que funciona como el centro de funcionamiento de la Flotilla Amazónica. La plataforma centraliza la operación mediática del proyecto, ofreciendo una ventana pública inmersiva y dos centros de gestión de activos blindados para la producción de contenido profesional. La solución garantiza la soberanía de la información: cada sección está optimizada para que los periodistas internacionales puedan descargar materiales de alta calidad y los socios puedan coordinar acciones de incidencia climática bajo una plataforma robusta, segura y escalable hacia la COP30.",
-    "projectNeed4": "El proyecto requería un espacio editorial que superara el formato de blog convencional. La necesidad principal era construir una plataforma que posicionara a la librería como una voz de autoridad y que, técnicamente, permitiera una conexión fluida con el catálogo de libros. Se buscaba fidelizar a la audiencia mediante sistemas de membresía y transformar el interés por la lectura en una acción de compra directa.",
+    "projectNeed4": "El proyecto necesitaba ir más allá de un blog convencional. La librería buscaba un espacio editorial que fortaleciera su voz cultural, facilitara la publicación de contenidos y permitiera conectar artículos con productos reales del e-commerce. El reto era construir una experiencia de lectura clara y, al mismo tiempo, crear un puente natural entre el contenido editorial y la compra de libros. ",
     "projectProcess4": {
-      "description": "Diseñamos un flujo de trabajo enfocado en la inmersión del lector, creando puentes técnicos entre el contenido editorial de alta profundidad y el motor de ventas de la librería. Nuestra estrategia priorizó una arquitectura de información que convierte la curiosidad cultural en una acción comercial directa y orgánica.",
+      "description": "Para trascender el formato tradicional de un blog, propusimos un desarrollo que integrara fluidamente cultura y comercio. Nos centramos en diseñar una experiencia de lectura inmersiva que, a su vez, funcionara como un ecosistema conectado directamente con el catálogo de la tienda.",
       "phase1Title": "1. Estructura Editorial",
-      "phase1": "Definimos las categorías de contenido y la arquitectura de la información para priorizar la legibilidad y el descubrimiento de nuevos artículos.",
-      "phase2Title": "2. Diseño de Experiencia (UX)",
-      "phase2": "Creamos una interfaz enfocada en la lectura inmersiva, integrando product cards que permiten visualizar libros relacionados sin interrumpir el flujo del usuario.",
-      "phase3Title": "3. Desarrollo de CMS",
-      "phase3": "Implementamos un sistema de gestión de contenidos en Wordpress a medida que facilita la publicación de artículos y la administración de la base de datos de suscriptores.",
-      "phase4Title": "4. Gestión de Membresías",
-      "phase4": "Programamos una funcionalidad de suscripción para gestionar el acceso a contenidos exclusivos y fortalecer el sentido de comunidad en torno al proyecto."
+      "phase1": "Definimos categorías, tipos de contenido y recorridos de lectura para facilitar el descubrimiento de artículos, autores y recomendaciones.",
+      "phase2Title": "2. Diseño de Experiencia",
+      "phase2": "Creamos una interfaz enfocada en la lectura, cuidando la legibilidad, la navegación y la integración de libros recomendados sin interrumpir el recorrido del usuario.",
+      "phase3Title": "3. Desarrollo CMS",
+      "phase3": "Implementamos una plataforma en WordPress para que el equipo editorial pudiera gestionar artículos, autores, categorías y publicaciones de forma autónoma.",
+      "phase4Title": "4. Integración con E-commerce",
+      "phase4": "Conectamos contenidos editoriales con productos del catálogo para facilitar el paso de la lectura a la compra."
     },
-    "projectSolution4": "Entregamos una página web optimizada que funciona como el principal generador de tráfico para la Librería Cosmonauta. La solución destaca por su integración estratégica: desarrollamos un puente técnico entre los artículos y la tienda online, permitiendo que cada recomendación literaria incluya enlaces de compra dinámicos y sincronizados con el inventario. Gracias a la implementación de un CMS intuitivo y un sistema de membresías, el equipo editorial gestiona su comunidad con total autonomía. El resultado es una herramienta que no solo difunde cultura, sino que optimiza el ciclo de venta al convertir el contenido en un punto de entrada directo hacia el e-commerce.",
+    "projectSolution4": "El resultado fue una revista digital que funciona como espacio editorial y como punto de entrada hacia la tienda online. La plataforma permite publicar contenidos de forma autónoma, organizar una comunidad lectora y vincular recomendaciones literarias con productos disponibles en el ecommerce. Así, Las Libreras Leen fortalece la identidad cultural de Librería Cosmonauta y convierte el contenido editorial en una parte activa de su presencia digital.",
     "projectNeed5": "La asociación necesitaba una ventana digital que hiciera justicia a la riqueza natural del corredor y profesionalizara su oferta turística. El desafío consistía en estructurar una narrativa que diferenciara sus diversos ejes: la investigación científica en la Estación Biológica San Gerardo, las rutas de agroturismo y las expediciones de aventura. Se requería una herramienta que permitiera al usuario explorar paquetes complejos de forma sencilla, resaltando siempre el modelo de gestión compartida con el Área de Conservación Guanacaste (ACG).",
     "projectProcess5": {
       "description": "Nuestra estrategia se enfocó en profesionalizar la presencia digital de la asociación mediante herramientas de diseño avanzado que facilitan la exploración de ecosistemas complejos. Desarrollamos una navegación visualmente inmersiva que traduce la riqueza biológica del corredor en una oferta turística estructurada, clara y competitiva.",
@@ -394,46 +512,80 @@
       "phase4": "Sistematizamos la información biológica y cultural del corredor, integrando fichas de especies y detalles sobre la herencia de los hornos de barro y la cocina ancestral de la zona."
     },
     "projectSolution5": "Entregamos una página web que posiciona a ASOCOVE como un referente del ecoturismo sostenible en Costa Rica. La plataforma integra un catálogo de paquetes autogestionable que facilita la toma de decisiones del viajero, vinculando cada actividad con su impacto directo en la comunidad. El núcleo de la solución es la promoción del turismo ambiental ligado a emprendimientos de las comunidades. Gracias a la infraestructura robusta y estética de la nueva web, ASOCOVE cuenta ahora con una herramienta comercial potente que garantiza su autonomía y fortalece su alianzas estratégicas con los negocios locales y la conservación.",
-    "projectNeed6": "Se requería construir una marca desde cero que transmitiera respeto, pluralidad y profundidad. Técnicamente, el desafío era desarrollar un portal editorial capaz de albergar contenidos complejos en tres idiomas (español, inglés y portugués), asegurando que el equipo de la revista pudiera administrar y publicar nuevos textos de forma autónoma y sencilla, sin barreras técnicas.",
+    "projectNeed6": "El proyecto necesitaba una presencia digital que transmitiera respeto, profundidad y claridad. La plataforma debía permitir la publicación de textos en tres idiomas, organizar autores y categorías, y facilitar que el equipo editorial pudiera administrar contenidos y traducciones sin depender de soporte técnico constante.",
     "projectProcess6": {
-      "description": "Materializamos la visión de Búsquedas mediante un proceso integral que abarcó desde el nacimiento de su identidad visual hasta la ingeniería de un portal trilingüe. El enfoque principal fue garantizar que la profundidad del contenido editorial conviviera con una interfaz minimalista y un sistema de gestión de contenidos sin fricciones.",
-      "phase1Title": "1. Desarrollo de Identidad (Branding)",
-      "phase1": "Diseñamos el ecosistema visual desde cero, incluyendo logotipo, paleta tipográfica y manual de marca, logrando una estética que invita a la reflexión y la introspección.",
+      "description": "Para materializar una plataforma editorial trilingüe y autónoma, definimos un proceso centrado en el respeto por el contenido. Trabajamos en una identidad visual sobria y en un desarrollo técnico que le diera total libertad al equipo para gestionar sus publicaciones.",
+      "phase1Title": "1. Identidad Visual",
+      "phase1": "Desarrollamos una línea visual sobria y coherente con el carácter reflexivo del proyecto, incluyendo logotipo, criterios gráficos y una estética pensada para la lectura pausada.",
       "phase2Title": "2. Arquitectura Multilingüe",
-      "phase2": "Implementamos una estructura técnica robusta utilizando WPML, garantizando una navegación coherente y optimizada para SEO en los tres idiomas principales del proyecto.",
-      "phase3Title": "3. Diseño de Experiencia (UX/UI)",
-      "phase3": "Creamos un entorno visual minimalista y 'limpio', diseñado para priorizar la lectura inmersiva y la calma, eliminando distracciones innecesarias para el lector.",
-      "phase4Title": "4. Configuración Autogestionable",
-      "phase4": "Desarrollamos la plataforma en WordPress, personalizando el panel de administración para que el equipo editorial pueda gestionar categorías, autores y traducciones con total independencia."
+      "phase2": "Organizamos la estructura del sitio para permitir navegación, contenidos y traducciones en español, inglés y francés.",
+      "phase3Title": "3. Diseño de Experiencia",
+      "phase3": "Creamos una interfaz limpia, clara y libre de distracciones para priorizar la lectura y facilitar el recorrido entre textos, autores y categorías.",
+      "phase4Title": "4. Desarrollo Autogestionable",
+      "phase4": "Implementamos la plataforma en WordPress con WPML, permitiendo que el equipo editorial administre publicaciones, autores y traducciones de forma independiente."
     },
-    "projectSolution6": "Entregamos una solución integral que dotó a Búsquedas de una marca única y una página web de alto nivel. La revista cuenta ahora con una marca sólida y un portal editorial trilingüe que funciona como un espacio para su comunidad global de lectores. El núcleo de la solución es la autonomía operativa: gracias a la implementación de herramientas intuitivas de gestión de contenidos y el cumplimiento de estándares internacionales de seguridad digital, el equipo de Búsquedas puede escalar su impacto y tejer su red de diálogo entre países y culturas de forma eficiente, segura y estéticamente impecable.",
-    "projectNeed7": "El proyecto requería una infraestructura digital que reflejara su filosofía de 'literatura viva' y en movimiento. El desafío técnico consistía en crear una interfaz que escapara de los formatos de blog convencionales para permitir propuestas artísticas inusuales. Además, MURA necesitaba un sistema 100% independiente y autogestionable, eliminando cualquier barrera técnica para la publicación de contenidos multimedia complejos.",
+    "projectSolution6": "El resultado fue una revista digital trilingüe, clara y fácil de administrar. La plataforma permite publicar contenidos, gestionar traducciones y ofrecer una experiencia de lectura sobria, ordenada y accesible para una comunidad internacional. Búsquedas cuenta ahora con una presencia digital que acompaña su identidad editorial y facilita el crecimiento de su red de lectores.",
+    "projectNeed7": "MURA necesitaba una presencia digital que reflejara su carácter experimental sin perder claridad para el usuario. El reto era construir una plataforma capaz de albergar textos, obras y contenidos multimedia, manteniendo autonomía editorial y una experiencia visual limpia.",
     "projectProcess7": {
-      "description": "Desarrollamos una propuesta que desafía las convenciones editoriales tradicionales, integrando una identidad de marca disruptiva con una interfaz experimental. Nuestro proceso se centró en crear un 'lienzo digital' dinámico que otorga total autonomía al equipo creativo para gestionar obras y contenidos en formatos inusuales.",
-      "phase1Title": "1. Desarrollo de Identidad (Branding)",
-      "phase1": "Diseñamos el sistema visual desde cero, incluyendo el logotipo y los elementos gráficos que representan la mutabilidad y fluidez de los géneros artísticos contemporáneos.",
-      "phase2Title": "2. Arquitectura de Información Experimental",
-      "phase2": "Estructuramos una navegación no lineal que facilita el descubrimiento de nuevas voces, permitiendo que el usuario transite libremente entre textos y obras multimedia.",
-      "phase3Title": "3. Diseño de Interfaz (UI)",
-      "phase3": "Creamos un entorno visual minimalista que funciona como un lienzo en blanco, donde la marca y los contenidos artísticos conviven en equilibrio sin perder legibilidad.",
-      "phase4Title": "4. Implementación en WordPress",
-      "phase4": "Configuramos un núcleo robusto y personalizado en WordPress, garantizando que el equipo de MURA pueda gestionar ediciones y administrar activos multimedia con total autonomía operativa."
+      "description": "Para equilibrar su carácter artístico con una navegación intuitiva, planteamos un desarrollo enfocado en el minimalismo funcional. Construimos un entorno que actúa como un lienzo en blanco, cediendo el protagonismo a los contenidos mediante este proceso:",
+      "phase1Title": "1. Identidad Visual",
+      "phase1": "Diseñamos un sistema visual que acompañara la personalidad artística y cambiante del proyecto, sin competir con los contenidos publicados.",
+      "phase2Title": "2. Arquitectura de Información",
+      "phase2": "Organizamos contenidos y recorridos para permitir una exploración editorial más libre, evitando una navegación demasiado rígida.",
+      "phase3Title": "3. Diseño de Interfaz",
+      "phase3": "Creamos una experiencia minimalista que funciona como soporte para textos, obras, imágenes y formatos diversos.",
+      "phase4Title": "4. Desarrollo WordPress",
+      "phase4": "Implementamos una plataforma autogestionable para que el equipo editorial pudiera publicar, organizar y administrar contenidos con independencia."
     },
-    "projectSolution7": "Entregamos una solución 360° que dotó a MURA de una personalidad visual única y una infraestructura digital de alto nivel. La revista cuenta ahora con una marca sólida y un portal dinámico que funciona como un archivo vivo y perdurable para la crítica cultural regional. El núcleo de la solución es la autonomía estratégica: al centralizar la gestión en una plataforma personalizada, logramos que el equipo editorial lidere su proyecto sin dependencias técnicas. Gracias a esta base técnica y visual, MURA proyecta su visión artística hacia un escenario global, garantizando que cada obra se presente en un entorno profesional, seguro y estéticamente impecable.",
+    "projectSolution7": "El resultado fue una revista digital con identidad propia, pensada como archivo vivo para literatura y artes. La plataforma permite gestionar contenidos de forma autónoma, presentar obras con claridad y sostener una experiencia editorial flexible, visualmente cuidada y fácil de recorrer.",
+    "projectNeed8": "La marca necesitaba recuperar coherencia visual y contar con materiales comerciales más sólidos para presentarse ante supermercados, distribuidores y potenciales clientes B2B. Aunque el producto ya tenía buen desempeño en percha, la identidad visual se había fragmentado con el tiempo y las presentaciones comerciales existentes no reflejaban la calidad, trayectoria y capacidad productiva de la empresa. El reto era construir una base visual clara y preparar herramientas que ayudaran al equipo comercial a comunicar mejor el valor de Piedra Negra: café ecuatoriano, tostado en origen, con capacidad industrial y una oferta adaptable a distintos canales.",
+    "projectProcess8": {
+      "description": "Para resolver la fragmentación visual y fortalecer su perfil corporativo, dividimos el trabajo en la normalización de la identidad de marca y la creación de herramientas B2B. Nuestro enfoque fue recuperar la esencia del café tostado en origen y traducirla en materiales profesionales que respaldaran al equipo comercial frente a distribuidores y supermercados.",
+      "phase1Title": "1. Diagnóstico de Marca",
+      "phase1": "Revisamos el estado visual de Piedra Negra y la necesidad de construir una base gráfica coherente para futuras aplicaciones comerciales, digitales y de retail.",
+      "phase2Title": "2. Manual de Marca",
+      "phase2": "Desarrollamos una guía de identidad visual con lineamientos de logotipo, símbolo, versiones de marca, zonas de protección, reducciones, tipografías, cromática y aplicaciones.",
+      "phase3Title": "3. Presentación Retail",
+      "phase3": "Diseñamos una herramienta comercial para supermercados, organizada alrededor de la trayectoria de la empresa, sus procesos, productos, clientes y fichas comerciales.",
+      "phase4Title": "4. Presentación Private Label",
+      "phase4": "Creamos una presentación corporativa enfocada en marcas blancas, destacando capacidades productivas, desarrollo de producto, formatos, procesos, economía de marca propia y ventajas para supermercados o distribuidores."
+    },
+    "projectSolution8": "El resultado fue un sistema base de identidad y dos herramientas comerciales listas para apoyar conversaciones B2B. El manual de marca permite que Piedra Negra mantenga coherencia visual en futuras piezas, campañas, presentaciones, redes o desarrollos web. Las presentaciones comerciales ayudan a mostrar la empresa de forma más profesional: una desde el enfoque retail y otra desde la oferta corporativa de desarrollo de marcas privadas. Con estos materiales, Piedra Negra cuenta con una presencia comercial más clara, consistente y preparada para abrir conversaciones con supermercados, distribuidores y clientes potenciales en nuevos mercados.",
+    "projectNeed9": "El proyecto necesitaba una presencia digital profesional que permitiera mostrar distintos tipos de trabajo visual en una misma plataforma. El reto era construir una web flexible, fácil de recorrer y pensada para productores, directores, agencias y posibles colaboradores que necesitan entender rápidamente el alcance, el estilo y la sensibilidad visual del portafolio.",
+    "projectProcess9": {
+      "description": "Para lograr que la obra audiovisual y fotográfica hablara por sí misma, centramos nuestro enfoque en la organización y la limpieza de la interfaz. Diseñamos un recorrido directo, capaz de mostrar la sensibilidad del director a clientes internacionales sin generar distracciones.",
+      "phase1Title": "1. Arquitectura de contenido",
+      "phase1": "Organizamos las distintas líneas de trabajo, dirección de fotografía, dirección, cortometrajes y fotografía, para que cada área tenga un lugar claro dentro del portafolio.",
+      "phase2Title": "2. Diseño de Experiencia",
+      "phase2": "Diseñamos una navegación limpia, visual y directa, pensada para que las imágenes, videos y proyectos seleccionados sean protagonistas.",
+      "phase3Title": "3. Dirección Visual",
+      "phase3": "Definimos una experiencia sobria y flexible, que acompaña el estilo del trabajo sin competir con las piezas audiovisuales y fotográficas.",
+      "phase4Title": "4. Desarrollo Web",
+      "phase4": "Construimos una base adaptable para actualizar nuevos proyectos, fotografías, videos y piezas seleccionadas con facilidad."
+    },
+    "projectSolution9": "El resultado es una web de portafolio clara, visual y profesional, diseñada para presentar obra audiovisual y fotográfica en un contexto internacional. La plataforma permite organizar proyectos, mostrar piezas seleccionadas y facilitar el contacto con posibles clientes, productoras, agencias o colaboradores. La experiencia funciona como una presencia digital sobria y cuidada, pensada para que el trabajo visual hable con claridad.",
     "projectsCTA": "¿Tienes un desafío similar?",
     "projectsCTADescritpion": "Es momento de diseñar la solución técnica que tu marca necesita para escalar su impacto.",
-    "projectsCTAButton": "Contáctanos",
+    "projectsCTAButton": "Hablemos",
     "otherProjects": "Otros proyectos",
     "credits": {
+      "team": "Equipo CloudTech",
       "post1": "Desarrollo Frontend",
       "post2": "Desarrollo Backend",
       "post3": "Desarrollo Fullstack",
-      "post4": "Líder de proyecto",
+      "post4": "Dirección de Proyecto",
       "post5": "Diseño UX/UI",
       "post6": "Desarrollo Web",
-      "post7": "Gestor de proyectos"
+      "post7": "Gestión de proyectos",
+      "post8": "Manual de Marca",
+      "post9": "Presentación retail y Presentación Private Label",
+      "post10": "Contenido y estructura"
     },
-    "downloadPortfolio": "Descarga nuestro portafolio",
+    "CTAsingleview": {
+      "sectionTitle": "¿Tienes un proyecto que necesita tomar forma <0>digital</0>?",
+      "sectionDescription": "Podemos ayudarte a ordenar la idea, diseñar la experiencia y construir una web, tienda online, plataforma o portafolio claro, funcional y alineado con tu identidad."
+    },
+    "downloadPortfolio": "Descarga el portafolio",
     "collab": "Proyecto realizado junto al equipo de Colmena Lab."
   },
   "testimonials": {
@@ -457,24 +609,24 @@
     "sectionCTAButton": "Hablemos de tu proyecto",
     "card": {
       "teamMember1": {
-        "position": "Comunicador estratégico",
-        "description": "Comunicador y estratega digital con más de una década de experiencia. Experto en crear contenidos y campañas impactantes con piezas multimedia y estrategias a medida, utiliza su versatilidad para la creación de narrativas complejas que reflejen los objetivos deseados y generen impacto."
+        "position": "Dirección de Proyecto y Comunicación",
+        "description": "Define la dirección estratégica y narrativa de los proyectos. Ordena ideas, mensajes y contenidos para que cada sitio comunique con claridad y refleje la identidad de la marca o creativo detrás."
       },
       "teamMember2": {
-        "position": "Desarrollador Fullstack",
-        "description": "Programador Fullstack en JavaScript, React y Python, con un enfoque en la interacción y comunicación. Su trayectoria en traducción le permite hacer que la tecnología sea comprensible, creando plataformas dinámicas que optimizan la experiencia de usuarios, fomentando la conexión global."
+        "position": "Desarrollo Fullstack y Traducción",
+        "description": "Desarrolla plataformas claras, funcionales y bien implementadas. También acompaña la adaptación de contenidos en español, francés e inglés, ayudando a que los proyectos puedan comunicarse mejor en distintos idiomas. "
       },
       "teamMember3": {
-        "position": "Desarrollador Fullstack",
-        "description": "Desarrollador Fullstack experto en JavaScript, React y Python, apasionado por optimizar procesos y diseñar interfaces responsivas. Transforma conceptos técnicos complejos en soluciones claras, garantizando software e interfaces funcionales y amigables que mejoran la experiencia del usuario."
+        "position": "Desarrollador Fullstack y UX/UI",
+        "description": "Combina UX/UI y desarrollo web para crear sitios claros, útiles y técnicamente viables. Construye wireframes, prototipos y diseños en alta fidelidad, acompañando al cliente en decisiones clave de experiencia."
       },
       "teamMember4": {
-        "position": "Director de Proyectos",
-        "description": "Profesional en transformaciones sociales e innovación con trayectoria en gestión administrativa, tramitación de procedimientos, administración documental y articulación comunitaria. Eficaz coordinando actividades, elaborando documentos y garantizando la integridad financiera de recursos."
+        "position": "Gestión de Proyectos",
+        "description": "Brinda seguimiento a los proyectos. Ayuda a ordenar prioridades, detectar puntos críticos y mantener claridad en cada etapa del proceso junto a la dirección del equipo."
       },
       "teamMember5": {
-        "position": "Desarrollador de software",
-        "description": "Desarrollador de software versátil en Android, React, Python y Node, con sólidos conocimientos en redes informáticas. Esta preparación integral le permite fluir con naturalidad por todo el ciclo de aplicaciones web y móviles, desde la concepción hasta su implementación efectiva."
+        "position": "Desarrollador de Software",
+        "description": "Aporta criterio técnico profundo para resolver desarrollos complejos en sitios web, web apps y aplicaciones. Su trabajo ayuda a convertir ideas exigentes en soluciones funcionales, sólidas y escalables."
       },
       "teamMember6": {
         "position": "Ejecutiva de Cuenta",
@@ -585,9 +737,11 @@
         "options": {
           "placeholder": "Escoge una opción...",
           "opt1": "Tengo una idea inicial",
-          "opt2": "Opción 2",
-          "opt3": "Opción 3",
-          "opt4": "Opción 4"
+          "opt2": "Ya tengo marca o identidad visual",
+          "opt3": "Ya tengo diseño",
+          "opt4": "Ya tengo una web y quiero mejorarla",
+          "opt5": "Estoy listo para empezar",
+          "opt6": "Necesito orientación"
         }
       },
       "section3": {
@@ -613,9 +767,10 @@
         }
       },
       "formSubmission": {
-        "termsDisclosure": "Acepto las condiciones y la política de privacidad.",
+        "termsDisclosure": "Acepto los ",
         "newsletter": "Acepto recibir comunicaciones comerciales.",
-        "submitButton": "Enviar mensaje"
+        "submitButton": "Enviar mensaje",
+        "termsAndPrivacy": "Términos y Condiciones / Políticas de Privacidad"
       }
     },
     "labels": {
@@ -655,12 +810,85 @@
           "description": "Te proponemos el siguiente paso: diagnóstico, propuesta, diseño, desarrollo o mejora."
         }
       }
+    },
+    "ContactCards": {
+      "meeting": {
+        "title": "¿Prefieres conversar directamente?",
+        "description": "Agenda una llamada corta para contarnos tu idea y ver cómo podemos ayudarte."
+      },
+      "email": {
+        "title": "También puedes escribirnos directamente a:"
+      },
+      "Portfolio":{
+        "title": "¿Quieres ver primero cómo trabajamos?",
+      "desc": "Mira nuestro portafolio"
+      }
     }
   },
-  "whatsapp": {
-    "accountName": "CloudTech Sistemas",
-    "statusMessage": "Normalmente responde en 1 hora",
-    "chatMessage": "¡Hola! 👋 ¿Cómo podemos ayudarte?",
-    "placeholder": "Escribe tu mensaje..."
+  "legal": {
+    "terms": {
+      "title": "Términos y Condiciones de Uso",
+      "lastUpdate": "Última actualización: 10 de agosto de 2026",
+      "sections": [
+        {
+          "heading": "1. Introducción y Aceptación",
+          "text": "Los presentes Términos y Condiciones regulan el acceso y uso del sitio web de CloudTech. Al navegar por este sitio, usted acepta plenamente estas condiciones. Si no está de acuerdo con alguna de ellas, le solicitamos que se abstenga de utilizar nuestros servicios o proporcionar información a través de nuestros formularios."
+        },
+        {
+          "heading": "2. Propiedad Intelectual",
+          "text": "Todo el contenido gráfico, código fuente, logotipos, textos, diseños y estructuras de software presentados en este sitio son propiedad exclusiva de CloudTech o de sus respectivos clientes (bajo licencia). Queda estrictamente prohibida la reproducción, distribución o modificación de cualquier elemento sin autorización previa y por escrito."
+        },
+        {
+          "heading": "3. Uso de los Servicios",
+          "text": "Nuestros servicios de diseño y desarrollo web están destinados a empresas, creativos y profesionales. El usuario se compromete a proporcionar información veraz en los formularios y a no utilizar el sitio para actividades ilícitas, envío de comunicaciones no solicitadas (spam) o distribución de software malicioso."
+        },
+        {
+          "heading": "4. Limitación de Responsabilidad",
+          "text": "Este sitio muestra proyectos realizados para clientes. CloudTech no se hace responsable por el contenido, políticas de privacidad o prácticas de sitios web de terceros a los que se acceda mediante enlaces desde nuestro portafolio."
+        },
+        {
+          "heading": "5. Jurisdicción y Ley Aplicable",
+          "text": "CloudTech trabaja para garantizar la máxima disponibilidad y seguridad del sitio. No obstante, no nos hacemos responsables por interrupciones técnicas ajenas a nuestro control, ni por daños derivados del uso de la información contenida en el portal o el mal funcionamiento del navegador del usuario."
+        },
+        {
+          "heading": "6. Modificaciones",
+          "text": "Estos términos se rigen por las leyes de la República del Ecuador. Cualquier controversia será resuelta ante los tribunales competentes de la ciudad de Quito, Ecuador, sin perjuicio de las normativas internacionales de protección al consumidor aplicables."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Políticas de Privacidad y Protección de Datos",
+      "lastUpdate": "Última actualización: 10 de agosto de 2026",
+      "sections": [
+        {
+          "heading": "1. Responsable del Tratamiento",
+          "text": "CloudTech, con domicilio en Ecuador, es el responsable del tratamiento de sus datos personales. Nos comprometemos a proteger su privacidad conforme a la Ley Orgánica de Protección de Datos Personales (LOPDP) de Ecuador y los estándares del Reglamento General de Protección de Datos (GDPR) de la Unión Europea."
+        },
+        {
+          "heading": "2. Datos que Recopilamos",
+          "text": "Recopilamos información de identificación (nombre, correo electrónico, teléfono) solo cuando usted la proporciona voluntariamente para solicitar servicios. También recopilamos datos técnicos mediante cookies (IP, tipo de navegador, tiempo de permanencia) para mejorar su experiencia de navegación."
+        },
+        {
+          "heading": "3. Finalidad del Tratamiento",
+          "text": "Sus datos se utilizan para: a) Responder a solicitudes de presupuesto; b) Gestionar la relación comercial en caso de contratación; c) Enviar actualizaciones sobre nuestros servicios (solo con consentimiento previo); d) Optimizar el rendimiento técnico de nuestra plataforma."
+        },
+        {
+          "heading": "4. Transferencia Internacional",
+          "text": "Al operar globalmente, sus datos pueden ser procesados en servidores seguros fuera de su país de residencia. CloudTech asegura que sus proveedores tecnológicos cumplen con estándares internacionales de cifrado y cláusulas contractuales de protección de datos."
+        },
+        {
+          "heading": "5. Sus Derechos (ARCO)",
+          "text": "Usted tiene derecho a acceder, rectificar, cancelar y oponerse al tratamiento de sus datos. Para ejercer estos derechos o retirar su consentimiento, puede escribirnos a: dev@cloudtech.com.ec indicando en el asunto 'Protección de Datos'."
+        },
+        {
+          "heading": "6. Seguridad de la Información",
+          "text": "Implementamos certificados SSL, cortafuegos y medidas de seguridad técnicas para evitar el acceso no autorizado o la pérdida de su información personal."
+        },
+        {
+          "heading": "7. Política de Cookies",
+          "text": "Este sitio utiliza cookies propias y de terceros para análisis estadístico y personalización de la experiencia. Las cookies son pequeños archivos almacenados en su navegador. Usted puede configurar su navegador para rechazarlas o eliminarlas en cualquier momento, aunque esto podría afectar el funcionamiento de algunas secciones del sitio."
+        }
+      ]
+    }
   }
 }

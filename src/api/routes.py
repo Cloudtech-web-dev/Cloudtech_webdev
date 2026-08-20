@@ -1,21 +1,27 @@
 """
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
-from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, Lead, CTAdmin
-from api.utils import generate_sitemap, APIException
-from sqlalchemy import select
+from flask import Blueprint, jsonify, request
 from flask_cors import CORS
+from flask_jwt_extended import create_access_token, jwt_required
+from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
-from flask_jwt_extended import create_access_token
+
+from api.models import CTAdmin, Lead, db
 
 api = Blueprint('api', __name__)
 
 # Allow CORS requests to this API
 CORS(api)
 
+# @api.before_request  # ← Useful to protect all the blueprint at once (with exceptions if needed)
+# def protect_api_blueprint():
+#     if request.endpoint == 'api.admin_login':
+#         return
+#     verify_jwt_in_request()
 
 @api.route('/leads', methods=['GET'])
+@jwt_required()
 def get_leads():
     all_leads = Lead.query.all()
     serialized_leads = [lead.serialize() for lead in all_leads]
@@ -26,32 +32,103 @@ def get_leads():
 def validate_lead_data(data):
     errors = {}
 
-    name = data.get("name")
-    email = data.get("email")
-    phone = data.get("phone")
-    company = data.get("company")
-    message = data.get("message")
+    # Extraemos arrays / valores de nivel superior
+    needs = data.get("needs", [])
+    stage = data.get("stage")
+    problem_description = data.get("problemDescription")
+    ideal_timeframe = data.get("idealTimeframe")
+    newsletter_opt_in = bool(data.get("newsletterOptIn", False))
 
-    if not name or not name.strip():
-        errors["name"] = "Name field is required."
+    # Extraemos el objeto anidado personalData
+    personal_data = data.get("personalData") or {}
+    whole_name = personal_data.get("wholeName")
+    email = personal_data.get("email")
+    phone = personal_data.get("phone")
+    project_name = personal_data.get("projectName")
 
+    # 1. Validar needs (mínimo 1 elemento)
+    if not isinstance(needs, list) or len(needs) == 0:
+        errors["needs"] = "At least one need must be selected."
+
+    # 2. Validar personalData -> wholeName (mínimo 2 palabras)
+    if not whole_name or not whole_name.strip():
+        errors["fullName"] = "Full name is required."
+    elif len(whole_name.strip().split()) < 2:
+        errors["fullName"] = "Please enter both first and last name."
+
+    # 3. Validar personalData -> email
     if not email or not email.strip():
-        errors["email"] = "Email field is required."
+        errors["email"] = "Email address is required."
     elif "@" not in email or "." not in email or len(email) < 5:
         errors["email"] = "Invalid email format."
 
-    if not phone or not phone.strip():
-        errors["phone"] = "Phone field is required"
-    elif len(phone) < 9:
-        errors["phone"] = "Phone number must have at least nine digits"
+    # 4. Validar personalData -> phone
+    if phone and len(phone.strip()) < 7:
+        errors["phone"] = "Phone number must have at least seven digits."
 
     return errors, {
-        "name": name.strip() if name else None,
+        "needs": needs,
+        "stage": int(stage) if stage is not None and str(stage).isdigit() else None,
+        "problem_description": problem_description.strip() if problem_description else None,
+        "ideal_timeframe": int(ideal_timeframe) if ideal_timeframe is not None and str(ideal_timeframe).isdigit() else None,
+        "full_name": whole_name.strip() if whole_name else None,
         "email": email.strip() if email else None,
         "phone": phone.strip() if phone else None,
-        "company": company.strip() if company else None,
-        "message": message.strip() if message else None
+        "project_name": project_name.strip() if project_name else None,
+        "newsletter_opt_in": newsletter_opt_in
     }
+    
+@api.route('/contact', methods=['POST'])
+def add_lead():
+    lead_data = request.get_json()
+
+    if not lead_data:
+        return jsonify({"message": "Invalid JSON or empty request body"}), 400
+
+    validation_errors, clean_data = validate_lead_data(lead_data)
+
+    if validation_errors:
+        return jsonify({
+            "status": "error",
+            "message": "Validation failed",
+            "errors": validation_errors
+        }), 400
+
+    try:
+        # Instanciamos el modelo Lead con los datos limpios
+        new_lead = Lead(
+            needs=clean_data["needs"],
+            stage=clean_data["stage"],
+            problem_description=clean_data["problem_description"],
+            ideal_timeframe=clean_data["ideal_timeframe"],
+            full_name=clean_data["full_name"],
+            email=clean_data["email"],
+            phone=clean_data["phone"],
+            project_name=clean_data["project_name"],
+            newsletter_opt_in=clean_data["newsletter_opt_in"]
+        )
+
+        db.session.add(new_lead)
+        db.session.commit()
+
+        return jsonify({
+            "message": "Lead received successfully!",
+            "lead_id": new_lead.id,
+            "lead": new_lead.serialize()
+        }), 201
+
+    except IntegrityError as e:
+        db.session.rollback()
+        print(f"Registration error (Duplicate/Integrity): {e}")
+        return jsonify({
+            "status": "error",
+            "message": "An integrity error occurred processing the lead."
+        }), 400
+
+    except Exception as e:
+        db.session.rollback()
+        print(f"Registration error (General): {e}")
+        return jsonify({"message": "Unable to process your request at this time"}), 500
 
 
 @api.route('/admin/login', methods=['POST'])
@@ -82,7 +159,7 @@ def admin_login():
             return jsonify({"message": "Invalid credentials"}), 401
 
         token = create_access_token(
-            identity=ct_admin.id,
+            identity=str(ct_admin.id),
             additional_claims={"role": "ct_admin"}
         )
 
@@ -95,55 +172,3 @@ def admin_login():
     except Exception as e:
         print(f"Login error: {e}")
         return jsonify({"message": "Failed login. Please try again later"}), 500
-
-
-@api.route('/contact', methods=['POST'])
-def add_lead():
-    lead_data = request.get_json()
-
-    if not lead_data:
-        return jsonify({"message": "Invalid JSON or empty request body"}), 400
-
-    validation_errors, clean_data = validate_lead_data(lead_data)
-
-    if validation_errors:
-        return jsonify({
-            "status": "error",
-            "message": "Validation failed",
-            "errors": validation_errors
-        }), 400
-
-    try:
-        new_lead = Lead(
-            name=clean_data["name"],
-            email=clean_data["email"],
-            phone=clean_data["phone"],
-            company=clean_data["company"],
-            message=clean_data["message"]
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return jsonify({
-            "message": "Lead received successfully!",
-            "lead_id": new_lead.id,
-            "lead": new_lead.serialize()
-        }), 201
-
-    except IntegrityError as e:
-        db.session.rollback()
-        print(f"Registration error (Duplicate): {e}")
-        if "lead_email_key" in str(e):
-            return jsonify({
-                "status": "error",
-                "message": "Validation failed",
-                "errors": {"email": "This email is already registered"}
-            }), 409
-        else:
-            return jsonify({"message": "An integrity error ocurred"}), 400
-
-    except Exception as e:
-        db.session.rollback()
-        print(f"Registration error (General): {e}")
-        return jsonify({"message": "Unable to process your request at this time"}), 500

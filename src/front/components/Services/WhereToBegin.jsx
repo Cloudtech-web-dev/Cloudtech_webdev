@@ -1,12 +1,14 @@
 import { useRef, useEffect } from 'react';
 import '../../styles/StickyLayout.css';
-import { useTranslation } from "react-i18next"
+import { useTranslation, Trans } from "react-i18next"
 
 export const WhereToBegin = () => {
     const { t } = useTranslation();
 
     const containerRef = useRef(null);
     const trackRef = useRef(null);
+    const baseBgRef = useRef(null);
+    const flashBgRef = useRef(null);
     const animationFrameRef = useRef(null);
 
     const phaseData = [
@@ -16,12 +18,16 @@ export const WhereToBegin = () => {
         { title: t('services.whereToBegin.phases.phase4.title'), desc: t('services.whereToBegin.phases.phase4.description') }
     ];
 
+    const flashColors = ['transparent', '#12A1D9', '#73BF9C', '#D8F279'];
+
     useEffect(() => {
         const updateAnimations = () => {
             if (!containerRef.current || !trackRef.current) return;
 
             const container = containerRef.current;
             const track = trackRef.current;
+            const baseBg = baseBgRef.current
+            const flashBg = flashBgRef.current;
 
             const containerHeight = container.offsetHeight;
             const windowHeight = window.innerHeight;
@@ -49,9 +55,39 @@ export const WhereToBegin = () => {
                 interpolatedProgress += transitionFactor * transitionFactor * (3 - 2 * transitionFactor);
             }
 
-            // Calculamos los píxeles reales de traslación
+            // 1. ANIMACIÓN DEL CONTENIDO HORIZONTAL
             const horizontalTranslate = interpolatedProgress * itemWidth;
             track.style.transform = `translateX(-${horizontalTranslate}px)`;
+
+            // 2. LÓGICA DE BARRIDO DE COLOR (COLOR WIPE)
+            if (baseBg && flashBg) {
+                // Obtenemos el índice exacto en el que estamos (0, 1, 2, 3)
+                const currentIndex = Math.floor(progress);
+                const fraction = progress - currentIndex; // decimal de 0.0 a 0.999
+
+                // El color Base es el color del paso actual en el que estamos asentados
+                const baseColor = flashColors[currentIndex] || 'transparent';
+                let flashColor = 'transparent';
+                let scaleX = 0;
+
+                // Si hemos recorrido el 85% de la distancia hacia el SIGUIENTE paso
+                if (fraction >= 0.85 && currentIndex < totalItems - 1) {
+                    flashColor = flashColors[currentIndex + 1];
+                    scaleX = (fraction - 0.85) / 0.15; // Escala el color de 0 a 1 suavemente
+                }
+
+                // Aplicamos el color asentado a la capa base
+                baseBg.style.backgroundColor = baseColor;
+
+                // Aplicamos la animación de estiramiento a la capa flash
+                if (scaleX > 0) {
+                    flashBg.style.backgroundColor = flashColor;
+                    flashBg.style.transform = `scaleX(${scaleX})`;
+                    flashBg.style.opacity = 1;
+                } else {
+                    flashBg.style.opacity = 0;
+                }
+            }
         };
 
         const onScroll = () => {
@@ -76,7 +112,12 @@ export const WhereToBegin = () => {
             <div className='intro-scroll-wrapper'>
                 <div className='intro-sticky-box'>
                     <div className='intro-content'>
-                        <h2 className='section-title'>No todos los <span className='bg-negative-title'>proyectos</span> empiezan en el mismo punto</h2>
+                        <h2 className='section-title'>
+                            <Trans i18nKey="services.whereToBegin.opening.openingTitle"
+                            components={[
+                                <span className="bg-negative-title" /> 
+                            ]} />
+                        </h2>
                         <p className='intro-text'>
                             {t('services.whereToBegin.opening.openingDescription')}
                         </p>
@@ -86,6 +127,8 @@ export const WhereToBegin = () => {
             {/* CONTENEDOR DE VALUES */}
             <div ref={containerRef} className='scroll-phases-container'>
                 <div className='sticky-view'>
+                    <div ref={baseBgRef} className="base-background"></div>
+                    <div ref={flashBgRef} className="flash-background"></div>
                     <div ref={trackRef} className='horizontal-track'>
                         {phaseData.map((item, index) => (
                             <div key={index} className='card-content-section'>
