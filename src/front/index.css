@@ -724,13 +724,13 @@ h6 {
     margin-bottom: -0.08lh;
     
     &:first-child {
+      color: black;
+      mix-blend-mode: screen;
+    }
+    &:last-child {
       position: absolute;
       color: white;
       mix-blend-mode: multiply;
-    }
-    &:last-child {
-      color: black;
-      mix-blend-mode: screen;
     }
   }
 }
