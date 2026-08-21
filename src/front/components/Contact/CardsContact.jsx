@@ -54,6 +54,7 @@ export const CardsContact = () => {
                         title={t("contact.ContactCards.meeting.title")}
                         description={t("contact.ContactCards.meeting.description")}
                         icon={CalendarIcon}
+                        link={`mailto:${contactEmail}`}
                     />
 
                     <ContactCard
