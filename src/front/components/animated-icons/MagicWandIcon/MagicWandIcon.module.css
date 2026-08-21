@@ -7,6 +7,8 @@ div.iconWrapper {
   
   > svg.icon {
     
+    width: 100%;
+    
     --gradient-color-1: #ff0000;
     --gradient-color-2: #ff7f00;
     --gradient-color-3: #ffff00;
@@ -47,6 +49,7 @@ div.iconWrapper:hover > svg.icon,
 :global(.group):hover > div.iconWrapper > svg.icon {
 
   overflow: visible;
+  will-change: transform;
 
   > g.layer {
       
