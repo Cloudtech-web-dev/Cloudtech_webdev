@@ -5,85 +5,85 @@ div.iconWrapper {
 width: 1em;
 display: flex;
 
-    > svg.icon {
+    > .icon.alt {
 
-        > :not(.artifactsContainer) { &, * { transform-origin: center} }
+        > :not(.artifactsContainer) { &, * { transform-origin: center } }
 
-        > g.tickUtils > rect.backTickRect { translate: -100% }
+        > .tickUtils > .backTickRect { translate: -100% }
 
-        > g.artifactsContainer {
+        > .artifactsContainer {
 
-            > g.artifactsGroup > g.artifactWrapper {
+            > .artifactsGroup > .artifactWrapper {
                 
                 > path { opacity: 0 }
 
-                > path.trail {
+                > .trail {
                     stroke-width: 0.7;
                     stroke-dasharray: var(--trail-size);
                     stroke-dashoffset: calc(var(--offset-coef, -1) * var(--trail-size));
                 }
             }
 
-            > g.artifacts1 {
+            > .artifacts1 {
 
-                > g.a2 { --trail-size: 62px }
-                > g.a5 { --trail-size: 62px }
-                > g.a6 { --trail-size: 72px }
+                > .a2 { --trail-size: 62px }
+                > .a5 { --trail-size: 62px }
+                > .a6 { --trail-size: 72px }
 
-                > g.a1 > path.artifact {
+                > .a1 > .artifact {
                     offset-path: path("m -39.356716,-8.499572 c 0,0 45.5736925,4.43307 57.400195,13.5020161 10.966376,8.4093739 20.758917,38.2345099 20.758917,38.2345099");
                     transform: scale(0.68193688) translateX(35%) translateY(16%);
                 }
-                > g.a2 > path.artifact {
+                > .a2 > .artifact {
                     offset-path: path("M 83.723078,-49.602254 C 80.530871,-33.457978 63.885251,-27.142094 64.380917,-18.652936 65.818526,5.9689102 12.336389,32.406862 14.936377,32.69443");
                     transform: rotate(-30deg) translateX(-28%) translateY(44%);
                 }
-                > g.a3 > path.artifact {
+                > .a3 > .artifact {
                     offset-path: path("M 23.152767,-48.139562 C 36.87755,-39.387743 39.257105,-21.86364 38.738018,-6.9345008 38.612116,9.3295976 37.590187,28.105897 50.007603,40.622281");
                     transform: scale(0.52240169) rotate(-30deg) translateX(10%) translateY(59%);
                 }
-                > g.a4 > path.artifact {
+                > .a4 > .artifact {
                     offset-path: path("M 58.074921,-75.301236 C 57.603095,-35.797788 57.131268,3.7056598 56.659442,43.209107");
                     transform: rotate(-90deg) translateX(-31%) translateY(44%);
                 }
-                > g.a5 > path.artifact {
+                > .a5 > .artifact {
                     offset-path: path("M 83.723078,-49.602254 C 80.530871,-33.457978 63.885251,-27.142094 64.380917,-18.652936 65.818526,5.9689102 12.336389,32.406862 14.936377,32.69443");
                     transform: rotate(195deg) translateX(-33%) translateY(-59%) scale(0.39851012);
                 }
-                > g.a6 > path.artifact {
+                > .a6 > .artifact {
                     offset-path: path("M 138.9829,-32.25028 C 105.17146,-22.37192 74.699306,10.140811 58.090861,42.238705");
                     transform: scale(0.38525604) rotate(195deg) translateX(5%) translateY(57%);
                 }
             }
 
-            > g.artifacts2 {
+            > .artifacts2 {
 
-                > g.artifactWrapper {
+                > .artifactWrapper {
                     --offset-coef: 1;
-                    > path.artifact { offset-distance: 100% }
+                    > .artifact { offset-distance: 100% }
                 }
                 
-                > g.a1 { --trail-size: 78px }
-                > g.a2 { --trail-size: 72px }
-                > g.a5 { --trail-size: 62px }
+                > .a1 { --trail-size: 78px }
+                > .a2 { --trail-size: 72px }
+                > .a5 { --trail-size: 62px }
 
-                > g.a1 > path.artifact {
+                > .a1 > .artifact {
                     offset-path: path("M 35.693344,42.480529 C 29.068648,-12.030891 21.728077,-59.35962 -19.987241,-4.246869");
                     transform: rotate(98deg) translateX(-28%) translateY(42%);
                 }
-                > g.a2 > path.artifact {
+                > .a2 > .artifact {
                     offset-path: path("M 55.653367,45.940949 C 56.46572,-23.047597 29.214588,-32.934672 23.434487,-46.559957");
                     transform: scale(0.52240169) rotate(92deg) translateX(7%) translateY(55%);
                 }
-                > g.a3 > path.artifact {
+                > .a3 > .artifact {
                     offset-path: path("m 38.929596,43.589169 c 0.330732,-32.143104 11.314945,-63.247508 27.467505,-90.742207 2.390908,-6.083282 10.26638,-14.300937 5.358326,-20.655849");
                     transform: translateX(-33%) translateY(-52%) rotate(-180deg);
                 }
-                > g.a4 > path.artifact {
+                > .a4 > .artifact {
                     offset-path: path("M 70.895379,42.850076 C 64.764466,32.04712 56.773179,19.644398 60.45218,6.7658409 65.781079,-4.5467355 80.289399,-4.0630784 90.937776,-5.1061583 c 11.074284,1.8170932 18.281024,-9.8922777 9.713254,-17.9017677 -2.712049,-3.993763 -6.089687,-7.471247 -8.940085,-11.356992");
                     transform: rotate(125deg) translateX(0%) translateY(14%);
                 }
-                > g.a5 > path.artifact {
+                > .a5 > .artifact {
                     offset-path: path("m 89.448312,26.648923 c -4.685336,-15.267535 -6.62751,-35.1878005 6.910434,-46.619325 16.711934,-12.88055 40.366954,-10.433903 59.728914,-6.390365");
                     transform: rotate(108deg) translateX(-29%) translateY(41%);
                 }
@@ -92,29 +92,34 @@ display: flex;
     }
 }
 
-div.iconWrapper:hover > svg.icon,
-:global(.group):hover > div.iconWrapper > svg.icon {
+
+:global(.group):not(:hover) > .iconWrapper:not(:hover) > .icon {
+    animation: none;
+}
+
+.iconWrapper:hover > .icon.alt,
+:global(.group):hover > .iconWrapper > .icon.alt {
 
     overflow: visible;
 
-    > :not(g.artifactsContainer) {
+    > :not(.artifactsContainer) {
         animation: faBounce 1.5s 0.5s cubic-bezier(.28, .84, .42, 1) infinite;
     }
 
-    > g.tickUtils > rect.backTickRect {
+    > .tickUtils > .backTickRect {
         animation: toggleCheck 1.5s ease-in-out infinite;
     }
 
-    > g.artifactsContainer > g.artifactsGroup {
+    > .artifactsContainer > .artifactsGroup {
 
-        > g.artifactWrapper {
+        > .artifactWrapper {
             --artifacts-base-animation-params: 3s 1s infinite ease;
-            > path.trail { animation: drawTrail var(--artifacts-base-animation-params) }
-            > path.artifact { animation: moveAlongPath var(--artifacts-base-animation-params) }
-            &.withTrail > path.artifact { animation-name: moveAlongPathWithTrail }
+            > .trail { animation: drawTrail var(--artifacts-base-animation-params) }
+            > .artifact { animation: moveAlongPath var(--artifacts-base-animation-params) }
+            &.withTrail > .artifact { animation-name: moveAlongPathWithTrail }
         }
 
-        &.artifacts2 > g.artifactWrapper > path { animation-delay: 2.5s }
+        &.artifacts2 > .artifactWrapper > path { animation-delay: 2.5s }
     }
 }
 

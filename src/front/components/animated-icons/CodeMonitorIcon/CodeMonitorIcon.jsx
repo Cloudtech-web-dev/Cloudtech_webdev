@@ -14,9 +14,9 @@ const pickSize = (size) => { switch(size) {
   default: return "1em";
 }};
 
-export const CodeMonitorIcon = ({ size="1x", className:propClassName, ...props }) => {
+export const CodeMonitorIcon = ({ size="1x", ...props }) => {
   return (
-    <div className={[styles.iconWrapper, propClassName].join(" ")} style={{fontSize: pickSize(size), ...props.style}} {...props}>
+    <div {...props} className={[ styles.iconWrapper, props.className ].filter(x=>x).join(" ")} style={{ fontSize: pickSize(size), ...props.style }}>
       <svg className={styles.icon} viewBox="0 0 115 115" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <clipPath id="screen-clip">

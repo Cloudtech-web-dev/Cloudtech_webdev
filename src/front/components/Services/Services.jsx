@@ -1,18 +1,13 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { Card } from "./Card";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCustomBagCheck } from "../../utils/customFaIcons";
 import { PlanetWithSatellitesIcon, CodeMonitorIcon, MagicWandIcon, BagCheckIcon } from "../animated-icons";
 
 
 const services = [
     { id: 'webSites', Icon: PlanetWithSatellitesIcon },
     { id: 'webApps', Icon: CodeMonitorIcon },
-    { id: 'eCommerce', Icon: (props) => <FontAwesomeIcon icon={faCustomBagCheck} className={["fa-bounce", props.className].join(" ")} size={props.size} /> },
-    // { id: 'eCommerce', Icon: BagCheckIcon },
+    { id: 'eCommerce', Icon: BagCheckIcon },
     { id: 'visualIdentity', Icon: MagicWandIcon },
 ];
 
@@ -26,15 +21,17 @@ export const Services = () => {
                 <section className="min-vh-100 d-flex justify-content-md-center position-relative px-3 vw-100 align-self-start" style={{ backgroundColor: "var(--bs-gray-100)" }}>
 
                     {/* Section Inner Container */}
-                    <div className="container py-md-5 my-md-4 z-0 align-content-center" style={{ paddingTop: "5.7rem" }}>
+                    <div className="container py-md-5 my-md-4 z-0 align-content-center" style={{ paddingBlock: "5.7rem" }}>
 
                         {/* Section Header */}
                         <div className="home-services-upper d-flex flex-column text-center justify-content-center align-items-center mx-auto" style={{ maxWidth: "fit-content", paddingInline: "20px", marginBottom: 100, gap: 40 }}>
 
                             {/* Heading */}
-                            <h2 className="home-services-title font-h1 position-relative" style={{ width: "fit-content", color: "var(--bs-accent-1)" }}>
+                            <h2 className="home-services-title font-h1 position-relative" style={{ width: "fit-content", maxWidth: "100%", whiteSpace: "unset", backgroundColor: "unset", color: "var(--bs-accent-1)" }}>
                                 <span className="d-none d-md-block position-absolute" style={{ backgroundColor: "var(--bs-gray-1000)", top: "-30%", left: "-17.5%", zIndex: -1, width: "135%", height: "160%" }} />
-                                {t('services.sectionTitle')}
+                                <span className="highlighted-text" style={{ "--highlighted-text-color": "var(--bs-accent-1)", "--highlighted-text-bg": "var(--bs-gray-1000)", lineHeight: "1.3" }}>
+                                    {t('services.sectionTitle')}
+                                </span>
                             </h2>
                             
                             {/* Description */}
@@ -61,7 +58,7 @@ export const Services = () => {
 
                         {/* Link to Services Button */}
                         <div id="services-outline-btn" className="d-flex flex-column justify-content-center flex-md-row gap-3 w-100">
-                            <Link to="/services" className="btn btn-outline btn-lg rounded-pill border-4 px-5 py-2 fs-5 fw-bold" style={{ letterSpacing: 0 }}>
+                            <Link to="/services" className="btn btn-outline btn-lg rounded-pill border-4 py-2 fw-bold" style={{ letterSpacing: 0, fontSize: "clamp(1rem,5vw,1.25rem)", paddingInline: "clamp(2.5rem,10vw,3rem)" }}>
                                 {t("services.exploreServicesButton")}
                             </Link>
                         </div>
@@ -94,7 +91,7 @@ export const Services = () => {
                                 margin-bottom: 2.5rem !important;
                                 .home-services-icon {
                                     gap: 10px !important;
-                                    > svg, .service-icon { height: fit-content; width: 40% }
+                                    > svg, .service-icon { height: fit-content; width: 0.47em }
                                     h3 { font-size: 1.2rem !important }
                                 }
                             }
@@ -116,9 +113,6 @@ export const Services = () => {
                             .service-icon { transition: scale 0.3s ease }
                             &:hover .service-icon { scale: 1.2 }
                             &:hover .service-icon { @media (width > 768px) { scale: 1.5 } }
-                        }
-                        .home-services-icon:not(:hover) svg {
-                            animation: none;
                         }
                     `}</style>
 

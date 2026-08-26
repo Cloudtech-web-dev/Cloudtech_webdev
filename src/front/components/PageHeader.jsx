@@ -5,6 +5,7 @@ import { useTranslation, Trans } from "react-i18next";
 import { GradientBg } from "./GradientBg";
 import { HighlightTransparencyBox } from "./HighlightTransparencyBox.jsx";
 import { HighlightGlitchingBox } from "./HighlightGlitchingBox.jsx";
+import { Navbar } from "./Navbar.jsx";
 
 
 /**
@@ -27,7 +28,16 @@ export const PageHeader = ({
   const [currentWord, setCurrentWord] = useState(/**@type{Array<string>}*/(words)[0]);
 
   return (
-    <section className="position-relative min-vh-100 overflow-hidden">
+    <section className="page-header position-relative d-flex flex-column min-vh-100 overflow-hidden">
+
+      <div style={{ visibility: "hidden" }}>
+        <Navbar />
+        <style>{`
+          .page-header div:has(> .navbar-toggler) {
+            margin-bottom: 0;
+          }
+        `}</style>
+      </div>
 
       {/* Background */}
       <div className="position-absolute bottom-0 start-0 w-100 h-100 overflow-hidden" style={{ clipPath: "inset(0)" }}>
@@ -62,7 +72,7 @@ export const PageHeader = ({
       </div>
 
       {/* Section Contents */}
-      <div className="container w-100 min-vh-100 py-5 d-flex align-items-center position-relative">
+      <div className="container w-100 min-vh-100 py-4 d-flex align-items-center position-relative">
         <div className="row w-100 d-flex justify-content-center g-0">
           <div className="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center gap-5 w-auto">
 
