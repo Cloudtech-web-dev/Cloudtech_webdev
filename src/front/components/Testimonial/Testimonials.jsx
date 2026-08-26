@@ -15,7 +15,7 @@ export const Testimonials = () => (
             <div className="d-flex flex-column text-center justify-content-center" style={{ marginBottom: 77 }}>
 
                 {/* Heading */}
-                <h2 className="font-h1" style={{ color: "var(--bs-accent-1)" }}>
+                <h2 className="font-h1" style={{ color: "var(--bs-accent-1)", lineHeight: "1.3" }}>
                     <Trans i18nKey='testimonials.sectionTitle' components={[<span className="highlighted-text" />]} />
                 </h2>
 

@@ -27,7 +27,7 @@ export const ProjectsHome = () => {
                 <div className={`${styles.homeProjectsUpper} d-flex flex-column text-center align-items-center mb-5 mx-auto`} style={{ width: "fit-content", maxWidth: "100%", paddingInline: 20, gap: 40 }}>
 
                     {/* Heading */}
-                    <h2 className={`${styles.homeProjectsTitle} font-h1 position-relative`} style={{ width: "fit-content", color: "var(--bs-gray-1000)" }}>
+                    <h2 className={`${styles.homeProjectsTitle} font-h1 position-relative`} style={{ width: "fit-content", color: "var(--bs-gray-1000)", lineHeight: "1.3" }}>
                         <span className="d-none d-md-block position-absolute" style={{ backgroundColor: "var(--bs-accent-1)", top: "-30%", left: "-7.5%", zIndex: -1, width: "115%", height: "160%" }} />
                         <span className="highlighted-text">{t('projects.sectionTitle')}</span>
                     </h2>
@@ -43,13 +43,13 @@ export const ProjectsHome = () => {
                 <div className="container" style={{ maxWidth: 774, marginBottom: 60 }}>
                     <div className="row row-cols-2" style={{ "--gutter": "10px", "--bs-gutter-x": "var(--gutter)", "--bs-gutter-y": "var(--gutter)", justifyContent: "center" }}>
                         {Object.entries(spotlightProjects).map(([projectKey, project]) => (
-                            <div key={projectKey} className="col" style={{ maxWidth: 380, minWidth: 330 }}>
+                            <div key={projectKey} className="col" style={{ maxWidth: 380, minWidth: "min(330px,100%)" }}>
                                 
                                 {/* Project Card */}
                                 <Link to={project.path && `projects/${project.path}`} className={`${styles.projectCard} container d-flex flex-column h-100`} onClick={e => project.path || e.preventDefault()} style={{ gap: 20, paddingBlockEnd: 20, textDecoration: "none", color: "var(--bs-gray-100)" }}>
                                     
                                     {/* Main Card Container */}
-                                    <div className={`${styles.cardMain} row text-center align-items-center position-relative overflow-hidden border`} style={{ height: 655, paddingInline: 20, borderRadius: 12, boxShadow: "5px 6px 7px 3px #00000040, 2px 4px 3.3px 1px #00000078" }} >
+                                    <div className={`${styles.cardMain} row text-center align-items-center position-relative overflow-hidden border`} style={{ height: 655, padding: "1rem 1.25rem", borderRadius: 12, boxShadow: "5px 6px 7px 3px #00000040, 2px 4px 3.3px 1px #00000078" }} >
 
                                         {/* Project Background Image (only shown on hover) */}
                                         <img src={assets[projectKey].cardBg} alt={t('projects.aria.bgImage', { projectName: t(`projects.projectName${project.id}`) })} className="z-n1 position-absolute top-0 start-0 w-100 h-100 object-fit-cover d-sm-block p-0" />
@@ -99,7 +99,7 @@ export const ProjectsHome = () => {
 
                 {/* Navigate to All Projects Button */}
                 <div className={`${styles.homeProjectsPortfolioBtn} d-flex flex-column justify-content-center align-items-center flex-md-row gap-3`}>
-                    <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 fw-bold fs-5 px-5 py-2" style={{ maxWidth: 419, width: "100%" }}>
+                    <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 fw-bold py-2" style={{ maxWidth: 419, width: "100%", fontSize: "clamp(1rem,5vw,1.25rem)", paddingInline: "clamp(2.5rem,10vw,3rem)" }}>
                         {t('projects.sectionPortfolioButton')}
                     </Link>
                 </div>
