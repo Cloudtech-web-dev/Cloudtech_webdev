@@ -9,6 +9,15 @@ export const HeaderContact = () => {
     const { t } = useTranslation();
 
     const [isFormOpen, setIsFormOpen] = useState(false);
+
+    
+    const handleSubmit = (/**@type {React.FormEvent<HTMLButtonElement>}*/e) => {
+        
+    };
+
+
+    /* OPEN FORM ON SCROLL BEHAVIOR */
+
     const formWasOpened = useRef(false);
 
     /**
@@ -30,7 +39,6 @@ export const HeaderContact = () => {
             openTimeout.current = setTimeout(setFormAsAlreadyOpened, 100);
         }
     };
-
     const closeForm = () => {
         document.body.classList.remove("modal-open");
         setIsFormOpen(false);
@@ -41,13 +49,6 @@ export const HeaderContact = () => {
         }
     };
 
-    const handleSubmit = (/**@type {React.FormEvent<HTMLButtonElement>}*/e) => {
-        
-    };
-
-
-    /* OPEN FORM ON SCROLL BEHAVIOR */
-    
     const scrollStart = useRef(scrollY);
     const handleScroll = () => {
         if (scrollY > scrollStart.current) {
@@ -55,7 +56,6 @@ export const HeaderContact = () => {
             openForm();
         } else { scrollStart.current = scrollY }
     };
-
     useEffect(() => {
         if (formWasOpened.current) return;
         

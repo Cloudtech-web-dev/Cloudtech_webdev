@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { Card } from "./Card";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCustomBagCheck } from "../../utils/customFaIcons";
 import { PlanetWithSatellitesIcon, CodeMonitorIcon, MagicWandIcon, BagCheckIcon } from "../animated-icons";
 
 

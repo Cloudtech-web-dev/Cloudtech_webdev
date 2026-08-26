@@ -1,3 +1,7 @@
+/* •----------------------------• */
+/* ♦-----  SECTION STYLES  -----♦ */
+/* •----------------------------• */
+
 .homeProjectsTitle {
   @media (width >= 768px) {
     > :global(.highlighted-text) { background: none }
@@ -5,7 +9,14 @@
 }
 
 
+
+/* •-------------------------• */
+/* ♦-----  CARD STYLES  -----♦ */
+/* •-------------------------• */
+
 .projectCard {
+
+  /* BASIC LAYOUT AND STYLES */
 
   > .cardMain {
     background: var(--bs-gray-1000);
@@ -30,6 +41,8 @@
   > .cardFooter { transition: color 0.3s ease }
 
 
+  /* ON HOVER REVEAL */
+
   &:hover {
     > .cardMain {
       background: rgba(0, 0, 0, 0.541);
@@ -46,17 +59,16 @@
   }
 
 
+  /* TOUCH ONLY DEVICES REVEAL */
+
   @media (pointer: coarse) and (hover: none) {
 
     animation: showCard linear both;
     animation-timeline: view();
     animation-range: entry 60% exit 30%;
 
-    /* --card-background-color: var(--bs-gray-1000); */
-
     > .cardMain {
       background: hsl(from var(--bs-gray-1000) h s calc(l * (1 - var(--card-shown-rate))) / calc(1 - (var(--card-shown-rate) * (1 - 0.541))));
-      /* background: var(--card-background-color); */
   
       .cardDescriptionWrapper {
         grid-template-rows: calc(1fr * var(--card-shown-rate));
@@ -68,6 +80,7 @@
 
     > .cardFooter { color: var(--card-footer-color) }
 
+    /* ↓ FALLBACK FOR `animation-timeline: view()` */
     @supports not (animation-timeline: view()) {
       animation: none;
       --card-shown-rate: 1;
@@ -79,44 +92,26 @@
 }
 
 
+/* INTERACTIVITY UTILS */
+
 @property --card-shown-rate {
   syntax: '<number>';
   inherits: true;
   initial-value: 0;
 }
-/* @property --card-background-color { */
-/*     syntax: '<color>'; */
-/*     inherits: true; */
-/*     // initial-value: var(--bs-gray-1000); */
-/*     // initial-value: #0008; */
-/*     initial-value: #0000; */
-/* } */
 @property --card-footer-color {
   syntax: '<color>';
   inherits: true;
-  /* initial-value: var(--bs-gray-100); */
   initial-value: #0000;
 }
 
 @keyframes showCard {
   30%, 70% {
     --card-shown-rate: 1;
-    /* --card-background-color: rgba(0, 0, 0, 0.541); */
     --card-footer-color: var(--bs-accent-1);
   }
   to {
     --card-shown-rate: 0;
-    /* --card-background-color: var(--bs-gray-1000); */
     --card-footer-color: var(--bs-gray-100);
   }
 }
-/* @keyframes showCard { */
-/*   from { --card-shown-rate: 0 } */
-/*   to { --card-shown-rate: 1 } */
-/* } */
-/* @keyframes changeCardFooterColor { */
-/*   to { color: var(--bs-accent-1) } */
-/* } */
-/* @keyframes changeCardBackgroundColor { */
-/*   to { background: rgba(0, 0, 0, 0.541) } */
-/* } */
