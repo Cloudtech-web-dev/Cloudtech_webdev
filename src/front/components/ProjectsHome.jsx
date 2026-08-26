@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import assets from "../assets/img/Portfolio";
 
-import styles from "../styles/components/HomeProjects.module.css";
+import styles from "../styles/components/ProjectsHome.module.css";
 
 
 const spotlightProjects = {
