@@ -10,7 +10,7 @@ import { Footer } from "../components/Footer"
 // Base component that maintains the navbar and footer throughout the page and the scroll to top functionality.
 export const AppContext = createContext(null);
 
-export const Layout = () => {
+export const Layout = ({ withoutFooterBrandCard = false }) => {
 
     const [store, dispatch] = useReducer(storeReducer, initialStore());
     const [showNavbar, setShowNavbar] = useState(true)
@@ -25,7 +25,7 @@ export const Layout = () => {
                 {showNavbar && <Navbar />}
                 <Outlet />
                 {/* <WhatsappButton /> */}
-                {showFooter && <Footer withBrandCard={location.pathname != "/contact"} />}
+                {showFooter && <Footer withBrandCard={ (location.pathname != "/contact") && !withoutFooterBrandCard } />}
             </>
         </AppContext.Provider>
     )
