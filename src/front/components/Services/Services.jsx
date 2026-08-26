@@ -25,7 +25,7 @@ export const Services = () => {
                 <section className="min-vh-100 d-flex justify-content-md-center position-relative px-3 vw-100 align-self-start" style={{ backgroundColor: "var(--bs-gray-100)" }}>
 
                     {/* Section Inner Container */}
-                    <div className="container py-md-5 my-md-4 z-0 align-content-center" style={{ paddingTop: "5.7rem" }}>
+                    <div className="container py-md-5 my-md-4 z-0 align-content-center" style={{ paddingBlock: "5.7rem" }}>
 
                         {/* Section Header */}
                         <div className="home-services-upper d-flex flex-column text-center justify-content-center align-items-center mx-auto" style={{ maxWidth: "fit-content", paddingInline: "20px", marginBottom: 100, gap: 40 }}>
