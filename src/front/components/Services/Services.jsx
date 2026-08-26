@@ -11,8 +11,7 @@ import { PlanetWithSatellitesIcon, CodeMonitorIcon, MagicWandIcon, BagCheckIcon 
 const services = [
     { id: 'webSites', Icon: PlanetWithSatellitesIcon },
     { id: 'webApps', Icon: CodeMonitorIcon },
-    { id: 'eCommerce', Icon: (props) => <FontAwesomeIcon icon={faCustomBagCheck} className={["fa-bounce", props.className].join(" ")} size={props.size} /> },
-    // { id: 'eCommerce', Icon: BagCheckIcon },
+    { id: 'eCommerce', Icon: BagCheckIcon },
     { id: 'visualIdentity', Icon: MagicWandIcon },
 ];
 
@@ -94,7 +93,7 @@ export const Services = () => {
                                 margin-bottom: 2.5rem !important;
                                 .home-services-icon {
                                     gap: 10px !important;
-                                    > svg, .service-icon { height: fit-content; width: 40% }
+                                    > svg, .service-icon { height: fit-content; width: 0.47em }
                                     h3 { font-size: 1.2rem !important }
                                 }
                             }
@@ -116,9 +115,6 @@ export const Services = () => {
                             .service-icon { transition: scale 0.3s ease }
                             &:hover .service-icon { scale: 1.2 }
                             &:hover .service-icon { @media (width > 768px) { scale: 1.5 } }
-                        }
-                        .home-services-icon:not(:hover) svg {
-                            animation: none;
                         }
                     `}</style>
 
