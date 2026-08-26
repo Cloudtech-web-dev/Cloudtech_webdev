@@ -229,15 +229,20 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
 
     console.log("hohohoooo");
     
-    wrapperRef.current.addEventListener('pointerdown', handlePointerDown, { passive: false });
-    wrapperRef.current.addEventListener('touchstart', handleTouchStart, { passive: false });
-    wrapperRef.current.addEventListener('wheel', handleHorizontalScroll, { passive: false });
+    const wrapperElement = wrapperRef.current;
+    if (typeof wrapperElement.addEventListener === 'function') {
+      wrapperElement.addEventListener('pointerdown', handlePointerDown, { passive: false });
+      wrapperElement.addEventListener('touchstart', handleTouchStart, { passive: false });
+      wrapperElement.addEventListener('wheel', handleHorizontalScroll, { passive: false });
+    }
     
     return () => {
       console.log("cloooooose");
-      wrapperRef.current.removeEventListener('pointerdown', handlePointerDown);
-      wrapperRef.current.removeEventListener('touchstart', handleTouchStart);
-      wrapperRef.current?.removeEventListener('wheel', handleHorizontalScroll);
+      if (wrapperElement && typeof wrapperElement.removeEventListener === 'function') {
+        wrapperElement.removeEventListener('pointerdown', handlePointerDown);
+        wrapperElement.removeEventListener('touchstart', handleTouchStart);
+        wrapperElement.removeEventListener('wheel', handleHorizontalScroll);
+      }
     };
   }, [wrapperRef.current]);
   
