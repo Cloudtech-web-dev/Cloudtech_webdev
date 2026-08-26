@@ -1,0 +1,122 @@
+.homeProjectsTitle {
+  @media (width >= 768px) {
+    > :global(.highlighted-text) { background: none }
+  }
+}
+
+
+.projectCard {
+
+  > .cardMain {
+    background: var(--bs-gray-1000);
+    transition: background 0.3s ease;
+
+    .cardDescriptionWrapper {
+      grid-template-rows: 0fr;
+      margin-top: 0px;
+      transition:
+        grid-template-rows 0.4s ease,
+        margin-top 0.3s ease;
+
+      > .cardDescription {
+        opacity: 0;
+        transition:
+          opacity 0.3s ease,
+          display 0.3s allow-discrete;
+      }
+    }
+  }
+
+  > .cardFooter { transition: color 0.3s ease }
+
+
+  &:hover {
+    > .cardMain {
+      background: rgba(0, 0, 0, 0.541);
+
+      .cardDescriptionWrapper {
+        grid-template-rows: 1fr;
+        margin-top: 40px;
+
+        > .cardDescription { opacity: 1 }
+      }
+    }
+
+    > .cardFooter { color: var(--bs-accent-1) }
+  }
+
+
+  @media (pointer: coarse) and (hover: none) {
+
+    animation: showCard linear both;
+    animation-timeline: view();
+    animation-range: entry 60% exit 30%;
+
+    /* --card-background-color: var(--bs-gray-1000); */
+
+    > .cardMain {
+      background: hsl(from var(--bs-gray-1000) h s calc(l * (1 - var(--card-shown-rate))) / calc(1 - (var(--card-shown-rate) * (1 - 0.541))));
+      /* background: var(--card-background-color); */
+  
+      .cardDescriptionWrapper {
+        grid-template-rows: calc(1fr * var(--card-shown-rate));
+        margin-top: calc(40px * var(--card-shown-rate));
+    
+        > .cardDescription { opacity: var(--card-shown-rate) }
+      }
+    }
+
+    > .cardFooter { color: var(--card-footer-color) }
+
+    @supports not (animation-timeline: view()) {
+      animation: none;
+      --card-shown-rate: 1;
+      --card-footer-color: var(--bs-gray-100);
+    }
+    
+  }
+
+}
+
+
+@property --card-shown-rate {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+/* @property --card-background-color { */
+/*     syntax: '<color>'; */
+/*     inherits: true; */
+/*     // initial-value: var(--bs-gray-1000); */
+/*     // initial-value: #0008; */
+/*     initial-value: #0000; */
+/* } */
+@property --card-footer-color {
+  syntax: '<color>';
+  inherits: true;
+  /* initial-value: var(--bs-gray-100); */
+  initial-value: #0000;
+}
+
+@keyframes showCard {
+  30%, 70% {
+    --card-shown-rate: 1;
+    /* --card-background-color: rgba(0, 0, 0, 0.541); */
+    --card-footer-color: var(--bs-accent-1);
+  }
+  to {
+    --card-shown-rate: 0;
+    /* --card-background-color: var(--bs-gray-1000); */
+    --card-footer-color: var(--bs-gray-100);
+  }
+}
+/* @keyframes showCard { */
+/*   from { --card-shown-rate: 0 } */
+/*   to { --card-shown-rate: 1 } */
+/* } */
+/* @keyframes changeCardFooterColor { */
+/*   to { color: var(--bs-accent-1) } */
+/* } */
+/* @keyframes changeCardBackgroundColor { */
+/*   to { background: rgba(0, 0, 0, 0.541) } */
+/* } */
