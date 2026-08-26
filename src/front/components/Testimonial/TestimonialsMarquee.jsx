@@ -50,6 +50,8 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
 
   /* MARQUEE INTERACTION HANDLING */
 
+  /* Element Refs */
+
   /**
    * @type {React.MutableRefObject<HTMLDivElement?>}
    * */
@@ -59,6 +61,8 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
    * */
   const trackRef = useRef(null);
 
+  /* Utility variables and functions */
+  
   const isDragging = useRef(false);
   const isGrabbing = useRef(false);
   const startX = useRef(0);
@@ -149,7 +153,6 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
     touchStart.current = e.touches[0];
     isInitialTouch.current = true;
 
-    // startDrag();
     wrapperRef.current.addEventListener('touchmove', handleTouchMove, { passive: false });
   };
   const handleTouchMove = (/**@type{React.TouchEvent<HTMLDivElement>}*/e) => {
@@ -163,7 +166,6 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
       const deltaY = Math.abs(touchEnd.clientY - touchStart.current.clientY);
       
       if (deltaX > Math.max(swipeMinDelta, deltaY)) {
-        // isGrabbing.current = true;
         startDrag();
         isHorizontallyLocked.current = true;
       }
@@ -177,7 +179,6 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
     isHorizontallyLocked.current = false;
     isInitialTouch.current = null;
 
-    // isGrabbing.current = false;
     stopDrag();
     wrapperRef.current.removeEventListener('touchmove', handleTouchMove);
   };
@@ -214,8 +215,6 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
       newProgress = getCurrentProgress() + progressDelta
     ;
 
-    // console.table({ deltaX, adjustedScrollDelta, currentProgress: currentProgress.current, currentProgressMethod: getCurrentProgress(), progressDelta, newProgress })
-
     setUpdatedProgress(newProgress);
 
     clearTimeout(wheelTimeout.current);
@@ -226,18 +225,21 @@ export const TestimonialsMarquee = ({ cardsArray = [], className: propClassNames
 
   useEffect(() => {
     if (!wrapperRef.current || !trackRef.current) return;
-
-    console.log("hohohoooo");
     
-    wrapperRef.current.addEventListener('pointerdown', handlePointerDown, { passive: false });
-    wrapperRef.current.addEventListener('touchstart', handleTouchStart, { passive: false });
-    wrapperRef.current.addEventListener('wheel', handleHorizontalScroll, { passive: false });
+    const wrapperElement = wrapperRef.current;
+
+    if (typeof wrapperElement.addEventListener === 'function') {
+      wrapperElement.addEventListener('pointerdown', handlePointerDown, { passive: false });
+      wrapperElement.addEventListener('touchstart', handleTouchStart, { passive: false });
+      wrapperElement.addEventListener('wheel', handleHorizontalScroll, { passive: false });
+    }
     
     return () => {
-      console.log("cloooooose");
-      wrapperRef.current.removeEventListener('pointerdown', handlePointerDown);
-      wrapperRef.current.removeEventListener('touchstart', handleTouchStart);
-      wrapperRef.current?.removeEventListener('wheel', handleHorizontalScroll);
+      if (wrapperElement && typeof wrapperElement.removeEventListener === 'function') {
+        wrapperElement.removeEventListener('pointerdown', handlePointerDown);
+        wrapperElement.removeEventListener('touchstart', handleTouchStart);
+        wrapperElement.removeEventListener('wheel', handleHorizontalScroll);
+      }
     };
   }, [wrapperRef.current]);
   

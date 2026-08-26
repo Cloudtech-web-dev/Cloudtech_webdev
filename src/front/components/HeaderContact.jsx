@@ -9,47 +9,58 @@ export const HeaderContact = () => {
     const { t } = useTranslation();
 
     const [isFormOpen, setIsFormOpen] = useState(false);
-    const formWasOpened = useRef(false);
 
-
-    const openForm = () => {
-        setIsFormOpen(true);
-        document.body.classList.add("modal-open");
-        formWasOpened.current = true;
-    }
-
-    const closeForm = () => {
-        document.body.classList.remove("modal-open");
-        setIsFormOpen(false);
-    };
-
+    
     const handleSubmit = (/**@type {React.FormEvent<HTMLButtonElement>}*/e) => {
         
     };
 
 
     /* OPEN FORM ON SCROLL BEHAVIOR */
-    
-    const handleScroll = (/**@type {WheelEvent}*/e) => {
-        if (formWasOpened.current)
-            return e.currentTarget.removeEventListener('wheel', handleScroll);
-        
-        e.preventDefault();
 
-        // if (e.defaultPrevented) console.info("The scroll has been locked...");
-        // else console.warn("Default was not prevented ノ┬─┬ノ ︵ ( \\o°o)\\");
+    const formWasOpened = useRef(false);
 
-        if (e.deltaY > 0) {
-            openForm();
-            e.currentTarget.removeEventListener('wheel', handleScroll);
+    /**
+     * @type {React.MutableRefObject<number?>}
+     * */
+    const openTimeout = useRef(null);
+
+    const setFormAsAlreadyOpened = () => {
+        formWasOpened.current = true;
+        removeEventListener('scroll', handleScroll);
+    };
+
+    const openForm = () => {
+        setIsFormOpen(true);
+        document.body.classList.add("modal-open");
+
+        if (!formWasOpened.current) {
+            clearTimeout(openTimeout.current);
+            openTimeout.current = setTimeout(setFormAsAlreadyOpened, 100);
+        }
+    };
+    const closeForm = () => {
+        document.body.classList.remove("modal-open");
+        setIsFormOpen(false);
+
+        if (!formWasOpened.current) {
+            clearTimeout(openTimeout.current);
+            setFormAsAlreadyOpened();
         }
     };
 
+    const scrollStart = useRef(scrollY);
+    const handleScroll = () => {
+        if (scrollY > scrollStart.current) {
+            scrollTo({ top: 0 });
+            openForm();
+        } else { scrollStart.current = scrollY }
+    };
     useEffect(() => {
         if (formWasOpened.current) return;
         
-        addEventListener('wheel', handleScroll, { passive: false });
-
+        addEventListener('scroll', handleScroll);
+        return () => removeEventListener('scroll', handleScroll);
     }, []);
 
 
