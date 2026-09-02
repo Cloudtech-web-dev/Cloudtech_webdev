@@ -8,7 +8,7 @@ export const ProjectCard = ({ id, cover, name }) => {
                     <img src={cover} alt={`Portada del proyecto ${name}`} className="w-100 h-100 object-fit-cover custom-gallery-img" />
                 </Link>
             </div>
-            <Link to={`/projects/${id}`} className="fs-5 link-custom-hover">{name}</Link>
+            <Link to={`/projects/${id}`} className="fs-5 link-custom-hover text-wrap text-break lh-sm">{name}</Link>
         </div>
     )
 }

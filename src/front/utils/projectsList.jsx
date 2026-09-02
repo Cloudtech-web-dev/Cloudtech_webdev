@@ -205,7 +205,7 @@ export const projectsList = [
                 position: 'projects.credits.post5'
             },
         ],
-        tech: ['Figma', 'Wordpress', 'CSS', 'MailChimp', 'Yoast SEO']
+        tech: ['Figma', 'WordPress', 'CSS', 'MailChimp', 'Yoast SEO']
     },
     {
         id: 'mura',
@@ -263,7 +263,7 @@ export const projectsList = [
                 position: 'projects.credits.post5'
             },
         ],
-        tech: ['Figma', 'Wordpress', 'CSS', 'MailChimp', 'Yoast SEO']
+        tech: ['Figma', 'WordPress', 'CSS', 'MailChimp', 'Yoast SEO']
     },
     {
         id: 'jpportafolio',
@@ -383,6 +383,6 @@ export const projectsList = [
                 position: 'projects.credits.post5'
             },
         ],
-        tech: ['Figma', 'Wordpress', 'CSS', 'MailChimp', 'Yoast SEO']
+        tech: ['Figma', 'WordPress', 'CSS', 'MailChimp', 'Yoast SEO']
     } 
 ];
