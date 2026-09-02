@@ -16,6 +16,8 @@ import { Admin } from "./pages/Admin";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { SingleProjectView } from "./components/SingleProjectView";
 import { TermsConditions } from "./pages/TermsConditions";
+import { NotFound } from "./pages/NotFound";
+import { ErrorPage } from "./pages/ErrorPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,19 +28,27 @@ export const router = createBrowserRouter(
     // Note: The child paths of the Layout element replace the Outlet component with the elements contained in the "element" attribute of these child paths.
 
     // Root Route: All navigation will start from here.
-    <Route path="/" element={<Layout />} errorElement={<h1>Not found!</h1>} >
+    <Route path="/" errorElement={<ErrorPage />}>
 
-      {/* Nested Routes: Defines sub-routes within the BaseHome component. */}
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/services" element={<ServicesPage />} />
-      <Route path="/projects" element={<Portfolio />} />
-      <Route path="/projects/:projectId" element={<SingleProjectView />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/terms-conditions" element={<TermsConditions />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/admin" element={<Admin />} />
-      {/* <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} /> */}
+      <Route path="/" element={<Layout />} >
+
+        {/* Nested Routes: Defines sub-routes within the BaseHome component. */}
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/projects" element={<Portfolio />} />
+        <Route path="/projects/:projectId" element={<SingleProjectView />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+
+      </Route>
+      
+      <Route path="/" element={<Layout withoutFooterBrandCard />} >
+        <Route path="/*" element={<NotFound />} />
+      </Route>
+
     </Route>
   )
 );

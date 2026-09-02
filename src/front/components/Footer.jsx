@@ -134,7 +134,7 @@ export const Footer = ({ withBrandCard = true }) => {
 				}
 				@media (width < 768px) {
 					footer.footer {
-						padding: 0 10px 20px 10px !important;
+						padding: 90px 10px 20px 10px !important;
 						margin-top: 50px !important;
 
 						hr {

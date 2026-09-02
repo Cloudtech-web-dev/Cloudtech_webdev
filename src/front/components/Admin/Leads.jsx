@@ -1,12 +1,17 @@
 
-import { useEffect, useReducer } from "react";
+import { useEffect, useReducer, Fragment } from "react";
 import storeReducer, { initialStore } from "../../store";
 
 const fetchAllLeads = async (dispatch) => {
     const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
     dispatch({ type: 'GET_ALL_LEADS_START' })
     try {
-        const response = await fetch(`${backendUrl}/api/leads`)
+        const response = await fetch(`${backendUrl}/api/leads`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('accessToken') ?? ''}`
+            }
+        })
 
         if (!response.ok) {
             const errorData = await response.json();
@@ -72,7 +77,16 @@ export const Leads = () => {
                                 {leads.map((lead, index) => (
                                     <tr key={lead.id || index}>
                                         <th className="text-white" scope="row">{lead.id || index + 1}</th>
-                                        <td className="text-white">{lead.needs}</td>
+                                        <td className="text-white">
+                                            { (()=>{
+                                                const needs = Array.from(lead.needs ?? []);
+                                                const first = needs.shift();
+                                                return (<ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                                                    <li>{first}</li>
+                                                    {needs.map((need, idx) => <Fragment key={idx}><hr style={{ marginBlock: "0.25rem" }} /><li>{need}</li></Fragment>)}
+                                                </ul>);
+                                            })() }
+                                        </td>
                                         <td className="text-white">{lead.stage}</td>
                                         <td className="text-white">{lead.problemDescription}</td>
                                         <td className="text-white">{lead.idealTimeframe}</td>                                        

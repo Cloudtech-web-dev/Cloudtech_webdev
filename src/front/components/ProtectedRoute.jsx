@@ -4,5 +4,5 @@ import { Navigate } from 'react-router-dom';
 export const ProtectedRoute = ({ children }) => {
     const token = localStorage.getItem('accessToken');
 
-    return token ? children : <Navigate to="/" />
+    return token ? children : <Navigate to="/login" />
 };

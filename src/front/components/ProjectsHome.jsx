@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 
 import assets from "../assets/img/Portfolio";
 
+import styles from "../styles/components/ProjectsHome.module.css";
+
 
 const spotlightProjects = {
     cosmonauta: { id: 1, tags: ["eCommerce", "webDev"], path: "libreria-cosmonauta"},
@@ -16,16 +18,16 @@ export const ProjectsHome = () => {
     const { t } = useTranslation();
 
     return (
-        <section id="projects-home-version" style={{ paddingTop: 65, paddingBottom: 52, color: "var(--bs-gray-100)" }}>
+        <section id={styles.projectsHomeVersion} style={{ paddingTop: 65, paddingBottom: 52, color: "var(--bs-gray-100)" }}>
 
             {/* Section Contents */}
-            <div className="container py-5 overflow-x-hidden">
+            <div className="container py-5" style={{ overflowX: "clip" }}>
 
                 {/* Section Header */}
-                <div className="home-projects-upper d-flex flex-column text-center align-items-center mb-5 mx-auto" style={{ width: "fit-content", maxWidth: "100%", paddingInline: 20, gap: 40 }}>
+                <div className={`${styles.homeProjectsUpper} d-flex flex-column text-center align-items-center mb-5 mx-auto`} style={{ width: "fit-content", maxWidth: "100%", paddingInline: 20, gap: 40 }}>
 
                     {/* Heading */}
-                    <h2 className="home-projects-title font-h1 position-relative" style={{ width: "fit-content", color: "var(--bs-gray-1000)" }}>
+                    <h2 className={`${styles.homeProjectsTitle} font-h1 position-relative`} style={{ width: "fit-content", color: "var(--bs-gray-1000)", lineHeight: "1.3" }}>
                         <span className="d-none d-md-block position-absolute" style={{ backgroundColor: "var(--bs-accent-1)", top: "-30%", left: "-7.5%", zIndex: -1, width: "115%", height: "160%" }} />
                         <span className="highlighted-text">{t('projects.sectionTitle')}</span>
                     </h2>
@@ -41,13 +43,13 @@ export const ProjectsHome = () => {
                 <div className="container" style={{ maxWidth: 774, marginBottom: 60 }}>
                     <div className="row row-cols-2" style={{ "--gutter": "10px", "--bs-gutter-x": "var(--gutter)", "--bs-gutter-y": "var(--gutter)", justifyContent: "center" }}>
                         {Object.entries(spotlightProjects).map(([projectKey, project]) => (
-                            <div key={projectKey} className="col" style={{ maxWidth: 380, minWidth: 330 }}>
+                            <div key={projectKey} className="col" style={{ maxWidth: 380, minWidth: "min(330px,100%)" }}>
                                 
                                 {/* Project Card */}
-                                <Link to={project.path && `projects/${project.path}`} className="project-card container d-flex flex-column h-100" onClick={e => project.path || e.preventDefault()} style={{ gap: 20, paddingBlockEnd: 20, textDecoration: "none", color: "var(--bs-gray-100)" }}>
+                                <Link to={project.path && `projects/${project.path}`} className={`${styles.projectCard} container d-flex flex-column h-100`} onClick={e => project.path || e.preventDefault()} style={{ gap: 20, paddingBlockEnd: 20, textDecoration: "none", color: "var(--bs-gray-100)" }}>
                                     
                                     {/* Main Card Container */}
-                                    <div className="card-main row text-center align-items-center position-relative overflow-hidden border" style={{ height: 655, paddingInline: 20, background: "var(--bs-gray-1000)" /* "#165766" */, borderRadius: 12, boxShadow: "5px 6px 7px 3px #00000040, 2px 4px 3.3px 1px #00000078" }} >
+                                    <div className={`${styles.cardMain} row text-center align-items-center position-relative overflow-hidden border`} style={{ height: 655, padding: "1rem 1.25rem", borderRadius: 12, boxShadow: "5px 6px 7px 3px #00000040, 2px 4px 3.3px 1px #00000078" }} >
 
                                         {/* Project Background Image (only shown on hover) */}
                                         <img src={assets[projectKey].cardBg} alt={t('projects.aria.bgImage', { projectName: t(`projects.projectName${project.id}`) })} className="z-n1 position-absolute top-0 start-0 w-100 h-100 object-fit-cover d-sm-block p-0" />
@@ -59,8 +61,8 @@ export const ProjectsHome = () => {
                                             <img src={assets[projectKey].logo} alt={t('projects.aria.logo', { projectName: t(`projects.projectName${project.id}`) })} style={{ width: 221 }} />
 
                                             {/* Project Description (only shown on hover) */}
-                                            <div className="card-description-wrapper d-grid">
-                                                <p className="card-description m-0 overflow-hidden">{t(`projects.featured.projectDescription${project.id}`)}</p>
+                                            <div className={`${styles.cardDescriptionWrapper} d-grid`}>
+                                                <p className={`${styles.cardDescription} m-0 overflow-hidden`}>{t(`projects.featured.projectDescription${project.id}`)}</p>
                                             </div>
                                             
                                         </div>
@@ -68,7 +70,7 @@ export const ProjectsHome = () => {
                                     </div>
                                     
                                     {/* Card Footer */}
-                                    <div className="card-footer row">
+                                    <div className={`${styles.cardFooter} row`}>
                                         <div className="col d-flex flex-column" style={{ paddingInline: 20, gap: 20 }}>
 
                                             {/* Project Name */}
@@ -96,52 +98,13 @@ export const ProjectsHome = () => {
                 </div>
 
                 {/* Navigate to All Projects Button */}
-                <div className="home-projects-portfolio-btn d-flex flex-column justify-content-center align-items-center flex-md-row gap-3">
-                    <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 fw-bold fs-5 px-5 py-2" style={{ maxWidth: 419, width: "100%" }}>
+                <div className={`${styles.homeProjectsPortfolioBtn} d-flex flex-column justify-content-center align-items-center flex-md-row gap-3`}>
+                    <Link to="/projects" className="btn btn-outline btn-lg rounded-pill border-2 fw-bold py-2" style={{ maxWidth: 419, width: "100%", fontSize: "clamp(1rem,5vw,1.25rem)", paddingInline: "clamp(2.5rem,10vw,3rem)" }}>
                         {t('projects.sectionPortfolioButton')}
                     </Link>
                 </div>
                 
             </div>
-
-            {/* Component Styles */}
-            <style>{`
-                .project-card {
-                    .card-main { transition: background 0.3s ease; }
-                    .card-footer { transition: color 0.3s ease; }
-                    .card-description-wrapper {
-                        grid-template-rows: 0fr;
-                        margin-top: 0px;
-                        transition:
-                            grid-template-rows 0.4s ease,
-                            margin-top 0.3s ease
-                        ;
-                    }
-                    .card-description {
-                        opacity: 0;
-                        transition:
-                            opacity 0.3s ease,
-                            display 0.3s allow-discrete
-                        ;
-                    }
-                
-                    &:hover {
-                        .card-main { background: rgba(0, 0, 0, 0.541) !important }
-                        .card-footer { color: var(--bs-accent-1) }
-                        .card-description-wrapper {
-                            grid-template-rows: 1fr;
-                            margin-top: 40px;
-                        }
-                        .card-description { opacity: 1 }
-                    }
-                }
-                
-                @media (width >= 768px) {
-                    .home-projects-title {
-                        .highlighted-text { background: none; }
-                    }
-                }
-            `}</style>
 
         </section>
     )
