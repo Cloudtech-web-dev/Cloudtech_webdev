@@ -105,7 +105,7 @@ export const Accordion = () => {
                     </div>
                 ))}
                 <div className="accordion-footer-cta">
-                    <Link to="/contact" className="btn-outline-accent">
+                    <Link to="/contact" className="btn-outline-accent px-3">
                         {t("services.ServicesCTAButton")}
                     </Link>
                 </div>

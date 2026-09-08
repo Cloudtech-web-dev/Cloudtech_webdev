@@ -47,9 +47,9 @@ export const Process = () => {
                 </p>
             </div>
             <div className="container pb-5">
-                <div className="row">
-                    <div className="col pe-sm-4 pe-md-5">
-                        <div className="d-flex justify-content-end">
+                <div className="row d-flex justify-content-center">
+                    <div className="col pe-md-5">
+                        <div className="d-flex justify-content-center justify-content-md-end">
                             <button
                                 className="process-section-title mb-4"
                                 onClick={() => handleMainSection('capacidades')}
@@ -58,8 +58,8 @@ export const Process = () => {
                         </div>
                     </div>
 
-                    <div className="col ps-sm-4 ps-md-3">
-                        <div className="d-flex justify-content-start">
+                    <div className="col ps-md-5">
+                        <div className="d-flex justify-content-center justify-content-md-start">
                             <button
                                 className="process-section-title mb-4"
                                 onClick={() => handleMainSection('proceso')}
