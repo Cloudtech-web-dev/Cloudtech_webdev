@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import flagES from '../assets/img/Flags/es.svg'
 import flagEN from '../assets/img/Flags/us.svg'
 import flagFR from '../assets/img/Flags/fr.svg'
@@ -12,11 +12,10 @@ function LanguageSwitcher() {
         en: flagEN,
         fr: flagFR
     };
-    const [activeFlag, setActiveFlag] = useState(flags[i18n.language] || flagEN);
 
-    useEffect(() => {
-        setActiveFlag(flags[i18n.language] || flagEN);
-    }, [i18n.language])
+    const currentLang = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0];
+
+    const activeFlag = flags[currentLang] || flagEN;  
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
