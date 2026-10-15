@@ -10,7 +10,7 @@ import { faFacebookSquare, faInstagram, faLinkedin, faWhatsapp } from '@fortawes
 
 
 const contactEmail = "dev@cloudtech.com.ec";
-const whatsAppPhoneNo = "593978879838";
+const whatsAppPhoneNo = "593995113707";
 const currentYear = (new Date()).getFullYear();
 
 const siteSections = ["about", "services", "projects", "contact"];
