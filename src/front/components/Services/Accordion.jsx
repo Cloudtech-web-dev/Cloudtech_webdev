@@ -16,11 +16,34 @@ export const Accordion = () => {
         "visual-identity": "web-content"
     });
 
-    const toggleAccordion = (categoryId, itemId) => {
+    const toggleAccordion = (categoryId, itemId, event) => {
+        const isCurrentlyOpen = openItems[categoryId] === itemId;
+        
+        const cardElement = event.currentTarget.closest(".accordion-card");
+        
         setOpenItems((prev) => ({
             ...prev,
-            [categoryId]: prev[categoryId] === itemId ? null : itemId
+            [categoryId]: isCurrentlyOpen ? null : itemId
         }));
+
+        const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+        if (!isCurrentlyOpen && window.innerWidth < 992 && isPortrait) {
+            if (cardElement) {
+                setTimeout(() => {
+                    const navbarOffset = 100;
+                    
+                    // Calculamos la posición exacta AHORA que el DOM está quieto
+                    const targetPosition = cardElement.getBoundingClientRect().top + window.scrollY - navbarOffset;
+                    
+                    // Scroll nativo suave
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: "smooth"
+                    });
+                }, 360); 
+            }
+        } 
     };
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -58,7 +81,7 @@ export const Accordion = () => {
                                         <button
                                             type="button"
                                             className="accordion-header"
-                                            onClick={() => toggleAccordion(category.id, item.id)}
+                                            onClick={(e) => toggleAccordion(category.id, item.id, e)}
                                         >
                                             <div className="accordion-header-left">
                                                 <img src={item.icon} alt="" className="header-icon-svg" />
