@@ -352,7 +352,7 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
 
             {/* Submit handles */}
             <div className={`${styles.submitHandles} d-flex justify-content-end`}>
-                <div className={`${styles['submit-handles']} submit-handles d-flex flex-column col-auto g-0`} style={{ gap: 30 }}>
+                <div className={`${styles['submit-handles']} submit-handles d-flex flex-column col-auto mw-100  g-0`} style={{ gap: 30 }}>
 
                     {/* Checkboxes container */}
                     <div className="d-flex flex-column col-auto g-0" style={{ gap: 5 }}>
@@ -385,7 +385,9 @@ export const ContactForm = ({ handleSubmit, handleCloseForm }) => {
                             <input onChange={handleInputs} checked={data.newsletterOptIn} type="checkbox" id="newsletter" name="newsletterOptIn" />
 
                             {/* Checkbox label */}
-                            {t('contact.form.formSubmission.newsletter')}
+                                <span>
+                                    {t('contact.form.formSubmission.newsletter')}
+                                </span>
 
                         </label>
 
