@@ -25,6 +25,68 @@ import { faLeanpub, faWix } from "@fortawesome/free-brands-svg-icons";
 
 
 export const projectsList = [
+     {
+        id: 'jpportafolio',
+        logo: LogoJPPortafolio,
+        cover: CoverJPPortafolio,
+        name: 'projects.projectName9',
+        preview: 'projects.projectPreview9',
+        summary: 'projects.projectSummary9',
+        need: 'projects.projectNeed9',
+        needsArt: needsCover[4],
+        process: 'projects.projectProcess9.description',
+        phase: [
+            {
+                icon: <FontAwesomeIcon icon={faFolderTree} size="5x" />,
+                title: 'projects.projectProcess9.phase1Title',
+                description: 'projects.projectProcess9.phase1'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faFaceSmile} size="5x" />,
+                title: 'projects.projectProcess9.phase2Title',
+                description: 'projects.projectProcess9.phase2'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faPhotoFilm} size="5x" />,
+                title: 'projects.projectProcess9.phase3Title',
+                description: 'projects.projectProcess9.phase3'
+            },
+            {
+                icon: <FontAwesomeIcon icon={faCode} size="5x" />,
+                title: 'projects.projectProcess9.phase4Title',
+                description: 'projects.projectProcess9.phase4'
+            }
+        ],
+        solution: 'projects.projectSolution9',
+        gallery: galleryJPPortafolio,
+        credits: [
+            {
+                name: 'David Pinto',
+                position: 'projects.credits.post4'
+            },
+            {
+                name: 'Santiago Montoya',
+                position: 'projects.credits.post5'
+            },
+            {
+                name: 'Marcelo Placencia',
+                position: 'projects.credits.post6'
+            },
+            {
+                name: 'Santiago Montoya',
+                position: 'projects.credits.post6'
+            },
+            {
+                name: 'Marcelo Placencia',
+                position: 'projects.credits.post10'
+            },
+            {
+                name: 'Santiago Montoya',
+                position: 'projects.credits.post10'
+            },
+        ],
+        tech: ['Figma', 'Astro', 'Astro i18n', 'Javascript', 'Tailwind', 'Sanity']
+    },
     {
         id: 'libreria-cosmonauta',
         logo: LogoCosmo,
@@ -91,6 +153,7 @@ export const projectsList = [
         id: 'piedra-negra',
         logo: LogoPiedraNegra,
         cover: CoverPiedraNegra,
+        videoEmbed: `<iframe src="https://cloudtechcomec.sharepoint.com/sites/cloudtech-entregables-publicos/_layouts/15/embed.aspx?UniqueId=02a29835-d9ab-439a-a0f3-c5879f34bcff&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create&autoplay=true&muted=true" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="MASTER_PIEDRA_NEGRA_FINAL.mp4"></iframe>`,
         name: 'projects.projectName8',
         preview: 'projects.projectPreview8',
         summary: 'projects.projectSummary8',
@@ -264,69 +327,7 @@ export const projectsList = [
             },
         ],
         tech: ['Figma', 'WordPress', 'CSS', 'MailChimp', 'Yoast SEO']
-    },
-    {
-        id: 'jpportafolio',
-        logo: LogoJPPortafolio,
-        cover: CoverJPPortafolio,
-        name: 'projects.projectName9',
-        preview: 'projects.projectPreview9',
-        summary: 'projects.projectSummary9',
-        need: 'projects.projectNeed9',
-        needsArt: needsCover[4],
-        process: 'projects.projectProcess9.description',
-        phase: [
-            {
-                icon: <FontAwesomeIcon icon={faFolderTree} size="5x" />,
-                title: 'projects.projectProcess9.phase1Title',
-                description: 'projects.projectProcess9.phase1'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faFaceSmile} size="5x" />,
-                title: 'projects.projectProcess9.phase2Title',
-                description: 'projects.projectProcess9.phase2'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faPhotoFilm} size="5x" />,
-                title: 'projects.projectProcess9.phase3Title',
-                description: 'projects.projectProcess9.phase3'
-            },
-            {
-                icon: <FontAwesomeIcon icon={faCode} size="5x" />,
-                title: 'projects.projectProcess9.phase4Title',
-                description: 'projects.projectProcess9.phase4'
-            }
-        ],
-        solution: 'projects.projectSolution9',
-        gallery: galleryJPPortafolio,
-        credits: [
-            {
-                name: 'David Pinto',
-                position: 'projects.credits.post4'
-            },
-            {
-                name: 'Santiago Montoya',
-                position: 'projects.credits.post5'
-            },
-            {
-                name: 'Marcelo Placencia',
-                position: 'projects.credits.post6'
-            },
-            {
-                name: 'Santiago Montoya',
-                position: 'projects.credits.post6'
-            },
-            {
-                name: 'Marcelo Placencia',
-                position: 'projects.credits.post10'
-            },
-            {
-                name: 'Santiago Montoya',
-                position: 'projects.credits.post10'
-            },
-        ],
-        tech: ['Figma', 'Astro', 'Astro i18n', 'Javascript', 'Tailwind', 'Sanity']
-    },
+    },   
     {
         id: 'las-libreras-leen',
         logo: LogoLibreras,

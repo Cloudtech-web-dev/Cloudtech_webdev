@@ -56,7 +56,30 @@ export const SingleProjectView = () => {
                 <div className="container mt-5 mt-lg-2 d-flex flex-column gap-5">
                     <div className="mt-3 d-lg-none"></div>
                     <div className="d-flex flex-column justify-content-center">
-                        <img src={projectData.cover} alt="portada de proyecto CloudTech" className="rounded-4" />
+
+                        {projectData.videoEmbed ? (
+                            <div className="ratio ratio-16x9 rounded-4 overflow-hidden shadow position-relative">
+                                <div
+                                    className="w-100 h-100 position-absolute top-0 start-0"
+                                    style={{
+                                        /* Forzamos que cualquier iframe dentro de este div ocupe el 100% real */
+                                        position: 'absolute',
+                                        top: 0,
+                                        left: 0,
+                                        width: '100%',
+                                        height: '100%'
+                                    }}
+                                    dangerouslySetInnerHTML={{
+                                        __html: projectData.videoEmbed
+                                            .replace('width="640"', 'width="100%"')
+                                            .replace('height="360"', 'height="100%"')                                            
+                                            .replace('<iframe', '<iframe allow="autoplay; fullscreen; picture-in-picture"')
+                                    }}
+                                />
+                            </div>
+                        ) : (
+                            <img src={projectData.cover} alt="portada de proyecto CloudTech" className="rounded-4" />
+                        )}
                     </div>
 
                     {/* SECCIÓN ÍNDICE Y RESUMEN PROYECTO */}
