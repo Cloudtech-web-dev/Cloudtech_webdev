@@ -3,11 +3,15 @@ import devProfile2 from '../assets/img/Team/teammember2.jpg'
 import devProfile3 from '../assets/img/Team/teammember3.jpg'
 import devProfile4 from '../assets/img/Team/teammember4.jpg'
 import devProfile5 from '../assets/img/Team/teammember5.jpg'
+import devProfile6 from '../assets/img/Team/teammember6.jpg'
+import devProfile7 from '../assets/img/Team/teammember7.jpg'
 import cat1 from '../assets/img/Team/cat1.jpg'
 import cat2 from '../assets/img/Team/cat2.avif'
 import cat3 from '../assets/img/Team/cat3.jpg'
 import cat4 from '../assets/img/Team/cat4.jpg'
 import cat5 from '../assets/img/Team/cat5.jpg'
+import cat6 from '../assets/img/Team/cat6.jpg'
+import cat7 from '../assets/img/Team/cat7.jpeg'
 
 
 export const teamContent = [
@@ -24,25 +28,24 @@ export const teamContent = [
     },
     {
         id: 1,
-        name: "José Pinto",
-        position: 'team.card.teamMember2.position',
-        description: 'team.card.teamMember2.description',
-        image: devProfile2,
-        catImage: cat2,
-        mailLink: 'jmpinto@cloudtech.com.ec',
-        linkedinLink: 'https://www.linkedin.com/in/jm-pinto/',
-        githubLink: 'https://github.com/UkuJoeMP'
+        name: "Mar Rodríguez",
+        position: 'team.card.teamMember6.position',
+        description: 'team.card.teamMember6.description',
+        image: devProfile6,
+        catImage: cat6,
+        mailLink: 'marcelo.placencia@epn.edu.ec',
+        linkedinLink: 'http://www.linkedin.com/in/marcelo-placencia-324406319'
     },
     {
         id: 2,
-        name: "Santiago Montoya",
-        position: 'team.card.teamMember3.position',
-        description: 'team.card.teamMember3.description',
-        image: devProfile3,
-        catImage: cat3,
-        mailLink: 'smontoya@cloudtech.com.ec',
-        linkedinLink: 'https://www.linkedin.com/in/santiago-montoya-ord%C3%B3%C3%B1ez-nk7/',
-        githubLink: 'https://github.com/santgeek'
+        name: "Marcelo Placencia",
+        position: 'team.card.teamMember5.position',
+        description: 'team.card.teamMember5.description',
+        image: devProfile5,
+        catImage: cat5,
+        mailLink: 'marcelo.placencia@epn.edu.ec',
+        linkedinLink: 'http://www.linkedin.com/in/marcelo-placencia-324406319',
+        githubLink: 'https://github.com/mplac555/'
     },
     {
         id: 3,
@@ -57,13 +60,34 @@ export const teamContent = [
     },
     {
         id: 4,
-        name: "Marcelo Placencia",
-        position: 'team.card.teamMember5.position',
-        description: 'team.card.teamMember5.description',
-        image: devProfile5,
-        catImage: cat5,
+        name: "Emilia Coloma",
+        position: 'team.card.teamMember6.position',
+        description: 'team.card.teamMember6.description',
+        image: devProfile7,
+        catImage: cat7,
         mailLink: 'marcelo.placencia@epn.edu.ec',
-        linkedinLink: 'http://www.linkedin.com/in/marcelo-placencia-324406319',
-        githubLink: 'https://github.com/mplac555/'
+        linkedinLink: 'http://www.linkedin.com/in/marcelo-placencia-324406319'
+    },
+    {
+        id: 5,
+        name: "Santiago Montoya",
+        position: 'team.card.teamMember3.position',
+        description: 'team.card.teamMember3.description',
+        image: devProfile3,
+        catImage: cat3,
+        mailLink: 'smontoya@cloudtech.com.ec',
+        linkedinLink: 'https://www.linkedin.com/in/santiago-montoya-ord%C3%B3%C3%B1ez-nk7/',
+        githubLink: 'https://github.com/santgeek'
+    },
+    {
+        id: 6,
+        name: "José Pinto",
+        position: 'team.card.teamMember2.position',
+        description: 'team.card.teamMember2.description',
+        image: devProfile2,
+        catImage: cat2,
+        mailLink: 'jmpinto@cloudtech.com.ec',
+        linkedinLink: 'https://www.linkedin.com/in/jm-pinto/',
+        githubLink: 'https://github.com/UkuJoeMP'
     }
-]
+];

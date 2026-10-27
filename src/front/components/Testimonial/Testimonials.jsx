@@ -1,49 +1,43 @@
-import { Card } from "./Card";
-import { testimonialsContent } from "../../utils/testimonialsContent";
-import { useTranslation } from "react-i18next";
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Autoplay } from "swiper/modules"
+import { Trans } from "react-i18next";
 
-import 'swiper/css';
-import 'swiper/css/navigation';
+import { TestimonialsMarquee as Marquee } from "./TestimonialsMarquee";
 
-export const Testimonials = () => {
-    const { t } = useTranslation();
+import { testimonialsContent as testimonials } from "../../utils/testimonialsContent";
 
-    return (
-        <section className="py-5">
-            <div className="container">
-                <div className="d-flex flex-column text-center justify-content-center">
-                    <h2 className="section-title">{t('testimonials.sectionTitle')}</h2>
-                </div>
 
-                <Swiper
-                    modules={[Navigation, Autoplay]}
-                    spaceBetween={30}
-                    slidesPerView={1}
-                    navigation
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false
-                    }}
+export const Testimonials = () => (
+    <section className="py-5">
 
-                    className="my-5 testimonial-swiper"
-                >
-                    {testimonialsContent.map(card =>
-                        <SwiperSlide key={card.id}>
-                            <div className="h-100">
-                                <Card
-                                    name={card.name}
-                                    position={t(card.position)}
-                                    review={t(card.review)}
-                                    profilePicture={card.profilePicture}
-                                    logo={card.logo}
-                                />
-                            </div>
-                        </SwiperSlide>
-                    )}
-                </Swiper>
+        {/* Section Contents */}
+        <div className="container g-0 m-0 mw-100 pb-5">
+            
+            {/* Section Header */}
+            <div className="d-flex flex-column text-center justify-content-center" style={{ marginBottom: 77 }}>
+
+                {/* Heading */}
+                <h2 className="font-h1" style={{ color: "var(--bs-accent-1)", lineHeight: "1.3" }}>
+                    <Trans i18nKey='testimonials.sectionTitle' components={[<span className="highlighted-text" />]} />
+                </h2>
+
             </div>
-        </section>
-    )
-}
+
+            {/* Section Body */}
+            <Marquee cardsArray={testimonials} rollDuration="30s" />
+
+        </div>
+        
+        {/* Component Styles */}
+        <style>{`
+            @media (width < 768px) {
+                .home-testimonials-title {
+                    margin-bottom: 3rem !important;
+                    h2 {
+                        font-size: calc(1.525rem + 3.3vw);
+                        line-height: 1.2;
+                    }
+                }
+            }
+        `}</style>
+        
+    </section>
+);

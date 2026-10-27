@@ -1,8 +1,9 @@
 import { Team } from "../components/Team/Team"
-import { Process } from "../components/Process"
-import { HeaderAbout } from "../components/HeaderAbout"
-import { Values } from "../components/Values/Values"
+import { Values } from "../components/About/Values"
+import { WorkSteps } from "../components/About/WorkSteps"
+import { WhoWeAre } from "../components/About/WhoWeAre"
 import { SEO } from "../utils/SEO"
+import PageHeader from "../components/PageHeader"
 
 export const About = () => {
     return (
@@ -13,9 +14,12 @@ export const About = () => {
                 url={window.location.href}
             />
             <main>
-                <HeaderAbout />
+                <PageHeader
+                    title="headers.headerAbout.headLine"
+                    description='headers.headerAbout.headerDescription' />
+                <WhoWeAre />
                 <Team />
-                <Process />
+                <WorkSteps />
                 <Values />
             </main>
         </>

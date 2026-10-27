@@ -1,11 +1,12 @@
 import os
-from flask import Blueprint, render_template_string, request, redirect, url_for
+
+from flask import Blueprint, redirect, render_template_string, request, url_for
 from flask_admin import Admin, AdminIndexView
 from flask_admin.contrib.sqla import ModelView
 from flask_login import current_user, login_user
-from wtforms import form, fields, validators, PasswordField
+from wtforms import PasswordField, fields, form, validators
 
-from .models import db, Lead, CTAdmin, TokenBlockedList
+from .models import CTAdmin, Lead, TokenBlockedList, db
 
 # --- Blueprint y Formulario de Login ---
 
@@ -103,16 +104,21 @@ class CTAdminModelView(SecureModelView):
     form_columns = ('email', 'password_field', 'is_admin')
     
     # Ocultamos la columna real _password de la vista
-    column_exclude_list = ['_password']
+    column_exclude_list = ('_password',)
     
     # Creamos el campo 'password_field' que no existe en el modelo
-    form_extra_fields = {
+    form_extra_fields = {  # noqa: RUF012
         'password_field': PasswordField('Password', [validators.DataRequired()])
     }
     
     def on_model_change(self, form, model, is_created):
-        if form.password_field.data:
-            model.password = form.password_field.data
+
+        assert isinstance(model, CTAdmin)
+      
+        password_field = getattr(form, 'password_field', None)
+      
+        if password_field and password_field.data:
+            model.password = password_field.data
 
 # --- Función de Configuración Principal ---
 
@@ -121,7 +127,7 @@ def setup_admin(app):
     app.secret_key = os.environ.get('FLASK_APP_KEY', 'sample key')
     app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
     app.register_blueprint(admin_auth, url_prefix='/dashboard')
-    admin = Admin(app, name='CloudTech Admin', template_mode='bootstrap3',
+    admin = Admin(app, name='CloudTech Admin',
                   url='/dashboard',
                   index_view=SecureAdminIndexView(name="Home", url="/dashboard"))
     admin.add_view(SecureModelView(Lead, db.session))

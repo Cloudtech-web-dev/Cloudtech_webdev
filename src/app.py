@@ -2,16 +2,18 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 import os
-from flask import Flask, request, jsonify, url_for, send_from_directory
-from flask_migrate import Migrate
-from flask_swagger import swagger
+from datetime import timedelta
+
+from flask import Flask, jsonify, redirect, request, send_from_directory, url_for
 from flask_jwt_extended import JWTManager
 from flask_login import LoginManager
-from api.utils import APIException, generate_sitemap
-from api.models import db, bcrypt, CTAdmin
-from api.routes import api
+from flask_migrate import Migrate
+
 from api.admin import setup_admin
 from api.commands import setup_commands
+from api.models import CTAdmin, bcrypt, db
+from api.routes import api
+from api.utils import APIException, generate_sitemap
 
 # from models import Person
 
@@ -27,9 +29,16 @@ login_manager.init_app(app)
 def load_user(user_id):
     return db.session.get(CTAdmin, int(user_id))
 
+@login_manager.unauthorized_handler
+def handle_unauthorized():
+    if request.path.startswith('/api/'):
+        return jsonify({"error": "Unauthorized. Please log in first."}), 401
+    return redirect(url_for('admin_auth.login', next=request.url))
+
 bcrypt.init_app(app)
 jwt = JWTManager(app)
 app.config["JWT_SECRET_KEY"] = os.environ.get("JWT_SECRET_KEY", "super-secret-jwt-key")
+app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(days=7)
 app.url_map.strict_slashes = False
 
 # database condiguration
@@ -38,7 +47,7 @@ if db_url is not None:
     app.config['SQLALCHEMY_DATABASE_URI'] = db_url.replace(
         "postgres://", "postgresql://")
 else:
-    app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:////tmp/test.db"
+    app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///test.db"
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 MIGRATE = Migrate(app, db, compare_type=True)
@@ -89,5 +98,5 @@ def serve_any_other_file(path):
 
 # this only runs if `$ python src/main.py` is executed
 if __name__ == '__main__':
-    PORT = int(os.environ.get('PORT', 3001))
+    PORT = int(os.environ.get('PORT', "3001"))
     app.run(host='0.0.0.0', port=PORT, debug=True)

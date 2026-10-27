@@ -18,14 +18,14 @@ const Main = () => {
                     fallback={
                         <div className='d-flex justify-content-center align-items-center' style={{ width: "100vh", height: "100vh" }}>
                             <div>
-                                <div class="spinner-grow text-warning" role="status">
-                                    <span class="visually-hidden"></span>
+                                <div className="spinner-grow text-warning" role="status">
+                                    <span className="visually-hidden"></span>
                                 </div>
-                                <div class="spinner-grow text-success" role="status">
-                                    <span class="visually-hidden"></span>
+                                <div className="spinner-grow text-success" role="status">
+                                    <span className="visually-hidden"></span>
                                 </div>
-                                <div class="spinner-grow text-light" role="status">
-                                    <span class="visually-hidden"></span>
+                                <div className="spinner-grow text-light" role="status">
+                                    <span className="visually-hidden"></span>
                                 </div>
                             </div>
                         </div>}>

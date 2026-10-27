@@ -1,7 +1,8 @@
-import { Services } from "../components/Services/Services"
 import { Process } from "../components/Process"
-import { HeaderServices } from "../components/HeaderServices"
 import { SEO } from "../utils/SEO"
+import { Accordion } from "../components/Services/Accordion"
+import { WhereToBegin } from "../components/Services/WhereToBegin"
+import PageHeader from "../components/PageHeader"
 
 export const ServicesPage = () => {
     return (
@@ -12,8 +13,11 @@ export const ServicesPage = () => {
                 url={window.location.href}
             />
             <main>
-                <HeaderServices />
-                <Services />
+                <PageHeader
+                    title="headers.headerServices.headLine"
+                    description='headers.headerServices.headerDescription' />
+                <Accordion />
+                <WhereToBegin />
                 <Process />
             </main>
         </>

@@ -38,16 +38,6 @@ export const capacitiesData = [
         id: 'capacidad8',
         label: 'process.capacities.seoAndDigitalContent.label',
         text: 'process.capacities.seoAndDigitalContent.text'
-    },
-    {
-        id: 'capacidad9',
-        label: 'process.capacities.communityManagement.label',
-        text: 'process.capacities.communityManagement.text'
-    },
-    {
-        id: 'capacidad10',
-        label: 'process.capacities.metrics.label',
-        text: 'process.capacities.metrics.text'
     }
 ];
 

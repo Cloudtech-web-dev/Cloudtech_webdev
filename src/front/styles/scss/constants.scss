@@ -1,0 +1,101 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$custom-theme-colors: (
+  "primary-1": #199AB7,
+  "primary-2": #217B8F,
+  "primary-3": #165766,
+  "secondary-1": #60E0A5,
+  "secondary-2": #73BF9C,
+  "secondary-3": #528C72,
+  "accent-1": #FBFF06,
+  "accent-2": #E2E505,
+  "accent-3": #A8AB02,
+  "gray-100": #E5E5E5,
+  "gray-300": #A6BCC2,
+  "gray-500": #5F828B,
+  "gray-700": #264E58,
+  "gray-1000": #04171B,
+  "gradient-1": linear-gradient(180deg, #60E0A5 0,#165766 100.00%),
+  "radial-gradient-2": radial-gradient(circle, #1bd5ff 0%, #128ba6 60%, #0c323b 100%),
+  "grad-accent": linear-gradient(180deg, #FBFF06 0,#7E8101 87.98%),
+  "grad-primary": linear-gradient(180deg, #199AB7 12.02%,#124652 100.00%),
+  "grad-secondary": linear-gradient(180deg, #60E0A5 0,#124450 87.98%),
+  "grad-acc-second": linear-gradient(180deg, #FBFF06 0,#477D64 77.40%),
+  "grad-secondary-primary": linear-gradient(180deg, #60E0A5 0,#165766 81.73%),
+  "alt-gradient": radial-gradient(circle, rgba(#1bd5ff, 0.9) 22%, #128ba6 67%, #0c323b 100%)
+);
+$gradientbg-effect-colors: (
+  "bg-1": rgb(108, 0, 162),
+  "bg-2": rgb(0, 17, 82),
+  "1": rgb(18, 113, 255),
+  "2": rgb(221, 74, 255),
+  "3": rgb(100, 220, 255),
+  "4": rgb(200, 50, 50),
+  "5": rgb(180, 180, 50),
+  "interactive": rgb(140, 100, 255)
+);
+$fonts: (
+  // Format: (family:font-family, size:font-size[, weight:font-weight][, style:font-style][, line-height:line-height][, letter-spacing:letter-spacing])
+  "h0": (family: "Outfit", size: 64px, weight: 700, line-height: 1.17, letter-spacing: -0.01em),
+  "h1": (family: "Outfit", size: 3rem, weight: 900, line-height: 1, letter-spacing: -0.01em),
+  "h2": (family: "Outfit", size: 32px, weight: 900, line-height: 0.85, letter-spacing: -0.01em),
+  "h3": (family: "Outfit", size: 24px, weight: 700, line-height: 1, letter-spacing: -0.01em),
+  "p1": (family: "Manrope", size: 1.2rem, weight: 400, line-height: 1.4, letter-spacing: 0.03em),
+  "p2": (family: "Manrope", size: 1.0rem, weight: 400, line-height: 1.4, letter-spacing: 0.03em),
+  "alt-h0": (family: "Crimson Text", size: 96px, weight: 400, style: italic, line-height: 1, letter-spacing: -0.01em),
+  "alt-h1": (family: "Crimson Text", size: 48px, weight: 400, style: italic, line-height: 96px, letter-spacing: -0.02em)
+);
+
+@mixin new-font($fontArray) {
+  $fontStyle: map-get($fontArray, "style");
+  $fontSize: map-get($fontArray, "size");
+  $fontWeight: map-get($fontArray, "weight");
+  $fontFamily: map-get($fontArray, "family");
+  $lineHeight: map-get($fontArray, "line-height");
+  $letterSpacing: map-get($fontArray, "letter-spacing");
+  $fallback: map-get($fontArray, "fallback");
+
+  @if $fontStyle { font-style: $fontStyle }
+  font: {
+    weight: if($fontWeight, $fontWeight, inherit);
+    size: $fontSize;
+    family: $fontFamily, if($fallback, $fallback, sans-serif);
+  }
+  line-height: if($lineHeight, $lineHeight, inherit);
+  @if $letterSpacing { letter-spacing: $letterSpacing }
+}
+
+:root {
+  /* =======  Color variables (a merge between the Figma design and Bootstrap defaults):  ======= */
+  $theme-colors: map-merge($theme-colors, $custom-theme-colors);
+  @each $color, $value in $theme-colors {
+    --bs-#{$color}: #{$value} !important;
+    @if not str-index("#{$value}", "gradient") {
+      --bs-#{$color}-rgb: #{to-rgb($value)};
+    }
+  }
+
+  /* =======  Gradient Background Effect (gbe) Colors  ======= */
+  @each $color, $value in $gradientbg-effect-colors {
+    --gbe-color-#{$color}: #{$value};
+    --gbe-color-#{$color}-rgb: #{to-rgb($value)};
+  }
+  
+  /* =======  Font variables  ======= */
+  @each $font, $value in $fonts {
+    --font-family-#{$font}: "#{map-get($value, "family")}";
+    --font-size-#{$font}: #{map-get($value, "size")}/#{map-get($value, "line-height")};
+  }
+}
+@each $font, $value in $fonts {
+  $base-elements: ("p", "h0", "h1", "h2", "h3", "h4", "h5", "h6");
+  $selector: if(index($base-elements, $font), "#{$font}, ", "") ".font-#{$font}";
+  #{$selector} { @include new-font($value) }
+}
+
+@media (min-width: 768px) { /* Equivalent to Bootstrap's `md` (Medium) */
+  h1, .font-h1 { font-size: 4rem }
+  .font-p1 { font-size: 1.5rem }
+  .font-p2 { font-size: 1.2rem }
+}

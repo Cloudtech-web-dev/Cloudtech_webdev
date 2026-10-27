@@ -4,13 +4,13 @@ import storeReducer, { initialStore } from "../store.js";
 import ScrollToTop from "../components/ScrollToTop"
 import { Navbar } from "../components/Navbar.jsx"
 import { Footer } from "../components/Footer"
-import WhatsappButton from "../components/WhatsappButton.jsx"
+// import WhatsappButton from "../components/WhatsappButton.jsx"
 
 
 // Base component that maintains the navbar and footer throughout the page and the scroll to top functionality.
 export const AppContext = createContext(null);
 
-export const Layout = () => {
+export const Layout = ({ withoutFooterBrandCard = false }) => {
 
     const [store, dispatch] = useReducer(storeReducer, initialStore());
     const [showNavbar, setShowNavbar] = useState(true)
@@ -24,8 +24,8 @@ export const Layout = () => {
                 <ScrollToTop location={location} />
                 {showNavbar && <Navbar />}
                 <Outlet />
-                <WhatsappButton />
-                {showFooter && <Footer />}
+                {/* <WhatsappButton /> */}
+                {showFooter && <Footer withBrandCard={ (location.pathname != "/contact") && !withoutFooterBrandCard } />}
             </>
         </AppContext.Provider>
     )
