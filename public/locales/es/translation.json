@@ -104,7 +104,7 @@
           "description": "No trabajamos con fórmulas genéricas. Cada decisión de diseño, contenido y desarrollo responde a la identidad y los objetivos del proyecto."
         },
         "value3": {
-          "title": "SOLIDEZ TÉCNICA",
+          "title": "SOLIDEZ",
           "description": "Cuidamos que cada sitio funcione bien: que sea estable, adaptable, fácil de usar y preparado para crecer y escalar."
         },
         "value4": {
@@ -316,6 +316,10 @@
     "ServicesCTAButton": "Agenda una llamada"
   },
   "process": {
+    "processHeader": {
+      "title": "Cómo trabajamos",
+      "description": "Cada proyecto avanza con una metodología clara: entender, organizar, diseñar, desarrollar y ajustar. Así cuidamos que cada decisión —desde la estructura hasta la publicación— responda a tus objetivos y ayude a crear una experiencia clara, funcional y fácil de usar."
+    },
     "sectionToggleCapacities": "Capacidades",
     "sectionToggleProcess": "Proceso",
     "capacities": {

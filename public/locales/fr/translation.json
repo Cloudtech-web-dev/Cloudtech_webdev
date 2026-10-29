@@ -9,40 +9,40 @@
   },
   "headers": {
     "headerHome": {
-      "headLine": "Nous créons des sites web et des <0>expériences</0> digitales pour les créatifs et les marques qui portent une identité.",
-      "headLine_glitch": "Nous créons des sites web et des <word /> digitales pour les créatifs et les marques qui portent une identité.",
+      "headLine": "Nous créons des sites web et des <0>expériences</0> digitales pour des créatifs et des marques uniques",
+      "headLine_glitch": "Nous créons des sites web et des <word /> digitales pour les créatifs et les marques uniques",
       "headLineGlitchWords": [ "expériences", "interactions", "interfaces", "plateformes" ],
-      "headerDescription": "Nous combinons design, narration et développement web pour les projets qui nécessitent une présence digitale à la hauteur de leur travail.",
-      "portfolioButton": "Découvrir nos projets",
-      "contactButton": "Parlons-en",
+      "headerDescription": "Le design, la narration et le développement web sont au cœur des projets qui exigent une présence digitale à la hauteur de leur savoir-faire.",
+      "portfolioButton": "Voir nos projets",
+      "contactButton": "Discutons avec l'équipe",
       "servicesPresentation": {
-        "headLine": "<0>Plus qu'un site web :</0> la vitrine digitale de votre savoir-faire.",
-        "description": "Nous créons des plateformes pour les projets qui ont besoin de valoriser leur travail, leurs produits ou leurs services. Nous transformons vos idées, vos contenus et votre ADN en expériences digitales claires, immersives et intuitives.",
+        "headLine": "<0>Au-delà d’un site web :</0> une manière claire de présenter votre travail",
+        "description": "Nous créons des plateformes pour les projets qui souhaitent mettre en valeur leur savoir-faire, leurs produits ou leurs services. Nous transformons vos idées, vos contenus et votre identité en expériences digitales claires, séduisantes et intuitives.",
         "portfolioButton": "Découvrir nos projets"
       }
     },
     "headerAbout": {
-      "headLine": "Un studio digital dédié aux projets à forte <0>identité</0>.",
-      "headLine_glitch": "Un studio digital dédié aux projets à forte <word />.",
-      "headLineGlitchWords": [ "identité" ],
-      "headerDescription": "Nous créons des sites web et des expériences digitales pour des projets avec une identité, en soignant leur apparence, leur compréhension et leur fonctionnement.",
-      "portfolioButton": "Voir les projets",
-      "contactButton": "Parlons-en"
+      "headLine": "Un studio digital dédié aux projets et <0>marques</0> uniques",
+      "headLine_glitch": "Un studio digital dédié aux projets à forte <word />",
+      "headLineGlitchWords": [ "marques" ],
+      "headerDescription": "Nous concevons des sites web et des expériences digitales sur mesure, en apportant un soin particulier à leur esthétique, leur lisibilité et leur performance technique.",
+      "portfolioButton": "Découvrir nos projets",
+      "contactButton": "Discutons avec l'équipe"
     },
     "headerServices": {
-      "headLine": "Sites web, applications et boutiques en ligne avec une <0>identité</0>.",
-      "headLine_glitch": "Sites web, applications et boutiques en ligne avec une <word />.",
-      "headLineGlitchWords": [ "identité" ],
-      "headerDescription": "Nous créons des expériences digitales claires, attrayantes et fonctionnelles, conçues pour mieux montrer votre travail, vos produits ou vos services.",
-      "portfolioButton": "Voir les projets",
-      "contactButton": "Parlons-en"
+      "headLine": "Sites web, applications et boutiques en ligne sur <0>mesure</0>",
+      "headLine_glitch": "Sites web, applications et boutiques en ligne sur <word />",
+      "headLineGlitchWords": [ "mesure" ],
+      "headerDescription": "Nous créons des expériences digitales claires, attrayantes et fonctionnelles, conçues pour mettre en valeur votre travail, vos produits et vos idées.",
+      "portfolioButton": "Découvrir nos projets",
+      "contactButton": "Discutons avec l'équipe"
     },
     "headerProjects": {
-      "headLine": "Projets digitaux avec une <0>identité</0>.",
-      "headLine_glitch": "Projets digitaux avec une <word />.",
-      "headLineGlitchWords": [ "identité" ],
-      "headerDescription": "Une sélection de sites web, de boutiques en ligne, de portfolios et de plateformes éditoriales où le design, le contenu et le développement s'intègrent pour mieux présenter une marque, un produit ou une idée.",
-      "contactButton": "Parlons-en"
+      "headLine": "Projets & Expériences sur <0>mesure</0>",
+      "headLine_glitch": "Projets & Expériences sur <word />.",
+      "headLineGlitchWords": [ "mesure" ],
+      "headerDescription": "Une sélection de sites web, boutiques en ligne, portfolios et plateformes éditoriales où design, contenu et technologie s'unissent pour valoriser pleinement une marque, un produit ou une idée.",
+      "contactButton": "Discutons avec l'équipe"
     }
   },
   "footer": {
@@ -59,39 +59,39 @@
   },
   "about": {
     "sectionTitle": "<0>Qui sommes</0>-nous ?",
-    "sectionDescription": "CloudTech est un studio digital qui unit le design, la narration et le développement web. Nous travaillons avec des marques, des créatifs et des projets qui ont besoin d'une présence digitale claire, attrayante et fonctionnelle. Nous nous intéressons à l'apparence d'un site, mais aussi à la façon dont il est expérimenté et à la meilleure façon de présenter un portfolio, un produit ou une idée.",
+    "sectionDescription": "CloudTech est un studio digital qui réunit design, storytelling et développement web. Nous accompagnons des marques, des créatifs et des projets soucieux de déployer une présence digitale claire, séduisante et fonctionnelle. Au-delà du simple aspect visuel, nous veillons à la qualité de l'expérience utilisateur et à la meilleure façon de structurer un portfolio, un produit ou une idée. ",
     "workSteps": {
       "opening": {
-        "openingTitle": "Comment nous <0>travaillons</0>",
-        "openingDescription": "Chaque projet commence par comprendre ce qu'il doit communiquer, qui il doit atteindre et comment il doit fonctionner. A partir de là, nous organisons l'information, définissons l'expérience, concevons l'interface et développons une solution claire, fonctionnelle et alignée avec les objectifs du projet."
+        "openingTitle": "Notre méthode de <0>travail</0>",
+        "openingDescription": "Chaque projet commence par une étape essentielle : comprendre ce qu'il doit communiquer, quelle audience il vise et comment il doit fonctionner. À partir de là, nous structurons l'information, définissons l'expérience, concevons l'interface et développons une solution claire, fonctionnelle et parfaitement adaptée à vos objectifs."
       },
       "steps": {
         "step1": {
-          "title": "Nous <0>écoutons</0> et comprenons",
-          "description": "Nous apprenons à connaître votre projet, vos objectifs, vos références et les besoins réels que le site web ou l'expérience digitale doit résoudre."
+          "title": "<0>Écoute</0> & Immersion",
+          "description": "Nous apprenons à connaître votre projet, vos objectifs, vos références et les besoins réels que l'expérience digitale doit résoudre."
         },
         "step2": {
-          "title": "Nous <0>organisons</0> l'information",
-          "description": "Nous définissons ce que votre site doit dire, comment le contenu est organisé et quel parcours chaque utilisateur doit effectuer."
+          "title": "<0>Structuration</0> du contenu",
+          "description": "Nous définissons le message central, l'organisation des contenus et le parcours idéal pour chaque utilisateur."
         },
         "step3": {
-          "title": "Nous <0>concevons</0> l'expérience",
-          "description": "Nous travaillons sur la structure visuelle, les wireframes et les écrans principaux pour que le projet soit clair, attrayant et facile à parcourir."
+          "title": "<0>Design</0> d'expérience",
+          "description": "Nous créons la structure visuelle, les wireframes et les interfaces clés pour garantir une navigation claire, fluide et esthétique."
         },
         "step4": {
-          "title": "Nous <0>développons</0> la solution",
-          "description": "Nous construisons le site, la boutique en ligne, l'application ou la plateforme avec la technologie appropriée pour qu'elle fonctionne bien et puisse évoluer."
+          "title": "<0>Développement</0> technique",
+          "description": "Nous construisons le site, la boutique en ligne ou l'application avec la technologie adaptée, garantissant performance et évolutivité. "
         },
         "step5": {
-          "title": "Nous <0>publions</0> et accompagnons",
-          "description": "Nous révisons, ajustons et laissons une base prête pour que le projet puisse continuer, être mis à jour ou évoluer selon ses besoins."
+          "title": "<0>Lancement</0> & Suivi",
+          "description": "Nous testons, ajustons et livrons une plateforme prête à opérer, évoluer et se développer en toute autonomie."
         }
       }
     },
     "values": {
       "opening": {
-        "openingTitle": "Ce qui guide notre <0>travail</0>",
-        "openingDescription": "Chaque projet a besoin de quelque chose de différent, mais notre façon de travailler repose sur des principes clairs : comprendre avant de construire, concevoir avec intention et développer des solutions qui fonctionnent pour de vraies personnes."
+        "openingTitle": "L'esprit du <0>studio</0>",
+        "openingDescription": "Chaque projet requiert une approche unique, mais notre travail repose sur des principes fondamentaux : comprendre avant de construire, concevoir avec intention et développer des solutions durables au service des personnes."
       },
       "valueContent": {
         "value1": {
@@ -99,11 +99,11 @@
           "description": "Nous organisons les idées, les contenus et les parcours pour que chaque site soit facile à comprendre, à utiliser et à explorer."
         },
         "value2": {
-          "title": "CRITÈRE",
-          "description": "Nous ne travaillons pas avec des formules génériques. Chaque décision de design, de contenu et de développement répond à l'identité et aux objectifs du projet."
+          "title": "DISCERNEMENT",
+          "description": "Nous refusons les modèles génériques. Chaque choix de design, de contenu et de technologie répond à l'identité et aux objectifs de votre projet."
         },
         "value3": {
-          "title": "SOLIDITÉ TECHNIQUE",
+          "title": "FIABILITÉ",
           "description": "Nous veillons à ce que chaque site fonctionne bien : qu'il soit stable, adaptable, facile à utiliser et préparé pour se développer et évoluer."
         },
         "value4": {
@@ -216,55 +216,55 @@
     "servicesList": {
       "websites": {
         "title": "Sites web",
-        "description": "Pour les marques, les créatifs et les projets qui ont besoin de mieux montrer leur travail, leurs produits ou leurs services.",
+        "description": "Pour les marques, les créatifs et les organisations désireux de valoriser leur travail, leurs produits ou leurs services.",
         "brandSites": {
-          "title": "Sites pour marques",
-          "description": "Nous créons des sites clairs, attrayants et faciles à utiliser pour présenter votre projet, vos services ou votre marque avec une identité.",
+          "title": "Sites de marques",
+          "description": "Nous concevons des sites clairs, séduisants et intuitifs pour présenter votre univers, vos services et vos engagements.",
           "button": "Voir le portfolio"
         },
         "creativePortfolios": {
           "title": "Portfolios créatifs",
-          "description": "Nous concevons des sites web pour montrer un travail visuel, audiovisuel ou éditorial de manière claire, professionnelle et facile à parcourir.",
+          "description": "Nous concevons des vitrines sur mesure pour exposer votre travail visuel, audiovisuel ou éditorial de manière fluide et immersive.",
           "button": "Voir le portfolio"
         },
         "editorialSites": {
-          "title": "Sites éditoriaux",
-          "description": "Nous construisons des plateformes pour des magazines, des contenus et des projets culturels qui doivent organiser des publications, des auteurs et des expériences de lecture.",
+          "title": "Plateformes éditoriales",
+          "description": "Nous bâtissons des espaces optimisés pour magazines, médias et projets culturels articulant contenus, auteurs et confort de lecture.",
           "button": "Voir le portfolio"
         },
         "implementation": {
-          "title": "Implémentation",
-          "description": "Nous adaptons la technologie à votre projet : WordPress, Webflow ou développement web.",
+          "title": "Technologies & Déploiement",
+          "description": "Nous sélectionnons la technologie la plus adaptée à votre projet : WordPress sur mesure, Webflow ou développement web dédié.",
           "button": "Voir le portfolio"
         }
       },
       "webApps": {
         "title": "Applications web",
-        "description": "Pour les projets qui ont besoin d'outils, de plateformes ou de fonctionnalités sur mesure.",
+        "description": "Pour les projets exigeant des outils, plateformes ou fonctionnalités sur mesure.",
         "customPlatforms": {
           "title": "Plateformes sur mesure",
-          "description": "Nous développons des outils digitaux avec des fonctionnalités spécifiques pour résoudre les besoins concrets de votre projet.",
+          "description": "Nous développons des outils digitaux dotés de fonctionnalités spécifiques pour répondre aux exigences précises de votre activité.",
           "button": "Voir le portfolio"
         },
         "dashboards": {
-          "title": "Dashboards et gestion",
-          "description": "Nous créons des systèmes pour gérer des contenus, des produits, des utilisateurs ou des informations de manière claire et ordonnée.",
+          "title": "Tableaux de bord & Gestion",
+          "description": "Nous créons des espaces d'administration intuitifs pour piloter vos contenus, produits, utilisateurs et données de manière structurée.",
           "button": "Voir le portfolio"
         },
         "specialFeatures": {
-          "title": "Fonctionnalités spéciales",
-          "description": "Nous développons des filtres, des moteurs de recherche, des formulaires avancés, des espaces privés et des interactions personnalisées.",
+          "title": "Fonctionnalités avancées",
+          "description": "Nous développons filtres complexes, moteurs de recherche sur mesure, formulaires interactifs, espaces privés et parcours personnalisés.",
           "button": "Voir le portfolio"
         },
         "integrations": {
           "title": "Intégrations",
-          "description": "Nous connectons votre plateforme avec des outils externes tels que des formulaires, des outils d'analyse, des paiements, des agendas ou des systèmes de gestion.",
+          "description": "Nous connectons votre plateforme à votre écosystème externe : passerelles de paiement, outils CRM, agendas ou systèmes de gestion.",
           "button": "Voir le portfolio"
         }
       },
       "ecommerce": {
         "title": "E-commerce",
-        "description": "Pour les marques qui souhaitent vendre des produits en ligne avec une expérience claire et fiable.",
+        "description": "Pour les marques souhaitant commercialiser leurs produits en ligne à travers une expérience fluide, sécurisée et engageante.",
         "onlineStore": {
           "title": "Boutiques en ligne",
           "description": "Nous construisons des boutiques conçues pour présenter les produits clairement et faciliter une expérience d'achat fiable.",
@@ -272,83 +272,87 @@
         },
         "catalogues": {
           "title": "Catalogues digitaux",
-          "description": "Nous organisons les produits, les catégories, les fiches et les informations clés pour que vos clients trouvent ce dont ils ont besoin.",
+          "description": "Nous organisons produits, catégories et fiches techniques afin d'offrir une recherche rapide et agréable à vos clients.",
           "button": "Voir le portfolio"
         },
         "payments": {
-          "title": "Paiements et intégrations",
-          "description": "Nous intégrons des passerelles de paiement, des formulaires, des systèmes de gestion ou des outils externes selon l'envergure du projet.",
+          "title": "Paiement & Automatisation",
+          "description": "Nous intégrons les passerelles de paiement, systèmes de livraison et outils de gestion adaptés à l'échelle de votre activité.",
           "button": "Voir le portfolio"
         },
         "shoppingExperience": {
-          "title": "Expérience d'achat",
-          "description": "Nous soignons le parcours de l'utilisateur pour qu'explorer, choisir et acheter soit clair, simple et sûr.",
+          "title": "Expérience client",
+          "description": "Nous soignons chaque étape du parcours utilisateur pour que l'exploration, le choix et la commande soient simples, transparents et sécurisés.",
           "button": "Voir le portfolio"
         }
       },
       "visualIdentity": {
-        "title": "Identité et contenu visuel",
-        "description": "Pour les projets qui ont besoin d'aligner leur image et de préparer des supports visuels pour mieux accompagner leur présence digitale.",
+        "title": "Direction artistique & Contenus",
+        "description": "Pour les projets souhaitant aligner leur image de marque et déployer des supports visuels cohérents avec leur présence digitale.",
         "webContent": {
-          "title": "Contenu pour le site web",
-          "description": "Nous vous aidons à organiser les textes, les images et les supports clés pour que chaque section communique clairement.",
+          "title": "Structuration des contenus",
+          "description": "Nous vous accompagnons dans l'organisation des textes, visuels et messages clés pour garantir la clarté de chaque page.",
           "button": "Voir le portfolio"
         },
         "visualDirection": {
           "title": "Direction visuelle",
-          "description": "Nous alignons l'esthétique du site avec l'identité du projet pour que tout soit cohérent et soigné.",
+          "description": "Nous harmonisons l'esthétique du site avec l'identité globale de votre marque pour offrir un rendu cohérent et soigné.",
           "button": "Voir le portfolio"
         },
         "photoVideo": {
-          "title": "Photographie et vidéo",
-          "description": "Lorsque le projet l'exige, nous articulons la production visuelle avec des équipes spécialisées pour renforcer votre présence digitale.",
+          "title": "Production photo & vidéo",
+          "description": "Lorsque le projet le demande, nous collaborons avec des équipes spécialisées pour produire des contenus visuels à forte valeur ajoutée.",
           "button": "Voir le portfolio"
         },
         "presentation": {
-          "title": "Présentations et supports",
-          "description": "Nous préparons des éléments complémentaires pour mieux expliquer, lancer ou présenter votre projet.",
+          "title": "Supports complémentaires",
+          "description": "Nous concevons des éléments de communication ciblés (présentations, kits de lancement, documents) pour accompagner votre déploiement.",
           "button": "Voir le portfolio"
         }
       }
     },
     "ServicesProjectsButton": "Voir le portfolio",
-    "ServicesCTAButton": "Planifier un appel"
+    "ServicesCTAButton": "Discutons de votre projet"
   },
   "process": {
+    "processHeader": {
+      "title": "Méthode & Savoir-faire",
+      "description": "Chaque projet avance selon une méthodologie rigoureuse : comprendre, organiser, concevoir, développer et ajuster. C'est ainsi que nous veillons à ce que chaque décision, de la structure jusqu'à la mise en ligne, réponde précisément à vos objectifs tout en offrant une expérience fluide et intuitive."
+    },
     "sectionToggleCapacities": "Capacités",
     "sectionToggleProcess": "Processus",
     "capacities": {
       "webConcept": {
-        "label": "Conceptualisation Web",
-        "text": "Processus créatif et stratégique définissant les fondements de votre site. Nous traduisons les valeurs de votre marque en maquettes alignées avec votre audience, explorant palettes, typographies et flux utilisateurs pour créer un cadre clair et percutant."
+        "label": "Architecture & Structure web",
+        "text": "Organiser vos informations pour définir l'arborescence, la hiérarchie des contenus et les parcours utilisateurs essentiels. Une fondation solide pour une navigation limpide dès le départ."
       },
       "webAudit": {
-        "label": "Audit Web",
-        "text": "Évaluation exhaustive de votre site pour identifier les améliorations en ergonomie, performance et design. Nous fournissons des insights concrets pour éliminer les obstacles utilisateurs et optimiser vos métriques clés."
+        "label": "Design & Expérience",
+        "text": "Concevoir l'architecture visuelle, les wireframes et les interfaces clés pour créer un site attrayant, intuitif et parfaitement aligné sur votre identité."
       },
       "webIntDev": {
-        "label": "Développement Web Intégral",
-        "text": "Création complète de votre présence digitale. Nous développons une architecture évolutive, une identité visuelle forte (UI kits) et un site performant pour stimuler l'interaction et la croissance de votre entreprise."
+        "label": "Développement Web",
+        "text": "Bâtir des plateformes fluides, adaptatives et sécurisées, en portant une attention particulière aux performances techniques et à la réactivité sur tous les écrans."
       },
       "webDesignSystems": {
-        "label": "Systèmes de Design Web",
-        "text": "Création de cadres réutilisables pour assurer une cohérence visuelle. Nous organisons les éléments UI en modules évolutifs pour une création de pages efficace, soutenue par une documentation complète."
+        "label": "E-commerce",
+        "text": "Créer des boutiques en ligne et catalogues digitaux pensés pour valoriser vos produits, simplifier la commande et instaurer un climat de confiance."
       },
       "webUpkeep": {
-        "label": "Maintenance Web",
-        "text": "Nous garantissons un site sécurisé et performant. Notre service inclut les mises à jour régulières, la surveillance des performances, la correction de bugs et les ajustements mineurs pour une présence en ligne fiable."
+        "label": "Maintenance & Suivi",
+        "text": "Assurer les mises à jour, la sécurité et les ajustements techniques pour préserver la stabilité et le bon fonctionnement de votre site au fil du temps."
       },
       "serviceIntegration": {
-        "label": "Intégration de Services",
-        "text": "Nous connectons votre site avec des outils externes (analytique, paiements, gestion). Nous gérons l'intégration technique pour assurer une fluidité totale et maximiser la valeur de vos systèmes."
+        "label": "Intégrations",
+        "text": "Connecter votre site à vos outils du quotidien : formulaires avancés, solutions d'analyse, passerelles de paiement, CRM et modules de réservation."
       },
       "strategicCommunication": {
-        "label": "Communication Stratégique",
-        "text": "Élaboration de feuilles de route pour votre communication. Nous analysons votre audience, définissons votre voix de marque et créons une planification multicanale alignée sur vos objectifs d'affaires."
+        "label": "Structuration des contenus",
+        "text": "Organiser vos textes, visuels et médias clés pour clarifier votre message. L'objectif : expliquer simplement ce que vous faites, proposez ou vendez."
       },
       "seoAndDigitalContent": {
-        "label": "SEO & Contenu Digital",
-        "text": "Nous optimisons vos textes pour capter l'attention humaine et celle des moteurs de recherche (UX Writing, mots-clés) assurant ainsi que votre contenu soit découvert et engageant."
+        "label": "Optimisation & Performance",
+        "text": "Auditer la structure, la vitesse, le SEO et l'expérience globale pour identifier et déployer des améliorations continues."
       },
       "communityManagement": {
         "label": "Gestion de Communautés",
@@ -361,42 +365,42 @@
     },
     "steps": {
       "firstStep": {
-        "label": "01. Compréhension du projet",
-        "text": "Tout commence par une discussion afin de cerner vos objectifs, vos références, vos besoins et la maturité de votre projet. Cette étape nous permet de définir ce que l'expérience digitale doit résoudre."
+        "label": "01. Comprendre le projet",
+        "text": "Échanger sur vos objectifs, vos références et vos enjeux afin de cerner précisément ce que l'expérience digitale doit résoudre."
       },
       "secondStep": {
-        "label": "02. Organisation de l'information",
-        "text": "L'objectif est de définir ce que le site doit communiquer, comment le contenu sera structuré et quel parcours chaque utilisateur doit effectuer. C'est à ce moment-là que s'établit la base stratégique du projet."
+        "label": "02. Structurer l'information",
+        "text": "Définir l'arborescence, la logique de contenu et le parcours idéal de vos visiteurs pour poser la base stratégique du site."
       },
       "thirdStep": {
-        "label": "03. Design de l'expérience",
-        "text": "L'élaboration de la structure visuelle, des wireframes et des écrans principaux permet de définir l'aspect esthétique et les interactions du site ou de la plateforme."
+        "label": "03. Concevoir l'expérience",
+        "text": "Composer les wireframes, l'univers visuel et les maquettes interactives pour valider l'esthétique et l'ergonomie."
       },
       "fourthStep": {
-        "label": "04. Développement de la solution",
-        "text": "L'implémentation du site, de la boutique en ligne, de l'application ou de la plateforme se fait avec la technologie appropriée. Les performances, la réactivité et l'intuitivité sont au cœur de cette étape."
+        "label": "04. Développer la solution",
+        "text": "Programmer le site, la boutique ou la plateforme avec la technologie appropriée, en plaçant la performance et la réactivité au centre."
       },
       "fifthStep": {
-        "label": "05. Phase de test et d'ajustement",
-        "text": "Une revue détaillée du fonctionnement, de la navigation, des textes et de l'interface visuelle garantit la correction des éventuelles erreurs avant le lancement officiel."
+        "label": "05. Tester & Ajuster",
+        "text": "Réaliser des contrôles rigoureux sur la navigation, le responsive design, l'affichage des textes et la sécurité avant le lancement."
       },
       "sixthStep": {
-        "label": "06. Publication et accompagnement",
-        "text": "Lors de sa mise en ligne, le projet est totalement opérationnel et prêt à évoluer. Si nécessaire, nous proposons un accompagnement sur mesure pour de futures mises à jour."
+        "label": "06. Déployer & Accompagner",
+        "text": "Mettre le projet en ligne dans des conditions optimales et vous former à sa prise en main pour vous garantir une autonomie totale."
       }
     }
   },
   "projects": {
-    "sectionTitle": "Nos projets",
-    "sectionDescription": "Découvrez comment nous accompagnons les marques et les créatifs dans la mise en valeur de leur travail, de leurs produits et de leur vision.",
-    "sectionCTAButton": "Connectons-nous",
+    "sectionTitle": "Projets & Expériences sur <0>mesure</0>",
+    "sectionDescription": "Une sélection de sites web, boutiques en ligne, portfolios et plateformes éditoriales où design, contenu et technologie s'unissent pour valoriser pleinement une marque, un produit ou une idée.",
+    "sectionCTAButton": "Discutons de votre projet",
     "sectionPortfolioButton": "Explorer le portfolio",
     "discoverMore": "Découvrir plus",
     "sectionTitle2": "Nos projets",
-    "sectionDescription2": "Chaque projet part d'un besoin différent : vendre des produits, organiser des contenus, présenter une œuvre ou construire une identité digitale claire. Ces travaux montrent comment nous combinons la structure, le design et le développement pour créer des expériences digitales utiles, attrayantes et faciles à utiliser.",
+    "sectionDescription2": "Chaque projet répond à un enjeu spécifique : commercialiser un catalogue, structurer des publications, exposer une œuvre ou révéler une identité digitale singulière. Ces réalisations illustrent notre manière d'allier architecture, design et développement pour créer des expériences fluides, séduisantes et intuitives.",
     "sectionCTA": {
       "sectionTitle": "<0>Explorez</0> notre portfolio complet",
-      "sectionDescription": "Nous avons préparé une version téléchargeable avec des projets sélectionnés, des services et des exemples de la façon dont nous combinons le design, le contenu et le développement pour construire des expériences digitales avec une identité."
+      "sectionDescription": "Nous avons réuni dans ce document une sélection de projets, nos domaines d'intervention et plusieurs exemples concrets de la façon dont nous allions design, contenu et développement pour bâtir des expériences digitales à forte identité."
     },
     "menuItems": {
       "itemOne": "[01] Besoin",
@@ -414,14 +418,14 @@
       "multilingualSite": "Site multilingue"
     },
     "featured": {
-      "projectDescription1": "Boutique en ligne pour une librairie indépendante, gérant le catalogue, les stocks et les paiements.",
-      "projectDescription7": "Magazine digital littéraire à l'interface épurée, pensé pour sublimer le contenu.",
-      "projectDescription9": "Site conçu pour présenter des productions visuelles de manière fluide et haut de gamme.",
-      "projectDescription6": "Plateforme éditoriale trilingue structurée pour optimiser contenus et traductions."
+      "projectDescription1": "Boutique en ligne pour une librairie indépendante, dotée d'un catalogue dynamique, d'une gestion de stock fluide et de paiements sécurisés.",
+      "projectDescription7": "Revue littéraire digitale dotée d'une interface épurée et d'une architecture pensée pour sublimer le contenu.",
+      "projectDescription9": "Un site conçu pour présenter des travaux audiovisuels et photographiques à travers une approche visuelle, fluide et soignée.",
+      "projectDescription6": "Une plateforme éditoriale trilingue, conçue pour organiser clairement les contenus, les auteurs et les traductions."
     },
     "projectName1": "Librería Cosmonauta",
-    "projectPreview1": "Boutique en ligne pour une librairie indépendante, conçue pour organiser un vaste catalogue éditorial, faciliter l'achat et gérer des paiements sécurisés.",
-    "projectSummary1": "Librería Cosmonauta est une librairie spécialisée dans la littérature indépendante. Le projet a consisté à concevoir et développer une boutique en ligne capable d'organiser son catalogue, de faciliter l'achat et de permettre des ventes digitales en toute sécurité. La plateforme transforme la sélection éditoriale de la librairie en une expérience d'achat claire, accessible et conçue pour les lecteurs de tout le pays.",
+    "projectPreview1": "Boutique en ligne dédiée à une librairie indépendante, pensée pour organiser un vaste catalogue éditorial, simplifier le parcours d'achat et garantir des transactions sécurisées.",
+    "projectSummary1": "Librería Cosmonauta est une librairie indépendante spécialisée dans la littérature contemporaine et les éditions d'auteur. Le projet a consisté à concevoir et développer une boutique en ligne sur mesure, capable d'organiser un vaste catalogue, de simplifier le parcours d'achat et de sécuriser les transactions digitales. La plateforme traduit la ligne éditoriale de la librairie en une expérience marchande claire, élégante et accessible aux lecteurs à l'échelle nationale.",
     "projectName2": "Flora Nueva",
     "projectPreview2": "Nous avons collaboré avec Flora Nueva pour projeter leur modèle agroécologique, rendant visible leur impact social et facilitant la commercialisation de leurs produits naturels.",
     "projectSummary2": "Flora Nueva est une organisation de développement rural qui implémente le modèle 'Village Industry'. CloudTech a développé une plateforme digitale conçue pour démontrer leurs chaînes agricoles régénératrices et stimuler la commercialisation éthique de leurs produits raffinés.",
@@ -429,36 +433,36 @@
     "projectPreview3": "Plateforme web multilingue intégrant un centre d'actifs digitaux sécurisé pour amplifier la visibilité mondiale de leur traversée vers la COP30.",
     "projectSummary3": "La Flotilla Amazónica est une expédition climatique naviguant des Andes jusqu'à Belém. CloudTech a développé une plateforme multilingue pour centraliser le récit du voyage et gérer les ressources pour la presse internationale (FR/EN/ES/PT).",
     "projectName4": "Las Libreras Leen",
-    "projectPreview4": "Magazine digital lié à Librería Cosmonauta, créé pour publier des contenus éditoriaux, renforcer la communauté de lecteurs et connecter les articles avec les produits du commerce en ligne.",
-    "projectSummary4": "Las Libreras Leen est un magazine digital lié à Librería Cosmonauta, créé pour publier des contenus éditoriaux, favoriser une communauté de lecteurs et relier la conversation culturelle à la boutique en ligne. Le projet a consisté à concevoir et développer une plateforme éditoriale claire, autogérée et connectée au e-commerce.",
+    "projectPreview4": "Média éditorial associé à la Librería Cosmonauta, créé pour diffuser des contenus littéraires, fédérer une communauté de lecteurs et lier directement les articles aux références de la boutique en ligne.",
+    "projectSummary4": "Las Libreras Leen est une revue digitale associée à la Librería Cosmonauta, conçue pour diffuser des contenus éditoriaux, fédérer une communauté de lecteurs et connecter directement le débat culturel à la boutique en ligne. Le projet a consisté à concevoir et développer une plateforme éditoriale claire, entièrement administrable et interconnectée avec l'écosystème e-commerce, capable d'organiser de manière fluide les articles, les portraits d'auteurs, les thématiques littéraires et les sélections d'ouvrages.",
     "projectName5": "ASOCOVE",
     "projectPreview5": "Création d'un site web positionnant les routes écologiques d'ASOCOVE comme une destination d'écotourisme durable finançant la conservation communautaire.",
     "projectSummary5": "Développement web pour l'association ASOCOVE. CloudTech a implémenté un portail connectant les voyageurs à des expériences authentiques, transformant chaque visite en un financement direct pour les communautés et la nature.",
     "projectName6": "Búsquedas",
-    "projectPreview6": "Revista digital trilingüe diseñada para organizar contenidos, autores y traducciones en una experiencia de lectura clara, sobria y autogestionable.",
-    "projectSummary6": "Búsquedas est un magazine digital dédié à la réflexion, à la lecture approfondie et au dialogue entre différents courants de pensée. Le projet a consisté à créer une identité visuelle sobre et à développer une plateforme éditoriale trilingue, claire et autogérée, capable d'organiser les contenus, les auteurs et les traductions en espagnol, anglais et français.",
+    "projectPreview6": "Revue digitale trilingue conçue pour structurer contenus, auteurs et traductions au sein d'une expérience de lecture sobre, fluide et entièrement administrable.",
+    "projectSummary6": "Búsquedas est une revue digitale indépendante axée sur la réflexion, à la lecture approfondie et au dialogue entre différents courants de pensée. Le projet a consisté à concevoir et développer une plateforme trilingue élégante, capable de hiérarchiser une grande diversité de contenus, d'auteurs et de traductions au sein d'un univers de lecture sobre et immersif. Le site offre un espace de lecture fluide et moderne, pensé pour valoriser le texte tout en facilitant l'exploration entre les langues.",
     "projectName7": "MURA",
-    "projectPreview7": "Magazine digital de littérature et d'arts, conçu pour donner la priorité au contenu, explorer de nouvelles formes de navigation et faciliter la gestion éditoriale.",
-    "projectSummary7": "MURA est un magazine digital de littérature et d'arts qui cherche à ouvrir un espace aux voix, aux formats et aux parcours éditoriaux non conventionnels. Le projet a consisté à créer une identité visuelle et à développer une plateforme éditoriale flexible, autogérée et conçue pour donner la priorité au contenu.",
+    "projectPreview7": "Revue digitale consacrée à la littérature et aux arts, conçue pour accorder la priorité au texte, expérimenter de nouveaux modes de navigation et faciliter la gestion éditoriale au quotidien.",
+    "projectSummary7": "MURA est un magazine digital de littérature et d'arts axée sur la création, le design, les différents formats et les parcours éditoriaux non conventionnels. Le projet a consisté à concevoir et développer une vitrine digitale élégante, capable de présenter la diversité de ses réalisations, d'exprimer la rigueur de sa démarche créative et de structurer sa présence en ligne. La plateforme offre une navigation fluide et immersive, mettant en avant la texture des matériaux, la précision des lignes et la singularité de chaque projet d'aménagement.",
     "projectName8": "Piedra Negra",
-    "projectPreview8": "Standardisation visuelle et développement d'outils commerciaux pour une marque de café équatorienne cherchant à renforcer sa présence dans la grande distribution et à ouvrir des opportunités B2B.",
-    "projectSummary8": "Piedra Negra est une marque équatorienne de café présente dans la grande distribution. Le projet a consisté à mettre à jour son identité visuelle à travers un manuel de marque, et à développer deux présentations commerciales pour soutenir son expansion : l'une axée sur le commerce de détail (retail) et l'autre orientée vers les marques blanches.",
+    "projectPreview8": "Harmonisation visuelle et conception d'outils commerciaux pour une marque de café équatorienne désireuse d'asseoir sa présence en grande distribution et de développer ses opportunités B2B.",
+    "projectSummary8": "Piedra Negra est une marque de café équatorienne engagée dans la production de haute qualité et la valorisation de son terroir. L'intervention de CloudTech a consisté à élaborer une stratégie globale d'image de marque et de contenus B2B — combinant harmonisation visuelle, conception d'outils commerciaux et production d'un film institutionnel haute définition — afin de structurer son déploiement auprès de la grande distribution et des grands comptes. Cette approche intégrée traduit la qualité du produit et la maîtrise des procédés de fabrication en une identité forte, crédible et hautement convaincante pour les acheteurs professionnels.",
     "projectName9": "Portfolio créatif — Jean Pierre Olivares",
-    "projectPreview9": "Site web pour un directeur de la photographie, réalisateur et photographe à Paris, conçu pour présenter des projets audiovisuels et photographiques de manière claire, visuelle et professionnelle.",
-    "projectSummary9": "Jean Pierre Olivares est directeur de la photographie, réalisateur et photographe basé à Paris. Le projet consiste à concevoir et développer un site web portfolio capable de présenter son travail audiovisuel et photographique de manière claire, sobre et visuelle. L'expérience est conçue pour organiser ses projets sans entrer en compétition avec la force des images.",
-    "projectNeed1": "La librairie avait besoin d'un canal digital pour vendre son catalogue à l'échelle nationale et abandonner les processus de vente manuels. Le défi consistait à organiser les produits de différents éditeurs, faciliter la recherche de livres, gérer les stocks et permettre des paiements sécurisés sans créer de friction pour l'utilisateur.",
+    "projectPreview9": "Vitrine web pour un chef opérateur, réalisateur et photographe basé à Paris, imaginée pour valoriser ses projets audiovisuels et photographiques à travers une esthétique épurée et professionnelle.",
+    "projectSummary9": "Jean Pierre Olivares est un chef opérateur, réalisateur et photographe basé à Paris, œuvrant dans l'univers du cinéma, du court-métrage et de la photographie d'auteur. Le projet a consisté à concevoir et développer un portfolio sur mesure, pensé comme un écran sobre et immersif pour mettre en valeur ses travaux audiovisuels, ses projets cinématographiques et ses séries photographiques. La plateforme privilégie la lisibilité de l'image, la fluidité de la lecture vidéo et la clarté de la navigation pour offrir aux producteurs, réalisateurs et directeurs d'acteurs une expérience de visionnage haut de gamme.",
+    "projectNeed1": "La librairie souhaitait déployer un canal de vente digital performant pour distribuer son catalogue à travers tout le pays et affranchir ses équipes des processus de commande manuels. Le défi résidait dans la structuration d'un catalogue multi-éditeurs, l'optimisation de la recherche d'ouvrages, la gestion synchronisée des stocks et la mise en place d'un système de paiement sécurisé, sans générer la moindre friction pour l'utilisateur.",
     "projectProcess1": {
-      "description": "Nous avons abordé le projet de manière globale pour construire un écosystème e-commerce robuste privilégiant la fluidité, le design et la sécurité.",
-      "phase1Title": "1. Structure du catalogue",
-      "phase1": "Nous avons organisé les informations des livres, des éditeurs, des auteurs et des catégories pour que la navigation soit claire et facile à utiliser.",
+      "description": "Afin de dépasser la gestion manuelle des commandes et déployer le catalogue à l'échelle nationale, nous avons abordé le projet de manière globale. Notre travail s'est concentré sur la structuration des données et le développement d'un écosystème e-commerce solide, plaçant la fluidité de navigation, la sobriété du design et la sécurité des transactions au cœur de chaque achat.",
+      "phase1Title": "1. Architecture du catalogue",
+      "phase1": "Organisation structurée des métadonnées (livres, maisons d'édition, auteurs et genres) pour offrir une navigation fluide et intuitive.",
       "phase2Title": "2. Design d'expérience",
-      "phase2": "Nous avons conçu des parcours d'achat simples, en priorisant la recherche, la lisibilité et l'expérience sur les appareils mobiles.",
-      "phase3Title": "3. Développement web",
-      "phase3": "Nous avons construit une plateforme capable de gérer efficacement les produits, les stocks, les filtres et les recherches.",
+      "phase2": "Conception de parcours d'achat épurés, mettant l'accent sur la lisibilité des fiches produits, la rapidité du moteur de recherche et le confort de navigation sur mobile.",
+      "phase3Title": "3. Développement sur mesure",
+      "phase3": "Programmation d'une plateforme robuste pour piloter efficacement le catalogue, la mise à jour des stocks et le filtrage avancé des requêtes.",
       "phase4Title": "4. Intégration des paiements",
       "phase4": "Nous avons mis en place des paiements sécurisés via Nuvei pour que la librairie puisse vendre en ligne en toute confiance."
     },
-    "projectSolution1": "Le résultat a été une boutique en ligne claire, sécurisée et autogérée, conçue pour que Librería Cosmonauta puisse vendre son catalogue de manière ordonnée. La plateforme permet de gérer les produits, mettre à jour les stocks et recevoir des paiements. Cela a transformé sa présence digitale en un canal commercial actif, aligné sur l'identité de la librairie.",
+    "projectSolution1": "Le résultat : une boutique en ligne esthétique, performante et entièrement administrable, permettant à la Librería Cosmonauta de structurer son activité e-commerce avec rigueur et autonomie. La plateforme permet une gestion simplifiée des stocks, optimise la découverte de nouveaux titres et automatise l'encaissement en ligne. Elle transforme ainsi la présence digitale du studio en un canal commercial actif, fidèle à son identité éditoriale.",
     "projectNeed2": "Flora Nueva avait besoin d'un site web démontrant l'interdépendance entre nature, communauté et industrie rurale. Le défi : visibiliser l'impact social et faciliter la commercialisation éthique.",
     "projectProcess2": {
       "description": "Nous avons transformé un modèle d'impact rural en une expérience digitale sophistiquée, équilibrant la narration du territoire avec des outils de gestion autonomes.",
@@ -485,19 +489,19 @@
       "phase4": "Configuration WordPress donnant à l'équipe une autonomie totale."
     },
     "projectSolution3": "Le site centralise l'opération médiatique du projet, offrant une fenêtre publique immersive et deux centres de gestion blindés pour les professionnels de la presse internationale.",
-    "projectNeed4": "Le projet devait aller au-delà d'un blog conventionnel. La librairie cherchait un espace éditorial qui renforce sa voix culturelle, facilite la publication de contenus et permette de lier les articles à des produits réels du e-commerce. Le défi consistait à construire une expérience de lecture claire et, en même temps, à créer un pont naturel entre le contenu éditorial et l'achat de livres.",
+    "projectNeed4": "Le projet devait dépasser le cadre d'un blog conventionnel pour devenir une véritable revue culturelle.La librairie souhaitait se doter d'un espace éditorial affirmé capable de porter sa voix, d'offrir une grande autonomie de publication et de lier naturellement chaque article aux références du catalogue. Le défi résidait dans la création d'un univers de lecture sobre et immersif qui s'articule sans friction avec le parcours d'achat.",
     "projectProcess4": {
-      "description": "Nous avons proposé un développement intégrant fluidement culture et commerce, avec une expérience de lecture immersive connectée au catalogue.",
-      "phase1Title": "1. Structure éditoriale",
-      "phase1": "Nous avons défini les catégories, les types de contenus et les parcours de lecture pour faciliter la découverte des articles, des auteurs et des recommandations.",
+      "description": "Pour transformer la ligne éditoriale en un véritable levier de découverte et d'engagement, nous avons structuré notre travail autour de quatre axes fondamentaux :",
+      "phase1Title": "1. Architecture & Structuration éditoriale",
+      "phase1": "Définition des rubriques, des formats de contenus et des parcours de lecture pour simplifier l'exploration des essais, des critiques et des recommandations.",
       "phase2Title": "2. Design d'expérience",
-      "phase2": "Nous avons créé une interface axée sur la lecture, en soignant la lisibilité, la navigation et l'intégration des livres recommandés sans interrompre le parcours de l'utilisateur.",
+      "phase2": "Conception d'une interface épurée dédiée à la lecture, apportant un soin particulier à la typographie, au confort visuel et à l'intégration contextuelle des fiches livres.",
       "phase3Title": "3. Développement CMS",
-      "phase3": "Nous avons implémenté une plateforme sur WordPress pour que l'équipe éditoriale puisse gérer les articles, les auteurs, les catégories et les publications de manière autonome.",
+      "phase3": "Mise en place d'une infrastructure WordPress personnalisée permettant à l'équipe rédactionnelle de gérer et publier articles, auteurs et sélections en toute autonomie.",
       "phase4Title": "4. Intégration au e-commerce",
-      "phase4": "Nous avons connecté les contenus éditoriaux aux produits du catalogue pour faciliter le passage de la lecture à l'achat."
+      "phase4": "Interconnexion directe entre les contenus éditoriaux et les fiches produits pour permettre aux lecteurs de passer instantanément de la lecture à l'achat."
     },
-    "projectSolution4": "Le résultat a été un magazine digital qui fonctionne comme un espace éditorial et comme un point d'entrée vers la boutique en ligne. La plateforme permet de publier des contenus de manière autonome, d'organiser une communauté de lecteurs et de lier les recommandations littéraires aux produits disponibles sur le e-commerce. Ainsi, Las Libreras Leen renforce l'identité culturelle de la librairie.",
+    "projectSolution4": "Le résultat : un magazine digital élégant qui agit à la fois comme un média culturel captivant et comme une porte d'entrée immersive vers la boutique en ligne. La plateforme permet de publier des contenus en toute indépendance, d'animer une communauté engagée et d'associer directement les recommandations littéraires aux titres disponibles à la vente. Las Libreras Leen renforce ainsi l'identité culturelle de la Librería Cosmonauta tout en faisant du contenu éditorial un moteur actif de sa présence commerciale.",
     "projectNeed5": "L'association nécessitait une vitrine digitale professionnelle pour son offre écotouristique, structurant la narration de ses divers axes (recherche, aventure, agrotourisme).",
     "projectProcess5": {
       "description": "Professionnalisation de la présence digitale via un design avancé facilitant l'exploration d'écosystèmes complexes.",
@@ -511,61 +515,61 @@
       "phase4": "Systématisation des informations biologiques et culturelles de la région."
     },
     "projectSolution5": "La plateforme positionne ASOCOVE comme référence de l'écotourisme au Costa Rica. Son catalogue de forfaits autogéré facilite la prise de décision, devenant un puissant outil commercial.",
-    "projectNeed6": "Le projet avait besoin d'une présence digitale qui transmette le respect, la profondeur et la clarté. La plateforme devait permettre la publication de textes en trois langues, organiser les auteurs et les catégories, et faciliter à l'équipe éditoriale la gestion des contenus et des traductions sans dépendre d'un support technique constant.",
+    "projectNeed6": "La revue devait structurer une publication multilingue exigeante sans altérer le confort de lecture ni complexifier la gestion éditoriale en arrière-plan. Le défi résidait dans l'organisation fluide des articles, des auteurs et des versions traduites (espagnol, français, anglais), ainsi que dans la mise en place d'une typographie et d'une mise en page adaptées aux textes longs sur tous les écrans.",
     "projectProcess6": {
-      "description": "Pour matérialiser une plateforme éditoriale trilingue, nous avons défini un processus centré sur le respect du contenu, avec une identité sobre et une grande liberté de gestion.",
-      "phase1Title": "1. Identité visuelle",
-      "phase1": "Nous avons développé une ligne visuelle sobre et cohérente avec le caractère réflexif du projet, incluant un logo, des critères graphiques et une esthétique pensée pour une lecture posée.",
+      "description": "Pour répondre aux exigences d'une revue trilingue et assurer une expérience de lecture optimale, nous avons pensé la plateforme autour du confort visuel et de l'ergonomie éditoriale. Notre intervention s'est structurée autour de quatre axes majeurs :",
+      "phase1Title": "1. Design éditorial",
+      "phase1": "Conception d'un univers visuel épuré priorisant la lisibilité des textes longs, le rythme des paragraphes et la mise en valeur des citations.",
       "phase2Title": "2. Architecture multilingue",
-      "phase2": "Nous avons organisé la structure du site pour permettre la navigation, les contenus et les traductions en espagnol, anglais et français.",
-      "phase3Title": "3. Design d'expérience",
-      "phase3": "Nous avons créé une interface épurée, claire et sans distractions pour donner la priorité à la lecture et faciliter le parcours entre les textes, les auteurs et les catégories.",
-      "phase4Title": "4. Développement autogéré",
-      "phase4": "Nous avons implémenté la plateforme sur WordPress avec WPML, permettant à l'équipe éditoriale de gérer les publications, les auteurs et les traductions de manière indépendante."
+      "phase2": "Mise en place d'un système de navigation fluide entre les différentes traductions d'un même article pour offrir une expérience homogène dans chaque langue.",
+      "phase3Title": "3. Développement & Performances",
+      "phase3": "Programmation d'une structure légère et rapide pour garantir un chargement instantané des contenus et une navigation sans interruption.",
+      "phase4Title": "4. DGestion de contenu (CMS) ",
+      "phase4": "Déploiement d'une interface d'administration intuitive sur Wordpress permettant à l'équipe éditoriale de publier, traduire et catégoriser les essais en toute autonomie."
     },
-    "projectSolution6": "Le résultat a été un magazine digital trilingue, clair et facile à administrer. La plateforme permet de publier des contenus, de gérer des traductions et d'offrir une expérience de lecture sobre, ordonnée et accessible pour une communauté internationale. Búsquedas dispose désormais d'une présence digitale qui accompagne son identité.",
-    "projectNeed7": "MURA avait besoin d'une présence digitale qui reflète son caractère expérimental sans perdre en clarté pour l'utilisateur. Le défi consistait à construire une plateforme capable d'héberger des textes, des œuvres et des contenus multimédias, en maintenant une autonomie éditoriale et une expérience visuelle épurée.",
+    "projectSolution6": "Le résultat : une plateforme éditoriale élégante, sobre et entièrement administrable, qui positionne Búsquedas comme un espace de publication internationale de référence. La revue dispose désormais d'un outil performant pour publier des contenus dans trois langues, mettre en avant ses contributeurs et offrir une expérience de lecture haut de gamme à sa communauté de lecteurs.",
+    "projectNeed7": "La marque souhaitait avoir une plateforme web moderne pour affirmer son positionnement sur son secteur et disposer d'un outil de présentation haut de gamme face. Le défi résidait dans la capacité à valoriser des projets visuellement complexes à travers une interface sobre, rapide et parfaitement optimisée sur tous les supports, tout en simplifiant la gestion des contenus pour les équipes internes.",
     "projectProcess7": {
-      "description": "Pour équilibrer son caractère artistique et une navigation intuitive, nous avons opté pour un minimalisme fonctionnel, laissant la vedette au contenu.",
-      "phase1Title": "1. Identité visuelle",
-      "phase1": "Nous avons conçu un système visuel qui accompagne la personnalité artistique et changeante du projet, sans concurrencer les contenus publiés.",
-      "phase2Title": "2. Architecture de l'information",
-      "phase2": "Nous avons organisé les contenus et les parcours pour permettre une exploration éditoriale plus libre, en évitant une navigation trop rigide.",
-      "phase3Title": "3. Design d'interface",
-      "phase3": "Nous avons créé une expérience minimaliste qui fonctionne comme un support pour des textes, des œuvres, des images et des formats divers.",
+      "description": "Pour traduire l'exigence spatiale et esthétique de MURA sur le web, nous avons structuré notre intervention autour de quatre piliers :",
+      "phase1Title": "1. Direction artistique & Design UX/UI",
+      "phase1": "Création d'une identité digitale épurée, mettant l'accent sur les grands formats visuels, le rythme typographique et la sobriété des espaces blancs.",
+      "phase2Title": "2. Architecture de portfolio",
+      "phase2": "Mise en page éditorialisée des cas clients pour détailler le contexte, les matériaux, les concepts créatifs et le rendu final de chaque réalisation.",
+      "phase3Title": "3. Développement & Optimisation visuelle",
+      "phase3": "Intégration d'une structure web performante garantissant un chargement fluide du contenu sans altérer l'expérience utilisateur.",
       "phase4Title": "4. Développement WordPress",
-      "phase4": "Nous avons mis en place une plateforme autogérée pour que l'équipe éditoriale puisse publier, organiser et administrer les contenus de manière indépendante."
+      "phase4": "Déploiement d'une solution d'administration intuitive permettant à MURA d'ajouter et d'éditer facilement ses nouveaux projets au fil de ses créations."
     },
-    "projectSolution7": "Le résultat a été un magazine digital avec sa propre identité, pensé comme une archive vivante pour la littérature et les arts. La plateforme permet de gérer les contenus de manière autonome, de présenter les œuvres avec clarté et de soutenir une expérience éditoriale flexible, visuellement soignée et facile à parcourir.",
-    "projectNeed8": "La marque devait retrouver une cohérence visuelle et disposer de supports commerciaux plus solides pour se présenter aux supermarchés, distributeurs et clients B2B potentiels. Le défi consistait à construire une base visuelle claire et à préparer des outils qui aideraient l'équipe commerciale à mieux communiquer la valeur de Piedra Negra : du café torréfié à l'origine, avec une capacité industrielle et une offre adaptable.",
+    "projectSolution7": "Le résultat : un magazine digital avec sa propre identité, pensé comme une archive vivante pour la littérature et les arts, au design affirmé, fluide et élégant, reflétant la maturité et l'exigence de la marque. La plateforme permet de gérer les contenus de manière autonome, de présenter les œuvres avec clarté et de soutenir une expérience éditoriale flexible, visuellement soignée et facile à parcourir.",
+    "projectNeed8": "Afin de consolider sa présence en grande distribution et d'ouvrir des opportunités sur de nouveaux marchés B2B, la marque souhaitait renforcer sa stratégie de communication commerciale. Le défi résidait dans l'harmonisation de son identité graphique et la création de supports de réassurance capables de réaffirmer la qualité de son café, la rigueur de ses processus de production et la solidité de l'entreprise face aux grands acheteurs et partenaires corporatifs.",
     "projectProcess8": {
-      "description": "Nous avons divisé le travail entre la normalisation de l'identité de marque et la création d'outils B2B performants pour les commerciaux.",
-      "phase1Title": "1. Diagnostic de marque",
-      "phase1": "Nous avons examiné l'état visuel de Piedra Negra et la nécessité de construire une base graphique cohérente pour de futures applications commerciales, digitales et de retail.",
-      "phase2Title": "2. Manuel de marque",
-      "phase2": "Nous avons développé un guide d'identité visuelle avec des directives pour le logo, le symbole, les versions, la chromatique et les applications.",
-      "phase3Title": "3. Présentation retail",
-      "phase3": "Nous avons conçu un outil commercial pour les supermarchés, organisé autour de la trajectoire de l'entreprise, de ses processus, produits, clients et fiches commerciales.",
-      "phase4Title": "4. Présentation marque de distributeur",
-      "phase4": "Nous avons créé une présentation corporative axée sur les marques blanches, mettant en évidence les capacités de production, l'économie de la marque propre et les avantages B2B."
+      "description": "Afin de valoriser la marque sur l'ensemble de ses points de contact commerciaux, notre accompagnement s'est structuré autour de quatre axes majeurs :",
+      "phase1Title": "1. Harmonisation visuelle & Identité de marque ",
+      "phase1": "Régularisation des codes graphiques, typographies et palettes de couleurs pour garantir une parfaite cohérence sur tous les supports.",
+      "phase2Title": "2. Design de présentations & Outils B2B",
+      "phase2": "Conception de dossiers commerciaux, catalogues interactifs et fiches techniques pensés pour capter l'attention des acheteurs et structurer l'argumentaire de vente.",
+      "phase3Title": "3. Réalisation & Production audiovisuelle",
+      "phase3": "Création d'un film institutionnel haute qualité valorisant la chaîne de production, pensé pour captiver les grands acheteurs lors des rendez-vous stratégiques.",
+      "phase4Title": "4. Valorisation du savoir-faire & Narrative",
+      "phase4": "Mise en récit de l'origine du café, des étapes de torréfaction et des profils aromatiques pour consolider la proposition de valeur lors des négociations."
     },
-    "projectSolution8": "Le résultat a été un système d'identité de base et deux outils commerciaux prêts à soutenir les conversations B2B. Le manuel de marque permet de maintenir une cohérence visuelle dans de futures pièces. Les présentations commerciales aident à montrer l'entreprise de manière plus professionnelle (retail et corporative).",
-    "projectNeed9": "Le projet avait besoin d'une présence digitale professionnelle permettant de montrer différents types de travaux visuels sur une même plateforme. Le défi consistait à construire un site web flexible, facile à parcourir, et pensé pour les producteurs, les réalisateurs, les agences et les collaborateurs potentiels qui ont besoin de comprendre rapidement la portée, le style et la sensibilité visuelle du portfolio.",
+    "projectSolution8": "Le résultat : un écosystème commercial et de marque complet, élégant et résolument orienté vers la conversion B2B. Piedra Negra dispose désormais d'une identité visuelle harmonieuse, de supports de présentation clairs pour la grande distribution et d'un spot vidéo à fort impact visuel. Cet ensemble d'outils permet à la marque d'aborder ses rendez-vous stratégiques avec assurance, d'appuyer la qualité de son produit et d'accélérer son expansion commerciale.",
+    "projectNeed9": "Jean-Pierre avait besoin d'un espace digital épuré et percutant pour présenter un ensemble hétérogène de créations (extraits de films, direction de la photographie, séries photographiques) auprès de décideurs du milieu audiovisuel. Le défi résidait dans l'organisation de contenus visuels lourds et variés sans altérer les temps de chargement, tout en garantissant une esthétique minimale qui laisse toute la place à l'image et au récit visuel.",
     "projectProcess9": {
-      "description": "Pour que l'œuvre audiovisuelle parle d'elle-même, nous avons centré notre approche sur l'organisation et la propreté de l'interface.",
-      "phase1Title": "1. Architecture du contenu",
-      "phase1": "Nous avons organisé les différentes lignes de travail (direction de la photographie, réalisation, courts-métrages et photographie) pour que chaque domaine ait une place claire.",
-      "phase2Title": "2. Design d'expérience",
-      "phase2": "Nous avons conçu une navigation épurée, visuelle et directe, pensée pour que les images, les vidéos et les projets sélectionnés soient les protagonistes.",
-      "phase3Title": "3. Direction visuelle",
-      "phase3": "Nous avons défini une expérience sobre et flexible, qui accompagne le style du travail sans concurrencer les pièces audiovisuelles et photographiques.",
-      "phase4Title": "4. Développement web",
-      "phase4": "Nous avons construit une base adaptable pour mettre à jour facilement les nouveaux projets, les photographies, les vidéos et les pièces sélectionnées."
+      "description": "Afin d'offrir une vitrine digitale à la hauteur des exigences du secteur cinématographique et photographique, notre accompagnement s'est structuré autour de quatre axes majeurs :",
+      "phase1Title": "1. Direction artistique épurée",
+      "phase1": "Conception d'une interface minimaliste tirant parti du contraste et de la sobriété typographique pour valoriser chaque photogramme et chaque cliché.",
+      "phase2Title": "2. Architecture & Structuration du portfolio",
+      "phase2": "Organisation fluide entre les travaux de fiction, les réalisations vidéos et les projets photographiques pour faciliter la découverte du travail de l'artiste.",
+      "phase3Title": "3. Optimisation média & Lecture vidéo",
+      "phase3": "Mise en place d'un système d'intégration vidéo performant garantissant une lecture fluide, réactive et sans perte de qualité visuelle sur tous les écrans.",
+      "phase4Title": "4. Gestion de contenu sur mesure ",
+      "phase4": "Configuration d'une interface d'administration adaptée permettant à l'auteur de mettre à jour rapidement ses projets, d'ajouter de nouvelles séries et d'actualiser ses crédits en toute autonomie."
     },
-    "projectSolution9": "Le résultat est un site web portfolio clair, visuel et professionnel, conçu pour présenter des œuvres audiovisuelles et photographiques dans un contexte international. La plateforme permet d'organiser des projets et de faciliter le contact. L'expérience fonctionne comme une présence digitale sobre et soignée, pensée pour que le travail visuel s'exprime avec clarté.",
-    "projectsCTA": "Avez-vous un projet qui a besoin de prendre une forme digitale ?",
-    "projectsCTADescritpion": "Nous pouvons vous aider à organiser l'idée, concevoir l'expérience et construire un site web, une boutique en ligne, une plateforme ou un portfolio clair.",
-    "projectsCTAButton": "Parlons-en",
+    "projectSolution9": "Le résultat : un portfolio sur mesure, élégant et fluide, parfaitement aligné avec l'univers artistique de Jean Pierre Olivares. Le site constitue un outil de présentation professionnelle raffiné, permettant de mettre en lumière l'exigence de sa direction de la photographie et la sensibilité de son travail photographique auprès de ses futurs collaborateurs et clients.",
+    "projectsCTA": "Vous avez un projet à concrétiser ?",
+    "projectsCTADescritpion": "Il est temps de concevoir la solution technique dont votre marque a besoin pour démultiplier son impact.",
+    "projectsCTAButton": "Discutons de votre projet",
     "otherProjects": "Autres projets",
     "credits": {
       "team": "Équipe CloudTech",
@@ -590,50 +594,50 @@
   "testimonials": {
     "sectionTitle": "<0>Témoignages</0> de nos clients",
     "testimony1": {
-      "position": "Rédactrice en chef",
-      "review": "“L'équipe n'a pas seulement développé un site WordPress fidèle à notre identité, elle nous a également fourni des fonctionnalités éditoriales et sécurisées sur mesure. Ils ont parfaitement saisi notre vision de la littérature et de l'autogestion, nous permettant de fédérer une large communauté de créateurs en Équateur et en Amérique latine.”"
+      "position": "Rédacteur en chef",
+      "review": "“L'équipe n'a pas seulement conçu un site WordPress fidèle à notre identité : elle nous a aussi dotés de fonctionnalités éditoriales sur mesure et sécurisées. Ils ont parfaitement compris notre vision de la littérature et de l'autogestion, nous permettant de fédérer une large communauté de créateurs en Équateur et en Amérique latine.”"
     },
     "testimony2": {
       "position": "Éditrice",
-      "review": "“Avec 'Búsquedas', nous avons concrétisé l'espace digital sécurisé et respectueux dont nous avions besoin pour encourager le débat. L'architecture du site nous a permis de tisser un réseau vivant. Nous avons particulièrement apprécié la capacité de l'équipe à s'imprégner de l'essence de notre projet.”"
+      "review": "“Avec 'Búsquedas', l'équipe a su donner vie à l'espace digital sécurisé et respectueux dont nous avions besoin pour encourager le débat. L'architecture du site nous a permis de tisser un réseau vivant entre différentes expressions et réflexions. Nous avons particulièrement apprécié la capacité de l'équipe à s'imprégner de l'essence de notre projet.”"
     },
     "testimony3": {
-      "position": "Directeur",
-      "review": "“Ils ont conçu une solution qui diffuse la littérature et l'art à l'international, s'affranchissant des frontières. Leur équipe a parfaitement intégré notre modèle collaboratif : leur créativité a permis de déployer une bibliothèque virtuelle et une interface sonore interactive, offrant une expérience véritablement immersive.”"
+      "position": "Rédacteur en chef",
+      "review": "“Ils ont conçu une solution qui offre à la littérature et à l'art un rayonnement international, en s'affranchissant des frontières. Leur équipe a parfaitement intégré notre modèle collaboratif : leur créativité a permis de déployer une bibliothèque virtuelle et une interface sonore interactive, offrant une expérience véritablement immersive.”"
     }
   },
   "team": {
-    "sectionTitle": "Rencontrez notre <0>équipe</0>",
-    "sectionDescription": "Nous sommes une équipe qui combine stratégie, design, développement, contenu et gestion commerciale pour construire des sites web et des expériences digitales avec une identité.",
+    "sectionTitle": "Notre <0>équipe</0>",
+    "sectionDescription": "Nous réunissons stratégie, design, développement, contenu et gestion commerciale pour concevoir des sites web et des expériences digitales sur mesure.",
     "sectionCTAButton": "Parlons de votre projet",
     "card": {
       "teamMember1": {
-        "position": "Direction de projet et communication",
-        "description": "Il définit la direction stratégique et narrative des projets. Il organise les idées, les messages et les contenus pour que chaque site communique clairement et reflète l'identité de la marque ou du créatif qui le porte."
+        "position": "Direction de projet & Stratégie narrative.",
+        "description": "Définit la direction stratégique et narrative des projets. Structure les idées, les messages et les contenus pour que chaque site communique clairement et reflète l'identité de la marque ou du créatif qui le porte."
       },
       "teamMember2": {
         "position": "Développement fullstack et traduction",
-        "description": "Il développe des plateformes claires, fonctionnelles et bien implémentées. Il accompagne également l'adaptation de contenus en espagnol, français et anglais, aidant les projets à mieux communiquer dans différentes langues."
+        "description": "Développe des plateformes claires, fonctionnelles et performantes. Accompagne l'adaptation de contenus en espagnol, français et anglais, permettant aux projets de communiquer efficacement dans différentes langues."
       },
       "teamMember3": {
         "position": "Développement fullstack et UX/UI",
-        "description": "Il combine l'UX/UI et le développement web pour créer des sites clairs, utiles et techniquement viables. Il construit des wireframes, des prototypes et des designs haute fidélité, accompagnant le client dans les décisions clés."
+        "description": "Allie design UX/UI et développement web pour concevoir des sites clairs, intuitifs et techniquement solides. Conçoit wireframes, prototypes et interfaces haute fidélité, guidant le client dans les choix clés de l'expérience utilisateur."
       },
       "teamMember4": {
-        "position": "Gestion de projet",
-        "description": "Il assure le suivi des projets. Il aide à ordonner les priorités, à détecter les points critiques et à maintenir la clarté à chaque étape du processus aux côtés de la direction de l'équipe."
+        "position": "Chef de projet",
+        "description": "Assure le suivi opérationnel des projets. Aide à fixer les priorités, à anticiper les points critiques et à garantir la clarté du processus à chaque étape aux côtés de la direction."
       },
       "teamMember5": {
-        "position": "Développement de logiciels",
-        "description": "Il apporte un jugement technique approfondi pour résoudre des développements complexes sur des sites web, des web apps et des applications. Son travail aide à transformer des idées exigeantes en solutions fonctionnelles."
+        "position": "Développement logiciel",
+        "description": "Apporte une solide expertise technique pour résoudre les développements complexes sur les sites web, web apps et applications. Transforme des idées exigeantes en solutions fonctionnelles, solides et évolutives."
       },
       "teamMember6": {
-        "position": "Responsable commercial",
-        "description": "Elle gère les nouveaux contacts et accompagne le processus commercial. Son rôle permet de faire avancer chaque opportunité grâce à un bon suivi, de la proximité et de la clarté."
+        "position": "Chargée de compte",
+        "description": "Gère les nouveaux contacts et accompagne le processus commercial. Son rôle garantit à chaque opportunité un suivi fluide, personnalisé et rigoureux."
       },
       "teamMember7": {
-        "position": "Responsable commercial",
-        "description": "Elle est spécialisée dans la gestion de la relation client et le développement d'opportunités commerciales. Elle comprend les besoins de chaque client, coordonne les propositions et assure une communication fluide."
+        "position": "Responsable du développement commercial",
+        "description": "Spécialisée dans la gestion de la relation client et le développement d'opportunités commerciales. Cerne les besoins de chaque projet, coordonne les propositions et assure une communication fluide pour bâtir des collaborations à long terme."
       }
     }
   },
@@ -709,15 +713,15 @@
     }
   },
   "contact": {
-    "sectionTitle": "Dites-nous ce que vous voulez <0>construire</0>",
-    "sectionDescription": "Si vous avez besoin d'un site web, d'une boutique en ligne, d'un portfolio ou d'une expérience digitale pour mieux présenter votre projet, nous pouvons vous aider à lui donner forme.",
+    "sectionTitle": "Dites-nous ce que vous souhaitez <0>construire</0>",
+    "sectionDescription": "Que vous souhaitiez développer un site web, une boutique en ligne, un portfolio ou une expérience digitale sur mesure pour affirmer votre présence, nous sommes là pour lui donner forme.",
     "formButton": "Que souhaitez-vous construire ?",
     "whatsAppButton": "Parlez-nous de votre idée",
     "form": {
       "top": {
         "scrollDown": "Défilez vers le bas",
         "closeButton": "Fermer",
-        "description": "Remplissez le formulaire et nous vous répondrons pour comprendre à quelle étape vous vous trouvez et comment nous pouvons vous accompagner."
+        "description": "Remplissez le formulaire ci-dessous : nous étudierons votre projet avec attention pour comprendre vos enjeux et définir ensemble le meilleur accompagnement."
       },
       "section1": {
         "title": "Que souhaitez-vous construire ?",
@@ -726,34 +730,34 @@
           "webApp": "Application web",
           "onlineShop": "Boutique en ligne / E-commerce",
           "creativePortfolio": "Portfolio créatif",
-          "visualIndentity": "Identité et contenu visuel",
-          "webUpgrade": "Améliorer un site existant",
-          "notSure": "Je ne suis pas encore sûr(e)"
+          "visualIndentity": "Identité de marque & Direction artistique",
+          "webUpgrade": "Optimisation d'un site existant",
+          "notSure": "Je souhaite être conseillé(e)"
         }
       },
       "section2": {
-        "title": "Où en êtes-vous ?",
+        "title": "Où en êtes-vous dans votre projet ?",
         "options": {
           "placeholder": "Choisissez une option...",
           "opt1": "J'ai une première idée",
-          "opt2": "J'ai déjà ma marque ou mon identité visuelle",
-          "opt3": "J'ai déjà les maquettes / le design",
-          "opt4": "J'ai déjà un site web et souhaite l'améliorer",
-          "opt5": "Je suis prêt(e) à me lancer",
-          "opt6": "J'ai besoin de conseils"
+          "opt2": "Mon identité visuelle est déjà définie",
+          "opt3": "Les maquettes / designs sont prêts",
+          "opt4": "J'ai un site existant à faire évoluer",
+          "opt5": "Je suis prêt(e) à lancer le développement",
+          "opt6": "J'ai besoin d'un cadrage technique et stratégique"
         }
       },
       "section3": {
-        "title": "Parlez-nous brièvement de vos besoins"
+        "title": "Parlez-nous brièvement de vos besoins et objectifs :"
       },
       "section4": {
-        "title": "Délai souhaité",
+        "title": "Délai souhaité pour le projet :",
         "options": {
           "opt1": "Dès que possible",
           "opt2": "D'ici 1 mois",
           "opt3": "D'ici 2 à 3 mois",
-          "opt4": "Plus tard",
-          "opt5": "Je ne sais pas encore"
+          "opt4": "À plus long terme",
+          "opt5": "En cours de définition"
         }
       },
       "section5": {
@@ -787,40 +791,40 @@
       "messageHolder": "Votre idée ici..."
     },
     "alerts": {
-      "alertSuccess": "Merci ! Votre message a bien été envoyé.",
+      "alertSuccess": "Merci ! Nous avons bien reçu les informations de votre projet. Notre équipe étudie votre demande et reviendra vers vous sous 24 à 48 heures ouvrées pour convenir d'un premier échange et définir les prochaines étapes.",
       "alertError": "Oups ! Un problème est survenu, veuillez réessayer.",
       "loading": "Envoi en cours..."
     },
     "afterwards": {
       "opening": {
-        "title": "Comment ça va se passer ensuite ?"
+        "title": "Comment se déroule la suite ?"
       },
       "steps": {
         "step1": {
-          "title": "[01] Analyse de votre demande",
-          "description": "Nous étudions les informations que vous avez partagées afin de bien comprendre ce dont vous avez besoin."
+          "title": "[01] Analyse de votre besoin",
+          "description": "Nous étudions l'ensemble des éléments partagés afin de cerner vos objectifs, vos contraintes techniques et votre calendrier."
         },
         "step2": {
-          "title": "[02] Prise de contact",
-          "description": "Nous programmons un appel ou un premier échange pour clarifier vos attentes et répondre à vos questions."
+          "title": "[02] Premier échange exploratoire",
+          "description": "Nous organisons une visio ou un échange direct pour affiner votre vision, clarifier vos attentes et répondre à toutes vos questions"
         },
         "step3": {
-          "title": "[03] Définition de la marche à suivre",
-          "description": "Nous vous proposons l'étape suivante la plus adaptée : diagnostic, proposition, design, développement ou optimisation."
+          "title": "[03] Plan d'action sur mesure",
+          "description": "Nous vous formulons une proposition adaptée à votre maturité : cadrage, direction artistique, architecture technique ou proposition commerciale globale."
         }
       }
     },
     "ContactCards": {
       "meeting": {
-        "title": "Vous préférez discuter directement ?",
-        "description": "Planifiez un court appel pour nous faire part de votre idée et voir comment nous pouvons vous aider."
+        "title": "Vous préférez en discuter de vive voix ?",
+        "description": "Réservez un créneau dans notre agenda pour nous présenter votre projet de vive voix et évaluer la meilleure approche."
       },
       "email": {
-        "title": "Vous pouvez également nous écrire directement à :"
+        "title": "Vous pouvez également nous écrire directement :"
       },
       "Portfolio": {
-        "title": "Vous voulez d'abord voir comment nous travaillons ?",
-        "desc": "Voir les projets"
+        "title": "Envie de découvrir nos réalisations avant de vous lancer ?",
+        "desc": "Consulter nos projets"
       }
     }
   },

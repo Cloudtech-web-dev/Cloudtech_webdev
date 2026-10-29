@@ -120,30 +120,31 @@ export const Navbar = () => {
 					</button>
 				</div>
 
-				<div className="flex-grow-1 d-flex flex-column justify-content-center align-items-center text-center">
-					<ul className="navbar-nav gap-4">
-						<li className="nav-item">
-							<Link className="nav-link text-white fs-2 fw-medium" to="/" onClick={closeMenu}>{t('navbar.home')}</Link>
-						</li>
-						<li className="nav-item">
-							<Link className="nav-link text-white fs-2 fw-medium" to="/about" onClick={closeMenu}>{t('navbar.about')}</Link>
-						</li>
-						<li className="nav-item">
-							<Link className="nav-link text-white fs-2 fw-medium" to="/services" onClick={closeMenu}>{t('navbar.services')}</Link>
-						</li>
-						<li className="nav-item">
-							<Link className="nav-link text-white fs-2 fw-medium" to="/projects" onClick={closeMenu}>{t('navbar.projects')}</Link>
-						</li>
-						<li className="nav-item d-flex align-items-center gap-3">
-							<span className="text-white fs-2 fw-medium">{t('navbar.language')}</span> <LanguageSwitcher />
-						</li>
-					</ul>
-					<div className="mt-5 w-100 px-4">
-						<Link className="btn btn-outline-custom-yellow rounded-pill w-100 py-2 fs-5 fw-bold" to="/contact" onClick={closeMenu}>{t('navbar.contact')}</Link>
+				<div className="menu-scroll-area">
+					<div className="menu-inner-content text-center">
+						<ul className="navbar-nav gap-4 menu-grid-landscape w-100 px-4">
+							<li className="nav-item">
+								<Link className="nav-link text-white fs-2 fw-medium" to="/" onClick={closeMenu}>{t('navbar.home')}</Link>
+							</li>
+							<li className="nav-item">
+								<Link className="nav-link text-white fs-2 fw-medium" to="/about" onClick={closeMenu}>{t('navbar.about')}</Link>
+							</li>
+							<li className="nav-item">
+								<Link className="nav-link text-white fs-2 fw-medium" to="/services" onClick={closeMenu}>{t('navbar.services')}</Link>
+							</li>
+							<li className="nav-item">
+								<Link className="nav-link text-white fs-2 fw-medium" to="/projects" onClick={closeMenu}>{t('navbar.projects')}</Link>
+							</li>
+							<li className="nav-item d-flex align-items-center justify-content-center gap-3">
+								<span className="text-white fs-2 fw-medium">{t('navbar.language')}</span> <LanguageSwitcher />
+							</li>
+						</ul>
+						<div className="mt-5 mb-4 w-100 px-4 contact-btn-wrapper">
+							<Link className="btn btn-outline-custom-yellow rounded-pill w-100 py-2 fs-5 fw-bold" to="/contact" onClick={closeMenu}>{t('navbar.contact')}</Link>
+						</div>
 					</div>
 				</div>
 			</div>
-
 		</>
 	);
 };

@@ -503,8 +503,16 @@
 .phase-title {
     font-weight: bold;
     font-size: 2.6rem;
+    max-width: none !important;
+    width: 100%;
+    line-height: 1.1;   
+}
+
+@media (min-width: 768px) {
+  .phase-title {
     max-width: 50%;
-    line-height: 1.1;
+    font-size: 2rem;
+  }
 }
 
 .phase-description {
@@ -635,7 +643,7 @@
     }
 
     .work-steps-title {
-        font-size: 3rem;
+        font-size: 1.9rem;
         text-align: center;
     }
 

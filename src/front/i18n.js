@@ -11,13 +11,15 @@ i18n
   .init({
     //lng: "es",
     fallbackLng: "en",
+    supportedLngs: ["en", "es", "fr"],
+    load: "languageOnly",
     debug: false,
     detection: {
       order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage', 'cookie']
     },
     interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
+      escapeValue: false, 
     },
   });
 
