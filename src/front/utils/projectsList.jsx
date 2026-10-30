@@ -210,10 +210,6 @@ export const projectsList = [
                 position: 'projects.credits.post13'
             },
             {
-                name: 'Stefano Rivera / Aleck Zip',
-                position: 'projects.credits.post14'
-            },
-            {
                 name: 'Stefano Rivera',
                 position: 'projects.credits.post15'
             },
