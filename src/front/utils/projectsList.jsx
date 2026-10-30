@@ -153,7 +153,7 @@ export const projectsList = [
         id: 'piedra-negra',
         logo: LogoPiedraNegra,
         cover: CoverPiedraNegra,
-        videoEmbed: `<iframe src="https://cloudtechcomec.sharepoint.com/sites/cloudtech-entregables-publicos/_layouts/15/embed.aspx?UniqueId=02a29835-d9ab-439a-a0f3-c5879f34bcff&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create&autoplay=true&muted=true" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="MASTER_PIEDRA_NEGRA_FINAL.mp4"></iframe>`,
+        vimeoUrl: 'https://vimeo.com/1239904153',
         name: 'projects.projectName8',
         preview: 'projects.projectPreview8',
         summary: 'projects.projectSummary8',
