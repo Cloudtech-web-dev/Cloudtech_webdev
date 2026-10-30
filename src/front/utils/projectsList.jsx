@@ -197,20 +197,41 @@ export const projectsList = [
                 name: 'projects.credits.team',
                 position: 'projects.credits.post9'
             },
-            // {
-            //     name: 'José Miguel Pinto',
-            //     position: 'projects.credits.post1'
-            // },
-            // {
-            //     name: 'Santiago Montoya',
-            //     position: 'projects.credits.post3'
-            // },
-            // {
-            //     name: 'Santiago Montoya',
-            //     position: 'projects.credits.post5'
-            // },
+            {
+                name: 'The Guerreros (Narek Khatchatrian, Fabrizzio Guerrero)',
+                position: 'projects.credits.post11'
+            },
+            {
+                name: 'Fabrizzio Guerrero',
+                position: 'projects.credits.post12'
+            },
+            {
+                name: 'Narek Khatchatrian',
+                position: 'projects.credits.post13'
+            },
+            {
+                name: 'Stefano Rivera / Aleck Zip',
+                position: 'projects.credits.post14'
+            },
+            {
+                name: 'Stefano Rivera',
+                position: 'projects.credits.post15'
+            },
+            {
+                name: 'Aleck Zip',
+                position: 'projects.credits.post16'
+            },
+            {
+                name: 'Aleck Zip / Fabrizzio Guerrero',
+                position: 'projects.credits.post17'
+            },
+            {
+                name: 'Emilia Coloma',
+                position: 'projects.credits.post18'
+            },
+            
         ],
-        tech: ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'Affinity', 'Canva']
+        tech: ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'Affinity', 'Canva', 'Da Vinci Resolve']
     },
     {
         id: 'busquedas',
