@@ -153,7 +153,7 @@ export const projectsList = [
         id: 'piedra-negra',
         logo: LogoPiedraNegra,
         cover: CoverPiedraNegra,
-        videoEmbed: `<iframe src="https://cloudtechcomec.sharepoint.com/sites/cloudtech-entregables-publicos/_layouts/15/embed.aspx?UniqueId=02a29835-d9ab-439a-a0f3-c5879f34bcff&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create&autoplay=true&muted=true" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="MASTER_PIEDRA_NEGRA_FINAL.mp4"></iframe>`,
+        vimeoUrl: 'https://vimeo.com/1239904153',
         name: 'projects.projectName8',
         preview: 'projects.projectPreview8',
         summary: 'projects.projectSummary8',
@@ -197,20 +197,41 @@ export const projectsList = [
                 name: 'projects.credits.team',
                 position: 'projects.credits.post9'
             },
-            // {
-            //     name: 'José Miguel Pinto',
-            //     position: 'projects.credits.post1'
-            // },
-            // {
-            //     name: 'Santiago Montoya',
-            //     position: 'projects.credits.post3'
-            // },
-            // {
-            //     name: 'Santiago Montoya',
-            //     position: 'projects.credits.post5'
-            // },
+            {
+                name: 'The Guerreros (Narek Khatchatrian, Fabrizzio Guerrero)',
+                position: 'projects.credits.post11'
+            },
+            {
+                name: 'Fabrizzio Guerrero',
+                position: 'projects.credits.post12'
+            },
+            {
+                name: 'Narek Khatchatrian',
+                position: 'projects.credits.post13'
+            },
+            {
+                name: 'Stefano Rivera / Aleck Zip',
+                position: 'projects.credits.post14'
+            },
+            {
+                name: 'Stefano Rivera',
+                position: 'projects.credits.post15'
+            },
+            {
+                name: 'Aleck Zip',
+                position: 'projects.credits.post16'
+            },
+            {
+                name: 'Aleck Zip / Fabrizzio Guerrero',
+                position: 'projects.credits.post17'
+            },
+            {
+                name: 'Emilia Coloma',
+                position: 'projects.credits.post18'
+            },
+            
         ],
-        tech: ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'Affinity', 'Canva']
+        tech: ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'Affinity', 'Canva', 'Da Vinci Resolve']
     },
     {
         id: 'busquedas',

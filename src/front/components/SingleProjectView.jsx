@@ -18,10 +18,25 @@ export const SingleProjectView = () => {
 
     const [showModal, setShowModal] = useState(false);
     const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+    const [isInteractive, setIsInteractive] = useState(false);
 
     const projectData = projectsList.find(project => project.id === projectId)
 
     const gallery = projectData.gallery;
+
+    function getVimeoUrl(url, interactive) {
+        if (!url) return "";
+        const match = url.match(/(?:vimeo\.com\/|video\/)(\d+)/);
+        const videoId = match ? match[1] : "";
+        if (!videoId) return "";
+
+        if (!interactive) {
+            // Estado inicial: Autoplay sin sonido, en bucle.
+            return `https://player.vimeo.com/video/${videoId}?autoplay=1&loop=1&muted=1&background=1&autopause=0`;
+        }
+        // Estado interactivo: Con controles, audio activado y pantalla completa permitida
+        return `https://player.vimeo.com/video/${videoId}?autoplay=1&muted=0&controls=1&autopause=0`;
+    }
 
     const handleImageClick = (index) => {
         setShowModal(true);
@@ -57,28 +72,36 @@ export const SingleProjectView = () => {
                     <div className="mt-3 d-lg-none"></div>
                     <div className="d-flex flex-column justify-content-center">
 
-                        {projectData.videoEmbed ? (
-                            <div className="ratio ratio-16x9 rounded-4 overflow-hidden shadow position-relative">
-                                <div
-                                    className="w-100 h-100 position-absolute top-0 start-0"
-                                    style={{
-                                        /* Forzamos que cualquier iframe dentro de este div ocupe el 100% real */
-                                        position: 'absolute',
-                                        top: 0,
-                                        left: 0,
-                                        width: '100%',
-                                        height: '100%'
-                                    }}
-                                    dangerouslySetInnerHTML={{
-                                        __html: projectData.videoEmbed
-                                            .replace('width="640"', 'width="100%"')
-                                            .replace('height="360"', 'height="100%"')                                            
-                                            .replace('<iframe', '<iframe allow="autoplay; fullscreen; picture-in-picture"')
-                                    }}
+                        {projectData.vimeoUrl ? (
+                            <div
+                                className="ratio ratio-16x9 rounded-4 overflow-hidden shadow position-relative cursor-pointer"
+                                onClick={() => {
+                                    // Al hacer clic por primera vez, activamos el modo interactivo
+                                    if (!isInteractive) setIsInteractive(true);
+                                }}
+                            >
+                                <iframe
+                                    src={getVimeoUrl(projectData.vimeoUrl, isInteractive)}
+                                    className={`w-100 h-100 position-absolute top-0 start-0 border-0 ${!isInteractive ? 'pointer-events-none' : ''}`}
+                                    allow="autoplay; fullscreen; picture-in-picture"
+                                    allowFullScreen
+                                    title={projectData.name}
                                 />
+
+                                {!isInteractive && (
+                                    <div
+                                        className="position-absolute inset-0 w-100 h-100 bg-black/10 cursor-pointer d-flex align-items-center justify-content-center z-10"
+                                        onClick={() => setIsInteractive(true)}
+                                    >                                        
+                                    </div>
+                                )}
                             </div>
                         ) : (
-                            <img src={projectData.cover} alt="portada de proyecto CloudTech" className="rounded-4" />
+                            <img
+                                src={projectData.cover}
+                                alt="portada de proyecto CloudTech"
+                                className="rounded-4 w-100 object-fit-cover shadow"
+                            />
                         )}
                     </div>
 
