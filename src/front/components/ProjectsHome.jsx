@@ -9,7 +9,7 @@ import styles from "../styles/components/ProjectsHome.module.css";
 const spotlightProjects = {
     cosmonauta: { id: 1, tags: ["eCommerce", "webDev"], path: "libreria-cosmonauta"},
     mura: { id: 7, tags: ["digitalMagazine", "digitalMagazine"], path: "mura"},
-    jp: { id: 9, tags: ["webCinematographer", "visualPortfolio"], path: null},
+    jp: { id: 9, tags: ["webCinematographer", "visualPortfolio"], path: "jpportafolio"},
     busquedas: { id: 6, tags: ["digitalMagazine", "multilingualSite"], path: "busquedas"}
 };
 

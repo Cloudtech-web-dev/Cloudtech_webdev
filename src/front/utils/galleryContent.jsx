@@ -10,6 +10,15 @@ import Piedra3 from '../assets/img/Portfolio/PiedraNegra/piedra3.jpg'
 import Piedra4 from '../assets/img/Portfolio/PiedraNegra/piedra4.jpg'
 import Piedra5 from '../assets/img/Portfolio/PiedraNegra/piedra5.jpg'
 import Piedra6 from '../assets/img/Portfolio/PiedraNegra/piedra6.jpg'
+import Piedra7 from '../assets/img/Portfolio/PiedraNegra/piedra7.jpg'
+import Piedra8 from '../assets/img/Portfolio/PiedraNegra/piedra8.jpg'
+import Piedra9 from '../assets/img/Portfolio/PiedraNegra/piedra9.jpg'
+import Piedra10 from '../assets/img/Portfolio/PiedraNegra/piedra10.jpg'
+import Piedra11 from '../assets/img/Portfolio/PiedraNegra/piedra11.jpg'
+import Piedra12 from '../assets/img/Portfolio/PiedraNegra/piedra12.jpg'
+import Piedra13 from '../assets/img/Portfolio/PiedraNegra/piedra13.jpg'
+import Piedra14 from '../assets/img/Portfolio/PiedraNegra/piedra14.jpg'
+import Piedra15 from '../assets/img/Portfolio/PiedraNegra/piedra15.jpg'
 import Libreras1 from '../assets/img/Portfolio/Libreras/libreras1.jpg'
 import Libreras2 from '../assets/img/Portfolio/Libreras/libreras2.jpg'
 import Libreras3 from '../assets/img/Portfolio/Libreras/libreras3.jpg'
@@ -40,5 +49,5 @@ export const galleryCosmo = [Cosmo1, Cosmo2, Cosmo3, Cosmo4, Cosmo5, Cosmo6];
 export const galleryLibreras = [Libreras1, Libreras2, Libreras3, Libreras4, Libreras5, Libreras6];
 export const galleryBusquedas = [Busquedas1, Busquedas2, Busquedas3, Busquedas4, Busquedas5, Busquedas6];
 export const galleryMura = [Mura1, Mura2, Mura3, Mura4, Mura5, Mura6];
-export const galleryPiedra = [Piedra1, Piedra2, Piedra3, Piedra4, Piedra5, Piedra6];
+export const galleryPiedra = [Piedra1, Piedra2, Piedra3, Piedra4, Piedra5, Piedra6, Piedra7, Piedra8, Piedra9, Piedra10, Piedra11, Piedra12, Piedra13, Piedra14, Piedra15];
 export const galleryJPPortafolio = [JPPort1, JPPort2, JPPort3, JPPort4, JPPort5, JPPort6];
